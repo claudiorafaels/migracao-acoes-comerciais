@@ -1,0 +1,269 @@
+﻿@using Martins.GestaoVerba.ViewModel
+@model NegociacaoVerbaViewModel
+
+<div class="fixed-nav-content">
+    @using (Ajax.BeginForm("SalvarNegociacao", "NegociacaoVerba", Martins.GestaoVerba.Core.Ajax.Constantes.AJAX_EDIT_POST_DEFAULT(), new { @id = "formEdit", @class = "form-pagination" }))
+    {
+        @Html.AntiForgeryToken()
+
+        @*Botões*@
+        <div class="container">
+            <div class="row py-1">
+                <div class="mx-auto">
+                    <ul class="nav nav-pills" style="font-size:25px;">
+
+                        <li class="nav-item">
+                            <a title="Voltar" style="cursor: pointer;" class="nav-link gray" id="btnCancel">
+                                <i class="fa fa-arrow-left"></i>&nbsp;
+                                @Html.ActionLink(" ", "Index", "Negociacao", new { area = "" }, new { onclick = "true;", @class = "" })
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="submit" title="Salvar" style="cursor: pointer;border:none;" class="bg-transparent" id="btnSave"> <i class="fa fa-save"></i>&nbsp;  </button>
+                        </li>
+                        <li class="nav-item">
+                            <a title="Enviar para Aprovação" style="cursor: pointer;" id="btnSend" class="nav-link gray" onclick="jsEnviarAprovacao()"> <i class="fa fa-send"></i>&nbsp;</a>
+                        </li>
+                        <li class="nav-item">
+                            <a title="Aprovar" id="btnAprove" style="cursor: pointer;" onclick="jsOpenModalEnviar()" class="nav-link gray"> <i class="fa fa-check"></i>&nbsp;</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="btnReprove" style="cursor: pointer;" title="Reprovar" class="nav-link gray"> <i class="fa fa-remove"></i>&nbsp;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown-divider" style="margin-top:-12px;"></div>
+            <br />
+        </div>
+
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @*Cadastrar*@
+        <div class="container card bg-primary">
+            <div class="py-1" style="color:white;">
+                <h5>Cadastrar Negociação</h5>
+            </div>
+            <div class="row bg-light">
+                <div class="col-12">
+                    <br />
+                    <label><b>Status: </b></label><label id="lblStatus"> @Html.LabelFor(model => model.NomStatus)</label>
+                </div>
+            </div>
+            <div class="row bg-light">
+                <div class="col-4">
+                    @Html.LabelFor(model => model.NomNegociacao)
+                    @Html.ValidationMessageFor(model => model.NomNegociacao, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.NomNegociacao, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                </div>
+                <div class="col-4">
+                    @Html.LabelFor(model => model.VlrTotalVerba)
+                    @Html.ValidationMessageFor(model => model.VlrTotalVerba, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.VlrTotalVerba, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                </div>
+                <div class="col-4">
+                    @Html.LabelFor(model => model.DtCadastro)
+                    @Html.ValidationMessageFor(model => model.DtCadastro, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.DtCadastro, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                </div>
+            </div>
+            <div class="row bg-light">
+                <div class="col-md-4">
+                    @Html.LabelFor(model => model.NomFilialOrigem)
+                    @Html.ValidationMessageFor(model => model.NomFilialOrigem, "", new { @class = "text-danger" })
+
+                    <div class="row">
+                        <div class="col-4">
+                            @Html.EditorFor(model => model.CodFilialOrigem, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                        </div>
+                        <div class="col-8">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.NomFilialOrigem, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+
+                                <button type="button" class="input-group-addon" title="Pesquisar Filial" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" id="btnOpenModal" onclick="jsOpenModalFilial()"><i class="fa fa-search center"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    @Html.LabelFor(model => model.NomDivisaoFornecedor)
+                    @Html.ValidationMessageFor(model => model.NomDivisaoFornecedor, "", new { @class = "text-danger" })
+
+                    <div class="row">
+                        <div class="col-4">
+                            @Html.EditorFor(model => model.CodDivisaoFornecedor, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                        </div>
+                        <div class="col-8">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.NomDivisaoFornecedor, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+
+                                <button type="button" class="input-group-addon" title="Pesquisar Filial" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" id="btnOpenModal" onclick="jsOpenModalFilial()"><i class="fa fa-search center"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    @Html.LabelFor(model => model.NomComprador)
+                    @Html.ValidationMessageFor(model => model.NomComprador, "", new { @class = "text-danger" })
+
+
+                    <div class="row">
+                        <div class="col-4">
+                            @Html.EditorFor(model => model.CodComprador, new { htmlAttributes = new { @class = "form-control", id = "txtEditNegociacaoVerbaCodComprador", data_val = false } })
+                        </div>
+                        <div class="col-8">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.NomComprador, new { htmlAttributes = new { @class = "form-control", id = "txtEditNegociacaoVerbaNomComprador", data_val = false } })
+
+                                <button type="button" class="input-group-addon" title="Pesquisar Comprador" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" onclick="jsOpenModalComprador()"><i class="fa fa-search center"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row bg-light" style="padding-bottom: 1rem; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">
+                <div class="col-12">
+                    @Html.LabelFor(model => model.ObsNegociacao)
+                    @Html.ValidationMessageFor(model => model.ObsNegociacao, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.ObsNegociacao, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                </div>
+            </div>
+        </div>
+        <br />
+
+        @*Adicionar Item e Grid*@
+        <div class="container card bg-primary">
+            <div id="gridDestinoObjetivo" class="gridDestinoObjetivo">
+                @Html.Partial("~/Views/Negociacao/destinoObjetivo.cshtml", Model.listaDestinoObjetivo, new ViewDataDictionary { TemplateInfo = new TemplateInfo { HtmlFieldPrefix = "listaDestinoObjetivo" } })
+            </div>
+        </div>
+
+    }
+
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+
+<!-- Modais -->
+<div class="modal col-md-8" id="modalEnviar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:90%; margin-left:auto; margin-right: auto;">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header bg-primary" style="color:white;">
+                    <h5 class="modal-title" id="myModalLabel">Aprovar Negociação</h5>
+                </div>
+                <div class="modal-body bg-light">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Contato do Fornecedor:</label>
+                            <input type="text" class="form-control" id="txtEditNomComprador" placeholder="" value="" required="">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Prazo:</label>
+                            <input type="text" class="form-control" id="txtEditNomComprador" placeholder="" value="" required="">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Forma de Pagamento:</label>
+                            <select class="form-control">
+                                <option class="dropdown-item" value="0">Selecione...</option>
+                                <option class="dropdown-item" value="1">Opção 1</option>
+                                <option class="dropdown-item" value="1">Opção 2</option>
+                                <option class="dropdown-item" value="1">Opção 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>Observação:</label>
+                            <textarea rows="4" class="form-control" placeholder="" value="" required="">Mesma observação da negociação (editável)</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" title="Aprovar" class="btn btn-default" style="cursor: pointer;" onclick="jsCloseModalEnviar()">Aprovar</button>
+                    <button type="button" title="Fechar" class="btn btn-default" style="cursor: pointer;background-color:orange" onclick="jsCloseModalEnviar()">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal col-md-8" id="modalFilialOrigem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:90%; margin-left:auto; margin-right: auto;">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header bg-primary" style="color:white;">
+                    <h5 class="modal-title" id="myModalLabel">Selecionar Filial</h5>
+                </div>
+                <div class="modal-body bg-light">
+                    <div class="container card bg-primary">
+                        <div class="py-1" style="color:white;">
+                            <h5>Pesquisar</h5>
+                        </div>
+                        <div class="row bg-light">
+
+                            <div class="col-md-4">
+                                <label>Filial de Origem:</label>
+                                <input type="text" class="form-control" style="width: 230px;" id="" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Código Filial:</label>
+                                <input type="text" class="form-control" id="" placeholder="" value="" required="">
+                            </div>
+                            <div class="col-md-4">
+                                <br />
+                                <button type="button" title="Pesquisar" class="btn" style="cursor: pointer;background-color: #196dab;" id="btnSaveNegociacao" value="" required=""><i class="fa fa-search"></i> Pesquisar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="container card bg-primary">
+                        <div class="py-1" style="color:white;">
+                            <h>Resultados</h>
+                        </div>
+                        <div class="row bg-secondary">
+                            <table id="tb" class="table table-hover table-bordered table-striped" style="margin: 0px;">
+                                <thead class="bg-secondary">
+                                    <tr role="row">
+                                        <th class="sorting">Ações</th>
+                                        <th class="sorting">Código</th>
+                                        <th class="sorting">Nome</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-light border">
+                                    <tr class="odd">
+                                        <td class="center border">
+                                            <button type="button" style="cursor: pointer;" title="Selecionar" class="btn bg-primary fa fa-check" id="btnEditNegociacao" value="" required="" onclick="jsCloseModalFilial()"></button>
+                                        </td>
+                                        <td class="border">0001</td>
+                                        <td class="border">Filial 1</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="center border">
+                                            <button type="button" style="cursor: pointer;" title="Selecionar" class="btn bg-primary fa fa-check" id="btnEditNegociacao" value="" required="" onclick="jsCloseModalFilial()"></button>
+                                        </td>
+                                        <td class="border">0002</td>
+                                        <td class="border">Filial 2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="py-1" style="color:white">
+                            Mostrando 3 de 3 resultados
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" title="Fechar" class="btn btn-default" style="cursor: pointer;background-color:orange" onclick="jsCloseModalFilial()">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

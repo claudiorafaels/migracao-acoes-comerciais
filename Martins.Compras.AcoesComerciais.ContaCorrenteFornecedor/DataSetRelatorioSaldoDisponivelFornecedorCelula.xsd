@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DataSetRelatorioSaldoDisponivelFornecedorCelula" targetNamespace="http://tempuri.org/DataSetRelatorioSaldoDisponivelFornecedorCelula.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DataSetRelatorioSaldoDisponivelFornecedorCelula.xsd"
+	xmlns:mstns="http://tempuri.org/DataSetRelatorioSaldoDisponivelFornecedorCelula.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DataSetRelatorioSaldoDisponivelFornecedorCelula" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="TbAnalitico">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODFRN" type="xs:integer" minOccurs="0" />
+							<xs:element name="TIPEMPENHO" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DESEMPENHO" type="xs:string" minOccurs="0" />
+							<xs:element name="SALDO" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMFRN" type="xs:string" minOccurs="0" />
+							<xs:element name="VlrSldRsv" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TIPDSNDSCBNF" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DESDSNDSCBNF" type="xs:string" minOccurs="0" />
+							<xs:element name="VlrRcb" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TipAlcVbaFrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DesAlcVbaFrn" type="xs:string" minOccurs="0" />
+							<xs:element name="PerAlcVbaFrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VlrAlcVbaFrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VlrRcbAlcVbaFrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VlrSldDspAlcVbaFrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PmtDdo" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

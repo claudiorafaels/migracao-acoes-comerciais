@@ -1,0 +1,124 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel
+
+@model  GridSetings<NegociacaoVerbaViewModel>
+
+@{
+    ViewBag.Title = "Negociação";
+}
+
+<div class="container-fluid">
+
+    @using (Ajax.BeginForm("PesquisarPendencias", "Negociacao", Marketing.GestaoVerbas.Core.Ajax.Constantes.AJAX_PESQUISA_POST_DEFAULT(), new { @id = "formPesquisaPendencias", @class = "form-pagination" }))
+    {
+        <br />
+        <div class="card bg-primary divFiltrosPesquisa">
+            <div class="card-header text-white" >
+                <h3>Filtros</h3>
+            </div>
+            <div class="card-body bg-light">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        @Html.LabelFor(model => model.Filtro.NomFornecedor)
+                        <div class="row">
+                            <div class="col-4">
+                                @Html.EditorFor(model => model.Filtro.CodFornecedor, new { htmlAttributes = new { @class = "form-control", id = "txtFiltroPendenciaVerbaCodFornecedor", data_val = false, onchange = "findFornecedorCodFornecedorChange('txtFiltroPendenciaVerbaCodFornecedor', 'txtFiltroPendenciaVerbaNomFornecedor' )" } })
+                            </div>
+                            <div class="col-8">
+                                <div class="input-group">
+                                    @Html.EditorFor(model => model.Filtro.NomFornecedor, new { htmlAttributes = new { @class = "form-control", data_val = false, id = "txtFiltroPendenciaVerbaNomFornecedor" } })
+
+                                    <button type="button" class="input-group-addon" title="Pesquisar Filial" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" id="btnOpenModal" onclick="jsOpenModalFornecedorPendencia()"><i class="fa fa-search center"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        @Html.LabelFor(model => model.Filtro.NomAutor)
+                        <div class="row">
+                            <div class="col-4">
+                                @Html.EditorFor(model => model.Filtro.CodAutor, new { htmlAttributes = new { @class = "form-control", data_val = false, id = "txtFiltroPendenciaVerbaCodAutor", onchange = "findFuncionarioCodFuncionarioChange('txtFiltroPendenciaVerbaCodAutor', 'txtFiltroPendenciaVerbaNomAutor' )" } })
+                            </div>
+                            <div class="col-8">
+                                <div class="input-group">
+                                    @Html.EditorFor(model => model.Filtro.NomAutor, new { htmlAttributes = new { @class = "form-control", data_val = false, id = "txtFiltroPendenciaVerbaNomAutor" } })
+                                    <button type="button" class="input-group-addon" title="Pesquisar Filial" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" id="btnOpenModal" onclick="jsOpenModalAutorPendencia()"><i class="fa fa-search center"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-2">
+                        @Html.LabelFor(model => model.Filtro.CodNegociacaoVerba)
+                        @Html.EditorFor(model => model.Filtro.CodNegociacaoVerba, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                    </div>
+                    <div class="col-md-6">
+                        @Html.LabelFor(model => model.Filtro.DesNegociacaoVerba)
+                        @Html.EditorFor(model => model.Filtro.DesNegociacaoVerba, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                    </div>
+                    <div class="col-md-4">
+                        <br />
+                        <div class="pull-right">
+                            <button type="submit" title="Pesquisar" class="btn" style="cursor: pointer;background-color: #196dab;" id="" value="" required=""><i class="fa fa-search"></i> Pesquisar</button>
+                            <button type="button" class="btn" style="cursor: pointer;background-color: #196dab;" title="Limpar campos de filtro" onclick="jsLimparFiltrosPesquisa()"><i class="fa fa-eraser"></i> Limpar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <div class="grid-paginavel">
+            @foreach (var item in Model.Result)
+            {
+                <div class="card bg-primary" onclick="jsEditarPendencia(@item.CodNegociacaoVerba)">
+
+                    <div class="card-header text-white" >
+                        <h5> @Html.DisplayFor(modelItem => item.CodNegociacaoVerba)  -  @Html.DisplayFor(modelItem => item.DesNegociacaoVerba)</h5>
+                    </div>
+                    <div class="card-body bg-light">
+                        <ul style="cursor: pointer;">
+                            <li style="list-style-type: none;">
+                                <i class="fa fa-fw fa-industry"></i>&nbsp;Fornecedor: @Html.DisplayFor(modelItem => item.CodFornecedor) -  @Html.DisplayFor(modelItem => item.NomFornecedor)
+                                <br />
+                                <i class="fa fa-fw fa-user-circle"></i>&nbsp;Comprador: @Html.DisplayFor(modelItem => item.CodComprador) - @Html.DisplayFor(modelItem => item.NomComprador)
+                                <br />
+                                <i class="fa fa-fw fa-user"></i>&nbsp;Autor: @Html.DisplayFor(modelItem => item.CodAutor) - @Html.DisplayFor(modelItem => item.NomAutor)
+                                <br />
+                                <i class="fa fa-fw fa-money"></i>&nbsp;Valor: @Html.DisplayFor(modelItem => item.VlrVerba)
+                                <br />
+                                <i class="fa fa-fw fa-calendar"></i>&nbsp;Data: @Html.DisplayFor(modelItem => item.DtCadastroNegociacao)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <br />
+            }
+            <div class="card ">
+                <div class="card-body bg-secondary">
+                    <div class="row">
+                        @Html.Partial(Constantes.VIEW_PAGINACAO, Model.Setings, new ViewDataDictionary { TemplateInfo = new TemplateInfo { HtmlFieldPrefix = "Setings" } })
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="aprovaNegociacao" id="aprovaNegociacao"></div>
+    <div id="formEdit"></div>
+    <div id="appendFind"></div>
+</div>
+
+<!-- Script -->
+@section Scripts {
+    @Scripts.Render("~/Scripts/pagina/negociacao-verba.js")
+    @Scripts.Render("~/Scripts/pagina/carimbo.js")
+    @Scripts.Render("~/Scripts/find/funcionario.js")
+    @Scripts.Render("~/Scripts/find/filialEmpresa.js")
+    @Scripts.Render("~/Scripts/find/fornecedor.js")
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetContaCorrenteFornecedor.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetContaCorrenteFornecedor.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetContaCorrenteFornecedor.xsd" id="DatasetContaCorrenteFornecedor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetContaCorrenteFornecedor">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0123086">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element name="DATREFLMT" type="xs:dateTime" />
+              <xs:element name="CODGDC" type="xs:string" />
+              <xs:element name="NUMSEQLMT" type="xs:decimal" />
+              <xs:element name="CODTIPLMT" type="xs:decimal" />
+              <xs:element name="CODCNTCRD" type="xs:string" />
+              <xs:element name="CODCENCSTCRD" type="xs:string" />
+              <xs:element name="CODCNTDEB" type="xs:string" />
+              <xs:element name="CODCENCSTDEB" type="xs:string" />
+              <xs:element name="VLRLMTCTB" type="xs:decimal" />
+              <xs:element name="DESHSTLMT" type="xs:string" />
+              <xs:element name="DESVARHSTPAD" type="xs:string" />
+              <xs:element minOccurs="0" name="DATCTBLMT" type="xs:dateTime" />
+              <xs:element name="NOMACSUSRGRCLMT" type="xs:string" />
+              <xs:element minOccurs="0" name="CODFILEMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPDSNDSCEVTACOCMC" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0100426">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="NOMFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContaCorrenteFornecedorKey1">
+      <xs:selector xpath=".//mstns:T0123086" />
+      <xs:field xpath="mstns:CODFRN" />
+      <xs:field xpath="mstns:TIPDSNDSCBNF" />
+      <xs:field xpath="mstns:DATREFLMT" />
+      <xs:field xpath="mstns:CODGDC" />
+      <xs:field xpath="mstns:NUMSEQLMT" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContaCorrenteFornecedorKey2">
+      <xs:selector xpath=".//mstns:T0100426" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:unique>
+    <xs:keyref name="T0100426T0123086" refer="mstns:DatasetContaCorrenteFornecedorKey2">
+      <xs:selector xpath=".//mstns:T0123086" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

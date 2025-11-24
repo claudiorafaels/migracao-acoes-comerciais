@@ -1,0 +1,301 @@
+﻿@using Martins.GestaoVerba.Core.Grid
+@using Martins.GestaoVerba.ViewModel
+@model  GridSetings<NegociacaoVerbaViewModel>
+
+@{
+    ViewBag.Title = "Negociação";
+
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="fixed-nav-content">
+    @using (Ajax.BeginForm("Index", "NegociacaoVerba", Martins.GestaoVerba.Core.Ajax.Constantes.AJAX_PESQUISA_POST_DEFAULT(), new { @id = "formPesquisa", @class = "form-pagination" }))
+    {
+        <div class="container">
+            <div class="row py-1">
+                <div class="mx-auto">
+                    <ul class="nav nav-pills" style="font-size:25px;">
+                        <li class="nav-item">
+                            <a title="Adicionar Negociação" onclick="jsNovaNegociacao();" class="nav-link gray"> <i class="fa fa-plus"></i>&nbsp;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown-divider" style="margin-top:-12px;"></div>
+            <br />
+        </div>
+
+        <div class="container card bg-primary">
+            <div class="py-1" style="color:white;">
+                <h5>Pesquisar</h5>
+            </div>
+            <div class="row bg-light">
+                <div class="col-md-4">
+                    @Html.LabelFor(model => model.Filtro.CodNegociacao)
+                    @Html.ValidationMessageFor(model => model.Filtro.CodNegociacao, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Filtro.CodNegociacao, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                </div>
+                <div class="col-md-4">
+                    @Html.LabelFor(model => model.Filtro.NomNegociacao)
+                    @Html.ValidationMessageFor(model => model.Filtro.NomNegociacao, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Filtro.NomNegociacao, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                </div>
+                <div class="col-md-4">
+                    @Html.LabelFor(model => model.Filtro.NomStatus)
+                    @Html.ValidationMessageFor(model => model.Filtro.NomStatus, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Filtro.NomStatus, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                </div>
+            </div>
+            <div class="row bg-light">
+                <div class="col-md-4">
+                    @Html.LabelFor(model => model.Filtro.NomFilialOrigem)
+                    @Html.ValidationMessageFor(model => model.Filtro.NomFilialOrigem, "", new { @class = "text-danger" })
+
+                    <div class="row">
+                        <div class="col-4">
+                            @Html.EditorFor(model => model.Filtro.CodFilialOrigem, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                        </div>
+                        <div class="col-8">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.Filtro.NomFilialOrigem, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+
+                                <button type="button" class="input-group-addon" title="Pesquisar Filial" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" id="btnOpenModal" onclick="jsOpenModalFilial()"><i class="fa fa-search center"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    @Html.LabelFor(model => model.Filtro.NomComprador)
+
+                    @Html.ValidationMessageFor(model => model.Filtro.NomComprador, "", new { @class = "text-danger" })
+
+                    <div class="row">
+                        <div class="col-4">
+                            @Html.EditorFor(model => model.Filtro.CodComprador, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                        </div>
+                        <div class="col-8">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.Filtro.NomComprador, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+
+                                <button type="button" class="input-group-addon" title="Pesquisar Filial" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" id="btnOpenModal" onclick="jsOpenModalFilial()"><i class="fa fa-search center"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    @Html.LabelFor(model => model.Filtro.NomAutor)
+                    @Html.ValidationMessageFor(model => model.Filtro.NomAutor, "", new { @class = "text-danger" })
+
+                    <div class="row">
+                        <div class="col-4">
+                            @Html.EditorFor(model => model.Filtro.CodAutor, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                        </div>
+                        <div class="col-8">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.Filtro.NomAutor, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+
+                                <button type="button" class="input-group-addon" title="Pesquisar Filial" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" id="btnOpenModal" onclick="jsOpenModalFilial()"><i class="fa fa-search center"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row bg-light">
+
+                <div class="col-md-4">
+                    @Html.LabelFor(model => model.Filtro.DtInicio)
+                    @Html.ValidationMessageFor(model => model.Filtro.DtInicio, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Filtro.DtInicio, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                </div>
+                <div class="col-md-4">
+                    @Html.LabelFor(model => model.Filtro.DtFim)
+                    @Html.ValidationMessageFor(model => model.Filtro.DtFim, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Filtro.DtFim, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                </div>
+                <div class="col-md-4">
+                    <br />
+                    <button type="submit" id="btnPesquisar" value="" class="btn" style="cursor: pointer;background-color: #196dab;"><i class="fa fa-search"></i> Pesquisar</button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <br />
+        <div class="container card bg-primary">
+            <div class="py-1" style="color:white;">
+                <h5>Resultados</h5>
+            </div>
+            <div class="row bg-secondary">
+                <table id="tb" class="table table-hover table-bordered table-striped" style="margin: 0px;">
+                    <thead class="bg-secondary">
+                        <tr role="row">
+                            <th class="center">Ações</th>
+                            <th class="sorting">
+                                <button type="submit" sort-expression="NomAutor">
+                                    @Html.DisplayNameFor(model => model.Filtro.NomAutor)
+                                </button>
+                            </th>
+                            <th class="sorting">
+                                <button type="submit" sort-expression="NomNegociacao">
+                                    @Html.DisplayNameFor(model => model.Filtro.NomNegociacao)
+                                </button>
+                            </th>
+                            <th class="sorting">
+                                <button type="submit" sort-expression="NomStatus">
+                                    @Html.DisplayNameFor(model => model.Filtro.NomStatus)
+                                </button>
+                            </th>
+                            <th class="sorting">
+                                <button type="submit" sort-expression="NomFilialOrigem">
+                                    @Html.DisplayNameFor(model => model.Filtro.NomFilialOrigem)
+                                </button>
+                            </th>
+                            <th class="sorting">
+                                <button type="submit" sort-expression="NomComprador">
+                                    @Html.DisplayNameFor(model => model.Filtro.NomComprador)
+                                </button>
+                            </th>
+                            <th class="sorting">
+                                <button type="submit" sort-expression="VlrTotalVerba">
+                                    @Html.DisplayNameFor(model => model.Filtro.VlrTotalVerba)
+                                </button>
+                            </th>
+                            <th class="sorting">
+                                <button type="submit" sort-expression="DtCadastro">
+                                    @Html.DisplayNameFor(model => model.Filtro.DtCadastro)
+                                </button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-light border">
+                        @foreach (var item in Model.Result)
+                        {
+                            <tr class="odd">
+                                <td class="center border">
+                                    <button type="button" title="Editar" class="btn bg-primary" id="btnEditNegociacao" value="" required="" onclick="jsEditar()"><i class="fa fa-edit"></i></button>
+                                </td>
+                                <td class="border">
+                                    @Html.DisplayFor(modelItem => item.NomAutor)
+                                </td>
+                                <td class="border">
+                                    @Html.DisplayFor(modelItem => item.NomNegociacao)
+                                </td>
+                                <td class="border">
+                                    @Html.DisplayFor(modelItem => item.NomStatus)
+                                </td>
+                                <td class="border">
+                                    @Html.DisplayFor(modelItem => item.NomFilialOrigem)
+                                </td>
+                                <td class="border">
+                                    @Html.DisplayFor(modelItem => item.NomComprador)
+                                </td>
+                                <td class="border">
+                                    @Html.DisplayFor(modelItem => item.VlrTotalVerba)
+                                </td>
+                                <td class="border">
+                                    @Html.DisplayFor(modelItem => item.DtCadastro)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                @Html.Partial(Constantes.VIEW_PAGINACAO, Model.Setings, new ViewDataDictionary { TemplateInfo = new TemplateInfo { HtmlFieldPrefix = "Setings" } })
+            </div>
+
+        </div>
+    }
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+
+<!-- Modal -->
+<div class="modal col-md-8" id="modalFilialOrigem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:90%; margin-left:auto; margin-right: auto;">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header bg-primary" style="color:white;">
+                    <h5 class="modal-title" id="myModalLabel">Selecionar Filial</h5>
+                </div>
+                <div class="modal-body bg-light">
+                    <div class="container card bg-primary">
+                        <div class="py-1" style="color:white;">
+                            <h5>Pesquisar</h5>
+                        </div>
+                        <div class="row bg-light">
+
+                            <div class="col-md-4">
+                                <label>Filial de Origem:</label>
+                                <input type="text" class="form-control" style="width: 230px;" id="" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Código Filial:</label>
+                                <input type="text" class="form-control" id="" placeholder="" value="" required="">
+                            </div>
+                            <div class="col-md-4">
+                                <br />
+                                <button type="button" title="Pesquisar" class="btn" style="cursor: pointer;background-color: #196dab;" id="btnSaveNegociacao" value="" required=""><i class="fa fa-search"></i> Pesquisar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="container card bg-primary">
+                        <div class="py-1" style="color:white;">
+                            <h>Resultados</h>
+                        </div>
+                        <div class="row bg-secondary">
+                            <table id="tb" class="table table-hover table-bordered table-striped" style="margin: 0px;">
+                                <thead class="bg-secondary">
+                                    <tr role="row">
+                                        <th class="sorting">Ações</th>
+                                        <th class="sorting">Código</th>
+                                        <th class="sorting">Nome</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-light border">
+                                    <tr class="odd">
+                                        <td class="center border">
+                                            <button type="button" title="Selecionar" style="cursor: pointer;" class="btn bg-primary fa fa-check" id="btnEditNegociacao" value="" required="" onclick="jsCloseModalFilial()"></button>
+                                        </td>
+                                        <td class="border">0001</td>
+                                        <td class="border">Filial 1</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="center border">
+                                            <button type="button" title="Selecionar" style="cursor: pointer;" class="btn bg-primary fa fa-check" id="btnEditNegociacao" value="" required="" onclick="jsCloseModalFilial()"></button>
+                                        </td>
+                                        <td class="border">0002</td>
+                                        <td class="border">Filial 2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="py-1" style="color:white">
+                            Mostrando 3 de 3 resultados
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" title="Fechar" class="btn btn-default" style="cursor: pointer;background-color:orange" onclick="jsCloseModalFilial()">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="formEdit"></div>
+
+<div id="appendFindFuncionario"></div>
+
+
+<!-- Script -->
+@Scripts.Render("~/Scripts/negociacao-verba.js")
+@Scripts.Render("~/Scripts/find/funcionario.js")

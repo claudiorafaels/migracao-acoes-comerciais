@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetObterValorPromessaOrigemTrocaFormaPagamentoAcordo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetObterValorPromessaOrigemTrocaFormaPagamentoAcordo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetObterValorPromessaOrigemTrocaFormaPagamentoAcordo.xsd" id="DatasetObterValorPromessaOrigemTrocaFormaPagamentoAcordo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetObterValorPromessaOrigemTrocaFormaPagamentoAcordo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tbObterValorPromessaOrigemTrocaFormaPagamentoAcordo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Codpms" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrNgcPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipDsnDscBnf" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrTxaAdm" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetRelatorioHistoricoAcordo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetRelatorioHistoricoAcordo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetRelatorioHistoricoAcordo.xsd" id="DatasetRelatorioHistoricoAcordo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetRelatorioHistoricoAcordo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TbHistoricoAcordo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IndTipInf" type="xs:int" />
+              <xs:element minOccurs="0" name="NumSeqLin" type="xs:int" />
+              <xs:element minOccurs="0" name="CodPms" type="xs:int" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="DatCadPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatNgcPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CodSitPms" type="xs:int" />
+              <xs:element minOccurs="0" name="DesSitPms" type="xs:string" />
+              <xs:element minOccurs="0" name="NomAcsUsrSis" type="xs:string" />
+              <xs:element minOccurs="0" name="DesMsgUsr" type="xs:string" />
+              <xs:element minOccurs="0" name="NumPedCmp" type="xs:int" />
+              <xs:element minOccurs="0" name="DatCncPed" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="IndAscArdFrnPms" type="xs:string" />
+              <xs:element minOccurs="0" name="DatPrvRcbPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TipFrmDscBnf" type="xs:int" />
+              <xs:element minOccurs="0" name="DesFrmDscBnf" type="xs:string" />
+              <xs:element minOccurs="0" name="TipDsnDscBnf" type="xs:int" />
+              <xs:element minOccurs="0" name="DesDsnDscBnf" type="xs:string" />
+              <xs:element minOccurs="0" name="VlrNgcPms" type="xs:float" />
+              <xs:element minOccurs="0" name="VlrPgoPms" type="xs:float" />
+              <xs:element minOccurs="0" name="VlrEftPms" type="xs:float" />
+              <xs:element minOccurs="0" name="VlrPdaPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NumCttFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="DatIniPodVgrCttFrn" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatVncCttFrn" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatDstCttFrn" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NumCslCttFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="DesCslCttFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="TipPodCttFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="DesPodCttFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="NumRefPod" type="xs:int" />
+              <xs:element minOccurs="0" name="DatIniPod" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatFimPod" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TipEdeAbgMix" type="xs:int" />
+              <xs:element minOccurs="0" name="DesEdeAbgMix" type="xs:string" />
+              <xs:element minOccurs="0" name="CodEdeAbgMix" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatRefApu" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VlrBseCalApuVlrRcb" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrRcbEftFxa" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrDscRcbEftFxa" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PerApuVlrRcbRefFxa" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodEmp" type="xs:int" />
+              <xs:element minOccurs="0" name="CodFilEmp" type="xs:int" />
+              <xs:element minOccurs="0" name="CodEmpFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="NumNotFscFrnCtb" type="xs:int" />
+              <xs:element minOccurs="0" name="CodSeqPclNotFsc" type="xs:string" />
+              <xs:element minOccurs="0" name="VlrTitPgtUtzSbtPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatGrcRlcTitPgtPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatSbtFrmDscBnf" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatDstRlcTitPgtPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CodPmsSbtFrmPgt" type="xs:int" />
+              <xs:element minOccurs="0" name="CodSitPmsOri" type="xs:int" />
+              <xs:element minOccurs="0" name="DesSitPmsOri" type="xs:string" />
+              <xs:element minOccurs="0" name="DatTrnDscDup" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatPgtTit" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatLmtCtbTitPgt" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FlgSitNgcDup" type="xs:string" />
+              <xs:element minOccurs="0" name="NomAcsUsrAltSitNgc" type="xs:string" />
+              <xs:element minOccurs="0" name="DatAtlSitNgcDup" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatLmtCntCrr" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VlrTxaAdm" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrPis" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrUtzCtt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatPrvRcbPmsEft" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VlrEftDscPcl" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatPgtPclNotFsc" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatLimTrc" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CodPmsOri" type="xs:int" />
+              <xs:element minOccurs="0" name="NomAcsUsrSisAltSitNgcDup" type="xs:string" />
+              <xs:element minOccurs="0" name="NumSeqOrd_001" type="xs:int" />
+              <xs:element minOccurs="0" name="NumSeqOrd_002" type="xs:int" />
+              <xs:element minOccurs="0" name="NumSeqOrd_003" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetCapaPedidoCompra.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetCapaPedidoCompra.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetCapaPedidoCompra.xsd" id="DatasetCapaPedidoCompra" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetCapaPedidoCompra">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0105592">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMPEDCMP" type="xs:decimal" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="CODSITPEDCMP" type="xs:decimal" />
+              <xs:element name="NOMLCLCOBPED" type="xs:string" />
+              <xs:element name="TIPCOBPEDCMP" type="xs:string" />
+              <xs:element name="NOMPCAFATPEDCMP" type="xs:string" />
+              <xs:element name="DATPEDCMP" type="xs:dateTime" />
+              <xs:element name="QDEITEPEDCMP" type="xs:decimal" />
+              <xs:element name="DESOBSPEDCMP" type="xs:string" />
+              <xs:element name="FLGPEDCMPCNG" type="xs:string" />
+              <xs:element name="NOMCIDRCBMER" type="xs:string" />
+              <xs:element name="NUMACOMCD" type="xs:decimal" />
+              <xs:element name="NUMIDTTIPPEDCMP" type="xs:decimal" />
+              <xs:element name="VLRTOTFRTCBD" type="xs:decimal" />
+              <xs:element name="NUMPEDNOR" type="xs:decimal" />
+              <xs:element name="NUMPEDBNF" type="xs:decimal" />
+              <xs:element name="NUMPNDRLCPEDCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATBXAPEDCMP" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATCNCPEDCMP" type="xs:dateTime" />
+              <xs:element name="CODPCAPGTNOTFSC" type="xs:decimal" />
+              <xs:element name="TIPCNDPGTPEDCMP" type="xs:decimal" />
+              <xs:element name="VLRFRTKGSCBDPEDCMP" type="xs:decimal" />
+              <xs:element name="VLRFRTMEOCUBCBDPED" type="xs:decimal" />
+              <xs:element name="VLRFRTCBDVLRPEDCMP" type="xs:decimal" />
+              <xs:element name="TIPFRTCBDPEDCMP" type="xs:string" />
+              <xs:element name="TIPMOEPEDCMP" type="xs:decimal" />
+              <xs:element name="TXAJURPGTPEDCMP" type="xs:decimal" />
+              <xs:element name="CODBCOTITPGT" type="xs:decimal" />
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="CODFILEMP" type="xs:decimal" />
+              <xs:element name="CODCNLDTB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATUPLPEDCMP" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TIPTRPPEDCMP" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCIDENTCIF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODCPR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFILEMPTRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODVIATBT" type="xs:decimal" />
+              <xs:element name="CODFILEMPENT" type="xs:decimal" />
+              <xs:element name="FLGTRNDDORCB" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMNGCCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMPEDCMPRPSAUT" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetCapaPedidoCompraKey1">
+      <xs:selector xpath=".//mstns:T0105592" />
+      <xs:field xpath="mstns:NUMPEDCMP" />
+      <xs:field xpath="mstns:CODEMP" />
+      <xs:field xpath="mstns:CODFILEMP" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

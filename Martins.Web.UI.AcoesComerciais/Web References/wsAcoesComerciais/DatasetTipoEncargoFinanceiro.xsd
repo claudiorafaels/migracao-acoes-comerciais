@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTipoEncargoFinanceiro.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTipoEncargoFinanceiro.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTipoEncargoFinanceiro.xsd" id="DatasetTipoEncargoFinanceiro" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTipoEncargoFinanceiro">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0138415">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TipEncFinCttFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesTipEncFinCttFrn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoEncargoFinanceiroKey1">
+      <xs:selector xpath=".//mstns:T0138415" />
+      <xs:field xpath="mstns:TipEncFinCttFrn" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

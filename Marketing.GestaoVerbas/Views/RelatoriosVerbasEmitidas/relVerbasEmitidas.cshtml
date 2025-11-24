@@ -1,0 +1,466 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel
+@model  GridSetings<RelatoriosVerbasEmitidasViewModel>
+
+<div class="row py-1">
+    <div class="mx-auto">
+        <ul class="nav nav-pills" style="font-size:25px;">
+            <li class="nav-item">
+                <button type="button" onclick="ModeFiltro()" title="Voltar" class="nav-link" style="background-color:transparent;border:none;"><i class="fa fa-arrow-left"></i>&nbsp;</button>
+            </li>
+
+            <li class="nav-item">
+                <button type="button" title="Exportar" class="nav-link" style="background-color:transparent;border:none;" onclick="jsExportarCSV()"> <i class="fa fa-download"></i>&nbsp;</button>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="dropdown-divider" style="margin-top:-12px;"></div>
+<br />
+<div class="card bg-primary">
+
+    <div class="card-header text-white">
+        @if (Model.Filtro.IndRelVisao == "N")
+        {
+            <h5>Relatório por Negociação</h5>
+        }
+        @if (Model.Filtro.IndRelVisao == "M")
+        {
+            <h5>Relatório por Mercadoria</h5>
+        }
+        @if (Model.Filtro.IndRelVisao == "F")
+        {
+            <h5>Relatório por Fornecedor</h5>
+        }
+        @if (Model.Filtro.IndRelVisao == "E")
+        {
+            <h5>Relatório por Empenho</h5>
+        }
+    </div>
+
+    <div id="tbGridPaginavel" class="card-body bg-secondary grid-paginavel">
+        <div class="row">
+            <div class="table-responsive">
+                <div class="dataTables_wrapper">
+                    <table class="table table-hover table-bordered table-striped dataTable">
+                        <thead class="bg-secondary">
+                            <tr role="row">
+                                @if (Model.Filtro.IndRelVisao == "N")
+                                {
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodNegociacaoVerba">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodNegociacaoVerba)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomNegociacaoVerba">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomNegociacaoVerba)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodStatusNegociacao">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomStatusNegociacao)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="DtCadastroNegociacao">
+                                            @Html.DisplayNameFor(model => model.Filtro.DtCadastroNegociacao)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodFornecedor">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodFornecedor)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomFornecedor">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomFornecedor)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodFilialEmpresa">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodFilialEmpresa)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomFilialEmpresa">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomFilialEmpresa)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="VlrVerbaNegociacao">
+                                            @Html.DisplayNameFor(model => model.Filtro.VlrVerbaNegociacao)
+                                        </button>
+                                    </th>
+
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="DesObservacaoSolicitacao">
+                                            @Html.DisplayNameFor(model => model.Filtro.DesObservacaoSolicitacao)
+                                        </button>
+                                    </th>
+                                }
+                                @if (Model.Filtro.IndRelVisao == "E")
+                                {
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodNegociacaoVerba">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodNegociacaoVerba)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomNegociacaoVerba">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomNegociacaoVerba)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodStatusNegociacao">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomStatusNegociacao)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="DtCadastroNegociacao">
+                                            @Html.DisplayNameFor(model => model.Filtro.DtCadastroNegociacao)
+                                        </button>
+                                    </th>
+
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodDestino">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomDestino)
+                                        </button>
+                                    </th>
+
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomObjetivo">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomObjetivo)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomDestinoObjetivo">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomDestinoObjetivo)
+                                        </button>
+                                    </th>
+
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodFornecedor">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodFornecedor)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomFornecedor">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomFornecedor)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodCarimbo">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodCarimbo)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodAcordo">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodAcordo)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodFilialEmpresa">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodFilialEmpresa)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomFilialEmpresa">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomFilialEmpresa)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="VlrVerbaEmpenho">
+                                            @Html.DisplayNameFor(model => model.Filtro.VlrVerbaEmpenho)
+                                        </button>
+                                    </th>
+
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="DesObservacaoSolicitacaoEmpenho">
+                                            @Html.DisplayNameFor(model => model.Filtro.DesObservacaoSolicitacaoEmpenho)
+                                        </button>
+                                    </th>
+                                }
+                                @if (Model.Filtro.IndRelVisao == "M")
+                                {
+
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodMercadoria">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodMercadoria)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomMercadoria">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomMercadoria)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomDestinoObjetivo">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomDestinoObjetivo)
+                                        </button>
+                                    </th>
+
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="DesEntidade">
+                                            @Html.DisplayNameFor(model => model.Filtro.DesEntidade)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodCarimbo">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodCarimbo)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodStatusCarimbo">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomStatusCarimbo)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="DtCadastroCarimbo">
+                                            @Html.DisplayNameFor(model => model.Filtro.DtCadastroCarimbo)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodFilialEmpresa">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodFilialEmpresa)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomFilialEmpresa">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomFilialEmpresa)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="VlrCarimboMercadoria">
+                                            @Html.DisplayNameFor(model => model.Filtro.VlrCarimboMercadoria)
+                                        </button>
+                                    </th>
+
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="DesObservacaoSolicitacao">
+                                            @Html.DisplayNameFor(model => model.Filtro.DesObservacaoCarimbo)
+                                        </button>
+                                    </th>
+                                }
+                                @if (Model.Filtro.IndRelVisao == "F")
+                                {
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodFornecedor">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodFornecedor)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomFornecedor">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomFornecedor)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="NomDestinoObjetivo">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomDestinoObjetivo)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="DesEntidade">
+                                            @Html.DisplayNameFor(model => model.Filtro.DesEntidade)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodCarimbo">
+                                            @Html.DisplayNameFor(model => model.Filtro.CodCarimbo)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="CodStatusCarimbo">
+                                            @Html.DisplayNameFor(model => model.Filtro.NomStatusCarimbo)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="DtCadastroCarimbo">
+                                            @Html.DisplayNameFor(model => model.Filtro.DtCadastroCarimbo)
+                                        </button>
+                                    </th>
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="VlrCarimbo">
+                                            @Html.DisplayNameFor(model => model.Filtro.VlrCarimbo)
+                                        </button>
+                                    </th>
+
+                                    <th class="sorting">
+                                        <button type="submit" sort-expression="DesObservacaoSolicitacao">
+                                            @Html.DisplayNameFor(model => model.Filtro.DesObservacaoCarimbo)
+                                        </button>
+                                    </th>
+                                }
+
+                            </tr>
+                        </thead>
+
+                        <tbody class="bg-light border" id="tbodyRelatorioItem">
+                            @foreach (RelatoriosVerbasEmitidasViewModel item in Model.Result)
+                            {
+                                <tr class="row-similar-item">
+                                    @if (Model.Filtro.IndRelVisao == "N")
+                                    {
+                                        <td>@Html.DisplayFor(model => item.CodNegociacaoVerba)</td>
+                                        <td>@Html.DisplayFor(model => item.NomNegociacaoVerba)</td>
+                                        <td>@Html.DisplayFor(model => item.NomStatusNegociacao)</td>
+                                        <td>@Html.DisplayFor(model => item.DtCadastroNegociacao)</td>
+                                        <td>@Html.DisplayFor(model => item.CodFornecedor)</td>
+                                        <td>@Html.DisplayFor(model => item.NomFornecedor)</td>
+                                        <td>@Html.DisplayFor(model => item.CodFilialEmpresa)</td>
+                                        <td>@Html.DisplayFor(model => item.NomFilialEmpresa)</td>
+                                        <td>@Html.DisplayFor(model => item.VlrVerbaNegociacao)</td>
+                                        <td>
+                                            <div style="width:300px;height:50px;overflow:auto;">
+                                                @Html.DisplayFor(model => item.DesObservacaoSolicitacao)
+                                            </div>
+                                        </td>
+                                    }
+                                    @if (Model.Filtro.IndRelVisao == "E")
+                                    {
+                                        <td>@Html.DisplayFor(model => item.CodNegociacaoVerba)</td>
+                                        <td>@Html.DisplayFor(model => item.NomNegociacaoVerba)</td>
+                                        <td>@Html.DisplayFor(model => item.NomStatusNegociacao)</td>
+                                        <td>@Html.DisplayFor(model => item.DtCadastroNegociacao)</td>
+                                        <td>@Html.DisplayFor(model => item.NomDestino)</td>
+                                        <td>@Html.DisplayFor(model => item.NomObjetivo)</td>
+                                        <td>@Html.DisplayFor(model => item.NomDestinoObjetivo)</td>
+                                        <td>@Html.DisplayFor(model => item.CodFornecedor)</td>
+                                        <td>@Html.DisplayFor(model => item.NomFornecedor)</td>
+                                        <td>@Html.DisplayFor(model => item.CodCarimbo)</td>
+                                        <td>@Html.DisplayFor(model => item.CodAcordo)</td>
+                                        <td>@Html.DisplayFor(model => item.CodFilialEmpresa)</td>
+                                        <td>@Html.DisplayFor(model => item.NomFilialEmpresa)</td>
+                                        <td>@Html.DisplayFor(model => item.VlrVerbaEmpenho)</td>
+                                        <td>
+                                            <div style="width:300px;height:50px;overflow:auto;">
+                                                @Html.DisplayFor(model => item.DesObservacaoSolicitacaoEmpenho)
+                                            </div>
+                                        </td>
+                                    }
+                                    @if (Model.Filtro.IndRelVisao == "M")
+                                    {
+                                        <td>@Html.DisplayFor(model => item.CodMercadoria)</td>
+                                        <td>@Html.DisplayFor(model => item.NomMercadoria)</td>
+                                        <td>@Html.DisplayFor(model => item.NomDestinoObjetivo)</td>
+                                        <td>@Html.DisplayFor(model => item.DesEntidade)</td>
+                                        <td>@Html.DisplayFor(model => item.CodCarimbo)</td>
+                                        <td>@Html.DisplayFor(model => item.NomStatusCarimbo)</td>
+                                        <td>@Html.DisplayFor(model => item.DtCadastroCarimbo)</td>
+                                        <td>@Html.DisplayFor(model => item.CodFilialEmpresa)</td>
+                                        <td>@Html.DisplayFor(model => item.NomFilialEmpresa)</td>
+                                        <td>@Html.DisplayFor(model => item.VlrCarimboMercadoria)</td>
+                                        <td>
+                                            <div style="width:300px;height:50px;overflow:auto;">
+                                                @Html.DisplayFor(model => item.DesObservacaoCarimbo)
+                                            </div>
+                                        </td>
+                                    }
+                                    @if (Model.Filtro.IndRelVisao == "F")
+                                    {
+                                        <td>@Html.DisplayFor(model => item.CodFornecedor)</td>
+                                        <td>@Html.DisplayFor(model => item.NomFornecedor)</td>
+                                        <td>@Html.DisplayFor(model => item.NomDestinoObjetivo)</td>
+                                        <td>@Html.DisplayFor(model => item.DesEntidade)</td>
+                                        <td>@Html.DisplayFor(model => item.CodCarimbo)</td>
+                                        <td>@Html.DisplayFor(model => item.NomStatusCarimbo)</td>
+                                        <td>@Html.DisplayFor(model => item.DtCadastroCarimbo)</td>
+                                        <td>@Html.DisplayFor(model => item.VlrCarimbo)</td>
+                                        <td>
+                                            <div style="width:300px;height:50px;overflow:auto;">
+                                                @Html.DisplayFor(model => item.DesObservacaoCarimbo)
+                                            </div>
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot class="bg-secondary">
+                            <tr>
+                                @if (Model.Filtro.IndRelVisao == "N")
+                                {
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                }
+                                @if (Model.Filtro.IndRelVisao == "E")
+                                {
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                }
+                                @if (Model.Filtro.IndRelVisao == "M")
+                                {
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                }
+                                @if (Model.Filtro.IndRelVisao == "F")
+                                {
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                }
+
+                                <th>
+
+                                    @if (Model.AggregateSummary != null)
+                                    {
+                                        if (Model.Filtro.IndRelVisao == "N")
+                                        {
+                                            <span>@((Model.AggregateSummary["SumVlrVerbaNegociacao"] as double?).GetValueOrDefault().ToString("c"))</span>
+                                        }
+                                        else if (Model.Filtro.IndRelVisao == "E")
+                                        {
+                                            <span>@((Model.AggregateSummary["SumVlrVerbaEmpenho"] as double?).GetValueOrDefault().ToString("c"))</span>
+                                        }
+                                        else if (Model.Filtro.IndRelVisao == "M")
+                                        {
+                                            <span>@((Model.AggregateSummary["SumVlrCarimboMercadoria"] as double?).GetValueOrDefault().ToString("c"))</span>
+                                        }
+                                        else if (Model.Filtro.IndRelVisao == "F")
+                                        {
+                                            <span>@((Model.AggregateSummary["SumVlrCarimbo"] as double?).GetValueOrDefault().ToString("c"))</span>
+                                        }
+                                    }
+                                    @*@if (Model.AggregateSummary != null && (Model.AggregateSummary.ContainsKey("SumVlrVerba")))
+                                        {
+                                            <span>@((Model.AggregateSummary["SumVlrVerba"] as double?).GetValueOrDefault().ToString("c"))</span>
+                                        }*@
+                                </th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            @Html.HiddenFor(model => model.Setings.TotalRows, new { @id = "hdfRelatorioVerbasEmitidasTotalRows" })
+            @Html.Partial(Constantes.VIEW_PAGINACAO, Model.Setings, new ViewDataDictionary { TemplateInfo = new TemplateInfo { HtmlFieldPrefix = "Setings" } })
+        </div>
+    </div>
+</div>

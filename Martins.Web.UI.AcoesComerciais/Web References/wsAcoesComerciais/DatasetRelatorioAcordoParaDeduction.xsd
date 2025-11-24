@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetRelatorioAcordoParaDeduction.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetRelatorioAcordoParaDeduction.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetRelatorioAcordoParaDeduction.xsd" id="DatasetRelatorioAcordoParaDeduction" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetRelatorioAcordoParaDeduction">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tbAcordoParaDeduction1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="DatCadPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatNgcPms" type="xs:string" />
+              <xs:element minOccurs="0" name="DatPrvRcbPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CodPms" type="xs:int" />
+              <xs:element minOccurs="0" name="NumPedCmp" type="xs:int" />
+              <xs:element minOccurs="0" name="CodSitPms" type="xs:int" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="CodDivCmp" type="xs:int" />
+              <xs:element minOccurs="0" name="DesDivCmp" type="xs:string" />
+              <xs:element minOccurs="0" name="DesFrmDscBnf" type="xs:string" />
+              <xs:element minOccurs="0" name="DesDsnDscBnf" type="xs:string" />
+              <xs:element minOccurs="0" name="VlrNgcPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrEftPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrPgoPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrAbe" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NumIdtTipPedCmp" type="xs:int" />
+              <xs:element minOccurs="0" name="DiaAtr" type="xs:int" />
+              <xs:element minOccurs="0" name="D2" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrAss" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodSeqPclNotFsc" type="xs:string" />
+              <xs:element minOccurs="0" name="DatFim" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatIni" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatPgtPclNot" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TipFrmDscBnf" type="xs:int" />
+              <xs:element minOccurs="0" name="NumNotFscFrnCtb" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrTitPgtUtzSbtPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodSitPmsOri" type="xs:int" />
+              <xs:element minOccurs="0" name="DatPgtTit" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatPrvRcb" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FlgSitNgcDup" type="xs:string" />
+              <xs:element minOccurs="0" name="CodPmsSbtFrmPgt" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrUtzCtt" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbAcordoParaDeduction3">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodEmp" type="xs:int" />
+              <xs:element minOccurs="0" name="CodFilEmp" type="xs:int" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="CodEmpFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="CodPms" type="xs:int" />
+              <xs:element minOccurs="0" name="TipFrmDscBnf" type="xs:int" />
+              <xs:element minOccurs="0" name="TipDsnDscBnf" type="xs:int" />
+              <xs:element minOccurs="0" name="DesDsnDscBnf" type="xs:string" />
+              <xs:element minOccurs="0" name="DatNgcPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NumNotFscFrnCtb" type="xs:int" />
+              <xs:element minOccurs="0" name="CodSeqPclNotFsc" type="xs:string" />
+              <xs:element minOccurs="0" name="NumSeqTitPgt" type="xs:int" />
+              <xs:element minOccurs="0" name="CodSitPmsOri" type="xs:int" />
+              <xs:element minOccurs="0" name="NumPedCmp" type="xs:int" />
+              <xs:element minOccurs="0" name="IndAscArdFrnPms" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrNgcPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrEftPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrPgoPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrUtzCtt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatPrvRcb" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatCncPed" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NumIdtTipPedCmp" type="xs:int" />
+              <xs:element minOccurs="0" name="CodPmsSbtFrmPgt" type="xs:int" />
+              <xs:element minOccurs="0" name="FlgSitNgcDup" type="xs:string" />
+              <xs:element minOccurs="0" name="DatPgtTit" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CodDivCmp" type="xs:int" />
+              <xs:element minOccurs="0" name="DesDivCmp" type="xs:string" />
+              <xs:element minOccurs="0" name="DatIni" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatFim" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatPrvRcbPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VlrAss" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbAcordoParaDeduction2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodEmp" type="xs:int" />
+              <xs:element minOccurs="0" name="CodFilEmp" type="xs:int" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="CodEmpFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="CodPms" type="xs:int" />
+              <xs:element minOccurs="0" name="DatPrvRcbPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TipFrmDscBnf" type="xs:int" />
+              <xs:element minOccurs="0" name="TipDsnDscBnf" type="xs:int" />
+              <xs:element minOccurs="0" name="DesDsnDscBnf" type="xs:string" />
+              <xs:element minOccurs="0" name="DatNgcPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NumNotFscFrnCtb" type="xs:int" />
+              <xs:element minOccurs="0" name="CodSeqPclNotFsc" type="xs:string" />
+              <xs:element minOccurs="0" name="NumSeqTitPgt" type="xs:int" />
+              <xs:element minOccurs="0" name="CodSitPms" type="xs:int" />
+              <xs:element minOccurs="0" name="NumPedCmp" type="xs:int" />
+              <xs:element minOccurs="0" name="IndAscArdFrnPms" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrNgcPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrEftPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrPgoPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrTitPgtUtzSbtPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatPgtPclNot" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatCncPed" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NumIdtTipPedCmp" type="xs:int" />
+              <xs:element minOccurs="0" name="CodDivCmp" type="xs:int" />
+              <xs:element minOccurs="0" name="DesDivCmp" type="xs:string" />
+              <xs:element minOccurs="0" name="DatIni" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatFim" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatPgtPclNotFsc" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VlrAss" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

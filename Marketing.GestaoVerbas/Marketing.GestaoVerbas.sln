@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketing.GestaoVerbas", "Marketing.GestaoVerbas.csproj", "{5815E5A4-0A2B-478A-81BF-4283E0365014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketing.GestaoVerbasAPI", "..\Marketing.GestaoVerbasAPI\Marketing.GestaoVerbasAPI.csproj", "{3BB858E9-BA8A-43BE-A322-4A81B6D5DA2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5815E5A4-0A2B-478A-81BF-4283E0365014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5815E5A4-0A2B-478A-81BF-4283E0365014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5815E5A4-0A2B-478A-81BF-4283E0365014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5815E5A4-0A2B-478A-81BF-4283E0365014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BB858E9-BA8A-43BE-A322-4A81B6D5DA2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BB858E9-BA8A-43BE-A322-4A81B6D5DA2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BB858E9-BA8A-43BE-A322-4A81B6D5DA2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BB858E9-BA8A-43BE-A322-4A81B6D5DA2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD5AAEFA-F5E7-42F6-B908-9E343CC81B74}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.martins.com.br:8080/tfs/des_compras
+		SccProjectUniqueName0 = Marketing.GestaoVerbas.csproj
+		SccProjectName0 = .
+		SccAuxPath0 = http://tfs.martins.com.br:8080/tfs/des_compras
+		SccLocalPath0 = .
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = ..\\Marketing.GestaoVerbasAPI\\Marketing.GestaoVerbasAPI.csproj
+		SccProjectName1 = ../Marketing.GestaoVerbasAPI
+		SccAuxPath1 = http://tfs.martins.com.br:8080/tfs/des_compras
+		SccLocalPath1 = ..\\Marketing.GestaoVerbasAPI
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

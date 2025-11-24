@@ -1,0 +1,64 @@
+﻿
+@using Marketing.GestaoVerbas.ViewModel
+@model IEnumerable<AcordoViewModel>
+
+
+@{
+    foreach (var item in Model)
+    {
+    }
+}
+
+
+
+<div class="modal" id="modalAcordosNegociacao" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary" style="color:white;">
+                <h5 class="modal-title" id="myModalLabel">Aprovar Negociação</h5>
+            </div>
+            <div class="modal-body bg-light">
+                @{
+                    NegociacaoVerbaViewModel negociacao = ViewBag.NegociacaoVerba;
+                }
+
+                <div class="row">
+                    <div class="col-md-6">
+                        @Html.LabelFor(model => negociacao.CodNegociacaoVerba)
+                        @Html.EditorFor(model => negociacao.CodNegociacaoVerba, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                    </div>
+                    <div class="col-md-6">
+                        @Html.LabelFor(model => negociacao.NomStatusNegociacaoVenda)
+                        @Html.EditorFor(model => negociacao.NomStatusNegociacaoVenda, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                    </div>
+                </div>
+
+
+                <h4>Acordos</h4>
+                <br />
+
+                @foreach (AcordoViewModel acordo in Model)
+                {
+                    <div class="row">
+                        <div class="col-md-4">
+                            @Html.LabelFor(model => acordo.Recebimentos.First().NomDestinoObjetivo)
+                            @Html.EditorFor(model => acordo.Recebimentos.First().NomDestinoObjetivo, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                        </div>
+                        <div class="col-md-4">
+                            @Html.LabelFor(model => acordo.Recebimentos.First().VlrNegociado)
+                            @Html.EditorFor(model => acordo.Recebimentos.First().VlrNegociado, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                        </div>
+                        <div class="col-md-4">
+                            @Html.LabelFor(model => acordo.CodPromessa)
+                            @Html.EditorFor(model => acordo.CodPromessa, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                        </div>
+                    </div>
+                }
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" title="Fechar" class="btn btn-default" style="cursor: pointer;background-color:orange" onclick="jsCloseModalAcordosNegociacao()">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

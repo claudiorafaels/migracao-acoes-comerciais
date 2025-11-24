@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetRelatorioCarimbo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetRelatorioCarimbo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetRelatorioCarimbo.xsd" id="DatasetRelatorioCarimbo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetRelatorioCarimbo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tbDiretoriaComFilial">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="DESDRTCMP" type="xs:string" />
+              <xs:element minOccurs="0" name="DESDIVCMP" type="xs:string" />
+              <xs:element minOccurs="0" name="SALDO" type="xs:decimal" />
+              <xs:element name="NOMFILEMP" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbFiltroAnalitico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NOMFILEMP" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="DESMER" type="xs:string" />
+              <xs:element minOccurs="0" name="SALDO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbFiltroSintetico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NOMFILEMP" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="SALDO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

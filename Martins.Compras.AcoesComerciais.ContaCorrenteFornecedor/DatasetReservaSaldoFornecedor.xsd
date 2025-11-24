@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetReservaSaldoFornecedor" targetNamespace="http://tempuri.org/DatasetReservaSaldoFornecedor.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetReservaSaldoFornecedor.xsd"
+	xmlns:mstns="http://tempuri.org/DatasetReservaSaldoFornecedor.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetReservaSaldoFornecedor" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="T0123159">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODFRN" type="xs:decimal" />
+							<xs:element name="CODACOCMC" type="xs:string" />
+							<xs:element name="TIPDSNDSCBNF" type="xs:decimal" />
+							<xs:element name="VLRSLDRSVFRN" type="xs:decimal" />
+							<xs:element name="FLGAPVACOCMC" type="xs:string" />
+							<xs:element name="FLGLMTCNTCRR" type="xs:string" />
+							<xs:element name="TIPACOCMC" type="xs:string" minOccurs="0" />
+							<xs:element name="DATAPVACOCMC" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="VLRRLZACOCMC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DATACEACOCMC" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="VLRACEACOCMC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VLRACRCAPACOCMC" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DatasetReservaSaldoFornecedorKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:T0123159" />
+			<xs:field xpath="mstns:CODFRN" />
+			<xs:field xpath="mstns:CODACOCMC" />
+			<xs:field xpath="mstns:TIPDSNDSCBNF" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

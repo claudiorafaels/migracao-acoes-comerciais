@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetEntidade.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetEntidade.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetEntidade.xsd" id="DatasetEntidade" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetEntidade">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0125046">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPPODCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMREFPOD" type="xs:decimal" />
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODEDEABGMIX" type="xs:decimal" />
+              <xs:element name="DATREFAPU" type="xs:dateTime" />
+              <xs:element name="VLRBSECALAPUVLRRCB" type="xs:decimal" />
+              <xs:element name="VLRBSECALIDCPOD" type="xs:decimal" />
+              <xs:element name="VLRBSECALIDCPODANT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERCRS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFXAAVL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERAPUVLRRCBREFFXA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRRCBEFTFXA" type="xs:decimal" />
+              <xs:element name="QDEMERCMPPOD" type="xs:decimal" />
+              <xs:element name="QDEMERDVLPOD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATNGCPMS" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VLRIPIACUPOD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRICMACUPOD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRSBTTBTACUPOD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRFATBRTACUPOD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QDETNLACUPOD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPFRMDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRDSCRCBEFTFXA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATHRAALTRGT" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NOMACSUSRSIS" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRPISACUPODAPUCTT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMCTTFRNAPUPOD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRCRDDISCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRCRDDSPUTZCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATAPUPODCTTFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VLRAPUPODCTTFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetEntidadeKey1">
+      <xs:selector xpath=".//mstns:T0125046" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPPODCTTFRN" />
+      <xs:field xpath="mstns:NUMREFPOD" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+      <xs:field xpath="mstns:DATREFAPU" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

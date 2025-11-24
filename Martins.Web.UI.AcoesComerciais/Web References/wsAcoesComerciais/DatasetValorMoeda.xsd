@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetValorMoeda.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetValorMoeda.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetValorMoeda.xsd" id="DatasetValorMoeda" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetValorMoeda">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0100094">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPMOE" type="xs:decimal" />
+              <xs:element name="MESREF" type="xs:decimal" />
+              <xs:element name="VLRMOE" type="xs:decimal" />
+              <xs:element name="DATULTATLVLRMOE" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetValorMoedaKey1">
+      <xs:selector xpath=".//mstns:T0100094" />
+      <xs:field xpath="mstns:TIPMOE" />
+      <xs:field xpath="mstns:MESREF" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

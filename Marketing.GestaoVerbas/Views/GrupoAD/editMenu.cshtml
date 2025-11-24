@@ -1,0 +1,44 @@
+﻿@using Marketing.GestaoVerbas.ViewModel
+@model GrupoADViewModel
+
+<div id="divEditMenu">
+    <div class="row py-1">
+        <div class="mx-auto">
+            <ul class="nav nav-pills" style="font-size:25px;">
+
+
+                <li class="nav-item">
+                    <a title="Voltar" style="cursor: pointer;" class="nav-link gray bg-transparent" onclick="ModeSearch()">
+                        <i class="fa fa-arrow-left"></i>&nbsp;
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a title="Salvar" style="cursor: pointer;border:none;" class="nav-link gray bg-transparent" id="btnSalvarControleAcesso" onclick="SalvarControleAcesso(@Model.CodGrupoAcesso)"> <i class="fa fa-save"></i>&nbsp;</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="dropdown-divider" style="margin-top:-12px;"></div>
+    <br />
+
+    @Html.HiddenFor(model => model.CodGrupoAcesso, new { id = "hdfEditMenuCodGrupoAcesso" })
+
+    <div class="card bg-primary" id="formMenu">
+        <div class="card-header text-white">
+            <h5>Menus</h5>
+        </div>
+
+        <div id="divCheckMenu" class="arvore card-body bg-white">
+            @Html.Partial("menu", Model)
+        </div>
+    </div>
+
+</div>
+
+<!-- Script -->
+@section Scripts {
+    @Scripts.Render("~/Scripts/pagina/grupoad.js")
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DataSetRelatorioSaldoDisponivelFornecedorCelula.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DataSetRelatorioSaldoDisponivelFornecedorCelula.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DataSetRelatorioSaldoDisponivelFornecedorCelula.xsd" id="DataSetRelatorioSaldoDisponivelFornecedorCelula" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DataSetRelatorioSaldoDisponivelFornecedorCelula">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TbAnalitico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODFRN" type="xs:long" />
+              <xs:element minOccurs="0" name="TIPEMPENHO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESEMPENHO" type="xs:string" />
+              <xs:element minOccurs="0" name="SALDO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="VlrSldRsv" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESDSNDSCBNF" type="xs:string" />
+              <xs:element minOccurs="0" name="VlrRcb" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesAlcVbaFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="PerAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrRcbAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrSldDspAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PmtDdo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

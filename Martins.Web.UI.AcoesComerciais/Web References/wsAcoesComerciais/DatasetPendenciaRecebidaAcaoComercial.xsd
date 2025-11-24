@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetPendenciaRecebidaAcaoComercial.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetPendenciaRecebidaAcaoComercial.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetPendenciaRecebidaAcaoComercial.xsd" id="DatasetPendenciaRecebidaAcaoComercial" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetPendenciaRecebidaAcaoComercial">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0119291">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="CODFILEMP" type="xs:decimal" />
+              <xs:element name="NUMPNDFRN" type="xs:decimal" />
+              <xs:element name="NUMSEQPGTPND" type="xs:decimal" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODBCO" type="xs:decimal" />
+              <xs:element name="DATVNCNGCPNDFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATBXAPNDFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NUMCHQPND" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMORDPGTPND" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODAGE" type="xs:decimal" />
+              <xs:element name="VLRRNGPNDFRN" type="xs:decimal" />
+              <xs:element name="VLRPGOPND" type="xs:decimal" />
+              <xs:element name="FLGGRCNOTFSCDVL" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMNOTFSCFRNCTB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATTRNPNDACOCMC" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetPendenciaRecebidaAcaoComercialKey1">
+      <xs:selector xpath=".//mstns:T0119291" />
+      <xs:field xpath="mstns:CODEMP" />
+      <xs:field xpath="mstns:CODFILEMP" />
+      <xs:field xpath="mstns:NUMPNDFRN" />
+      <xs:field xpath="mstns:NUMSEQPGTPND" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/dataSetParametro.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/dataSetParametro.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dataSetParametro.xsd" id="dataSetParametro" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="dataSetParametro">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0114095">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMPMTSIS" type="xs:long" />
+              <xs:element minOccurs="0" name="NUMULTNGCCMP" type="xs:long" />
+              <xs:element minOccurs="0" name="NUMULTSEQLSTPCOFRN" type="xs:long" />
+              <xs:element minOccurs="0" name="NUMULTMSGFRN" type="xs:long" />
+              <xs:element minOccurs="0" name="DATULTATZHST" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PERTXAPIS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERTXAFNS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERTXAICRRMC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QDEDIADFCFRTMRB" type="xs:int" />
+              <xs:element minOccurs="0" name="NUMULTPEDCMP" type="xs:long" />
+              <xs:element minOccurs="0" name="CODEMPREF" type="xs:int" />
+              <xs:element minOccurs="0" name="NUMULTCTTFRN" type="xs:long" />
+              <xs:element minOccurs="0" name="NUMULTCSLCTTFRN" type="xs:long" />
+              <xs:element minOccurs="0" name="NUMDIAANTMSGFIMCTT" type="xs:long" />
+              <xs:element minOccurs="0" name="QDEDIAMNMFIMAPU" type="xs:int" />
+              <xs:element minOccurs="0" name="PERDIFMAXPEDARD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERDIFMAXSPRPEDARD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERPADCALTXAPISNCM" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERPADCALTXAFNSNCM" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QDEMAXDIAATPENTPED" type="xs:int" />
+              <xs:element minOccurs="0" name="QDEMAXDIAPGCENTPED" type="xs:int" />
+              <xs:element minOccurs="0" name="QDEMINDIACNFENT" type="xs:int" />
+              <xs:element minOccurs="0" name="QDEMAXDIACNFENT" type="xs:int" />
+              <xs:element minOccurs="0" name="NUMDIAPRIAPUARDFRN" type="xs:int" />
+              <xs:element minOccurs="0" name="QDEDIAPVSCAPGIRMER" type="xs:int" />
+              <xs:element minOccurs="0" name="NUMMNMORDPGTFRN" type="xs:long" />
+              <xs:element minOccurs="0" name="NUMPRXORDPGTFRN" type="xs:long" />
+              <xs:element minOccurs="0" name="NUMMAXORDPGTFRN" type="xs:long" />
+              <xs:element minOccurs="0" name="VLRMNMAVLRETRSC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERLIMDSTMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QDEDIACALCTNVLRCMP" type="xs:long" />
+              <xs:element minOccurs="0" name="QDEPADSMLETARETRSC" type="xs:long" />
+              <xs:element minOccurs="0" name="QDEPADGRPFXASML" type="xs:long" />
+              <xs:element minOccurs="0" name="PERAJTCALPBBRETRSC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QDEDIARSVAGDRCB" type="xs:int" />
+              <xs:element minOccurs="0" name="PERCTNCBTANLPED" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="dataSetParametroKey1">
+      <xs:selector xpath=".//mstns:T0114095" />
+      <xs:field xpath="mstns:NUMPMTSIS" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetContrato.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetContrato.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetContrato.xsd" id="DatasetContrato" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetContrato">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0124945">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="DATCADCTTFRN" type="xs:dateTime" />
+              <xs:element name="DATINIPODVGRCTTFRN" type="xs:dateTime" />
+              <xs:element name="DATVNCCTTFRN" type="xs:dateTime" />
+              <xs:element name="TIPPODCTTFRN" type="xs:decimal" />
+              <xs:element name="QDEMESAPUPODVGRCTT" type="xs:decimal" />
+              <xs:element name="FLGPGCAUTCTTFRN" type="xs:string" />
+              <xs:element name="QDEPGCEFTCTTFRN" type="xs:decimal" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATDSTCTTFRN" type="xs:dateTime" />
+              <xs:element name="FLGFIMCTTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="FLGAPUCRSREFPODANT" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMNVOCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QDEITECTLFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPFRMPGTCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPFRNCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPPGTNOTFSCCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPABGTABPCOCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPENCFINCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMDIAPRZPGTCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERDSCFINCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERENCFINCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESOBSCNDPGTCTTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="INDDIFALQICMCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDDIFCNLVNDCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMDIAATLTABPCOFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESOBSTABPCOCTTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="INDTRCMERCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESOBSFRMPGTCTTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="CODBCOCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODAGEBCOCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODCNTCRRBCOCTTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="INDDSCCMCPETCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMDIAVNCPRDCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESOBSDSCCMCPET" type="xs:string" />
+              <xs:element minOccurs="0" name="DESLNHPRDCTTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPFRMDSCDVLMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPFRTDVLMER" type="xs:string" />
+              <xs:element minOccurs="0" name="DESOBSDVLMER" type="xs:string" />
+              <xs:element minOccurs="0" name="INDAPUPISCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDAPUPISNCMCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPUTZALCVBAFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0100426">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCPR" type="xs:decimal" />
+              <xs:element name="NUMTLFFRN" type="xs:string" />
+              <xs:element name="ENDFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCIDFRN" type="xs:decimal" />
+              <xs:element name="DATCADFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CODREPFRN" type="xs:decimal" />
+              <xs:element name="TIPFRTPADFRN" type="xs:string" />
+              <xs:element name="DESNOMFRNCMNDDO" type="xs:string" />
+              <xs:element name="FLGCMNDDOFRN" type="xs:string" />
+              <xs:element name="QDEDIAATZPADFRN" type="xs:decimal" />
+              <xs:element name="TIPCALATZPAD" type="xs:string" />
+              <xs:element name="NUMIDTTIPCALATZPAD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATFCHANOFSC" type="xs:dateTime" />
+              <xs:element name="CODGRPFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATDSTDIVFRN" type="xs:dateTime" />
+              <xs:element name="NUMSEQPCSENVINFFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMCGCFRNCMNDDOITX" type="xs:string" />
+              <xs:element name="FLGCMNDDOITX" type="xs:string" />
+              <xs:element name="CLFCRVABCFRN" type="xs:string" />
+              <xs:element name="POSCRVABCFRN" type="xs:decimal" />
+              <xs:element name="FLGFRNFBR" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCSS" type="xs:decimal" />
+              <xs:element name="NOMFNTFRN" type="xs:string" />
+              <xs:element name="INDATDDTOFRN" type="xs:decimal" />
+              <xs:element name="CODFRNPCPAPUARDFRN" type="xs:decimal" />
+              <xs:element name="NOMUSRCONCTOFRN" type="xs:string" />
+              <xs:element name="IDTENDCREETNFINFRN" type="xs:string" />
+              <xs:element name="CODBAI" type="xs:decimal" />
+              <xs:element name="CODCEP" type="xs:decimal" />
+              <xs:element name="CODIDTFRNBCOBRD" type="xs:decimal" />
+              <xs:element name="CODDIGVRFFRNBCOBRD" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPIDTEMPASCACOCMC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFRNEMPASCACOCMC" type="xs:decimal" />
+              <xs:element name="CODCRVABCFRNDRT" type="xs:string" />
+              <xs:element name="NUMPOSCRVABCFRNDRT" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0124961">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPFRMDSCBNF" type="xs:decimal" />
+              <xs:element name="TIPMOE" type="xs:decimal" />
+              <xs:element name="PERDISCNTCRRFRN" type="xs:decimal" />
+              <xs:element name="FLGGRCACOCMC" type="xs:string" />
+              <xs:element name="NUMDIAVNCACOCMC" type="xs:int" />
+              <xs:element minOccurs="0" name="DATDSTCSL" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DESOBSREFCSL" type="xs:string" />
+              <xs:element name="DATINIVGRCSLCTTFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TIPDSNDSCBNFFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPDSNDSCBNFMRT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FLGDSCAUTPED" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPDSCPGTFVC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IndCalGrpFrnAsc" type="xs:int" />
+              <xs:element minOccurs="0" name="QdeIteVarMix" type="xs:int" />
+              <xs:element minOccurs="0" name="PerIteVarMix" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatRefApuPodCslCtt" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="QdeMesApuMedPod" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrLimFatCalPod" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipLimCalPod" type="xs:int" />
+              <xs:element minOccurs="0" name="QdePedPodApuCsl" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0124953">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCSLCTTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="INDUTZCSLALCVBAFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDUTLVLRFXA" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0124996">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODEDEABGMIX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FLGMERECS" type="xs:string" />
+              <xs:element minOccurs="0" name="FLGTRTMERNVO" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPBSECALAPUVLRRCB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPBSECALAPUIDCCRS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERFIXAPUVLRRCB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FLGCALVLRRCBFXACRS" type="xs:string" />
+              <xs:element minOccurs="0" name="FLGFXAAVLPER" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRFIXAPUVLRRCB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRFATMNMCOBFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPBSECALVLRFATMNM" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDINCIPIAPUCTT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDINCICMAPUCTT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDINCPISAPUCTT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDINCSBTTBTAPUCTT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDGRCBSEANT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERORIFIXAPUVLRRCB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDSUSAPUARDFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0124970">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPPODCTTFRN" type="xs:decimal" />
+              <xs:element name="DESPODCTTFRN" type="xs:string" />
+              <xs:element name="QDEMESREFPOD" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0125011">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESEDEABGMIX" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0125038">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODFXAAVL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRFXAAVL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRRCBREFFXA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERAPUVLRRCBREFFXA" type="xs:decimal" />
+              <xs:element name="DATREFINIUTZPMT" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATCADPMT" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PERORIAPUVLRRCBFXA" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0124988">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPPODCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMREFPOD" type="xs:decimal" />
+              <xs:element name="DATINIPOD" type="xs:dateTime" />
+              <xs:element name="DATFIMPOD" type="xs:dateTime" />
+              <xs:element name="FLGESTAPUPOD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMSEQREFPOD" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0125020">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODMER" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0134010">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="CODFRNPCPAPUARDFRN" type="xs:decimal" />
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="CODFRNASCAPUARDFRN" type="xs:decimal" />
+              <xs:element name="NUMCTTFRNACS" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0138482">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPUNDPGTCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0138458">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPUNDPGTCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESTIPUNDPGTCTTFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0138490">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPFRTCTTFRN" type="xs:string" />
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESOBSTIPFRTCTTFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0138504">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPSVCCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="INDSVCCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESOBSSVCCTTFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0138466">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPSVCCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESTIPSVCCTTFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0138512">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPRLCCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="INDRLCCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESOBSRLCCTTFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0138474">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPRLCCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESTIPRLCCTTFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0100086">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODMER" type="xs:decimal" />
+              <xs:element name="DESMER" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCTGUNIMER" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TbPRCDLCnsAscCslFrn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODFRNPCPAPUARDFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDGRP" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="queryFiliados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODCLI" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMCLI" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRFIXAPUVLRRCB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CADASTRADO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RLCABGCTTFIL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODCLI" type="xs:decimal" />
+              <xs:element name="VLRFIXAPUVLRRCB" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ComparativoValores">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NUMCTTFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Aditamento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCSLCTTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="PERFIXAPUVLRRCB" type="xs:decimal" />
+              <xs:element name="CODFXAAVL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRFXAAVL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERAPUVLRRCBREFFXA" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATVNCCTTFRN" type="xs:dateTime" />
+              <xs:element name="CODEDEABGMIX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERORIFIXAPUVLRRCB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERORIAPUVLRRCBFXA" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AditamentoPercentuais">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PERUTZVLRAPUARDFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERRCTTBTADIARDFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERDSCNOTFSCFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AditamentoGravado">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="DATINIVGRADIARDFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATFIMVGRADIARDFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PERUTZVLRAPUARDFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERRCTTBTADIARDFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERDSCNOTFSCFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RLCARDFRNADINOTFSC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODEDEABGMIX" type="xs:decimal" />
+              <xs:element name="DATINIVGRADIARDFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATFIMVGRADIARDFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PERUTZVLRAPUARDFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERRCTTBTADIARDFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERDSCNOTFSCFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATCNCADIARDFRN" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RLCARDFRNSMLADI">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODEDEABGMIX" type="xs:decimal" />
+              <xs:element name="DATSMLADIARDFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PERUTZVLRAPUARDFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERRCTTBTADIARDFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERDSCNOTFSCFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFNCSMLADIARDFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATEFTSMLADIARDFRN" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey1">
+      <xs:selector xpath=".//mstns:T0124945" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey2">
+      <xs:selector xpath=".//mstns:T0100426" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey3">
+      <xs:selector xpath=".//mstns:T0124961" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey4">
+      <xs:selector xpath=".//mstns:T0124953" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey5">
+      <xs:selector xpath=".//mstns:T0124996" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey6">
+      <xs:selector xpath=".//mstns:T0124970" />
+      <xs:field xpath="mstns:TIPPODCTTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey7">
+      <xs:selector xpath=".//mstns:T0125011" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey8">
+      <xs:selector xpath=".//mstns:T0125038" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+      <xs:field xpath="mstns:CODFXAAVL" />
+      <xs:field xpath="mstns:DATREFINIUTZPMT" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey9">
+      <xs:selector xpath=".//mstns:T0124988" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPPODCTTFRN" />
+      <xs:field xpath="mstns:NUMREFPOD" />
+      <xs:field xpath="mstns:DATINIPOD" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey10">
+      <xs:selector xpath=".//mstns:T0125020" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:CODMER" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey11">
+      <xs:selector xpath=".//mstns:T0134010" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:CODFRNPCPAPUARDFRN" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:CODFRNASCAPUARDFRN" />
+      <xs:field xpath="mstns:NUMCTTFRNACS" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey12">
+      <xs:selector xpath=".//mstns:T0138482" />
+      <xs:field xpath="mstns:TIPUNDPGTCTTFRN" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey13">
+      <xs:selector xpath=".//mstns:T0138458" />
+      <xs:field xpath="mstns:TIPUNDPGTCTTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey14">
+      <xs:selector xpath=".//mstns:T0138490" />
+      <xs:field xpath="mstns:TIPFRTCTTFRN" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey15">
+      <xs:selector xpath=".//mstns:T0138504" />
+      <xs:field xpath="mstns:TIPSVCCTTFRN" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey16">
+      <xs:selector xpath=".//mstns:T0138466" />
+      <xs:field xpath="mstns:TIPSVCCTTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey17">
+      <xs:selector xpath=".//mstns:T0138512" />
+      <xs:field xpath="mstns:TIPRLCCTTFRN" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey18">
+      <xs:selector xpath=".//mstns:T0138474" />
+      <xs:field xpath="mstns:TIPRLCCTTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey19">
+      <xs:selector xpath=".//mstns:T0100086" />
+      <xs:field xpath="mstns:CODMER" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey20">
+      <xs:selector xpath=".//mstns:RLCABGCTTFIL" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+      <xs:field xpath="mstns:CODCLI" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey21">
+      <xs:selector xpath=".//mstns:Aditamento" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:CODFXAAVL" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey22">
+      <xs:selector xpath=".//mstns:RLCARDFRNADINOTFSC" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+      <xs:field xpath="mstns:DATINIVGRADIARDFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoKey23">
+      <xs:selector xpath=".//mstns:RLCARDFRNSMLADI" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+      <xs:field xpath="mstns:DATSMLADIARDFRN" />
+    </xs:unique>
+    <xs:keyref name="T0124996RLCABGCTTFIL" refer="mstns:DatasetContratoKey5">
+      <xs:selector xpath=".//mstns:RLCABGCTTFIL" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+    </xs:keyref>
+    <xs:keyref name="T0138474T0138512" refer="mstns:DatasetContratoKey18">
+      <xs:selector xpath=".//mstns:T0138512" />
+      <xs:field xpath="mstns:TIPRLCCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0124945T0138512" refer="mstns:DatasetContratoKey1">
+      <xs:selector xpath=".//mstns:T0138512" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0138466T0138504" refer="mstns:DatasetContratoKey16">
+      <xs:selector xpath=".//mstns:T0138504" />
+      <xs:field xpath="mstns:TIPSVCCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0124945T0138504" refer="mstns:DatasetContratoKey1">
+      <xs:selector xpath=".//mstns:T0138504" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0124945T0138490" refer="mstns:DatasetContratoKey1">
+      <xs:selector xpath=".//mstns:T0138490" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0138458T0138482" refer="mstns:DatasetContratoKey13">
+      <xs:selector xpath=".//mstns:T0138482" />
+      <xs:field xpath="mstns:TIPUNDPGTCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0124945T0138482" refer="mstns:DatasetContratoKey1">
+      <xs:selector xpath=".//mstns:T0138482" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0124961T0134010" refer="mstns:DatasetContratoKey3">
+      <xs:selector xpath=".//mstns:T0134010" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0124961T0125020" refer="mstns:DatasetContratoKey3">
+      <xs:selector xpath=".//mstns:T0125020" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0124970T0124988" refer="mstns:DatasetContratoKey6">
+      <xs:selector xpath=".//mstns:T0124988" />
+      <xs:field xpath="mstns:TIPPODCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0124961T0124988" refer="mstns:DatasetContratoKey3">
+      <xs:selector xpath=".//mstns:T0124988" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0124996T0125038" refer="mstns:DatasetContratoKey5">
+      <xs:selector xpath=".//mstns:T0125038" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+    </xs:keyref>
+    <xs:keyref name="T0125011T0124996" refer="mstns:DatasetContratoKey7">
+      <xs:selector xpath=".//mstns:T0124996" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+    </xs:keyref>
+    <xs:keyref name="T0124961T0124996" refer="mstns:DatasetContratoKey3">
+      <xs:selector xpath=".//mstns:T0124996" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+    </xs:keyref>
+    <xs:keyref msdata:ConstraintOnly="true" name="T0124945T0124996" refer="mstns:DatasetContratoKey1">
+      <xs:selector xpath=".//mstns:T0124996" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0124953T0124961" refer="mstns:DatasetContratoKey4">
+      <xs:selector xpath=".//mstns:T0124961" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+    </xs:keyref>
+    <xs:keyref msdata:ConstraintOnly="true" name="T0124945T0124961" refer="mstns:DatasetContratoKey1">
+      <xs:selector xpath=".//mstns:T0124961" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+    </xs:keyref>
+    <xs:keyref name="T0100426T0124945" refer="mstns:DatasetContratoKey2">
+      <xs:selector xpath=".//mstns:T0124945" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

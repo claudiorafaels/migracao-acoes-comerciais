@@ -1,0 +1,144 @@
+﻿@using Marketing.GestaoVerbas.ViewModel
+@model IEnumerable<NegociacaoVerbaDestinoViewModel>
+
+<div class="card bg-primary">
+    <div class="card-header text-white">
+        <h5>Distribuição da Verba</h5>
+    </div>
+    <div class="card-body bg-light">
+        @if (Util.VerificaMenuUsuario("5"))
+        {
+        <div class="row div-add-distribuicao-verba">
+            @{
+                Marketing.GestaoVerbas.ViewModel.NegociacaoVerbaDestinoViewModel item = new Marketing.GestaoVerbas.ViewModel.NegociacaoVerbaDestinoViewModel();
+
+                SelectListItem[] destinos = new SelectListItem[3];
+                destinos[0] = new SelectListItem { Value = "", Text = "Selecione..." };
+                destinos[1] = new SelectListItem { Value = "1", Text = "Ações Comerciais" };
+                destinos[2] = new SelectListItem { Value = "2", Text = "Ações em Preço" };
+
+                SelectListItem[] objetivos = new SelectListItem[1];
+                objetivos[0] = new SelectListItem { Value = "", Text = "Selecione..." };
+            }
+            <div class="col-md-4">
+                @Html.LabelFor(model => item.NomDestino)
+                <br />
+                @Html.ValidationMessageFor(model => item.NomDestino, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => item.CodDestino, destinos, new { @class = "form-control", id = "drpAddDestinoObjetivoCodDestino", onchange = "jsdrpAddDestinoObjetivoCodDestinoChange(this)" })
+            </div>
+
+            <div class="col-md-4">
+                @Html.LabelFor(model => item.NomObjetivo)
+                <br />
+                @Html.ValidationMessageFor(model => item.NomObjetivo, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => item.CodObjetivo, objetivos, new { @class = "form-control", id = "drpAddDestinoObjetivoCodObjetivo" })
+            </div>
+            <div class="col-4">
+                @Html.LabelFor(model => item.VlrVerba)
+                @Html.ValidationMessageFor(model => item.VlrVerba, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => item.VlrVerba, new { htmlAttributes = new { @class = "form-control", data_val = false, alt = "decimal_positivo_2", id = "txtAddDestinoObjetivoVlrVerba" } })
+            </div>
+        </div>
+        <div class="row bg-light div-add-distribuicao-verba">
+            <div class="col-md-8">
+                <div class="row bg-light" style="padding-bottom: 1rem; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">
+                    <div class="col-12">
+                        @Html.LabelFor(model => item.DesObservacao)
+                        @Html.ValidationMessageFor(model => item.DesObservacao, "", new { @class = "text-danger" })
+                        @Html.EditorFor(model => item.DesObservacao, new { htmlAttributes = new { @class = "form-control", id = "txtAddDestinoObjetivoDesObservacao", data_val = false } })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <br />
+                <button id="btnAdd" type="button" title="Adicionar" class="btn fa fa-plus" style="cursor: pointer;margin-top: 7px; border-bottom-right-radius:3px;border-top-right-radius:3px;" onclick="jsAddObjetivoDestino()"></button>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+
+
+                }
+
+        @*Grid*@
+        <div class="row bg-secondary">
+            <table id="tbGrid" class="table table-hover table-striped">
+                <thead class="bg-secondary">
+                    <tr role="row">
+                        <th class="center border" style="min-width: 96px;"></th>
+                        <th class="border">
+                            @Html.DisplayNameFor(model => model.NomDestinoObjetivo)
+                        </th>
+                        <th class="border">
+                            @Html.DisplayNameFor(model => model.NomDestino)
+                        </th>
+                        <th class="border">
+                            @Html.DisplayNameFor(model => model.NomObjetivo)
+                        </th>
+                        <th class="border">
+                            @Html.DisplayNameFor(model => model.VlrVerba)
+                        </th>
+                        <th class="border">
+                            @Html.DisplayNameFor(model => model.DesObservacao)
+                        </th>
+                        <th class="border">
+                            @Html.DisplayNameFor(model => model.CodCarimbo)
+                        </th>
+                        <th class="border">
+                            @Html.DisplayNameFor(model => model.CodPromessa)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tbGridBody" class="bg-light border">
+                    @{
+                    foreach (var item2 in Model)
+                    {
+                        <tr class="odd" style="border-bottom: none;">
+
+                            <td class="center border">
+                                @if (Util.VerificaMenuUsuario("5"))
+                            {
+                                <button type="button" title="Remover" class="btn bg-danger btn-remover-distribuicao-verba" onclick="jsRemoverNegociacaoVerbaDestino(@item2.CodDestinoObjetivo)"><i class="fa fa-trash"></i></button>
+                        }
+
+                                @if (item2.CodObjetivo == 1 && item2.CodNegociacaoVerba != null)
+                            {
+                                <button type="button" title="Carimbo" class="btn bg-primary" onclick="jsEditCarimbo( @item2.CodNegociacaoVerba, @item2.CodDestinoObjetivo )"><i class="fa fa-money"></i></button>
+                        }
+                            </td>
+                            <td class="border">
+                                @Html.HiddenFor(modelItem => item2.CodDestinoObjetivo)
+                                @Html.DisplayFor(modelItem => item2.NomDestinoObjetivo)
+                            </td>
+                            <td class="border">
+                                @Html.HiddenFor(modelItem => item2.CodDestino)
+                                @Html.DisplayFor(modelItem => item2.NomDestino)
+                            </td>
+                            <td class="border">
+                                @Html.HiddenFor(modelItem => item2.CodObjetivo)
+                                @Html.DisplayFor(modelItem => item2.NomObjetivo)
+                            </td>
+                            <td class="border">
+                                @Html.DisplayFor(modelItem => item2.VlrVerba)
+                            </td>
+                            <td class="border">
+                                @Html.DisplayFor(modelItem => item2.DesObservacao)
+                            </td>
+                            <td class="border">
+                                @Html.DisplayFor(modelItem => item2.CodCarimbo)
+                            </td>
+                            <td class="border">
+                                @Html.DisplayFor(modelItem => item2.CodPromessa)
+                            </td>
+                        </tr>
+                }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

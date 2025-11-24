@@ -1,0 +1,1952 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Martins.Web.Services.AcoesComerciais</name>
+    <version>1.0.0.0</version>
+    <fullname>Martins.Web.Services.AcoesComerciais, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</fullname>
+  </assembly>
+  <members>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterContratoXClausulaContrato(System.DateTime,System.DateTime,System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna os dados para tabela T0124961 com base em atributos que não fazem parte da chave primária. 
+ Descrição da entidade:RELACAO CLAUSULA COM CONTRATO DE FORNECIMENTO 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="DATDSTCSL">DATA DESATIVACAO CLAUSULA.</param>
+ <param name="DATDSTCSLInicial">DATA DESATIVACAO CLAUSULA INICIAL.</param>
+ <param name="DATDSTCSLFinal">DATA DESATIVACAO CLAUSULA FINAL.</param>
+ <param name="NUMCSLCTTFRN">NUMERO DA CLAUSULA DO CONTRATO DE FORNECIMENTO.</param>
+ <param name="NUMCTTFRN">NUMERO DO CONTRATO DE FORNECIMENTO.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    31/10/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarContratoXClausulaContrato(Martins.Compras.AcoesComerciais.AcordoFornecimento.DatasetContrato)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="ds">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    31/10/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterContratoFornecimentoXAbatimentoPerda(System.Decimal,System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Retorna um registro com base em sua chave primária. Entidade principal:T0153589 
+ </summary>
+ <param name="CODEDEABGMIX" />
+ <param name="DATREFAPU" />
+ <param name="NUMCSLCTTFRN" />
+ <param name="NUMCTTFRN" />
+ <param name="NUMREFPOD" />
+ <param name="NUMSEQRLCCTTPMS" />
+ <param name="TIPEDEABGMIX" />
+ <param name="TIPPODCTTFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	16/11/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarContratoFornecimentoXAbatimentoPerda(Martins.Compras.AcoesComerciais.Gestao.DatasetContratoFornecimentoXAbatimentoPerda)">
+      <summary>
+ Atualização dos dados. Entidade principalT0153589 
+ </summary>
+ <param name="DatasetContratoFornecimentoXAbatimentoPerda" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	16/11/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterContratoFornecimentosXAbatimentosPerda(System.Decimal,System.String)">
+      <summary>
+ Este método retorna o SQL para tabela T0153589 com base nos parametros. 
+ Descrição da entidade:RELACAO CONTRATO FORNECIMENTO X RELACAO ABATIMENTO PERDA 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+     [Elifázio]    30/11/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterAcordoXMensagem(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Decimal)">
+      <summary>
+ Retorna um registro com base em sua chave primária. Entidade principal:T0153031 
+ </summary>
+ <param name="CODEMP" />
+ <param name="CODFILEMP" />
+ <param name="CODPMS" />
+ <param name="DATNGCPMS" />
+ <param name="NUMSEQOBSPMS" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	16/11/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarAcordoXMensagem(Martins.Compras.AcoesComerciais.Gestao.DatasetAcordoXMensagem)">
+      <summary>
+ Atualização dos dados. Entidade principalT0153031 
+ </summary>
+ <param name="DatasetAcordoXMensagem" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	16/11/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterBonificacaoDuplicataEmitir(System.Decimal,System.Decimal,System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Retorna um registro com base em sua chave primária. Entidade principal:T0152663 
+ </summary>
+ <param name="CODEDEABGMIX" />
+ <param name="CODFRN" />
+ <param name="DATREFAPU" />
+ <param name="NUMCSLCTTFRN" />
+ <param name="NUMCTTFRN" />
+ <param name="NUMREFPOD" />
+ <param name="TIPEDEABGMIX" />
+ <param name="TIPPODCTTFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	16/11/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarBonificacaoDuplicataEmitir(Martins.Compras.AcoesComerciais.Gestao.DatasetBonificacaoDuplicataEmitir)">
+      <summary>
+ Atualização dos dados. Entidade principalT0152663 
+ </summary>
+ <param name="DatasetBonificacaoDuplicataEmitir" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	16/11/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterPerdaEmitida(System.Decimal,System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Retorna um registro com base em sua chave primária. Entidade principal:T0152647 
+ </summary>
+ <param name="CODEDEABGMIX" />
+ <param name="DATREFAPU" />
+ <param name="NUMCSLCTTFRN" />
+ <param name="NUMCTTFRN" />
+ <param name="NUMREFPOD" />
+ <param name="NUMSEQRLCCTTPMS" />
+ <param name="TIPEDEABGMIX" />
+ <param name="TIPPODCTTFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	16/11/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterAbatimentoPerdasAcoFrn(System.Decimal,System.Boolean)">
+      <summary>
+ Este método retorna o SQL para tabela T0152647. 
+ Selecione os abatimento referente as perdas do processo Aco. Frn 
+ Descrição da entidade:RELACAO PERDAS EMITIDAS 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    04/11/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarPerdaEmitida(Martins.Compras.AcoesComerciais.Gestao.DatasetPerdaEmitida)">
+      <summary>
+ Atualização dos dados. Entidade principalT0152647 
+ </summary>
+ <param name="DatasetPerdaEmitida" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	16/11/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterProximoNumeroOP">
+      <summary>
+ Obter Proximo numero de OP. 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	17/11/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarContratoTabelas(Martins.Compras.AcoesComerciais.AcordoFornecimento.DatasetContrato)">
+      <summary>
+ Atualiza os dados no banco de todas as tabelas que envolve a criação do contrato 
+ </summary>
+ <param name="ds">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    28/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterSimulacaoSinteticaDeCrescimento(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PCTDLSmlStnCrs.PRCDLSmlStnCrs 
+ </summary>
+ <param name="pvCodDivCmpEnt" />
+ <param name="pvCodFrnEnt" />
+ <param name="pvCodCprEnt" />
+ <param name="pvTipPodEnt" />
+ <param name="pvNumPorEnt" />
+ <param name="pvNumPor1Ent" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDLSmlStnCrs.PRCDLSmlStnCrs 
+ LEGADO:spCLJ121 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    14/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.FornecedorPertenceCelulaAtendidaUsuario(System.Decimal,System.String)">
+      <summary>
+ Retorna verdadeiro se o fornecedor pertence a celula atendida pelo usuário 
+ </summary>
+ <param name="CODFRN" />
+ <param name="NOMACSUSRSIS" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/12/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterCategoriasDoFornecedor(System.Decimal,System.Decimal)">
+      <summary>
+ Obter as categorias existentes para o fornecedor 
+ </summary>
+ <param name="CODEMP" />
+ <param name="CODFRNPCPMER" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	5/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterMercadoriasDoFornecedor(System.Decimal,System.Decimal)">
+      <summary>
+ Obter as categorias do fornecedor. 
+ </summary>
+ <param name="CODEMP" />
+ <param name="CODFRNPCPMER" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	5/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterClausulasEmContratroVigentesDoFornecedor(System.Decimal)">
+      <summary>
+ Obtem as clásulas em um ou mais contratos, desde que esteja vigente, 
+ de um fornecedor específico 
+ </summary>
+ <param name="CODFRNPCPAPUARDFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	12/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterParametroFornecedorMmm(System.Decimal)">
+      <summary>
+ Retorna um registro com base em sua chave primária. Entidade principal:T0123884 
+ </summary>
+ <param name="CODFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	15/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterParametrosFornecedorMmm(System.Decimal,System.String)">
+      <summary>
+ Retorna registro(s) com base em atributos (não necessariamente chave primária). Entidade principal:T0123884 
+ </summary>
+ <param name="CODFRN" />
+ <param name="FLGFRNAJTCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	15/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarParametroFornecedorMmm(Martins.Compras.AcoesComerciais.AcordoFornecimento.DatasetParametroFornecedorMmm)">
+      <summary>
+ Atualização dos dados. Entidade principalT0123884 
+ </summary>
+ <param name="DatasetParametroFornecedorMmm" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	15/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterFiliadosContrato(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Obtem os filiados do contrato 
+ </summary>
+ <param name="NUMCTTFRN" />
+ <param name="NUMCSLCTTFRN" />
+ <param name="TIPEDEABGMIX" />
+ <param name="CODEDEABGMIX" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	21/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterAbrangenciaXContratoXFiliado(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Retorna um registro com base em sua chave primária. Entidade principal:RLCABGCTTFIL 
+ </summary>
+ <param name="CODCLI" />
+ <param name="CODEDEABGMIX" />
+ <param name="NUMCSLCTTFRN" />
+ <param name="NUMCTTFRN" />
+ <param name="TIPEDEABGMIX" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	23/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterAbrangenciasXContratoXFiliado(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Retorna registro(s) com base em atributos (não necessariamente chave primária). Entidade principal:RLCABGCTTFIL 
+ </summary>
+ <param name="CODCLI" />
+ <param name="CODEDEABGMIX" />
+ <param name="NUMCSLCTTFRN" />
+ <param name="NUMCTTFRN" />
+ <param name="TIPEDEABGMIX" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	23/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarAbrangenciaXContratoXFiliado(Martins.Compras.AcoesComerciais.AcordoFornecimento.DatasetContrato)">
+      <summary>
+ Atualização dos dados. Entidade principalRLCABGCTTFIL 
+ </summary>
+ <param name="DatasetContrato" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	23/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarAbrangenciaXContratoXFiliadoDeArquivoCSV(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Atualiza os relacionamento de abrangencia e Filiado a partir de um 
+ arquivo CSV 
+ </summary>
+ <param name="NUMCTTFRN" />
+ <param name="NUMCSLCTTFRN" />
+ <param name="TIPEDEABGMIX" />
+ <param name="CODEDEABGMIX" />
+ <param name="caminhoArquivoCSV" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	23/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterUsuarioXCelula(System.Decimal,System.String)">
+      <summary>
+ Retorna um registro com base em sua chave primária. Entidade principal:T0144920 
+ </summary>
+ <param name="CODDIVCMP" />
+ <param name="NOMACSUSRSIS" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	26/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterUsuariosXCelula(System.Decimal,System.String)">
+      <summary>
+ Retorna registro(s) com base em atributos (não necessariamente chave primária). Entidade principal:T0144920 
+ </summary>
+ <param name="CODDIVCMP" />
+ <param name="NOMACSUSRSIS" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	26/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarUsuarioXCelula(Martins.Compras.AcoesComerciais.Gestao.DatasetUsuarioXCelula)">
+      <summary>
+ Atualização dos dados. Entidade principalT0144920 
+ </summary>
+ <param name="DatasetUsuarioXCelula" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	26/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterTransferenciaVerbaFornecedor(System.Decimal)">
+      <summary>
+ Retorna um registro com base em sua chave primária. Entidade principal:CADTRNVBAFRN 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	27/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterTransferenciasVerbaFornecedorJOIN(System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Retorna um registro com base em sua chave primária. Entidade principal:CADTRNVBAFRN 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	27/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterMinhasAprovavoesEmTransferenciaVerbasFornecedor(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="CODFNC" />
+ <param name="TIPSTAFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterTransferenciasVerbaFornecedor(System.Decimal,System.String,System.Decimal,System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Retorna registro(s) com base em atributos (não necessariamente chave primária). Entidade principal:CADTRNVBAFRN 
+ </summary>
+ <param name="CODFNC" />
+ <param name="DESJSTTRNVBA" />
+ <param name="NUMFLUAPV" />
+ <param name="TIPALCVBAFRN" />
+ <param name="TIPDSNDSCBNFDSNTRN" />
+ <param name="TIPSTAFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarTransferenciaVerbaFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor)">
+      <summary>
+ Atualização dos dados. Entidade principalCADTRNVBAFRN 
+ </summary>
+ <param name="DatasetTransferenciaVerbaFornecedor" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	27/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelacaoTransferenciaVerbaFornecedor(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Retorna um registro com base em sua chave primária. Entidade principal:RLCTRNVBAFRN 
+ </summary>
+ <param name="CODFRN" />
+ <param name="NUMFLUAPV" />
+ <param name="TIPALCVBAFRN" />
+ <param name="TIPDSNDSCBNFORITRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	27/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelacaoTransferenciaVerbaFornecedorJoinT0153541JoinT0100426JoinT0113625JoinT0118570JoinT0109059(System.Decimal)">
+      <summary>
+ Obtem os registros da tabela:RLCTRNVBAFRN com seus respectivos relacionamentos 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	5/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelacoesTransferenciaVerbaFornecedor(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Retorna registro(s) com base em atributos (não necessariamente chave primária). Entidade principal:RLCTRNVBAFRN 
+ </summary>
+ <param name="CODFRN" />
+ <param name="NUMFLUAPV" />
+ <param name="TIPALCVBAFRN" />
+ <param name="TIPDSNDSCBNFORITRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	27/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarRelacaoTransferenciaVerbaFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor)">
+      <summary>
+ Atualização dos dados. Entidade principalRLCTRNVBAFRN 
+ </summary>
+ <param name="DatasetTransferenciaVerbaFornecedor" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	27/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterNovaChaveTransferenciaVerba">
+      <summary>
+ Obter nova chave para a transferencia verba 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterFuncionario(System.Decimal)">
+      <summary>
+ Retorna um registro com base em sua chave primária. Entidade principal:T0100361 
+ </summary>
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ClonarTransferenciaEmpenhoFornecedor(System.Decimal)">
+      <summary>
+ Reprovar Fluxo Transferencia Verbas 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	27/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarTransferencia(System.String,System.String,Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor)">
+      <summary>
+ Transfere valores entre empenhos do fornecedor (processo sem fluxo de aprovação) 
+ </summary>
+ <param name="NOMACSUSRSIS" />
+ <param name="TIPUSRSIS" />
+ <param name="dsTransferenciaVerbaFornecedor" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	16/1/2008	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelacaoTipoTransferenciaEmpenhoFornecedor(System.Int32,System.String,System.Decimal)">
+      <summary>
+ CONSULTA RELAÇÃO TIPO DE TRANSFERÊNCIA EMPRENHO E FORNECEDOR 
+ </summary>
+ <param name="vTipOpe">TIPO DA CONSULTA 1,2 OU 3</param>
+ <param name="vNomAcsUsrSis" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[ELIFÁZIO]	21/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterSelecaoValorDisponivelFornecedor(System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ CONSULTA Valores Disponiveis de um Fornecedor 
+ </summary>
+ <param name="vDatRef" />
+ <param name="vCodFrn" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[ELIFÁZIO]	21/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterSaldoDisponivelFornecedor(System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ Obter saldo disponível do fornecedor 
+ </summary>
+ <param name="vDatRef" />
+ <param name="vCodFrn" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterSaldoDisponivelFornecedor2(System.DateTime,System.Decimal,System.String)">
+      <summary>
+ Obter saldo disponível do fornecedor 
+ </summary>
+ <param name="vDatRef" />
+ <param name="vCodFrn" />
+ <param name="In_TipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/2/2008	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterSaldoDisponivelFornecedorParaTodosEmpenhos(System.DateTime,System.Decimal)">
+      <summary>
+ Obter saldo disponível do fornecedor para todos empenhos 
+ </summary>
+ <param name="vDatRef" />
+ <param name="vCodFrn" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	11/1/2008	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterSaldoDisponivelFornecedorPorCategoria(System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ Obter saldo disponível do fornecedor por categoria 
+ </summary>
+ <param name="vDatRef" />
+ <param name="CodDivCmp" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterSaldoDisponivelFornecedorPorCategoria2(System.DateTime,System.Decimal)">
+      <summary>
+ Obter saldo disponível do fornecedor por categoria 
+ </summary>
+ <param name="vDatRef" />
+ <param name="CodDivCmp" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/2/2008	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterSaldoDisponivelFornecedorPorComprador(System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ Obter saldo disponível do fornecedor por comprador 
+ </summary>
+ <param name="vDatRef" />
+ <param name="codCpr" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterSaldoDisponivelFornecedorPorComprador2(System.DateTime,System.Decimal)">
+      <summary>
+ Obter saldo disponível do fornecedor por comprador 
+ </summary>
+ <param name="vDatRef" />
+ <param name="codCpr" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/2/2008	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterSelecaoValorAcordoDuplicataNaoRelacionada(System.Int32,System.Int32)">
+      <summary>
+' Verificar se o fornecedor pertence à céluda atendida pelo usuário 
+' </summary>
+' <param name="NomUsrSis" />
+' <param name="CodFrn" />
+' <returns />
+' <remarks>
+' </remarks>
+' <history>
+' 	[ELIFÁZIO]	22/9/2006	Created 
+' </history>
+' ----------------------------------------------------------------------------- 
+ ----------------------------------------------------------------------------- 
+ <summary>
+ CONSULTA Valores Acordos Duplicata Nao Relacionada 
+ </summary>
+ <param name="vOpcao" />
+ <param name="vCodFrn" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio]	27/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterValorPromessaOrigemTrocaFormaPagamentoAcordo(System.Int32,System.DateTime)">
+      <summary>
+ CONSULTA Valores Promessa Origem Troca Forma Pagamento Acordo 
+ </summary>
+ <param name="vOpcao" />
+ <param name="vCodFrn" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio]	27/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterProximoCodigoAcordoComercial(System.Int32,System.Int32)">
+      <summary>
+ Obtem Novo Codigo de Promessa 
+ </summary>
+ <param name="vCodEmp" />
+ <param name="vCodFilEmp" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio]	27/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.GerarManutencaoMovimentoAcordoComercial(System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.String)">
+      <summary>
+ CADASTRA A PROMESSA, Manutencao Movimento Acordo Comercial 
+ </summary>
+ <param name="vTipOpe" />
+ <param name="vCodEmp" />
+ <param name="vCodFilEmp" />
+ <param name="vCodPms" />
+ <param name="vDatNgcPms" />
+ <param name="vCodSitPms" />
+ <param name="vNumPedCmp" />
+ <param name="vCodFrn" />
+ <param name="vNomAcsUsrSis" />
+ <param name="vDesMsgUsr" />
+ <param name="vNomCtoFrn" />
+ <param name="vNumTlfCtoFrn" />
+ <param name="vDesCgrCtofrn" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	28/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.GerarManutencaoRelacaoAcordoComercialParcela(System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime,System.DateTime,System.Int32,System.Int32,System.String,System.String,System.String)">
+      <summary>
+ CADASTRA A Manutencao Relacao Acordo Comercial Parcela 
+ </summary>
+ <param name="vTipOpe" />
+ <param name="vCodEmp" />
+ <param name="vCodFilEmp" />
+ <param name="vCodPms" />
+ <param name="vDatNgcPms" />
+ <param name="vDatPrvRcbPms" />
+ <param name="vTipFrmDscBnf" />
+ <param name="vTipDsnDscBnf" />
+ <param name="vVlrNgcPms" />
+ <param name="vVlrEftPms" />
+ <param name="vNomAcsUsrSis" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	29/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterPesquisaExtratoMovimentoDiarioFornecedor(System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Int32)">
+      <summary>
+ Preenche o extratro do fornecedor 
+ </summary>
+ <param name="Ano" />
+ <param name="Mes" />
+ <param name="CodFrn" />
+ <param name="TipDsnDscBnf" />
+ <param name="FlgDsp" />
+ <param name="TipPmt" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio]	16/10/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterDadosDoCartorioPorCelula(System.Int32)">
+      <summary>
+ Retorna dados do cartório por célula 
+ </summary>
+ <param name="CodDivCmp" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Joelma Oliveira]	11/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterPerdasDisponiveis(System.Int32,System.Int32)">
+      <summary>
+ Seleciona as Perdas Disponíveis 
+ </summary>
+ <param name="CODFRN" />
+ <param name="CODDIVCMP" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Joelma Oliveira]	11/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterValoresApuradosContratosValidosDoFornecedor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+ Buscar todos os valores apurados para contratos válidos do fornecedor 
+ </summary>
+ <param name="CODFRN" />
+ <param name="NUMCSLCTTFRN" />
+ <param name="TIPFRMDSCBNF" />
+ <param name="TIPDSNDSCBNF" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Joelma Oliveira]	11/10/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterAcordosEmAbertoPorEmpenho(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Selecionar as promessas em aberto de acordo com o empenho em questão 
+ </summary>
+ <param name="TipDsnDscBnf" />
+ <param name="TipFrmDscBnf" />
+ <param name="CodDivCmp" />
+ <param name="CodFrn" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Joelma Oliveira]	11/10/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.GerarClausulaTrimestralidade(System.Decimal)">
+      <summary>
+ Chamada para procedure: MRT.PCTDLGrcCslTms.PRCDLGrcCslTms 
+ </summary>
+ <param name="pvNumCttFrn" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDLGrcCslTms.PRCDLGrcCslTms 
+ LEGADO: CLJ001 
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    20/11/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.GerarClausulaAnualidade(System.Decimal)">
+      <summary>
+ Chamada para procedure: MRT.PCTDLGrcCslAno.PRCDLGrcCslAno 
+ </summary>
+ <param name="pvNumCttFrn" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDLGrcCslAno.PRCDLGrcCslAno 
+ LEGADO: CLJ001 
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    20/11/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarContaCorrenteFornecedor2(System.DateTime,System.Decimal,System.Decimal,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.Decimal,System.Decimal,System.String,System.Int32,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PCTDKAtlCntCrrFrn.PRCDKAtlCntCrrFrn 
+ </summary>
+ <param name="pvDatRefLmt" />
+ <param name="pvTipDsnDscBnf" />
+ <param name="pvCodFrn" />
+ <param name="pvCodGdc" />
+ <param name="pvCodTipLmtPmt" />
+ <param name="pvCodCntCrd" />
+ <param name="pvCodCenCstCrd" />
+ <param name="pvCodCntDeb" />
+ <param name="pvCodCenCstDeb" />
+ <param name="pvVlrLmtCtb" />
+ <param name="pvDesHstLmt" />
+ <param name="pvDesVarHstPad" />
+ <param name="pvNomAcsUsrGrcLmt" />
+ <param name="pvCodFilEmp" />
+ <param name="pvCodPms" />
+ <param name="pvFlgRetVlr" />
+ <param name="pvTipAlcVbaFrnPmt" />
+ <param name="pvTransfIntegral" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDKAtlCntCrrFrn.PRCDKAtlCntCrrFrn 
+ LEGADO: CCX001GA 
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    21/11/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.InsereVaresApuradosContratoValido(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int32,System.Int32,System.Int32,System.Int32,System.Decimal,System.DateTime,System.Decimal,System.Int32,System.Int32,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PCTDLIsrVlrApuCttVldFrn.PRCDLIsrVlrApuCttVldFrn 
+ </summary>
+ <param name="pvNUMCTTFRN" />
+ <param name="pvNUMCSLCTTFRN" />
+ <param name="pvTIPPODCTTFRN" />
+ <param name="pvNUMREFPOD" />
+ <param name="pvTIPEDEABGMIX" />
+ <param name="pvCODEDEABGMIX" />
+ <param name="pvDATREFAPU" />
+ <param name="pvTIPFRMDSCBNF" />
+ <param name="pvTIPDSNDSCBNF" />
+ <param name="pvCODFRN" />
+ <param name="pvNUMCTTFRNORI" />
+ <param name="pvNUMCSLCTTFRNORI" />
+ <param name="pvTIPPODCTTFRNORI" />
+ <param name="pvNUMREFPODORI" />
+ <param name="pvTIPEDEABGMIXORI" />
+ <param name="pvCODEDEABGMIXORI" />
+ <param name="pvDATREFAPUORI" />
+ <param name="pvVLRCRDUTZCTTFRN" />
+ <param name="pvNUMSEQRLCCTTPMS" />
+ <param name="pvTIPFRMDSCBNFORIPDA" />
+ <param name="pvTIPDSNDSCBNFORIPDA" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDLIsrVlrApuCttVldFrn.PRCDLIsrVlrApuCttVldFrn 
+ LEGADO:SPCLJ153 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    13/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.InserePromessasEmAbertoDeAcordoEmpenho(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.Int32,System.String)">
+      <summary>
+ Chamada para procedure: MRT.PCTDLIsrArdAbtRelPdaCtt.PRCDLIsrArdAbtRelPdaCtt 
+ </summary>
+ <param name="pvNUMCTTFRN" />
+ <param name="pvNUMCSLCTTFRN" />
+ <param name="pvTIPPODCTTFRN" />
+ <param name="pvNUMREFPOD" />
+ <param name="pvTIPEDEABGMIX" />
+ <param name="pvCODEDEABGMIXPAR" />
+ <param name="pvDATREFAPU" />
+ <param name="pvTIPFRMDSCBNF" />
+ <param name="pvTIPDSNDSCBNF" />
+ <param name="pvCODFRN" />
+ <param name="pvCODEMPORI" />
+ <param name="pvCODFILEMPORI" />
+ <param name="pvCODPMSORI" />
+ <param name="pvDATNGCPMSORI" />
+ <param name="pvDATPRVRCBPMSORI" />
+ <param name="pvTipFrmDscBnfOri" />
+ <param name="pvTipDsnDscBnfOri" />
+ <param name="pvVLRCRDUTZCTTFRN" />
+ <param name="pvDESOBSPMSPAR" />
+ <param name="pvNOMUSRSIS" />
+ <param name="pvNUMSEQRLCCTTPMS" />
+ <param name="pvTIPOBSPMS" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDLIsrArdAbtRelPdaCtt.PRCDLIsrArdAbtRelPdaCtt 
+ LEGADO:SPCLJ154 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    13/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.CancelarPerdasDisponiveis(System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Decimal)">
+      <summary>
+ Chamada para procedure: MRT.PCTDLCncPdaDis.PRCDLCncPdaDis 
+ </summary>
+ <param name="pvTIPOPE" />
+ <param name="pvNUMCTTFRN" />
+ <param name="pvNUMCSLCTTFRN" />
+ <param name="pvTIPPODCTTFRN" />
+ <param name="pvNUMREFPOD" />
+ <param name="pvTIPEDEABGMIX" />
+ <param name="pvCODEDEABGMIX" />
+ <param name="pvDATREFAPU" />
+ <param name="pvVLRPDACNC" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDLCncPdaDis.PRCDLCncPdaDis 
+ LEGADO:SPCLJ157 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    13/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.GravarObservacaoPerdaAcordo(System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Decimal,System.Decimal,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.String,System.DateTime)">
+      <summary>
+ Chamada para procedure: MRT.PCTDLGrvObsRlcPdaArdFrn.PRCDLGrvObsRlcPdaArdFrn 
+ </summary>
+ <param name="pvTIPOPE" />
+ <param name="pvNUMCTTFRN" />
+ <param name="pvNUMCSLCTTFRN" />
+ <param name="pvTIPPODCTTFRN" />
+ <param name="pvNUMREFPOD" />
+ <param name="pvTIPEDEABGMIX" />
+ <param name="pvCODEDEABGMIXPAR" />
+ <param name="pvDATREFAPU" />
+ <param name="pvNUMSEQRLCCTTPMS" />
+ <param name="pvCODFRN" />
+ <param name="pvDESOBSCTTFRNAUX" />
+ <param name="pvTIPCNCPDACTTFRN" />
+ <param name="pvVLRCRDDISCTTFRN" />
+ <param name="pvTIPFRMDSCBNF" />
+ <param name="pvTIPDSNDSCBNF" />
+ <param name="pvNOMUSRSIS" />
+ <param name="pvDATGRCOBSPMS" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDLGrvObsRlcPdaArdFrn.PRCDLGrvObsRlcPdaArdFrn 
+ LEGADO:SPCLJ158 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    13/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterAcoesComerciaisBaixa(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PCTDKSelAcoCmcBxa.PRCDKSelAcoCmcBxa 
+ </summary>
+ <param name="pvCodpms" />
+ <param name="pvCodFilEmp" />
+ <param name="pvnumpedcmp" />
+ <param name="pvCodFrn" />
+ <param name="pvDatIniPod" />
+ <param name="pvDatFimPod" />
+ <param name="pvflag" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDKSelAcoCmcBxa.PRCDKSelAcoCmcBxa 
+ LEGADO:SPCBY300 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    20/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterMaximoDeCodigoOrdemPagamentoFornecedor(System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PCTDKObtMaxCodOrdPgtFrnAsc.PRCDKObtMaxCodOrdPgtFrnAsc 
+ </summary>
+ <param name="pvCodFrn" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDKObtMaxCodOrdPgtFrnAsc.PRCDKObtMaxCodOrdPgtFrnAsc 
+ LEGADO:SPCBU223 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.TransferirValoresEntreEmpenhosFornecedor(System.Decimal,System.Int32,System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+      <summary>
+ Realiza transferencia entre dos fornecedores e/ou empenho 
+ </summary>
+ <param name="pValor" />
+ <param name="pTipAlcVbaFrn" />
+ <param name="pvDatRefLmt" />
+ <param name="pvTipDsnDscBnfOrigem" />
+ <param name="pvTipDsnDscBnfDestino" />
+ <param name="pvCodFrnOrigem" />
+ <param name="pvCodFrnDestino" />
+ <param name="pvVlrLmtCtb" />
+ <param name="pvDesHstLmt" />
+ <param name="pvDesVarHstPadOrigem" />
+ <param name="pvDesVarHstPadDestino" />
+ <param name="pvNomAcsUsrGrcLmt" />
+ <param name="pvTipAlcVbaFrnPmtOrigem" />
+ <param name="pvTipAlcVbaFrnPmtDestino" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/12/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterDiretoriaEDivisaoDeCompraDeFornecedor(System.Decimal)">
+      <summary>
+ Chamada para procedure: MRT.PCTDJObtDrtCmpFrn.PRCDJObtDrtCmpFrn 
+ </summary>
+ <param name="pvCodFrn" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDJObtDrtCmpFrn.PRCDJObtDrtCmpFrn 
+ LEGADO:spCCX043 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    30/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ApurarAcordoGeralDeFornecimento(System.Decimal,System.Decimal,System.DateTime,System.Decimal,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)">
+      <summary>
+ Chamada para procedure: MRT.PctDLApuArdGrlFrn.PrcDLApuArdGrlFrn 
+ </summary>
+ <param name="ppin_NumCttFrn" />
+ <param name="ppin_Clausula" />
+ <param name="ppid_DatApuracao" />
+ <param name="ppin_Periodo" />
+ <param name="ppin_ApuraTudo" />
+ <param name="ppin_Fornecedores" />
+ <param name="ppin_Categoria" />
+ <param name="ppin_Item" />
+ <param name="ppin_ItensNovos" />
+ <param name="ppid_DatEmsNotFsc" />
+ <param name="ppid_DatLibIni" />
+ <param name="ppid_DatLibFim" />
+ <remarks>
+ Chamada para procedure: MRT.PctDLApuArdGrlFrn.PrcDLApuArdGrlFrn 
+ LEGADO:SPCLJ002 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    09/01/2007  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ManterClausulaContrato(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PctDLVrfAscCslCttFrnAscFrnPcp.PrcDLVrfAscCslCttFrnAscFrnPcp 
+ </summary>
+ <param name="ppin_IndPrc" />
+ <param name="ppin_NumCslCttFrn" />
+ <param name="ppin_CodFrnPcpApuArdFrn" />
+ <param name="ppin_NumCttFrn" />
+ <param name="ppin_CodFrnAscApuArdFrn" />
+ <param name="ppin_NumCttFrnAcs" />
+ <remarks>
+ Chamada para procedure: MRT.PctDLVrfAscCslCttFrnAscFrnPcp.PrcDLVrfAscCslCttFrnAscFrnPcp 
+ LEGADO:spClj118 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    01/02/2007  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.GeraFaixasParaAbrangencia(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime)">
+      <summary>
+ Chamada para procedure: MRT.PctGrcFxaAbg.PrcGrcFxaAbg 
+ </summary>
+ <param name="ppin_CTT" />
+ <param name="ppin_CSL" />
+ <param name="ppin_ABG" />
+ <param name="ppin_EDE" />
+ <param name="ppin_VLRFXA" />
+ <param name="ppin_VLRREC" />
+ <param name="ppin_PER" />
+ <param name="ppid_DATREFINIUTZPMT" />
+ <remarks>
+ Chamada para procedure: MRT.PctGrcFxaAbg.PrcGrcFxaAbg 
+ LEGADO:spClj017 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    01/02/2007  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObtemFornecedorEPeriodoContrato(System.Int32,System.Int32,System.String,System.Int32,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PctFmrAgdPed.PrcFmrAgdPed 
+ </summary>
+ <param name="ppin_CodOpc" />
+ <param name="ppin_CodPar" />
+ <param name="ppis_DesPar" />
+ <param name="ppin_TipOrd" />
+ <param name="ppin_CodEmp" />
+ <remarks>
+ Chamada para procedure: MRT.PctFmrAgdPed.PrcFmrAgdPed 
+ LEGADO:spCby116 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    01/02/2007  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ManterFaixasDeCrescimento(System.Int32,System.Int32,System.Int32,System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Int32,System.DateTime)">
+      <summary>
+ Chamada para procedure: MRT.PctMntFxaCrs.PrcMntFxaCrs 
+ </summary>
+ <param name="ppin_CTT" />
+ <param name="ppin_CSL" />
+ <param name="ppin_ABG" />
+ <param name="ppin_EDE" />
+ <param name="ppin_VLRFXA" />
+ <param name="ppin_VLRREC" />
+ <param name="ppin_PER" />
+ <param name="ppin_CODFXA" />
+ <param name="ppid_DATREFINIUTZPMT" />
+ <remarks>
+ Chamada para procedure: MRT.PctMntFxaCrs.PrcMntFxaCrs 
+ LEGADO:spClj028 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    01/02/2007  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarParametrosAlocacaoVerbas(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Decimal,System.Int32,System.Int32,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PctAtlPmtAlcVba.PrcAtlPmtAlcVba 
+ </summary>
+ <param name="ppin_TipOpe" />
+ <param name="ppin_NumCtt_Query" />
+ <param name="ppin_NumCttFrn" />
+ <param name="ppin_NumCSl_Query" />
+ <param name="ppin_TipEde_Query" />
+ <param name="ppin_CodEde_Query" />
+ <param name="ppin_PerVlrRcb" />
+ <param name="ppin_PerVlrRcb_Query" />
+ <param name="ppin_ReqAlcVba_Query" />
+ <remarks>
+ Chamada para procedure: MRT.PctAtlPmtAlcVba.PrcAtlPmtAlcVba 
+ LEGADO:spClj198 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    01/02/2007  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterDistinctDatRefIniUtzPmtDeFaixa(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Obtem 
+ </summary>
+ <param name="NUMCTTFRN" />
+ <param name="NUMCSLCTTFRN" />
+ <param name="TIPEDEABGMIX" />
+ <param name="CODEDEABGMIX" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	1/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterDistinctDATINIPODDePeriodo(System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMCTTFRN" />
+ <param name="NUMCSLCTTFRN" />
+ <param name="TIPPODCTTFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	2/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.GerarPeriodosParaClausulaDeContrato(System.Int32,System.Int32,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PctDLAtlPgcAutCttArdFrn.PrcDlPodCslCtt 
+ </summary>
+ <param name="ppin_Ctt" />
+ <param name="ppin_Cla" />
+ <param name="ppin_Per" />
+ <param name="ppis_CodUni" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	2/2/2007	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterAssociacaoClausulaFornecedor(System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Chamada para procedure: MRT.PCTDLCnsAscCslFrn.PRCDLCnsAscCslFrn 
+ </summary>
+ <param name="pvCodFrn" />
+ <param name="pvNumCttFrn" />
+ <param name="pvNumCslCttFrn" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDLCnsAscCslFrn.PRCDLCnsAscCslFrn 
+ LEGADO: spCLJ117 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    12/02/2007  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.SelecionarEAlterarValorEfetivoDesconto(System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Decimal,System.String)">
+      <summary>
+ Chamada para procedure: MRT.PCTDLSelAltVlrEftDsc.PRCDLSelAltVlrEftDsc 
+ </summary>
+ <param name="pvOperacao" />
+ <param name="pvNumCttFrn" />
+ <param name="pvNumCslCttFrn" />
+ <param name="pvTipPodCttFrn" />
+ <param name="pvNumRefPod" />
+ <param name="pvTipEdeAbgMix" />
+ <param name="pvCodEdeAbgMixEnt" />
+ <param name="pvDatRefApu" />
+ <param name="pvVlrDscRcbEftFxa" />
+ <param name="pvNomAcsUsrSis" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDLSelAltVlrEftDsc.PRCDLSelAltVlrEftDsc 
+ LEGADO:SPCLJ105 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    26/02/2007  Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizarValorUtilizado(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Decimal,System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Int32,System.Decimal,System.String,System.Int32,System.Int32,System.Int32,System.String)">
+      <summary>
+ LÓGICA DA PROC spCLJ095 MIGRADA PARA FRAMEWORK MARTINS 
+ </summary>
+ <param name="NumCttFrn" />
+ <param name="NumCslCttFrn" />
+ <param name="TipPodCttFrn" />
+ <param name="NumRefPod" />
+ <param name="TipEdeAbgMix" />
+ <param name="CodEdeAbgMix" />
+ <param name="DatRefApu" />
+ <param name="NumSeqRlcCttPms" />
+ <param name="CodFrn" />
+ <param name="CodEmpFrn" />
+ <param name="NumNotFscFrnCtb" />
+ <param name="CodSeqPclNotFsc" />
+ <param name="NumSeqTitPgt" />
+ <param name="CodEmp" />
+ <param name="CodFilEmp" />
+ <param name="VlrUtzCtt" />
+ <param name="FlgSitNgcDup" />
+ <param name="TipDscPgtFvc" />
+ <param name="TipFrmDscBnf" />
+ <param name="TipDsnDscBnf" />
+ <param name="NomAcsUsrSis" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio]	5/10/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.GerarLinhaDescontoBonificacao(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Decimal,System.DateTime,System.Decimal,System.Int32,System.Decimal)">
+      <summary>
+ LÓGICA DA PROC spCLJ096 MIGRADA PARA FRAMEWORK MARTINS 
+ </summary>
+ <param name="NumCttFrn" />
+ <param name="NumCslCttFrn" />
+ <param name="TipPodCttFrn" />
+ <param name="NumRefPod" />
+ <param name="TipEdeAbgMix" />
+ <param name="CodEdeAbgMix" />
+ <param name="DatRefApu" />
+ <param name="VlrRcbEftFxa" />
+ <param name="TipFrmDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	28/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.AtualizaSituacaoNegociacao(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Decimal,System.DateTime,System.Int32,System.Decimal,System.Int32,System.DateTime,System.Decimal,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.DateTime)">
+      <summary>
+ LÓGICA DA PROC spCLJ097 MIGRADA PARA FRAMEWORK MARTINS 
+ </summary>
+ <param name="NumCttFrn" />
+ <param name="NumCslCttFrn" />
+ <param name="TipPodCttFrn" />
+ <param name="NumRefPod" />
+ <param name="TipEdeAbgMix" />
+ <param name="CodEdeAbgMixEnt" />
+ <param name="DatRefApu" />
+ <param name="NumSeqRlcCttPms" />
+ <param name="VlrNgcPms" />
+ <param name="CodPms" />
+ <param name="DatNgcPms" />
+ <param name="VlrEftDscPcl" />
+ <param name="FlgSitNgcDup" />
+ <param name="NomAcsUsrSis" />
+ <param name="CodEmp" />
+ <param name="CodFilEmp" />
+ <param name="TipFrmDscBnf" />
+ <param name="TipDsnDscBnf" />
+ <param name="CodFrn" />
+ <param name="CodEmpFrn" />
+ <param name="NumNotFscFrnCtb" />
+ <param name="CodSeqPclNotFsc" />
+ <param name="NumSeqTitPgt" />
+ <param name="TipDscPgtFvc" />
+ <param name="DatPrvRcbPms" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	29/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterDestinoVerbaPrometida(System.Int32,System.Int32)">
+      <summary>
+ 
+ </summary>
+ <param name="NumCttFrn" />
+ <param name="NumCslCttFrn" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	02/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterDataPrevisaoRecebimento(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+ 
+ </summary>
+ <param name="NumCttFrn" />
+ <param name="NumCslCttFrn" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	02/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterDuplicatasDisponiveis(System.Int32)">
+      <summary>
+ Seleciona as duplicatas de um fornecedor CLJ072 
+ </summary>
+ <param name="CodFrn" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio]	4/10/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterTrocaManualTituloPagamentoAcordoComercial(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime,System.Int32,System.Int32,System.DateTime,System.Int32,System.String,System.Int32,System.Decimal)">
+      <summary>
+ TROCA MANUAL DE TITULOS DE PAGAMENTO DE ACORDOS COMERCIAIS 
+ </summary>
+ <param name="vpTipCsn">
+ 1) Lista as Promessas do Fornecedor 
+ 2) Lista informacoes de Promessa Especifica do Fornecedor 
+ 3) Notas relacionadas a Promessa do Fornecedor 
+ 4) Notas disponiveis para relacionamento 
+ 5) Insere/atualiza notas na relacao de acordos comerciais X duplicatas 
+    Para esta opcao todos os prnincipais campos da tabela T0134045 devem ser informados 
+ 6) Desativa notas na relacao de acordos comerciais X duplicatas 
+    Para esta opcao todos os prnincipais campos da tabela T0134045 devem ser informados 
+ 7) Lista as Promessas Parciais do Fornecedor 
+ 8) Lista informacoes de Promessa  Parciais Especifica do Fornecedor 
+ 9) Insere/atualiza notas na relacao de acordos comerciais X duplicatas 
+    Para esta opcao todos os prnincipais campos da tabela T0138058 devem ser informados (IndAscArdFrnPms = 1) 
+    Para esta opcao todos os prnincipais campos da tabela T0138066 devem ser informados (IndAscArdFrnPms = 1) 
+    Para esta opcao todos os prnincipais campos da tabela T0134045 devem ser informados 
+ 10)Desativa notas na relacao de acordos comerciais X duplicatas 
+    Para esta opcao todos os prnincipais campos da tabela T0138058 devem ser informados (IndAscArdFrnPms = 1) 
+    Para esta opcao todos os prnincipais campos da tabela T0138066 devem ser informados (IndAscArdFrnPms = 1) 
+    Para esta opcao todos os prnincipais campos da tabela T0134045 devem ser informados 
+ </param>
+ <param name="vpCodFrn" />
+ <param name="vpCodPms" />
+ <param name="vpCodEmp" />
+ <param name="vpCodFilEmp" />
+ <param name="vpCodEmpFrn" />
+ <param name="vpDatPrvRcbPms" />
+ <param name="vpTipFrmDscBnf" />
+ <param name="vpTipDsnDscBnf" />
+ <param name="vpDatNgcPms" />
+ <param name="vpNumNotFscFrnCtb" />
+ <param name="vpCodSeqPclNotFsc" />
+ <param name="vpNumSeqTitPgt" />
+ <param name="vpVlrTitPgtUtzSbtPms" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio]	6/10/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioHistoricoBaixaOP(System.String,System.String,System.Int32,System.String)">
+      <summary>
+ Relatorio Historico Baixa por OP 
+ </summary>
+ <param name="pDatInicial">Data Inicial do Período</param>
+ <param name="pDatFinal">Data Final do Período</param>
+ <param name="pCodFrn">Código Fornecedor</param>
+ <param name="pNomFrn">Nome Fornecedor</param>
+ <returns>Dataset com a Tabela  preenchida</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Bruno Viso]	06/06/2013	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioHistoricoAcordo(System.Int32)">
+      <summary>
+ Relatorio Historico Contrato X Promessa 
+ </summary>
+ <param name="pCodPms">Promessa</param>
+ <returns>Dataset com a Tabela tbHistoricoAcordo preenchida</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	15/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioAcordoFornecimento_027(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.DateTime)">
+      <summary>
+ Relatorio Historico Acordo Fornecimento rpclj027.rpt 
+ </summary>
+ <param name="CodDivCmp" />
+ <param name="NumCslCttFrn" />
+ <param name="TipPodCttFrn" />
+ <param name="DatIni" />
+ <param name="DatFim" />
+ <returns>Dataset com a Tabela tbAcordoFornecimento_027 preenchida</returns>
+ <remarks>
+ O posfixo 027 é por compatibilidade do nome do legado 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	15/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioAcordoFornecimento_041(System.Int32,System.Decimal,System.Decimal,System.DateTime,System.DateTime)">
+      <summary>
+ Relatorio Historico Acordo Fornecimento rpclj041.rpt 
+ </summary>
+ <param name="CodDivCmp" />
+ <param name="NumCslCttFrn" />
+ <param name="TipPodCttFrn" />
+ <param name="DatIni" />
+ <param name="DatFim" />
+ <returns>Dataset com a Tabela tbAcordoFornecimento_041 preenchida</returns>
+ <remarks>
+ O posfixo 027 é por compatibilidade do nome do legado 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	15/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioAcordoFornecimento_022(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime)">
+      <summary>
+ Relatorio Historico Acordo Fornecimento rpclj022.rpt 
+ </summary>
+ <param name="CodFrn" />
+ <param name="TipPod" />
+ <param name="NumCttFrn" />
+ <param name="NumCslCttFrn" />
+ <param name="TipEdeAbgMix" />
+ <param name="CodEdeAbgMix" />
+ <param name="NumRefPod" />
+ <param name="DatIniPod" />
+ <returns>Dataset com a Tabela tbAcordoFornecimento_022 preenchida</returns>
+ <remarks>
+ O posfixo 022 é por compatibilidade do nome do legado 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	15/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioAcordoFornecimento_023(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime)">
+      <summary>
+ Relatorio Acordo Fornecimento rpclj023.rpt 
+ </summary>
+ <param name="CodFrn" />
+ <param name="TipPod" />
+ <param name="NumCttFrn" />
+ <param name="NumCslCttFrn" />
+ <param name="TipEdeAbgMix" />
+ <param name="CodEdeAbgMixPAR" />
+ <param name="NumRefPod" />
+ <param name="DatIniPodPAR" />
+ <returns>Dataset com a Tabela tbAcordoFornecimento_023 preenchida</returns>
+ <remarks>
+ O posfixo 023 é por compatibilidade do nome do legado 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	15/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioAcordoFornecimento_051(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime)">
+      <summary>
+ Relatorio Acordo Fornecimento 
+ rpcClj051B.rpt – Procedure: spClj051;1 
+ rpcClj051A.rpt – Procedure: spClj051;1 
+ </summary>
+ <param name="CodFrn" />
+ <param name="TipPod" />
+ <param name="NumCttFrn" />
+ <param name="NumCslCttFrn" />
+ <param name="TipEdeAbgMix" />
+ <param name="CodEdeAbgMixPAR" />
+ <param name="NumRefPod" />
+ <param name="DatIniPodPAR" />
+ <returns>Dataset com a Tabela tbAcordoFornecimento_051 preenchida</returns>
+ <remarks>
+ O posfixo 051 é por compatibilidade do nome do legado 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	15/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioAcordoFornecimento_052(System.Int32,System.Int32,System.Decimal,System.Int32,System.Int32,System.Decimal,System.Int32,System.DateTime)">
+      <summary>
+ Relatorio Acordo Fornecimento 
+ rpcClj052D1.rpt – Procedure: spClj052;1 
+ rpcClj052A1.rpt – Procedure: spClj052;1 
+ rpcClj052C1.rpt – Procedure: spClj052;1 
+ rpcClj052B1.rpt – Procedure: spClj052;1 
+ rpcClj052A.rpt – Procedure: spClj052;1 
+ rpcClj052D.rpt – Procedure: spClj052;1 
+ rpcClj052A.rpt – Procedure: spClj052;1 
+ rpcClj052C.rpt – Procedure: spClj052;1 
+ rpcClj052B.rpt – Procedure: spClj052;1 
+ rpcClj052A1.rpt – Procedure: spClj052;1 
+ </summary>
+ <param name="CodFrn" />
+ <param name="TipPod" />
+ <param name="NumCttFrn" />
+ <param name="NumCslCttFrn" />
+ <param name="TipEdeAbgMix" />
+ <param name="CodEdeAbgMixPAR" />
+ <param name="NumRefPod" />
+ <param name="DatRefPod" />
+ <returns>Dataset com a Tabela tbAcordoFornecimento_052 preenchida</returns>
+ <remarks>
+ O posfixo 052 é por compatibilidade do nome do legado 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	15/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioAcordoFornecimento_053(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime)">
+      <summary>
+ Relatorio Acordo Fornecimento rpcclj053.rpt 
+ </summary>
+ <param name="CodFrn" />
+ <param name="TipPod" />
+ <param name="NumCttFrn" />
+ <param name="NumCslCttFrn" />
+ <param name="TipEdeAbgMix" />
+ <param name="CodEdeAbgMixPAR" />
+ <param name="NumRefPod" />
+ <param name="DatRefPodPar" />
+ <returns>Dataset com a Tabela tbAcordoFornecimento_053 preenchida</returns>
+ <remarks>
+ O posfixo 053 é por compatibilidade do nome do legado 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	15/9/2006	Created 
+ </history></member>
+    <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioAcordoFornecimento_074(System.Int32,System.Int32)">
+      <summary>
+ Relatorio Acordo Fornecimento rpclj070.rpt - proc spCLJ074 
+ </summary>
+ <param name="Opcao" />
+ <param name="CodFrn" />
+  <member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioAcordoParaDeduction(System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime,System.DateTime,System.Int32,System.Int32)"><summary>
+ Relatorio Acordo p/Deduction 
+ cby002z5.rpt – Procedure: spCBU184;1 
+ cby002z5a.rpt – Procedure: spCBU184;1 
+ 
+ Acordo s/NF p/Deduction 
+ cby002Z4.rpt – Procedure: spCBU184:1 
+ </summary>
+ <param name="CodFrn" />
+ <param name="TipPod" />
+ <param name="NumCttFrn" />
+ <param name="NumCslCttFrn" />
+ <param name="TipEdeAbgMix" />
+ <param name="CodEdeAbgMixPAR" />
+ <param name="NumRefPod" />
+ <param name="DatRefPodPar" />
+ <returns>Dataset com a Tabela tbAcordoParaDeduction preenchida</returns>
+ <remarks>
+ Como a proc é a mesma para o relatório de Deduction s/ NF, esse método será 
+ reaproveitado para o mesmo 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	15/9/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioConferenciaAcaoTatica(System.Int32,System.String,System.Int32)"><summary>
+ Conferencia Ação Tática 
+ cby002z2a.rpt – Procedure: spCLJ113;1 
+ cby002z2b.rpt – Procedure: spCLJ113;1 
+ </summary>
+ <param name="CodFrn" />
+ <param name="MesRef" />
+ <param name="Opcao" />
+ <returns>Dataset com a Tabela tbConferenciaAcaoTatica preenchida</returns>
+ <remarks>
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	15/9/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioContasAReceber_02ZA(System.DateTime,System.DateTime,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)"><summary>
+ Conta A Receber CBY002ZA.RPT 
+ </summary>
+ <param name="DatInicial" />
+ <param name="DatFinal" />
+ <param name="CelI" />
+ <param name="CelF" />
+ <param name="FrnI" />
+ <param name="FrnF" />
+ <param name="FrmI" />
+ <param name="FrmF" />
+ <param name="DsnI" />
+ <param name="DsnF" />
+ <param name="Abo" />
+ <returns>Dataset com a Tabela tbContasAReceber_02ZA preenchida</returns>
+ <remarks>
+ CBY002ZA.RPT – Procedure: spCBU099;1 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	18/9/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioContasAReceber_02ZB(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)"><summary>
+ Contas a Receber Sintético CBY002ZB.RPT 
+ </summary>
+ <param name="PmtIdtSmn" />
+ <param name="CodCelI" />
+ <param name="CodCelF" />
+ <param name="CodFrnI" />
+ <param name="CodFrnF" />
+ <param name="TipFrmI" />
+ <param name="TipFrmF" />
+ <param name="TipDsnI" />
+ <param name="TipDsnF" />
+ <param name="PmtFlgTot" />
+ <returns>Dataset com a Tabela tbContasAReceber_02ZB preenchida</returns>
+ <remarks>
+ CBY002ZB.RPT – Procedure: spCBU243;1 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	18/9/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioContasAReceber_02ZC(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)"><summary>
+ Conta A Receber ABC - Saldo em Aberto CBY002ZC.RPT 
+ </summary>
+ <param name="CodCelI" />
+ <param name="CodCelF" />
+ <param name="CodFrnI" />
+ <param name="CodFrnF" />
+ <param name="IdtFlgTodt" />
+ <returns>Dataset com a Tabela tbContasAReceber_02ZC preenchida</returns>
+ <remarks>
+ CBY002ZC.RPT – Procedure: spCBU248;1 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	18/9/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioContasAReceber_02ZC1(System.Int32,System.Int32,System.Int32)"><summary>
+ Conta A Receber ABC - Saldo em Aberto - A Emitir CBY002ZC1.RPT 
+ </summary>
+ <param name="CodDivCmp" />
+ <param name="CodFrn" />
+ <param name="NumCslCttFrn" />
+ <returns>Dataset com a Tabela tbContasAReceber_02ZC1 preenchida</returns>
+ <remarks>
+ CBY002ZC1.RPT – Procedure: spCBU248;1 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	18/9/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioContasAReceber_02ZE1(System.DateTime,System.DateTime)"><summary>
+ Conta A Receber - Acordos com Situação de Erro CBY002ZE1.RPT 
+ </summary>
+ <param name="DatIni" />
+ <param name="DatFim" />
+ <returns>Dataset com a Tabela tbContasAReceber_02ZE1 preenchida</returns>
+ <remarks>
+ CBY002ZE1.RPT – Procedure: spCBU246;1 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	18/9/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioContasAReceber_02ZF(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)"><summary>
+ Conta A Receber - Aging List Analítico ( Valores a receber por idade ) CBY002ZF.RPT 
+ </summary>
+ <param name="CodCelI" />
+ <param name="CodCelF" />
+ <param name="CodFrnI" />
+ <param name="CodFrnF" />
+ <param name="QdeDiaInt" />
+ <param name="IdtFlgTod" />
+ <returns>Dataset com a Tabela tbContasAReceber_02ZF preenchida</returns>
+ <remarks>
+ CBY002ZF.RPT – Procedure: spCBU245;1 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	18/9/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioContasAReceber_02ZG(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)"><summary>
+ Conta A Receber - INF. DO.AGING LIST SINTETICO ( VALORES A RECEBER POR IDADE) 
+ CBY002ZG.RPT 
+ </summary>
+ <param name="CodCelI" />
+ <param name="CodCelF" />
+ <param name="QdeDiaInt" />
+ <param name="IdtFlgTod" />
+ <returns>Dataset com a Tabela tbContasAReceber_02ZG preenchida</returns>
+ <remarks>
+ CBY002ZG.RPT– Procedure: spCBU244;1 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	18/9/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioContasAReceber_02ZR(System.Int32,System.Int32,System.Int32,System.String)"><summary>
+ Conta A Receber - Bonificacoes e Desconto em Duplicata a Emitir 
+ CBY002ZR.RPT 
+ </summary>
+ <param name="CodDivCmp" />
+ <param name="CodFrn" />
+ <param name="NumCslCttFrn" />
+ <param name="ChmAcoNot" />
+ <returns>Dataset com a Tabela tbContasAReceber_02ZR preenchida</returns>
+ <remarks>
+ CBY002ZR.RPT– Procedure: spCBU241;1 
+ </remarks>
+ <history>
+ 	[Elifázio Bernardes]	18/9/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioAcordoAcoesComerciais_232(System.Int32,System.Int32,System.Int32,System.DateTime)"><summary>
+ Manutenção Acordo - Registro de acordo. 
+ cby002ka.rpt 
+ </summary>
+ <param name="CodEmp" />
+ <param name="CodFilEmp" />
+ <param name="CodPms" />
+ <param name="DatNgcPms" />
+ <returns>Dataset com a Tabela TbAcordoAcoesComerciais_232 preenchida</returns>
+ <remarks>
+ Procedure legado SQL-SERVER: spCBU232 
+ Procedure Migrada Oracle...: 
+ </remarks>
+ <history>
+ 	[Joelma Oliveira]	10/17/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioAcordoAcoesComerciais_194(System.Int32,System.Int32,System.Int32)"><summary>
+ Cancelar Vlrs.Fornec - Cancelar Valores para Fornecedores em Processo de Desativação. Dataset com a Tabela TbAcordoAcoesComerciais_194 preenchida. 
+ CBY002AE.rpt 
+ </summary>
+ <param name="CodEmp" />
+ <param name="CodFilEmp" />
+ <param name="CodPms" />
+ <param name="DatNgcPms" />
+ <returns>Dataset com a Tabela TbAcordoAcoesComerciais_194 preenchida</returns>
+ <remarks>
+ Procedure legado SQL-SERVER: spCBU194 
+ Procedure Migrada Oracle...: 
+ </remarks>
+ <history>
+ 	[Joelma Oliveira]	10/17/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioAnaliticoAcoesComerciais(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String)"><summary>
+ Contrato - Consulta acordos de fornecedores. 
+ CLJ001Y.rpt 
+ </summary>
+ <param name="TipOpe" />
+ <param name="CodFrn" />
+ <param name="NumCttFrn" />
+ <param name="FlgTipOpe" />
+ <param name="Codigo" />
+ <param name="Tipo" />
+ <returns>Dataset com a Tabela TbAnaliticoAcoesComerciais preenchida</returns>
+ <remarks>
+ Procedure legado SQL-SERVER: SPCLJ127 
+ Procedure Migrada Oracle...: 
+ </remarks>
+ <history>
+ 	[Joelma Oliveira]	10/18/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioExtratoContaCorrrente_012(System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Int32)"><summary>
+ Extrato- Extrato de Fornecedor. 
+ CCX001i.rpt 
+ </summary>
+ <param name="Ano" />
+ <param name="Mes" />
+ <param name="CodFrn" />
+ <param name="TipDsnDscBnf" />
+ <param name="FlgDsp" />
+ <param name="TipPmt" />
+ <returns>Dataset com a Tabela TbExtratoContaCorrrente_012 preenchida</returns>
+ <remarks>
+ Procedure legado SQL-SERVER: spCCX012 
+ Procedure Migrada Oracle...: 
+ </remarks>
+ <history>
+ 	[Joelma Oliveira]	10/18/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioExtratoContaCorrrente_048(System.DateTime,System.DateTime,System.Int32,System.Int32,System.String,System.Int32,System.String)"><summary>
+ Extrato- Extrato de Fornecedor(disponível). 
+ CCX001ia.rpt 
+ </summary>
+ <param name="DataInicial" />
+ <param name="DataFinal" />
+ <param name="CodFrn" />
+ <param name="TipDsnDscBnf" />
+ <param name="FlgDsp" />
+ <param name="TipPmt" />
+ <param name="lst_TipDsnDscBnf" />
+ <returns>Dataset com a Tabela TbExtratoContaCorrrente_48 preenchida</returns>
+ <remarks>
+ Procedure legado SQL-SERVER: spCCX048 
+ Procedure Migrada Oracle...: 
+ </remarks>
+ <history>
+ 	[Joelma Oliveira]	10/18/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioRecibo(System.Int32)"><summary>
+ Recebimento.Dataset com a Tabela TbRecebo preenchida. 
+ cby002la.rpt 
+ </summary>
+ <param name="CodFrn" />
+ <returns>Dataset com a Tabela TbRecibo</returns>
+ <remarks>
+ Procedure legado SQL-SERVER: spCBU233 
+ Procedure Migrada Oracle...: 
+ </remarks>
+ <history>
+ 	[Joelma Oliveira]	10/30/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelacaoPerdasEmitidas_163(System.Int32,System.Int32)"><summary>
+ Relação de Perdas Emitidas.Dataset com a Tabela TbRelacaoPerdasEmitidas_163 preenchida. 
+ rpclj148a.rpt 
+ </summary>
+ <param name="CodDivCmp" />
+ <param name="CodFrn" />
+ <returns>Dataset com a Tabela TbRelacaoPerdasEmitidas_163 preenchida</returns>
+ <remarks>
+ Procedure legado SQL-SERVER: spCLJ163 
+ Procedure Migrada Oracle...: 
+ </remarks>
+ <history>
+ 	[Joelma Oliveira]	11/2/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelacaoPerdasEmitidas_164(System.Int32,System.DateTime,System.DateTime)"><summary>
+ Relação de Perdas Emitidas.Dataset com a Tabela TbRelacaoPerdasEmitidas_164 preenchida. 
+ rpclj148b.rpt 
+ </summary>
+ <param name="CodFrn" />
+ <param name="DatIni" />
+ <param name="DatFim" />
+ <returns>Dataset com a Tabela TbRelacaoPerdasEmitidas_164 preenchida</returns>
+ <remarks>
+ Procedure legado SQL-SERVER: spCLJ164 
+ Procedure Migrada Oracle...: 
+ </remarks>
+ <history>
+ 	[Joelma Oliveira]	11/3/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioSaldoDisponivelFornecedorCelula(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int32)"><summary>
+ Chamada para procedure: MRT.PCTDJRetSldDisFrnCel.PRCDJRetSldDisFrnCel 
+ </summary>
+ <param name="pvCodDivCmp" />
+ <param name="pvTipDsnDscBnf" />
+ <param name="pvAnoMesRef" />
+ <param name="pvTipo" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDJRetSldDisFrnCel.PRCDJRetSldDisFrnCel 
+ LEGADO:spccx025 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/12/2006  Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterRelatorioBaixaAcordo(System.Decimal)"><summary>
+ Relatorio Baixa Acordo. Dataset com a Tabela tbBaixa Acordo preenchida 
+ </summary>
+ <param name="CodPms" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	27/5/2008	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterCompradores(System.Decimal,System.DateTime,System.DateTime,System.DateTime,System.Int16,System.String,System.String)"><summary>
+ Este método retorna dados da entidade T0113625 com base em outros atributos. 
+ Descrição da entidade:CADASTRO COMPRADOR 
+ </summary>
+ <param name="CODGERPRD">CODIGO GERENTE DE PRODUTO.</param>
+ <param name="DATDSTCPR">DATA DE DESATIVACAO DO COMPRADOR.</param>
+ <param name="DATDSTCPRInicial">DATA DE DESATIVACAO DO COMPRADOR INICIAL.</param>
+ <param name="DATDSTCPRFinal">DATA DE DESATIVACAO DO COMPRADOR FINAL.</param>
+ <param name="IncluirDATDSTCPRNulo"> Valores: [0: Todos | 1:Somenta Ativos | 2:Somentes Inativos] - DATA DE DESATIVACAO DO COMPRADOR.</param>
+ <param name="DESSGLGERPRD">DESCRICAO SIGLA DO GERENTE DE PRODUTO.</param>
+ <param name="NOMCPR">NOME FUNCIONARIO.</param>
+ <returns>Retorna um DataSet com a tabela "T0113625" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    11/12/2006  Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterValorUnitarioMercadoria(System.Decimal,System.Decimal)"><summary>
+ Consulta Valor unitario da meradoria 
+ </summary>
+ <param name="codigoMercadoria" />
+ <param name="codigoFilial" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Lesley]	08/14/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.obterMercadoriaSimilar(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal)"><summary>
+ Consulta mercadorias similares e seus respectivos preços unitários 
+ </summary>
+ <param name="codigoIncentivo" />
+ <param name="numeroCriterio" />
+ <param name="codigoTipoPublicoAlvo" />
+ <param name="codigoAbrangencia" />
+ <param name="numeroPeriodo" />
+ <param name="codigoEntidade" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Lesley]	08/25/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.obterMercadoriaPreco(System.Decimal,System.Decimal,System.String)"><summary>
+ Consulta mercadorias e seus preços unitários 
+ </summary>
+ <param name="codigoFilial" />
+ <param name="codigoMercadoria" />
+ <param name="descricaoMercadoria" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Lesley]	08/25/2006	Created 
+ </history></member><member name="M:Martins.Web.Services.AcoesComerciais.AcoesComerciais.ObterSomaSaldo(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)"><summary>
+ Retorna registro(s) com base em atributos (não necessariamente chave primária). Entidade principal:T0138776 
+ </summary>
+ <param name="codigoIncentivo" />
+ <param name="numeroCriterio" />
+ <param name="numeroAbrangencia" />
+ <param name="numeroPeriodo" />
+ <param name="codigoPremio" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Lesley]	07/27/2006	Created 
+ </history></member></member>
+  </members>
+</doc>

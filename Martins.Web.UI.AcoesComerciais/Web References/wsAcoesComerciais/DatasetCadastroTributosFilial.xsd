@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetCadastroTributosFilial.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetCadastroTributosFilial.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetCadastroTributosFilial.xsd" id="DatasetCadastroTributosFilial" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetCadastroTributosFilial">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0114508">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFILEMP" type="xs:decimal" />
+              <xs:element name="NUMPMTSIS" type="xs:decimal" />
+              <xs:element name="FTRSEGFILEMP" type="xs:decimal" />
+              <xs:element name="PERCSTDSP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERPRGITGSOC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERCRBFNMSEGSOC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERCRBMOVFIN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetCadastroTributosFilialKey1">
+      <xs:selector xpath=".//mstns:T0114508" />
+      <xs:field xpath="mstns:CODFILEMP" />
+      <xs:field xpath="mstns:NUMPMTSIS" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

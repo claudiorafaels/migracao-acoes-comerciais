@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetBonificacaoEmitir.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetBonificacaoEmitir.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetBonificacaoEmitir.xsd" id="DatasetBonificacaoEmitir" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetBonificacaoEmitir">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0133243">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODCPR" type="xs:decimal" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="DESCSLCTTFRN" type="xs:string" />
+              <xs:element name="TIPPODCTTFRN" type="xs:decimal" />
+              <xs:element name="DESPODCTTFRN" type="xs:string" />
+              <xs:element name="NUMREFPOD" type="xs:decimal" />
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODEDEABGMIX" type="xs:decimal" />
+              <xs:element name="DATREFAPU" type="xs:dateTime" />
+              <xs:element name="VLRRCBEFTFXA" type="xs:decimal" />
+              <xs:element name="VLRUTZCTT" type="xs:decimal" />
+              <xs:element name="DATFIMPOD" type="xs:dateTime" />
+              <xs:element name="VLRBSECALAPUVLRRCB" type="xs:decimal" />
+              <xs:element name="INDUTZARDFRNBNF" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetBonificacaoEmitirKey1">
+      <xs:selector xpath=".//mstns:T0133243" />
+      <xs:field xpath="mstns:CODCPR" />
+      <xs:field xpath="mstns:CODFRN" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPPODCTTFRN" />
+      <xs:field xpath="mstns:NUMREFPOD" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+      <xs:field xpath="mstns:DATREFAPU" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

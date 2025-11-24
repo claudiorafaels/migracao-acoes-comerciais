@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetFuncionario.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetFuncionario.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetFuncionario.xsd" id="DatasetFuncionario" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetFuncionario">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0100361">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFNC" type="xs:decimal" />
+              <xs:element name="NOMFNC" type="xs:string" />
+              <xs:element name="CODDPT" type="xs:decimal" />
+              <xs:element name="CODSEC" type="xs:decimal" />
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="DATADSFNC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATDEMFNC" type="xs:dateTime" />
+              <xs:element name="ENDFNC" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCID" type="xs:decimal" />
+              <xs:element name="CODBAIFNC" type="xs:decimal" />
+              <xs:element name="CODCEPFNC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMTLFFNC" type="xs:string" />
+              <xs:element minOccurs="0" name="CODFILFNC" type="xs:decimal" />
+              <xs:element name="CODSEXFNC" type="xs:string" />
+              <xs:element name="CODDRT" type="xs:decimal" />
+              <xs:element name="CODDIV" type="xs:decimal" />
+              <xs:element name="CODCENCST" type="xs:string" />
+              <xs:element name="CODGRPPGTFNC" type="xs:decimal" />
+              <xs:element name="CODSETFNC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMCNTCRRFNC" type="xs:string" />
+              <xs:element minOccurs="0" name="CODAGEBCOFNC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODBCOFNC" type="xs:decimal" />
+              <xs:element name="CODCGRFNC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMCPFFNC" type="xs:string" />
+              <xs:element name="CODSNDFNC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATNSC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CODUNDNGC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFILEMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODUNDREG" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODSGMMCDCTB" type="xs:decimal" />
+              <xs:element name="NUMRMLTLF" type="xs:string" />
+              <xs:element minOccurs="0" name="DESPSWFNCPAD" type="xs:string" />
+              <xs:element minOccurs="0" name="DESPSWCDF" type="xs:string" />
+              <xs:element name="DESENDCREETNFNC" type="xs:string" />
+              <xs:element name="CODNIVFNC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDTRBFNC" type="xs:decimal" />
+              <xs:element name="NUMCARCCP" type="xs:string" />
+              <xs:element name="NUMCARRLP" type="xs:string" />
+              <xs:element name="DATVLDCARCCP" type="xs:dateTime" />
+              <xs:element name="DATVLDCARRLP" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATPRVDEMFNC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NUMCPF" type="xs:string" />
+              <xs:element minOccurs="0" name="DATALTCADFNC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TIPFNC" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetFuncionarioKey1">
+      <xs:selector xpath=".//mstns:T0100361" />
+      <xs:field xpath="mstns:CODFNC" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

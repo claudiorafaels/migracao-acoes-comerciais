@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetRelatorioBaixaAcordo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetRelatorioBaixaAcordo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetRelatorioBaixaAcordo.xsd" id="DatasetRelatorioBaixaAcordo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetRelatorioBaixaAcordo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tbBaixaAcordo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="CODPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESSITPMS" type="xs:string" />
+              <xs:element minOccurs="0" name="DatNgcPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatCadPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NumPedCmp" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NomAcsUsrSis" type="xs:string" />
+              <xs:element minOccurs="0" name="DesMsgUsr" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoRegistro" type="xs:string" />
+              <xs:element minOccurs="0" name="DESFRMDSCBNF" type="xs:string" />
+              <xs:element minOccurs="0" name="DESDSNDSCBNF" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRNGCPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLREFTPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRPGOPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRPDAPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMULTALTPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATALTPMS" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VLRCANCELADO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMACSUSRSISBaixa" type="xs:string" />
+              <xs:element minOccurs="0" name="DESJSTCNCVLRARDCMC" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

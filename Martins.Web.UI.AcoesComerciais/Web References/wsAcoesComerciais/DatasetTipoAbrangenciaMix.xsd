@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTipoAbrangenciaMix.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTipoAbrangenciaMix.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTipoAbrangenciaMix.xsd" id="DatasetTipoAbrangenciaMix" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTipoAbrangenciaMix">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0125011">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESEDEABGMIX" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoAbrangenciaMixKey1">
+      <xs:selector xpath=".//mstns:T0125011" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

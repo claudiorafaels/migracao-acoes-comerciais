@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DataSetRelatorioRecibo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DataSetRelatorioRecibo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DataSetRelatorioRecibo.xsd" id="DataSetRelatorioRecibo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DataSetRelatorioRecibo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TbRecibo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodFrnRcb" type="xs:int" />
+              <xs:element minOccurs="0" name="NomFrnRcb" type="xs:string" />
+              <xs:element minOccurs="0" name="TipIdtEmpAscAcoCmc" type="xs:int" />
+              <xs:element minOccurs="0" name="CodFrnEmpAscAcoCmc" type="xs:int" />
+              <xs:element minOccurs="0" name="CodFilEmpRcb" type="xs:int" />
+              <xs:element minOccurs="0" name="CodPmsRcb" type="xs:int" />
+              <xs:element minOccurs="0" name="DatPrvRcbPmsRcb" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VlrNgcPmsRcb" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrPgoPmsRcb" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesDsnDscBnfRcb" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoRcb" type="xs:string" />
+              <xs:element minOccurs="0" name="CodBcoRcb" type="xs:long" />
+              <xs:element minOccurs="0" name="CodAgeRcb" type="xs:int" />
+              <xs:element minOccurs="0" name="NumChqRcb" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrChqRcb" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipFrnRcb" type="xs:string" />
+              <xs:element minOccurs="0" name="VlrSldRcb" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

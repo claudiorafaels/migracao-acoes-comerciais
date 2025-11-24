@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetFuncionario" targetNamespace="http://tempuri.org/DatasetFuncionario.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetFuncionario.xsd"
+	xmlns:mstns="http://tempuri.org/DatasetFuncionario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetFuncionario" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="T0100361">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODFNC" type="xs:decimal" />
+							<xs:element name="NOMFNC" type="xs:string" />
+							<xs:element name="CODDPT" type="xs:decimal" />
+							<xs:element name="CODSEC" type="xs:decimal" />
+							<xs:element name="CODEMP" type="xs:decimal" />
+							<xs:element name="DATADSFNC" type="xs:dateTime" />
+							<xs:element name="DATDEMFNC" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="ENDFNC" type="xs:string" />
+							<xs:element name="CODCID" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODBAIFNC" type="xs:decimal" />
+							<xs:element name="CODCEPFNC" type="xs:decimal" />
+							<xs:element name="NUMTLFFNC" type="xs:string" minOccurs="0" />
+							<xs:element name="CODFILFNC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODSEXFNC" type="xs:string" />
+							<xs:element name="CODDRT" type="xs:decimal" />
+							<xs:element name="CODDIV" type="xs:decimal" />
+							<xs:element name="CODCENCST" type="xs:string" />
+							<xs:element name="CODGRPPGTFNC" type="xs:decimal" />
+							<xs:element name="CODSETFNC" type="xs:decimal" />
+							<xs:element name="NUMCNTCRRFNC" type="xs:string" minOccurs="0" />
+							<xs:element name="CODAGEBCOFNC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODBCOFNC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODCGRFNC" type="xs:decimal" />
+							<xs:element name="NUMCPFFNC" type="xs:string" minOccurs="0" />
+							<xs:element name="CODSNDFNC" type="xs:decimal" />
+							<xs:element name="DATNSC" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="CODUNDNGC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODFILEMP" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODUNDREG" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODSGMMCDCTB" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NUMRMLTLF" type="xs:string" />
+							<xs:element name="DESPSWFNCPAD" type="xs:string" minOccurs="0" />
+							<xs:element name="DESPSWCDF" type="xs:string" minOccurs="0" />
+							<xs:element name="DESENDCREETNFNC" type="xs:string" />
+							<xs:element name="CODNIVFNC" type="xs:decimal" />
+							<xs:element name="INDTRBFNC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NUMCARCCP" type="xs:string" />
+							<xs:element name="NUMCARRLP" type="xs:string" />
+							<xs:element name="DATVLDCARCCP" type="xs:dateTime" />
+							<xs:element name="DATVLDCARRLP" type="xs:dateTime" />
+							<xs:element name="DATPRVDEMFNC" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="NUMCPF" type="xs:string" minOccurs="0" />
+							<xs:element name="DATALTCADFNC" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="TIPFNC" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DatasetFuncionarioKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:T0100361" />
+			<xs:field xpath="mstns:CODFNC" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

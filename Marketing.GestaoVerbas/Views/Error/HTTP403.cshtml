@@ -1,0 +1,97 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Martins | Gestão de Verbas</title>
+
+    @Styles.Render("~/Content/tether")
+    @Styles.Render("~/Content/bootstrap")
+    <script src="https://use.fontawesome.com/4bc0d857d3.js"></script>
+    @Styles.Render("~/Content/site")
+</head>
+<body style="background-color: #DFEAF4;">
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+        <a class="navbar-brand mx-auto" href="#">
+            <img src="~/Images/logo_nav.png" alt="Martins" class="img-fluid"> <b class="text-left m-0" style="font-size:24px;">Gestão de Verbas</b>
+        </a>
+    </nav>
+
+    <br />
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-6">
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h1>
+                            Acesso negado!
+                        </h1>
+                        <br />
+                        <p>Voce não possui acesso a esta funcionalidade!</p>
+                        <br />
+                        <br />
+                    </div>
+                    <div class="col-sm-12 text-right">
+                        <h3>
+                            <i class="fa fa-arrow-circle-left"></i>
+                            @Html.ActionLink("Voltar para a Home", "index", "index")
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<form id="form" action='@Session["MAPPATH"]/Login/Login' method="post">
+                <div class="container divLogin">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-offset-4 col-sm-12">
+                                <img src="~/Images/logo.png" width="90" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-offset-1 col-sm-12">
+                                <input type="text" class="form-control" id="txtUser" name="txtUsuario" maxlength="40" placeholder="Usuário" required="required">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-offset-1 col-sm-12">
+                                <input type="password" class="form-control" id="txtPassword" name="txtSenha" maxlength="40" placeholder="Senha" required="required">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-offset-1 col-sm-12">
+                                <input type='button' value="ACESSAR" onclick="jsLogin();" class='btn btn-primary' />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>*@
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/tether")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/app")
+
+</body>
+</html>

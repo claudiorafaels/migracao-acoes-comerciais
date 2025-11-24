@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetCarimboHistorico.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetCarimboHistorico.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetCarimboHistorico.xsd" id="DatasetCarimboHistorico" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetCarimboHistorico">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tbHistorico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="DESMER" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMSEQLMT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATHRAGRCHST" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPLMTMCOVBAFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRLMT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESHSTLMT" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

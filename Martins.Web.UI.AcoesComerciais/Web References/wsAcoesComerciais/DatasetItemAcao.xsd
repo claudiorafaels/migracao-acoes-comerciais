@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetItemAcao.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetItemAcao.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetItemAcao.xsd" id="DatasetItemAcao" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetItemAcao">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TblItemAcao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODACOCMC" type="xs:decimal" />
+              <xs:element name="NUMLNHITEOCDACOCMC" type="xs:decimal" />
+              <xs:element name="CODITEOCDACOCMC" type="xs:string" />
+              <xs:element name="QDEITEOCDACOCMC" type="xs:decimal" />
+              <xs:element name="VLRUNTITEOCDACOCMC" type="xs:decimal" />
+              <xs:element name="DATUTZITEACOCMC" type="xs:dateTime" />
+              <xs:element name="DESFRMUTZITEACOCMC" type="xs:string" />
+              <xs:element name="CODOPEFSCDSNACOCMC" type="xs:decimal" />
+              <xs:element name="VLRUTZOPEDSNACOCMC" type="xs:decimal" />
+              <xs:element name="QDEUTZOPEDSNACOCMC" type="xs:decimal" />
+              <xs:element name="CODMER" type="xs:decimal" />
+              <xs:element name="CODUNDESRNGCOPEDSN" type="xs:decimal" />
+              <xs:element name="CODFILEMP" type="xs:decimal" />
+              <xs:element name="QDEDIACMPITEACOCMC" type="xs:decimal" />
+              <xs:element name="CODCENCST" type="xs:decimal" />
+              <xs:element name="NUMCGCEMPFRN" type="xs:string" />
+              <xs:element name="IDTEMPFRNITERSU" type="xs:decimal" />
+              <xs:element name="IDTLCLEMPFRNITERSU" type="xs:decimal" />
+              <xs:element name="IDTTERPGTITERSU" type="xs:decimal" />
+              <xs:element name="CODIDTTSC" type="xs:decimal" />
+              <xs:element name="IDTCNTCTB" type="xs:decimal" />
+              <xs:element name="INDITEREQRSUVLRMNM" type="xs:decimal" />
+              <xs:element name="DESOBSCPR" type="xs:string" />
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="IDTITERSU" type="xs:decimal" />
+              <xs:element name="NUMLNHCTTRSU" type="xs:decimal" />
+              <xs:element name="DESCTTRSU" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TblSomaSaldo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SALDO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TblAcaoIncentivo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODICT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODACOCMC" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ValorUnitarioMercadoria">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="VLRCSTUNTMERAUX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FLGMERPMC" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MercadoriasPreco">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESMER" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRCSTUNTMER" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

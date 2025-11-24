@@ -1,0 +1,58 @@
+﻿
+@using Marketing.GestaoVerbas.Core.Message
+
+@{
+
+    List<Alert> alerts = new List<Alert>();
+    if (TempData.ContainsKey(Constantes.TEMP_DATA_KEY) && TempData[Constantes.TEMP_DATA_KEY] is List<Alert>)
+    {
+        alerts = TempData[Constantes.TEMP_DATA_KEY] as List<Alert>;
+    }
+}
+
+@for (int i = 0; i < alerts.Count; i++)
+{
+    Alert alert = alerts[i];
+
+    <div class="alert @(alert.AutoClose? "auto-close": "") alert-@alert.AlertStyle.ToString() fade in @(alert.EnableClose? "alert-dismissible": "") ">
+        @if (alert.EnableClose)
+        {
+            <a href="#" Class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        }
+
+        @if (alert.Message != null)
+        {
+            @Html.Raw(alert.Message)
+        }
+
+        @if (alert.Exception != null)
+        {
+            <div class="accordion-toggle collapsed smaller @alert.AlertStyle.ToString()" data-toggle="collapse" data-parent="#accordion" href="collapse_@i" aria-expanded="false" style="cursor:pointer">
+                <i class="bigger-110 ace-icon fa fa-angle-right" data-icon-hide="ace-icon fa fa-angle-down" data-icon-show="ace-icon fa fa-angle-right"></i>
+                @Html.Raw(alert.Exception.Message)
+            </div>
+            <div Class="panel-collapse collapse smaller @alert.AlertStyle.ToString()" id="collapse_@i" aria-expanded="false" style="height: 0px;">
+                <br />
+                Tipo:
+                @HttpContext.Current.Server.HtmlDecode(alert.Exception.GetType().ToString())
+                <br />
+                Trace:
+                @HttpContext.Current.Server.HtmlDecode(alert.Exception.StackTrace)
+            </div>
+        }
+    </div>
+}
+<script>
+    window.setTimeout(function () {
+        CloseAlertAuto();
+    }, 8000);
+</script>
+
+@if (alerts.Count > 0)
+{
+    <script>
+        $('html, body, body .modal').scrollTop(0);
+    </script>
+}
+
+

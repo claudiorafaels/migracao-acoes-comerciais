@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTipoFormaPagamento.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTipoFormaPagamento.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTipoFormaPagamento.xsd" id="DatasetTipoFormaPagamento" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTipoFormaPagamento">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0138407">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TipFrmPgtCttFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesTipFrmPgtCttFrn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoFormaPagamento">
+      <xs:selector xpath=".//mstns:T0138407" />
+      <xs:field xpath="mstns:TipFrmPgtCttFrn" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

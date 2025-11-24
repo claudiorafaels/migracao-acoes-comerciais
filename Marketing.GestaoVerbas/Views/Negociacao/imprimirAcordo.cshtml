@@ -1,0 +1,71 @@
+﻿
+@using Marketing.GestaoVerbas.ViewModel
+@model IEnumerable<AcordoViewModel>
+
+
+@{
+    foreach (var item in Model)
+    {
+    }
+}
+
+
+
+<div class="modal" id="modalImprimirAcordos" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary" style="color:white;">
+                <h5 class="modal-title" id="myModalLabel">Imprimir Acordos</h5>
+            </div>
+            <div class="modal-body bg-light">
+                @{
+                NegociacaoVerbaViewModel negociacao = ViewBag.NegociacaoVerba;
+                }
+
+                <div class="card bg-primary">
+                    <div class="card-header text-white">
+                        <h5>Acordos</h5>
+                    </div>
+                    <div class="card-body bg-secondary">
+                        <div class="row">
+                            <div class="table-responsive">
+                                <div class="dataTables_wrapper">
+                                    <table id="tbGrid" class="table table-hover table-striped  table-bordered">
+                                        <thead class="bg-secondary">
+                                            <tr>
+                                                <th class="center border">
+                                                </th>
+                                                <th>Negociação</th>
+                                                <th>Acordo</th>
+                                                <th>Empenho</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-light">
+                                            @foreach (AcordoViewModel acordo in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <a class="btn fa fa-print" target="_blank" href="@Url.Action("ImprimirAcordo", "Negociacao",  new { pCodPromessa = acordo.CodPromessa })" title="Imprimir">
+                                                    </a>
+                                                </td>
+                                                <td>@Html.DisplayFor(model => negociacao.CodNegociacaoVerba)</td>
+                                                <td>@Html.DisplayFor(model => acordo.CodPromessa)</td>
+                                                <td>@Html.DisplayFor(model => acordo.Recebimentos.First().NomDestinoObjetivo)</td>
+                                                <td>@Html.DisplayFor(model => acordo.Recebimentos.First().VlrNegociado)</td>
+                                            </tr>
+                                    }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" title="Fechar" class="btn btn-default" style="cursor: pointer;background-color:orange" onclick="jsCloseModalImprimirAcordos()">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

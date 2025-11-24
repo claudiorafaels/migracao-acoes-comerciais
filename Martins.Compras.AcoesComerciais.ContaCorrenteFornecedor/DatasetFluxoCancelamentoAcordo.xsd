@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetFluxoCancelamentoAcordo" targetNamespace="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd"
+	xmlns:mstns="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetFluxoCancelamentoAcordo" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="T0154038">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NUMPEDCNCACOCMC" type="xs:decimal" />
+							<xs:element name="CODFRN" type="xs:decimal" />
+							<xs:element name="NUMREQCNCACOCMC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODSTAAPV" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VLRTOTCNCACOCMC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DESOBSCNCACOCMC" type="xs:string" minOccurs="0" />
+							<xs:element name="NOMUSRSIS" type="xs:string" minOccurs="0" />
+							<xs:element name="DATGRCCNCACOCMC" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="DATAPVCNCACOCMC" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="DATRPVCNCACOCMC" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="T0154038Pesquisa">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NUMPEDCNCACOCMC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODSTAAPV" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DESSTAAPV" type="xs:string" minOccurs="0" />
+							<xs:element name="CODFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMFRN" type="xs:string" minOccurs="0" />
+							<xs:element name="DESOBSCNCACOCMC" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="T0154021">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NUMPEDCNCACOCMC" type="xs:decimal" />
+							<xs:element name="CODPMS" type="xs:decimal" />
+							<xs:element name="CODEMP" type="xs:decimal" />
+							<xs:element name="CODFILEMP" type="xs:decimal" />
+							<xs:element name="DATNGCPMS" type="xs:dateTime" />
+							<xs:element name="DATPRVRCBPMS" type="xs:dateTime" />
+							<xs:element name="TIPFRMDSCBNF" type="xs:decimal" />
+							<xs:element name="TIPDSNDSCBNF" type="xs:decimal" />
+							<xs:element name="VLRNGCPMS" type="xs:decimal" />
+							<xs:element name="VLRPGOPMS" type="xs:decimal" />
+							<xs:element name="VLRSLDPMSFRN" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Funcionario">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODFNC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMUSRRCF" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="FuncionariosControladoria">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NUMSEQNIVAPV" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODFNCAPVFIX" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="queryFluxos">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODFNC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMFNC" type="xs:string" minOccurs="0" />
+							<xs:element name="DESSTAFLUAPV" type="xs:string" minOccurs="0" />
+							<xs:element name="DATHRAAPVFLU" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="DESOBSAPV" type="xs:string" minOccurs="0" />
+							<xs:element name="TIPSTAFLUAPV" type="xs:string" minOccurs="0" />
+							<xs:element name="DATHRAFLUAPV" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="INDMESTRNFLU" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMFNCDELEGADO" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="T0154021ComDuplicidadeEmOutroFluxo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NUMPEDCNCACOCMC" type="xs:decimal" />
+							<xs:element name="CODPMS" type="xs:decimal" />
+							<xs:element name="CODEMP" type="xs:decimal" />
+							<xs:element name="CODFILEMP" type="xs:decimal" />
+							<xs:element name="DATNGCPMS" type="xs:dateTime" />
+							<xs:element name="DATPRVRCBPMS" type="xs:dateTime" />
+							<xs:element name="TIPFRMDSCBNF" type="xs:decimal" />
+							<xs:element name="TIPDSNDSCBNF" type="xs:decimal" />
+							<xs:element name="VLRNGCPMS" type="xs:decimal" />
+							<xs:element name="VLRPGOPMS" type="xs:decimal" />
+							<xs:element name="VLRSLDPMSFRN" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DatasetFluxoCancelamentoAcordoKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:T0154038" />
+			<xs:field xpath="mstns:NUMPEDCNCACOCMC" />
+			<xs:field xpath="mstns:CODFRN" />
+		</xs:unique>
+		<xs:key name="DatasetFluxoCancelamentoAcordoKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:T0154021" />
+			<xs:field xpath="mstns:NUMPEDCNCACOCMC" />
+			<xs:field xpath="mstns:CODPMS" />
+			<xs:field xpath="mstns:CODEMP" />
+			<xs:field xpath="mstns:CODFILEMP" />
+			<xs:field xpath="mstns:DATNGCPMS" />
+			<xs:field xpath="mstns:DATPRVRCBPMS" />
+			<xs:field xpath="mstns:TIPFRMDSCBNF" />
+			<xs:field xpath="mstns:TIPDSNDSCBNF" />
+		</xs:key>
+		<xs:key name="DatasetFluxoCancelamentoAcordoKey3">
+			<xs:selector xpath=".//mstns:T0154021ComDuplicidadeEmOutroFluxo" />
+			<xs:field xpath="mstns:CODPMS" />
+		</xs:key>
+		<xs:key name="DatasetFluxoCancelamentoAcordoKey4">
+			<xs:selector xpath=".//mstns:T0154021ComDuplicidadeEmOutroFluxo" />
+			<xs:field xpath="mstns:CODEMP" />
+			<xs:field xpath="mstns:CODFILEMP" />
+		</xs:key>
+		<xs:key name="DatasetFluxoCancelamentoAcordoKey5" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:T0154021ComDuplicidadeEmOutroFluxo" />
+			<xs:field xpath="mstns:CODPMS" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

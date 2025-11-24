@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DataSetRelatorioAcordos.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DataSetRelatorioAcordos.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DataSetRelatorioAcordos.xsd" id="DataSetRelatorioAcordos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DataSetRelatorioAcordos">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TBNovosAcordosSintetico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="NOME_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="DATA_PREVISAO_RECEBTO" type="xs:string" />
+              <xs:element minOccurs="0" default="0" name="SALDO_EXTRA_ACORDO" type="xs:decimal" />
+              <xs:element minOccurs="0" default="0" name="SALDO_ACORDO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBNovosAcordosAnalitico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="NOME_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="ACORDO" type="xs:string" />
+              <xs:element minOccurs="0" name="DATA_NEGOCIACAO_ACORDO" type="xs:string" />
+              <xs:element minOccurs="0" default="0" name="VALOR_ACORDO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBAcordosCanceladosSintetico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="DATCNC" type="xs:string" />
+              <xs:element minOccurs="0" name="EMPENHO" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRCNC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOME_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="CODIGO_FORNECEDOR" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBAcordosCanceladosAnalitico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO_FORNECEDOR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOME_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="ACORDO" type="xs:string" />
+              <xs:element minOccurs="0" name="EMPENHO" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRCNC" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

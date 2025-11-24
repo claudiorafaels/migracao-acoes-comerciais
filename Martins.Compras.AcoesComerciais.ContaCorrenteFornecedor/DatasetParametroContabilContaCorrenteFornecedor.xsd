@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetParametroContabilContaCorrenteFornecedor" targetNamespace="http://tempuri.org/DatasetParametroContabilContaCorrenteFornecedor.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetParametroContabilContaCorrenteFornecedor.xsd"
+	xmlns:mstns="http://tempuri.org/DatasetParametroContabilContaCorrenteFornecedor.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetParametroContabilContaCorrenteFornecedor" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="T0123094">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODTIPLMT" type="xs:decimal" />
+							<xs:element name="CODFILEMP" type="xs:decimal" />
+							<xs:element name="CODCNTDEB" type="xs:string" />
+							<xs:element name="CODCENCSTDEB" type="xs:string" />
+							<xs:element name="CODCNTCRD" type="xs:string" />
+							<xs:element name="CODCENCSTCRD" type="xs:string" />
+							<xs:element name="CODHSTPAD" type="xs:string" />
+							<xs:element name="CODEVTCTB" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODFTOCTB" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODEVTCTBNGCDVL" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODFTOCTBNGCDVL" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODEVTCTBFRTDVL" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODFTOCTBFRTDVL" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DatasetParametroContabilContaCorrenteFornecedorKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:T0123094" />
+			<xs:field xpath="mstns:CODTIPLMT" />
+			<xs:field xpath="mstns:CODFILEMP" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

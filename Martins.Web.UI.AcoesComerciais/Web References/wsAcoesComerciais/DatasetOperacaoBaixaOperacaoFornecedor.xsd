@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetOperacaoBaixaOperacaoFornecedor.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetOperacaoBaixaOperacaoFornecedor.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetOperacaoBaixaOperacaoFornecedor.xsd" id="DatasetOperacaoBaixaOperacaoFornecedor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetOperacaoBaixaOperacaoFornecedor">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TbRetorno1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NumOrdPgtFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodBco" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodAge" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatRcbOrdPgt" type="xs:string" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="VlrOrdPgt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatUltPmsOrd" type="xs:string" />
+              <xs:element minOccurs="0" name="DatRcbCreOrd" type="xs:string" />
+              <xs:element minOccurs="0" name="NomAcsUsrSis" type="xs:string" />
+              <xs:element minOccurs="0" name="TipOriOrdPgtFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipOpeBxaOrdPgtFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesTipOpeBxaOrdPgt" type="xs:string" />
+              <xs:element minOccurs="0" name="NumOrdPgtOriFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatTrnOrdPgtFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="DesHstDpsIdtFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="NomAcsUsrBxaOrdPgt" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TbRetorno2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TipOpeBxaOrdPgtFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesTipOpeBxaOrdPgt" type="xs:string" />
+              <xs:element minOccurs="0" name="CodTipLmt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipOriOrdPgtFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IndTipOpeBxaOrdPgt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IndTipOpeTrnOrdPgt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IndTipOpeQbrOrdPgt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodTipLmtPndSemDvl" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodTipLmtPndComDvl" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbQuebraOP">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+              <xs:element minOccurs="0" name="Fornecedor" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Tipo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

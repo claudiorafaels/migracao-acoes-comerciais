@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTipoServico.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTipoServico.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTipoServico.xsd" id="DatasetTipoServico" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTipoServico">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0138466">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TipSvcCttFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesTipSvcCttFrn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoServicoKey1">
+      <xs:selector xpath=".//mstns:T0138466" />
+      <xs:field xpath="mstns:TipSvcCttFrn" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

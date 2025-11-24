@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTipoTransferenciaValoresAcoesComerciais.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTipoTransferenciaValoresAcoesComerciais.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTipoTransferenciaValoresAcoesComerciais.xsd" id="DatasetTipoTransferenciaValoresAcoesComerciais" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTipoTransferenciaValoresAcoesComerciais">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0135033">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODTIPTRNVLRACOCMC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESTIPTRNVLRACOCMC" type="xs:string" />
+              <xs:element name="TIPDSNDSCBNF" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoTransferenciaValoresAcoesComerciaisKey1">
+      <xs:selector xpath=".//mstns:T0135033" />
+      <xs:field xpath="mstns:CODTIPTRNVLRACOCMC" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

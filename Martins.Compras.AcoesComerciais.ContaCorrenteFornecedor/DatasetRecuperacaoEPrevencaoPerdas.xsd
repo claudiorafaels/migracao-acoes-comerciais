@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetRecuperacaoEPrevencaoPerdas" targetNamespace="http://tempuri.org/DatasetRecuperacaoEPrevencaoPerdas.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetRecuperacaoEPrevencaoPerdas.xsd"
+	xmlns:mstns="http://tempuri.org/DatasetRecuperacaoEPrevencaoPerdas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetRecuperacaoEPrevencaoPerdas" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Sintetico">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMFRN" type="xs:string" minOccurs="0" />
+							<xs:element name="NUMCTTFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NUMCSLCTTFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TIPEDEABGMIX" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODEDEABGMIX" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DATREFAPU" type="xs:date" minOccurs="0" />
+							<xs:element name="RECEBERCFA" type="xs:decimal" minOccurs="0" />
+							<xs:element name="RECEBERORI" type="xs:decimal" minOccurs="0" />
+							<xs:element name="RECEBIDOACORDO" type="xs:decimal" minOccurs="0" />
+							<xs:element name="RECEBERACORDO" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ACORDOTOTAL" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NEGOCIADOACORDO" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PAGOACORDO" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Analitico">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMFRN" type="xs:string" minOccurs="0" />
+							<xs:element name="NUMCTTFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NUMCSLCTTFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TIPEDEABGMIX" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODEDEABGMIX" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DATREFAPU" type="xs:date" minOccurs="0" />
+							<xs:element name="BASECALCFA" minOccurs="0" type="xs:decimal" />
+							<xs:element name="BASECALORI" minOccurs="0" type="xs:decimal" />
+							<xs:element name="BASEANTCFA" type="xs:decimal" minOccurs="0" />
+							<xs:element name="BASEANTORI" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PERCRSCFA" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PERCRSORI" type="xs:decimal" minOccurs="0" />
+							<xs:element name="FXACFA" type="xs:decimal" minOccurs="0" />
+							<xs:element name="FXAORI" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PERAPUCFA" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PERAPUORI" type="xs:decimal" minOccurs="0" />
+							<xs:element name="RECEBERCFA" type="xs:decimal" minOccurs="0" />
+							<xs:element name="RECEBERORI" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NEGOCIADOACORDO" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PAGOACORDO" type="xs:decimal" minOccurs="0" />
+							<xs:element name="RECEBERACORDO" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ACORDOTOTAL" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Clausulas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NUMCSLCTTFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DESCSLCTTFRN" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DataApuracao">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DATREFAPU" type="xs:date" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AcordosCanceladosPerdas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMFRN" type="xs:string" minOccurs="0" />
+							<xs:element name="CODPMS" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODSITPMS" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DATNGCPMS" type="xs:date" minOccurs="0" />
+							<xs:element name="DATPRVRCBPMS" type="xs:date" minOccurs="0" />
+							<xs:element name="TIPDSNDSCBNF" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DESDSNDSCBNF" type="xs:string" minOccurs="0" />
+							<xs:element name="VLRNGCPMS" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VLRPGOPMS" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VLREFTPMS" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DATCNCPED" type="xs:date" minOccurs="0" />
+							<xs:element name="NOMACSUSRSIS" type="xs:string" minOccurs="0" />
+							<xs:element name="VLRPDAPMS" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DESJSTCNCVLRARDCMC" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Comprador">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODCPR" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMCPR" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="NotasPeriodo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DATEMSNOTFSC" type="xs:date" minOccurs="0" />
+							<xs:element name="NUMNOTFSCFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODMER" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DESMER" type="xs:string" minOccurs="0" />
+							<xs:element name="VLRLIQITENOT" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VLRBRTITENOT" type="xs:decimal" minOccurs="0" />
+							<xs:element name="QDEITENOT" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VLRSTBITENOT" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VLRIPIITENOT" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VLRICMITENOT" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetContratoXPeriodo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetContratoXPeriodo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetContratoXPeriodo.xsd" id="DatasetContratoXPeriodo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetContratoXPeriodo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0124988">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPPODCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMREFPOD" type="xs:decimal" />
+              <xs:element name="DATINIPOD" type="xs:dateTime" />
+              <xs:element name="DATFIMPOD" type="xs:dateTime" />
+              <xs:element name="FLGESTAPUPOD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMSEQREFPOD" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0124970">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPPODCTTFRN" type="xs:decimal" />
+              <xs:element name="DESPODCTTFRN" type="xs:string" />
+              <xs:element name="QDEMESREFPOD" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Query01">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="DATINIPOD" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoXPeriodoKey1">
+      <xs:selector xpath=".//mstns:T0124988" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPPODCTTFRN" />
+      <xs:field xpath="mstns:NUMREFPOD" />
+      <xs:field xpath="mstns:DATINIPOD" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoXPeriodoKey2">
+      <xs:selector xpath=".//mstns:T0124970" />
+      <xs:field xpath="mstns:TIPPODCTTFRN" />
+    </xs:unique>
+    <xs:keyref name="T0124970T0124988" refer="mstns:DatasetContratoXPeriodoKey2">
+      <xs:selector xpath=".//mstns:T0124988" />
+      <xs:field xpath="mstns:TIPPODCTTFRN" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

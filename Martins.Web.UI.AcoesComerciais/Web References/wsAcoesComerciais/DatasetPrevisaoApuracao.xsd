@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetPrevisaoApuracao.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetPrevisaoApuracao.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetPrevisaoApuracao.xsd" id="DatasetPrevisaoApuracao" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetPrevisaoApuracao">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="PrevisaoApuracao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODDRTCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESDRTCMP" type="xs:string" />
+              <xs:element minOccurs="0" name="CODDIVCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESDIVCMP" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCPR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMCPR" type="xs:string" />
+              <xs:element minOccurs="0" name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="numcttfrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="numcslcttfrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="descslcttfrn" type="xs:string" />
+              <xs:element minOccurs="0" name="tippodcttfrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="numrefpod" type="xs:decimal" />
+              <xs:element minOccurs="0" name="tipedeabgmix" type="xs:decimal" />
+              <xs:element minOccurs="0" name="codedeabgmix" type="xs:decimal" />
+              <xs:element minOccurs="0" name="vlrrcbeftfxa" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

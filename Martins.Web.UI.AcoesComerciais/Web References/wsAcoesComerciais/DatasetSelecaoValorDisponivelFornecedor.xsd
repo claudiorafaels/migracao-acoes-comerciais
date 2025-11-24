@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetSelecaoValorDisponivelFornecedor.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetSelecaoValorDisponivelFornecedor.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetSelecaoValorDisponivelFornecedor.xsd" id="DatasetSelecaoValorDisponivelFornecedor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetSelecaoValorDisponivelFornecedor">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tbSelecaoValorDisponivelFornecedor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="VlrSldDsp" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrSldPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrSldAcoFut" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrSldTot" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipDsnDscBnf" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesAlcVbaFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="PerAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrRcbAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrSldDspAlcVbaFrn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbTransfenciaEmpenhosDoFornecedor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NomeCategoria" type="xs:string" />
+              <xs:element minOccurs="0" name="NomeComprador" type="xs:string" />
+              <xs:element name="CodigoFornecedor" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NomeFornecedor" type="xs:string" />
+              <xs:element name="CodigoEmpenho" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NomeEmpenho" type="xs:string" />
+              <xs:element name="CodigoAlocacao" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NomeAlocacao" type="xs:string" />
+              <xs:element minOccurs="0" name="ValorAlocado" type="xs:decimal" />
+              <xs:element minOccurs="0" name="ValorReceber" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SaldoDisponivel" type="xs:decimal" />
+              <xs:element minOccurs="0" name="ValorTransferir" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrSldDspAlcVbaFrnPmt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodigoComprador" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbFornecedorCompradorEDivisaoCompra">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="CODDIVCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESDIVCMP" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCPR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMCPR" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetSelecaoValorDisponivelFornecedorKey1">
+      <xs:selector xpath=".//mstns:tbTransfenciaEmpenhosDoFornecedor" />
+      <xs:field xpath="mstns:CodigoFornecedor" />
+      <xs:field xpath="mstns:CodigoEmpenho" />
+      <xs:field xpath="mstns:CodigoAlocacao" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetSelecaoValorDisponivelFornecedorKey2">
+      <xs:selector xpath=".//mstns:tbFornecedorCompradorEDivisaoCompra" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

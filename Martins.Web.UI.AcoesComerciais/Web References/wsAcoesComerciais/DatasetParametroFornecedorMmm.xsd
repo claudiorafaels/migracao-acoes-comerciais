@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetParametroFornecedorMmm.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetParametroFornecedorMmm.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetParametroFornecedorMmm.xsd" id="DatasetParametroFornecedorMmm" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetParametroFornecedorMmm">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0123884">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="FLGFRNAJTCMC" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetParametroFornecedorMmmKey1">
+      <xs:selector xpath=".//mstns:T0123884" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetMercadoria.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetMercadoria.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetMercadoria.xsd" id="DatasetMercadoria" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetMercadoria">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0100086">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODMER" type="xs:decimal" />
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="DESMER" type="xs:string" />
+              <xs:element minOccurs="0" name="CODTBTICMMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATDSTMER" type="xs:dateTime" />
+              <xs:element name="CODGRPMERNCM" type="xs:string" />
+              <xs:element name="CODGRPMERNCMCTB" type="xs:string" />
+              <xs:element name="DATALTCADMER" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="INDORIMER" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0100086Pesquisa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESMER" type="xs:string" />
+              <xs:element minOccurs="0" name="CODGRPMERNCM" type="xs:string" />
+              <xs:element minOccurs="0" name="CODGRPMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODTBTICMMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODESTUNIORI" type="xs:string" />
+              <xs:element minOccurs="0" name="CODESTUNIDSN" type="xs:string" />
+              <xs:element minOccurs="0" name="DESTBTICMMER" type="xs:string" />
+              <xs:element minOccurs="0" name="DESGRPMER" type="xs:string" />
+              <xs:element minOccurs="0" name="DESGRPMERNCM" type="xs:string" />
+              <xs:element minOccurs="0" name="CODGRPMERNCMCTB" type="xs:string" />
+              <xs:element minOccurs="0" name="PERTBTVLRVNDMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERTBTVLRCMPMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCODTBTESTORIDSN" type="xs:string" />
+              <xs:element minOccurs="0" name="PERTBTICMMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SITUACAO" type="xs:string" />
+              <xs:element minOccurs="0" name="DATDSTMER" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="INDORIMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESINDORIMER" type="xs:string" />
+              <xs:element minOccurs="0" name="PERTBTICMDIF" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FornecedorMercadoria">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCGCEMPFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0100086MixMartins">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODMER" type="xs:decimal" />
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="DESMER" type="xs:string" />
+              <xs:element name="CODGRPMER" type="xs:decimal" />
+              <xs:element name="CODCLSMER" type="xs:decimal" />
+              <xs:element name="CODGRPMERNCMCTB" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCLSMER" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCMCMER" type="xs:string" />
+              <xs:element minOccurs="0" name="CODFRNPCPMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATDSTMER" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DESGRPMER" type="xs:string" />
+              <xs:element minOccurs="0" name="DESINDORIMER" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ParametrosTributarios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODESTUNIORI" type="xs:string" />
+              <xs:element minOccurs="0" name="CODESTUNIDSN" type="xs:string" />
+              <xs:element minOccurs="0" name="CODGRPMERNCMCTB" type="xs:string" />
+              <xs:element minOccurs="0" name="CODMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESMER" type="xs:string" />
+              <xs:element minOccurs="0" name="PERTBTICMMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODTBTICMMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCODTBTESTORIDSN" type="xs:string" />
+              <xs:element minOccurs="0" name="FLGRTNICMFTE" type="xs:string" />
+              <xs:element minOccurs="0" name="PerVnd" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PerCmp" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODGRPMERSBTTBT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODGRPCLISBTTBT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODPRRGRPCLISBTTBT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERMRGLCRSBTTBT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERCRDSBTTBT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERDBTSBTTBT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPDTZSBTTBT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FLGVGRVLRMNMSBTTBT" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRMNMMEREST" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESINDORIMER" type="xs:string" />
+              <xs:element minOccurs="0" name="GNRE" type="xs:string" />
+              <xs:element minOccurs="0" name="Dir_Ativa" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PERTBTICMDIF" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetMercadoriaKey1">
+      <xs:selector xpath=".//mstns:T0100086" />
+      <xs:field xpath="mstns:CODMER" />
+      <xs:field xpath="mstns:CODEMP" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetMercadoriaKey2">
+      <xs:selector xpath=".//mstns:FornecedorMercadoria" />
+      <xs:field xpath="mstns:NUMCGCEMPFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetMercadoriaKey3">
+      <xs:selector xpath=".//mstns:T0100086MixMartins" />
+      <xs:field xpath="mstns:CODMER" />
+      <xs:field xpath="mstns:CODEMP" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

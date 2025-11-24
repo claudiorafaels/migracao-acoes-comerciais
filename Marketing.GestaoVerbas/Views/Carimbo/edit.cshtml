@@ -1,0 +1,195 @@
+﻿@using Marketing.GestaoVerbas.ViewModel
+@model CarimboViewModel
+
+@{
+    NegociacaoVerbaViewModel negociacao = ViewBag.NegociacaoVerba;
+}
+
+<!-- Botões -->
+<div class="row py-1">
+    <div class="mx-auto">
+        <ul class="nav nav-pills" style="font-size:25px;">
+            <li class="nav-item">
+                <a title="Voltar" style="cursor: pointer;" class="nav-link gray" onclick="jsVoltarCarimboParaNegociacao()"> <i class="fa fa-arrow-left"></i>&nbsp;</a>
+            </li>
+            @{
+                if (negociacao.CodStatusNegociacaoVenda == 1 || negociacao.CodStatusNegociacaoVenda == 4)
+                {
+                    <li class="nav-item">
+                        <a title="Salvar" style="cursor: pointer;" class="nav-link gray"> <i class="fa fa-save" onclick="jsSalvarCarimbo()"></i>&nbsp;</a>
+                    </li>
+                }
+            }
+
+        </ul>
+    </div>
+</div>
+<div class="dropdown-divider" style="margin-top:-12px;"></div>
+<br />
+
+<!-- Informações -->
+<div class="card bg-primary ">
+    <div id="pnlCarimboItemEditInfoNegociacao" class="card-header text-white">
+        <h5><i class="fa fa-plus" style="cursor:pointer;padding-top:10px;"></i> @Model.CodNegociacaoVerba - Informações da Negociação</h5>
+    </div>
+    <div class="card-body bg-light collapse">
+        @*Comprador- negociação*@
+        @Html.HiddenFor(model => negociacao.CodComprador, new { @id = "hdfEditCarimboCodComprador" })
+
+        @Html.HiddenFor(model => model.CodFornecedor, new { @id = "hdfEditCarimboCodFornecedor" })
+        @Html.HiddenFor(model => model.CodDestinoObjetivo, new { @id = "hdfEditNegociacaoVerbaCodDestinoObjetivo" })
+        @Html.HiddenFor(model => model.CodNegociacaoVerba, new { @id = "hdfEditCarimboCodNegociacaoVerba" })
+        @Html.HiddenFor(model => model.CodCarimbo, new { @id = "hdfEditCarimboCodCarimbo" })
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.NomFornecedor)
+                <div class="row">
+                    <div class="col-4">
+                        @Html.EditorFor(model => model.CodFornecedor, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })
+                    </div>
+                    <div class="col-8">
+                        @Html.TextBoxFor(model => model.NomFornecedor, new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.NomFuncionario)
+                <div class="row">
+                    <div class="col-4">
+                        @Html.EditorFor(model => model.CodFuncionario, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })
+                    </div>
+                    <div class="col-8">
+                        @Html.TextBoxFor(model => model.NomFuncionario, new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.NomDestinoObjetivo)
+                <div class="row">
+                    <div class="col-4">
+                        @Html.TextBoxFor(model => model.CodDestinoObjetivo, new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
+                    </div>
+                    <div class="col-8">
+                        @Html.TextBoxFor(model => model.NomDestinoObjetivo, new { @class = "form-control", disabled = "disabled", @readonly = "readonly" })
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.VlrVerba)
+                @Html.ValidationMessageFor(model => model.VlrVerba, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.VlrVerba, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly", alt = "decimal_positivo_2" } })
+            </div>
+        </div>
+        <div class="row" style="padding-bottom: 1rem; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.DesObservacao)
+                @Html.ValidationMessageFor(model => model.DesObservacao, "", new { @class = "text-danger" })
+                @Html.TextAreaFor(model => model.DesObservacao, new { @class = "form-control", @id = "txtEditCarimboDesObservacaoSolicitacaoVerba", disabled = "disabled" })
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+
+<!-- Calcular Carimbo -->
+<div class="card bg-primary ">
+    <div class="card-header text-white">
+        <h5> @Model.CodCarimbo - Carimbo</h5>
+    </div>
+    <div class="card-body bg-light">
+        <div class="row">
+            <div class="col-md-3">
+                @Html.LabelFor(model => model.VlrVerba)
+                @Html.ValidationMessageFor(model => model.VlrVerba, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.VlrVerba, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly", alt = "decimal_positivo_2" } })
+            </div>
+            <div class="col-md-3">
+                @Html.LabelFor(model => model.VlrImpostos)
+                @Html.ValidationMessageFor(model => model.VlrImpostos, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.VlrImpostos, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly", alt = "decimal_positivo_2" } })
+            </div>
+            <div class="col-md-3">
+                @Html.LabelFor(model => model.VlrCarimbo)
+                @Html.ValidationMessageFor(model => model.VlrCarimbo, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.VlrCarimbo, new { htmlAttributes = new { @class = "form-control", id = "txtEditVlrCarimboMax", disabled = "disabled", @readonly = "readonly", alt = "decimal_positivo_2" } })
+            </div>
+            <div class="col-md-3">
+                <label>Período: </label>
+                <br />
+                <label><b>Semanal</b> </label>
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+@Html.HiddenFor(model => model.CodNegociacaoVerba, new { htmlAttributes = new { @class = "form-control", id = "txtEditNegociacaoVerbaCodNegociacaoVerba", data_val = false } })
+
+<div class="card bg-primary">
+    <div class="card-header text-white">
+        <h5>
+            Mercadorias
+            <a title="Exportar" style="background-color:transparent; float:right;" class="nav-link gray text-white " onclick="jsExportarCarimbo()" > <i class="fa fa-download"></i>&nbsp;</a>
+
+            <span class="calculo-auto" style="float:right;line-height: 32px;">
+                <label style=" font-size: 12px; margin: 0px; ">
+                    Calcular Automaticamente
+                    <input type="checkbox" id="cbtIndCalculoAuto" checked="checked" />
+                </label>
+                <button type="button" class="gray text-white btn-link" onclick="jsCalcularCarimboManual();" title="Calcular agora">
+                    <i class="fa fa-calculator"></i>&nbsp;
+                </button>
+            </span>
+        </h5>
+    </div>
+    <div class=" card-body bg-secondary" style="padding-bottom: 0px;padding-top: 5px;">
+        @{
+            if (negociacao.CodStatusNegociacaoVenda == 1 || negociacao.CodStatusNegociacaoVenda == 4)
+            {
+                <div class="row">
+                    <div class="col-lg-6 text-white">
+                        <label>Modo de Calculo: </label>
+                        <br class="hidden-lg-up" />
+                        <div style="white-space: nowrap;display: inline-table;">
+                            <input type="radio" id="rbtModoCalculoCarimboAuto" name="modoDistribuicaoPartCarimbo" value="A" checked="checked" onclick="jsModoCalculoCarimboAuto();" />
+                            <label for="rbtModoCalculoCarimboAuto">%Part. Verba Auto.</label>
+                        </div>
+                        <div style="white-space: nowrap;display: inline-table;">
+                            <input type="radio" id="rbtModoCalculoCarimboDigitacao" name="modoDistribuicaoPartCarimbo" value="M" onclick="jsModoCalculoCarimboManual();" />
+                            <label for="rbtModoCalculoCarimboDigitacao">%Part. Verba Manual</label>
+                        </div>
+                        <div style="white-space: nowrap;display: inline-table;">
+                            <input type="radio" id="rbtModoCalculoCarimboQuedaPonderada" name="modoDistribuicaoPartCarimbo" value="P" onclick="jsModoCalculoCarimboQuedaPonderada();" />
+                            <label for="rbtModoCalculoCarimboQuedaPonderada">%Queda Ponderada</label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-2 text-right text-white hidden-md-down">
+                                <label style="margin: 5px 0; ">Filtrar Filial: </label>
+                            </div>
+                            <div class="col-md-12 text-white hidden-lg-up">
+                                <label>Filtrar Filial: </label>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="input-group">
+                                    @Html.ListBox("CodFilialEmpresa", new MultiSelectList(ViewBag.Filiais, "CodFilialEmpresa", "CodNomFilialEmpresa"), new { @class = "form-control chosen-select", id = "drpEditCarimboCodFilialFiltro" })
+                                    <button type="button" title="Filtrar" class="input-group-addon" style="cursor: pointer;background-color: #196dab;color:white;padding-top:4px !important;padding-bottom: 4px !important; height:100%" onclick="jsFiltrarCarimbo()">Filtrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        <!-- Grid -->
+        <div id="gridCarimbo" class="gridCarimbo small">
+            @Html.Partial("~/Views/Carimbo/gridCarimboItem.cshtml", Model.Itens, new ViewDataDictionary { TemplateInfo = new TemplateInfo { HtmlFieldPrefix = "listaSimilares" } })
+        </div>
+    </div>
+</div>

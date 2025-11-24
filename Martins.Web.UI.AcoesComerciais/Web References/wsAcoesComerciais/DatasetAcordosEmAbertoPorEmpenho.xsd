@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetAcordosEmAbertoPorEmpenho.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetAcordosEmAbertoPorEmpenho.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetAcordosEmAbertoPorEmpenho.xsd" id="DatasetAcordosEmAbertoPorEmpenho" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetAcordosEmAbertoPorEmpenho">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tbAcordosEmAbertoPorEmpenho">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodEmp" type="xs:int" />
+              <xs:element minOccurs="0" name="CodFilEmp" type="xs:int" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="CodPms" type="xs:int" />
+              <xs:element minOccurs="0" name="DatNgcPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatPrvRcbPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TipFrmDscBnf" type="xs:int" />
+              <xs:element minOccurs="0" name="TipDsnDscBnf" type="xs:int" />
+              <xs:element minOccurs="0" name="CodSitPms" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrDspPms" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

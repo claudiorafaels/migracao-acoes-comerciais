@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetSituacaoAcordo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetSituacaoAcordo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetSituacaoAcordo.xsd" id="DatasetSituacaoAcordo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetSituacaoAcordo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0118082">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODSITPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESSITPMS" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetSituacaoAcordoKey1">
+      <xs:selector xpath=".//mstns:T0118082" />
+      <xs:field xpath="mstns:CODSITPMS" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

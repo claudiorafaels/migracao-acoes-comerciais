@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetParametroGestaoAcaoComercial.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetParametroGestaoAcaoComercial.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetParametroGestaoAcaoComercial.xsd" id="DatasetParametroGestaoAcaoComercial" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetParametroGestaoAcaoComercial">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0118074">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="CODFILEMP" type="xs:decimal" />
+              <xs:element name="CODULTUTZACOCMC" type="xs:decimal" />
+              <xs:element name="CODULTUTZPMS" type="xs:decimal" />
+              <xs:element name="DATREFPCSPEDCMP" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VLRMAXARR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERMAXARR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRMNMSLDBLQFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FLGBLQPEDBNFNOR" type="xs:string" />
+              <xs:element minOccurs="0" name="PERJURSLDNEG" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERPIS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FTRCNVVBACTTMRGCRB" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0112963">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="CODFILEMP" type="xs:decimal" />
+              <xs:element name="NOMFILEMP" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetParametroGestaoAcaoComercialKey1">
+      <xs:selector xpath=".//mstns:T0118074" />
+      <xs:field xpath="mstns:CODEMP" />
+      <xs:field xpath="mstns:CODFILEMP" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetParametroGestaoAcaoComercialKey2">
+      <xs:selector xpath=".//mstns:T0112963" />
+      <xs:field xpath="mstns:CODEMP" />
+      <xs:field xpath="mstns:CODFILEMP" />
+    </xs:unique>
+    <xs:keyref name="T0112963T0118074" refer="mstns:DatasetParametroGestaoAcaoComercialKey2">
+      <xs:selector xpath=".//mstns:T0118074" />
+      <xs:field xpath="mstns:CODEMP" />
+      <xs:field xpath="mstns:CODFILEMP" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

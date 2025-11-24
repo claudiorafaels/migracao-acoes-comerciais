@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTipoPedidoCompra.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTipoPedidoCompra.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTipoPedidoCompra.xsd" id="DatasetTipoPedidoCompra" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTipoPedidoCompra">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0104499">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPPEDCMP" type="xs:decimal" />
+              <xs:element name="DESTIPPEDCMP" type="xs:string" />
+              <xs:element name="FLGCALPCOMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMCSLCTTFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0124953">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCSLCTTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="INDUTZCSLALCVBAFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDUTLVLRFXA" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoPedidoCompraKey1">
+      <xs:selector xpath=".//mstns:T0104499" />
+      <xs:field xpath="mstns:TIPPEDCMP" />
+    </xs:unique>
+    <xs:unique name="DatasetTipoPedidoCompraKey2">
+      <xs:selector xpath=".//mstns:T0124953" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+    </xs:unique>
+    <xs:keyref name="T0124953T0104499" refer="mstns:DatasetTipoPedidoCompraKey2">
+      <xs:selector xpath=".//mstns:T0104499" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

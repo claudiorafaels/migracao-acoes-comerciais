@@ -1,0 +1,135 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Martins | Gestão de Verbas</title>
+
+    @Styles.Render("~/Content/tether")
+    @Styles.Render("~/Content/bootstrap")
+    <script src="https://use.fontawesome.com/4bc0d857d3.js"></script>
+    @Styles.Render("~/Content/site")
+</head>
+<body style="background-color: #DFEAF4;">
+    <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+        <a class="navbar-brand mx-auto" href="#">
+            <img src="~/Images/logo_nav.png" alt="Martins" class="img-fluid"> <b class="text-left m-0" style="font-size:24px;">Gestão de Verbas</b>
+        </a>
+    </nav>
+
+    <br />
+    <div class="container body-content">
+         <form id="form" action='@Session["MAPPATH"]/Login/Login' method="post">
+            <div class="container divLogin">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-offset-4 col-sm-12">
+                            <img src="~/Images/logo.png" width="90" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-offset-1 col-sm-12">
+                            <input type="text" class="form-control" id="txtUser" name="txtUsuario" maxlength="40" placeholder="Usuário" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-offset-1 col-sm-12">
+                            <input type="password" class="form-control" id="txtPassword" name="txtSenha" maxlength="40" placeholder="Senha" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-offset-1 col-sm-12">
+                            <input type='button' value="ACESSAR" onclick="jsLogin();" class='btn btn-primary' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="loadingGif" style="display: none;"></div>
+    <div class="loadingFundoBranco" style="display: none;"> </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/tether")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/app")
+
+    @Html.Partial("_Alerta")
+
+    <script type="text/javascript">
+
+        function jsLogin() {
+            if (jsValidarAprovacao()) {
+                $('.loadingGif').show();
+                $('.loadingFundoBranco').show();
+                $("#form").submit();
+            }
+        }
+
+        function jsValidarAprovacao() {
+            var countError = 0;
+            var fieldsCollection = [
+                "txtUser",
+                "txtPassword",
+            ]
+            var valuesCollection = [
+                $("#txtUser").val(),
+                $("#txtPassword").val(),
+            ]
+            var i = 0;
+            for (i; i < fieldsCollection.length; i++) {
+                if (valuesCollection[i] == "") {
+                    countError++;
+                    $('#' + fieldsCollection[i]).css("border", "1px solid red");
+                }
+                else
+                    $('#' + fieldsCollection[i]).css("border", "1px solid #e4e4e4");
+            }
+
+            if (countError == 0)
+                return true;
+            else {
+                jsAbreAlerta("Atenção", "Preencha todos os campos corretamente!", "info");
+                return false;
+            }
+        }
+
+
+
+        var inputs = $('#txtUser, #txtPassword');
+        for (var i = 0; i < inputs.length; i++) {
+            $(inputs[i]).bind("keydown", function (event) {
+                var keycode = (event.keyCode ? event.keyCode : (event.which ? event.which : event.charCode));
+                if (keycode == 13) {
+                    jsLogin();
+                    return false;
+                } else {
+                    return true;
+                }
+            });
+        }
+
+
+
+        //if ('serviceWorker' in navigator) {
+        //    navigator.serviceWorker
+        //         .register('../service-worker.js')
+        //         .then(function () { console.log('Service Worker Registered'); });
+        //}
+
+    </script>
+</body>
+</html>

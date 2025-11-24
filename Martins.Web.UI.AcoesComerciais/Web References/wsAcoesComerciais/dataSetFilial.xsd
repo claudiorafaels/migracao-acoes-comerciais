@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/dataSetFilial.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/dataSetFilial.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dataSetFilial.xsd" id="dataSetFilial" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="dataSetFilial">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0112963">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:int" />
+              <xs:element name="CODFILEMP" type="xs:int" />
+              <xs:element name="NOMFILEMP" type="xs:string" />
+              <xs:element name="ENDFILEMP" type="xs:string" />
+              <xs:element name="CODBAIFILEMP" type="xs:long" />
+              <xs:element name="CODCPLBAIFILEMP" type="xs:long" />
+              <xs:element name="CODCEPFILEMP" type="xs:long" />
+              <xs:element name="NUMCGCFILEMP" type="xs:string" />
+              <xs:element name="NUMINSESTFILEMP" type="xs:string" />
+              <xs:element name="DATCADFILEMP" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATDSTFILEMP" type="xs:dateTime" />
+              <xs:element name="FLGFILEMPEPD" type="xs:string" />
+              <xs:element name="FLGFILEMPFAT" type="xs:string" />
+              <xs:element name="FLGFILEMPMTZ" type="xs:string" />
+              <xs:element name="FLGFILEMPCDA" type="xs:string" />
+              <xs:element name="FLGFILEMPCENREG" type="xs:string" />
+              <xs:element name="FLGFILEMPTRNMERRVD" type="xs:string" />
+              <xs:element name="FLGFILEMPENRNOTFSC" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCENREG" type="xs:int" />
+              <xs:element minOccurs="0" name="CODFILEMPCTB" type="xs:int" />
+              <xs:element name="CODNACATIEMP" type="xs:long" />
+              <xs:element name="PERALQSEGACNTRB" type="xs:decimal" />
+              <xs:element name="NUMFNDPVDAPOSOCTCR" type="xs:int" />
+              <xs:element name="CODTCRPVDSOC" type="xs:int" />
+              <xs:element name="CODPGTGUAPVDSOC" type="xs:int" />
+              <xs:element name="VLRDNSMERREF" type="xs:decimal" />
+              <xs:element name="TIPFILEMPSBTTBT" type="xs:int" />
+              <xs:element name="TIPFILEMPSBTTBTPCO" type="xs:int" />
+              <xs:element minOccurs="0" name="TIPCONETQENRSAI" type="xs:int" />
+              <xs:element name="NUMINSMNC" type="xs:string" />
+              <xs:element name="NUMAVR" type="xs:string" />
+              <xs:element name="DATABRFSC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATBXAFSC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CODFILEMPVNDDTO" type="xs:int" />
+              <xs:element minOccurs="0" name="CODEANFILEMP" type="xs:string" />
+              <xs:element minOccurs="0" name="DESABVFILEMP" type="xs:string" />
+              <xs:element name="INDFILATVPRSETRCMS" type="xs:int" />
+              <xs:element minOccurs="0" name="DATATVPRSETRCMSFIL" type="xs:dateTime" />
+              <xs:element name="PERMAXVARALTCSTCAD" type="xs:decimal" />
+              <xs:element name="IDTULTGRPCRG" type="xs:int" />
+              <xs:element minOccurs="0" name="CODFILEMPTBT" type="xs:int" />
+              <xs:element minOccurs="0" name="NUMTLFFILEMPTBT" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMFAXFILEMPTBT" type="xs:string" />
+              <xs:element name="CODCRFLICFUNPRDCON" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMSEQLIVFSCSVC" type="xs:long" />
+              <xs:element minOccurs="0" name="NUMPAGLIVFSCSVC" type="xs:int" />
+              <xs:element minOccurs="0" name="QDELIMPAGLIVFSCSVC" type="xs:int" />
+              <xs:element name="INDISNCRDCMB" type="xs:int" />
+              <xs:element name="INDCALPTOVNDFILEPD" type="xs:int" />
+              <xs:element name="CODCIDPCOACOCMC" type="xs:int" />
+              <xs:element name="NUMSEQCRGSEP" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="dataSetFilialKey1">
+      <xs:selector xpath=".//mstns:T0112963" />
+      <xs:field xpath="mstns:CODEMP" />
+      <xs:field xpath="mstns:CODFILEMP" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

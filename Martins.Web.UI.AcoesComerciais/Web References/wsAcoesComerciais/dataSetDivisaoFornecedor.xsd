@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/dataSetDivisaoFornecedor.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/dataSetDivisaoFornecedor.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dataSetDivisaoFornecedor.xsd" id="dataSetDivisaoFornecedor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="dataSetDivisaoFornecedor">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0126573">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:int" />
+              <xs:element name="CODFILEMP" type="xs:int" />
+              <xs:element name="CODFRN" type="xs:long" />
+              <xs:element minOccurs="0" name="FLGSGSUNDCMP" type="xs:string" />
+              <xs:element minOccurs="0" name="FLGAJTUNDCMP" type="xs:string" />
+              <xs:element minOccurs="0" name="QDEDIAETQINISGS" type="xs:int" />
+              <xs:element minOccurs="0" name="QDEDIAENTFRN" type="xs:int" />
+              <xs:element minOccurs="0" name="FLGSLDPED" type="xs:string" />
+              <xs:element minOccurs="0" name="QDEDIARPS" type="xs:int" />
+              <xs:element minOccurs="0" name="VLRMNMCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FLGMEDVNDCAL" type="xs:string" />
+              <xs:element minOccurs="0" name="CREETNFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="FLGPEDEDI" type="xs:string" />
+              <xs:element minOccurs="0" name="QDEDIAFAT" type="xs:int" />
+              <xs:element minOccurs="0" name="FLGCTSVND" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPFRMPEDCMPFRN" type="xs:int" />
+              <xs:element minOccurs="0" name="DATCADFRNEDI" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATDSTFRNEDI" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PERARRUNDCMPPLT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDFRNGRCPEDAUT" type="xs:int" />
+              <xs:element minOccurs="0" name="VLRMNMGRCPEDCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODSVCRDEVLRADI" type="xs:int" />
+              <xs:element minOccurs="0" name="QDEDIAATPENVMSG" type="xs:int" />
+              <xs:element minOccurs="0" name="INDENVIVNETQ" type="xs:int" />
+              <xs:element minOccurs="0" name="INDENVCADMER" type="xs:int" />
+              <xs:element minOccurs="0" name="INDENVIVNSAISMN" type="xs:int" />
+              <xs:element minOccurs="0" name="DATHRAALTCAD" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NOMACSUSRSIS" type="xs:string" />
+              <xs:element minOccurs="0" name="INDENVADVRCB" type="xs:int" />
+              <xs:element minOccurs="0" name="TIPIDTPRDTRCINFETN" type="xs:int" />
+              <xs:element minOccurs="0" name="TIPPCOENVTRCINFETN" type="xs:int" />
+              <xs:element minOccurs="0" name="TIPCALUTZPCOLIQ" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0107838">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:int" />
+              <xs:element name="CODFILEMP" type="xs:int" />
+              <xs:element name="CODEMPFRN" type="xs:long" />
+              <xs:element name="TIPCTOFRN" type="xs:int" />
+              <xs:element minOccurs="0" name="NOMCTOEMPFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMTLFEMPFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMFAXEMPFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="CODBAI" type="xs:long" />
+              <xs:element minOccurs="0" name="CODCPLBAI" type="xs:long" />
+              <xs:element minOccurs="0" name="ENDCTOEMPFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCEP" type="xs:long" />
+              <xs:element minOccurs="0" name="TIPLGR" type="xs:string" />
+              <xs:element minOccurs="0" name="DESLGR" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMENDLGR" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCPLEND" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMCXAPTL" type="xs:long" />
+              <xs:element minOccurs="0" name="ENDCREETNCTO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0100035Simplificado">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODCID" type="xs:int" />
+              <xs:element minOccurs="0" name="NOMCID" type="xs:string" />
+              <xs:element minOccurs="0" name="CODESTUNI" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0100426">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:int" />
+              <xs:element name="CODFRN" type="xs:long" />
+              <xs:element name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCPR" type="xs:int" />
+              <xs:element name="NUMTLFFRN" type="xs:string" />
+              <xs:element name="ENDFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCIDFRN" type="xs:int" />
+              <xs:element name="DATCADFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CODREPFRN" type="xs:int" />
+              <xs:element name="TIPFRTPADFRN" type="xs:string" />
+              <xs:element name="DESNOMFRNCMNDDO" type="xs:string" />
+              <xs:element name="FLGCMNDDOFRN" type="xs:string" />
+              <xs:element name="QDEDIAATZPADFRN" type="xs:int" />
+              <xs:element name="TIPCALATZPAD" type="xs:string" />
+              <xs:element name="NUMIDTTIPCALATZPAD" type="xs:long" />
+              <xs:element minOccurs="0" name="DATFCHANOFSC" type="xs:dateTime" />
+              <xs:element name="CODGRPFRN" type="xs:int" />
+              <xs:element minOccurs="0" name="DATDSTDIVFRN" type="xs:dateTime" />
+              <xs:element name="NUMSEQPCSENVINFFRN" type="xs:int" />
+              <xs:element minOccurs="0" name="NUMCGCFRNCMNDDOITX" type="xs:string" />
+              <xs:element name="FLGCMNDDOITX" type="xs:string" />
+              <xs:element name="CLFCRVABCFRN" type="xs:string" />
+              <xs:element name="POSCRVABCFRN" type="xs:int" />
+              <xs:element name="FLGFRNFBR" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCSS" type="xs:int" />
+              <xs:element name="NOMFNTFRN" type="xs:string" />
+              <xs:element name="INDATDDTOFRN" type="xs:int" />
+              <xs:element name="CODFRNPCPAPUARDFRN" type="xs:long" />
+              <xs:element name="NOMUSRCONCTOFRN" type="xs:string" />
+              <xs:element name="IDTENDCREETNFINFRN" type="xs:string" />
+              <xs:element name="CODBAI" type="xs:long" />
+              <xs:element name="CODCEP" type="xs:long" />
+              <xs:element name="CODIDTFRNBCOBRD" type="xs:long" />
+              <xs:element name="CODDIGVRFFRNBCOBRD" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPIDTEMPASCACOCMC" type="xs:int" />
+              <xs:element minOccurs="0" name="CODFRNEMPASCACOCMC" type="xs:long" />
+              <xs:element name="CODCRVABCFRNDRT" type="xs:string" />
+              <xs:element name="NUMPOSCRVABCFRNDRT" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="dataSetDivisaoFornecedorKey4">
+      <xs:selector xpath=".//mstns:T0126573" />
+      <xs:field xpath="mstns:CODEMP" />
+      <xs:field xpath="mstns:CODFILEMP" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dataSetDivisaoFornecedorKey3">
+      <xs:selector xpath=".//mstns:T0107838" />
+      <xs:field xpath="mstns:CODEMP" />
+      <xs:field xpath="mstns:CODFILEMP" />
+      <xs:field xpath="mstns:CODEMPFRN" />
+      <xs:field xpath="mstns:TIPCTOFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dataSetDivisaoFornecedorKey2">
+      <xs:selector xpath=".//mstns:T0100035Simplificado" />
+      <xs:field xpath="mstns:CODCID" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dataSetDivisaoFornecedorKey1">
+      <xs:selector xpath=".//mstns:T0100426" />
+      <xs:field xpath="mstns:CODEMP" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetRelatorioContasAReceber.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetRelatorioContasAReceber.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetRelatorioContasAReceber.xsd" id="DatasetRelatorioContasAReceber" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetRelatorioContasAReceber">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tbContasAReceber_02ZA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODEMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFILEMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMPEDCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODSITPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATNGCPMS" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="DatPrvRcbPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TIPFRMDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesFrmDscBnf" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesDsnDscBnf" type="xs:string" />
+              <xs:element minOccurs="0" name="CodDivCmp" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesDivCmp" type="xs:string" />
+              <xs:element minOccurs="0" name="CodGerPrd" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLREFTPMS" type="xs:float" />
+              <xs:element minOccurs="0" name="VLRNGCPMS" type="xs:float" />
+              <xs:element minOccurs="0" name="VLRPGOPMS" type="xs:float" />
+              <xs:element minOccurs="0" name="CANCELADO" type="xs:float" />
+              <xs:element minOccurs="0" name="ABERTO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DT_PAGTO" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DIA_ATR" type="xs:float" />
+              <xs:element minOccurs="0" name="TIPO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbContasAReceber_02ZB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODEMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodDivCmp" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesDivCmp" type="xs:string" />
+              <xs:element minOccurs="0" name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="Prometido" type="xs:float" />
+              <xs:element minOccurs="0" name="Recebido" type="xs:float" />
+              <xs:element minOccurs="0" name="A_Receber" type="xs:float" />
+              <xs:element minOccurs="0" name="PmsSmnAtu" type="xs:float" />
+              <xs:element minOccurs="0" name="RcbSmnAtu" type="xs:float" />
+              <xs:element minOccurs="0" name="A_RcbAtu" type="xs:float" />
+              <xs:element minOccurs="0" name="T_Prometido" type="xs:float" />
+              <xs:element minOccurs="0" name="T_Recebido" type="xs:float" />
+              <xs:element minOccurs="0" name="T_a_receber" type="xs:float" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbContasAReceber_02ZC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodEmp" type="xs:long" />
+              <xs:element minOccurs="0" name="CodDivCmp" type="xs:long" />
+              <xs:element minOccurs="0" name="DesDivCmp" type="xs:string" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:long" />
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="Negociado" type="xs:float" />
+              <xs:element minOccurs="0" name="Efetivado" type="xs:float" />
+              <xs:element minOccurs="0" name="Pago" type="xs:float" />
+              <xs:element minOccurs="0" name="SldAboNgc" type="xs:float" />
+              <xs:element minOccurs="0" name="SldAboEft" type="xs:float" />
+              <xs:element minOccurs="0" name="Percentual" type="xs:float" />
+              <xs:element minOccurs="0" name="PerAcm" type="xs:float" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbContasAReceber_02ZC1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODCEL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCEL" type="xs:string" />
+              <xs:element minOccurs="0" name="CODDIVCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESDIVCMP" type="xs:string" />
+              <xs:element minOccurs="0" name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRABT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TOTAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PER" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbContasAReceber_02ZE1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodEmp" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodFilEmp" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NumPedCmp" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodSitPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesSitPms" type="xs:string" />
+              <xs:element minOccurs="0" name="DatNgcPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="DatPrvRcbPms" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TipFrmDscBnf" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesFrmDscBnf" type="xs:string" />
+              <xs:element minOccurs="0" name="TipDsnDscBnf" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesDsnDscBnf" type="xs:string" />
+              <xs:element minOccurs="0" name="CodDivCmp" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesDivCmp" type="xs:string" />
+              <xs:element minOccurs="0" name="CodGerPrd" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrEftPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrNgcPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrPgoPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesErro" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbContasAReceber_02ZF">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODEMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODDIVCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESDIVCMP" type="xs:string" />
+              <xs:element minOccurs="0" name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="DiaAtr" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Negociado" type="xs:float" />
+              <xs:element minOccurs="0" name="Efetivado" type="xs:float" />
+              <xs:element minOccurs="0" name="Pago" type="xs:float" />
+              <xs:element minOccurs="0" name="SldAboFrnJV" type="xs:float" />
+              <xs:element minOccurs="0" name="SldAboFrnAV" type="xs:float" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbContasAReceber_02ZG">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodEmp" type="xs:long" />
+              <xs:element minOccurs="0" name="CodDivCmp" type="xs:long" />
+              <xs:element minOccurs="0" name="DesDivCmp" type="xs:string" />
+              <xs:element minOccurs="0" name="DiaAtr" type="xs:long" />
+              <xs:element minOccurs="0" name="SldAboFrn" type="xs:float" />
+              <xs:element minOccurs="0" name="Percentual" type="xs:float" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbContasAReceber_02ZR">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodDivCmp" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesDivCmp" type="xs:string" />
+              <xs:element minOccurs="0" name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCSLCTTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="DATINCACO" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VLRRCBEFTFXA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRRCBPCL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRRESID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATPRVRCB" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TIPFRMDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESFRMDSCBNF" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESDSNDSCBNF" type="xs:string" />
+              <xs:element minOccurs="0" name="DIAATR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NumRefPod" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATATUA" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

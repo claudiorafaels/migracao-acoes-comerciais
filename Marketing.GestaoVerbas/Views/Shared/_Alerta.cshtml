@@ -1,0 +1,33 @@
+﻿<div id="divModalAlerta" class="alert alert-warning alert-dismissable" style="display: none; position: fixed; top: 20%; z-index: 9999999; width: 90%; margin-left: auto; margin-right: auto; right: 0; left: 0;">
+    <button type="button" class="close" aria-hidden="true" onclick="FechaAlerta()" style="padding-left: 10px;">
+        ×
+    </button>
+    <b id="spanModalTitle" style="display: none;"></b>&nbsp;<span id="spanModalContent" style="word-wrap: break-word;"></span>
+</div>
+
+<script type="text/javascript">
+
+	$(document).ready(function () {
+
+	    if ('@(TempData["mensagemAlerta"])') {
+	        jsAbreAlerta('@(TempData["tituloAlerta"])', '@(TempData["mensagemAlerta"])', '@(TempData["cssAlerta"])');
+	    }
+	});
+
+    function jsAbreAlerta(title, content, type) {
+
+        $('#spanModalTitle').html(title);
+        $('#spanModalContent').html(content);
+        $('#divModalAlerta').attr('class', '');
+        $('#divModalAlerta').addClass('alert alert-' + type + ' alert-dismissable');
+        $('#divModalAlerta').modal('show');
+        $('#btnModalCancel').css('display', 'none');
+    }
+
+	function FechaAlerta() {
+
+	    $('#divModalAlerta').modal('hide');
+	}
+
+</script>
+

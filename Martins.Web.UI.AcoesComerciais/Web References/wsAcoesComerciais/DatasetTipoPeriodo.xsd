@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTipoPeriodo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTipoPeriodo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTipoPeriodo.xsd" id="DatasetTipoPeriodo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTipoPeriodo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0124970">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPPODCTTFRN" type="xs:decimal" />
+              <xs:element name="DESPODCTTFRN" type="xs:string" />
+              <xs:element name="QDEMESREFPOD" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoPeriodoKey1">
+      <xs:selector xpath=".//mstns:T0124970" />
+      <xs:field xpath="mstns:TIPPODCTTFRN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

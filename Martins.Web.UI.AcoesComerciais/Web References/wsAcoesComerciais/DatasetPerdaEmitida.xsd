@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetPerdaEmitida.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetPerdaEmitida.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetPerdaEmitida.xsd" id="DatasetPerdaEmitida" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetPerdaEmitida">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0152647">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPPODCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMREFPOD" type="xs:decimal" />
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODEDEABGMIX" type="xs:decimal" />
+              <xs:element name="DATREFAPU" type="xs:dateTime" />
+              <xs:element name="NUMSEQRLCCTTPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODEMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFILEMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATNGCPMS" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATPRVRCBPMS" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TIPFRMDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMCTTFRNORIPDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMCSLCTTFRNORIPDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPPODCTTFRNORIPDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMREFPODORIPDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPEDEABGMIXORIPDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODEDEABGMIXORIPDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATREFAPUORIPDA" type="xs:dateTime" />
+              <xs:element name="TIPFRMDSCBNFORIPDA" type="xs:decimal" />
+              <xs:element name="TIPDSNDSCBNFORIPDA" type="xs:decimal" />
+              <xs:element name="VLRCRDUTZCTTFRN" type="xs:decimal" />
+              <xs:element name="DATGRCRLCPDACTTFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATDSTRLCPDACTTFRN" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetPerdaEmitidaKey1">
+      <xs:selector xpath=".//mstns:T0152647" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:TIPPODCTTFRN" />
+      <xs:field xpath="mstns:NUMREFPOD" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+      <xs:field xpath="mstns:DATREFAPU" />
+      <xs:field xpath="mstns:NUMSEQRLCCTTPMS" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

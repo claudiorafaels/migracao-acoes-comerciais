@@ -1,0 +1,42 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel
+@using System.Linq
+
+@model  MenuAcessoViewModel
+
+@if (Model.Acessos != null)
+{
+    List<MenuViewModel> filhos = Model.Acessos.Where(p => p.CodMenuPai == Model.CodMenuCorrente).ToList();
+
+    <div class="arvore-node">
+        @foreach (MenuViewModel node in filhos)
+        {
+            <div class="menu-item">
+                <a class="menu-root" href="#">
+                    <i class="fa fa-plus"></i>&nbsp Menu Root
+                </a>
+
+                @if (node.CodMenuPai == "0")
+                {<a class="menu-root" href="#">
+                        <i class="fa fa-plus">@node.NomMenu</i>
+                    </a>
+                    @*<div class="collapse">
+                            //Parcial view.
+                        </div>*@
+                }
+                else
+                {
+                    <div class="collapse">
+                        @Html.ActionLink(node.NomMenu, node.DesLocalAplicacaoMenu, new { area = "" }, new { onclick = "true;", @class = "" })
+                    </div>
+                }
+
+                @{
+                    Model.CodMenuCorrente = node.CodMenu;
+                }
+                @Html.Partial("menuAcesso", Model)
+            </div>
+        }
+    </div>
+
+}

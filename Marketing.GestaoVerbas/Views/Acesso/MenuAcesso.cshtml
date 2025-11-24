@@ -1,0 +1,41 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel
+@using System.Linq
+
+@model  string
+
+@{
+    List<MenuViewModel> menus = Session["MENUACESSO"] as List<MenuViewModel>;
+
+    List<MenuViewModel> filhos = new List<MenuViewModel>();
+    if (menus != null)
+    {
+        filhos = menus.Where(p => p.CodMenuPai == Model).ToList();
+    }
+}
+
+<div class="arvore-node">
+    @foreach (MenuViewModel node in filhos)
+    {
+        if (node.DesLocalAplicacaoMenu != "[botao]")
+        {
+            <div class="menu-item">
+                @if (node.DesLocalAplicacaoMenu == "#")
+                {
+                    <a class="menu-root" href="#">
+                        <i class="fa @node.DesIconeMenu"></i>&nbsp; @node.NomMenu
+                    </a>
+                    <div class="collapse">
+                        @Html.Partial("~/Views/Acesso/MenuAcesso.cshtml", node.CodMenu, new ViewDataDictionary { TemplateInfo = new TemplateInfo { HtmlFieldPrefix = "MenuItem" } })
+                    </div>
+                }
+                else
+                {
+                    <a href="@string.Format("{0}/{1}", Request.ApplicationPath, node.DesLocalAplicacaoMenu)">
+                        <i class="fa @node.DesIconeMenu"></i>&nbsp; @node.NomMenu
+                    </a>
+                }
+            </div>
+        }
+    }
+</div>

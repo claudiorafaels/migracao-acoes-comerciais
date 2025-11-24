@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:i0="http://tempuri.org/DataSetUsuario.xsd" xmlns:tns="http://tempuri.org/Martins.Web.Services.Usuario/Usuario" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/Martins.Web.Services.Usuario/Usuario" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/DataSetUsuario.xsd" location="http://localhost/Martins.Web.Services.Usuario/Usuario.asmx?schema=DataSetUsuario" />
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/Martins.Web.Services.Usuario/Usuario">
+      <s:import namespace="http://tempuri.org/DataSetUsuario.xsd" />
+      <s:element name="ObterUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codigoUsuario" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DataSetUsuario.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObterUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ObterUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UsuarioSoap">
+    <wsdl:operation name="ObterUsuario">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna dados do usuário com base no código..</documentation>
+      <wsdl:input message="tns:ObterUsuarioSoapIn" />
+      <wsdl:output message="tns:ObterUsuarioSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UsuarioSoap" type="tns:UsuarioSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="ObterUsuario">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.Usuario/Usuario/ObterUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Usuario">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="UsuarioSoap" binding="tns:UsuarioSoap">
+      <soap:address location="http://localhost/Martins.Web.Services.Usuario/Usuario.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

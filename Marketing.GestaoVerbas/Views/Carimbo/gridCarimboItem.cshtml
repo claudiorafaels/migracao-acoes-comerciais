@@ -1,0 +1,359 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel
+@model IEnumerable<CarimboItemViewModel>
+
+
+
+
+<div class="bg-secondary row">
+    <div id="gridCarimboMercadoria" style="width:100% ;">
+        <table class="table table-hover table-bordered dataTable">
+            <thead class="bg-secondary">
+                <tr role="row">
+                    <th class="sorting width60">  <button type="button" sort-expression="VlrPrevistoCarimbo" onclick="jsOrdenarCarimboItem(this);"><i class="fa fa-sort text-white"></i></button>    &nbsp;<input type="checkbox" class="marcar" onclick="jsSelecionarTodos(this)" /></th>
+                    <th class="width30"><i class="fa fa-plus" style="cursor:pointer;" onclick="jsExpandeAll(this)"></i></th>
+                    <th class="sorting width120"><button type="button" sort-expression="NomFilialEmpresa" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.NomFilialEmpresa) </button></th>
+                    <th class="sorting width80"><button type="button" sort-expression="CodMercadoria" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.CodMercadoria) </button></th>
+                    <th class="sorting width250"><button type="button" sort-expression="NomMercadoria" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.NomMercadoria) </button></th>
+                    <th class="sorting width150"><button type="button" sort-expression="DesClasseMercadoria" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.DesClasseMercadoria) </button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="QtdEstoqueMercadoria" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.QtdEstoqueMercadoria) </button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrEstoqueMercadoria" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.VlrEstoqueMercadoria) </button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="QtdSaldoPeriodoMercadoria" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.QtdSaldoPeriodoMercadoria) </button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrSaldoPeriodoMercadoria" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.VlrSaldoPeriodoMercadoria) </button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrCobertura" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.VlrCobertura) </button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrPerParticipacaoVerba" onclick="jsOrdenarCarimboItem(this);">&nbsp; @Html.DisplayNameFor(model => model.VlrPerParticipacaoVerba)</button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrDiarioCustoMedioEfetivo" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.VlrDiarioCustoMedioEfetivo) </button></th>
+
+                    <th class="sorting width90"><button type="button" sort-expression="VlrMedioVerbaParaPrecoMercadoria" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.VlrMedioVerbaParaPrecoMercadoria) </button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrMedioVerbaParaMargemMercadoria" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(Model => Model.VlrMedioVerbaParaMargemMercadoria)</button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrVerbaUnitario" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(Model => Model.VlrVerbaUnitario)</button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrPrevistoCarimbo" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.VlrPrevistoCarimbo) </button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrPerQuedaPonderada" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.VlrPerQuedaPonderada)</button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrPerMcVnd" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.VlrPerMcVnd) </button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrPerMbVnd" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.VlrPerMbVnd) </button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrPercentualFundingVendaTotal" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.VlrPercentualFundingVendaTotal) </button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrPercentualFundingVendaPreco" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.VlrPercentualFundingVendaPreco) </button></th>
+                    <th class="sorting width90"><button type="button" sort-expression="VlrImpostos" onclick="jsOrdenarCarimboItem(this);">&nbsp;@Html.DisplayNameFor(model => model.VlrImpostos) </button></th>
+                </tr>
+            </thead>
+
+            <tbody class="bg-light border" id="tbodyCarimboItem">
+                @{
+                    int? codGrupoSimilar = null;
+                    int? codFilialEmpresa = null;
+
+                    bool grupoNaoSimilares = false;
+                    string cssGrupo = "weak";
+                    string cssItemGrupo = "weak";
+                    string cssItem = "weak";
+
+                }
+
+                @foreach (CarimboItemViewModel item in Model)
+                {
+                    if (item.CodGrupoSimilar != 0) //verifica se o item  possui grupo
+                    {
+                        if (item.CodGrupoSimilar != codGrupoSimilar || item.CodFilialEmpresa != codFilialEmpresa) //verificar se o grupo esta alternando // || item.CodFilialEmpresa != codFilialEmpresa
+                        {
+                            codGrupoSimilar = item.CodGrupoSimilar;
+                            codFilialEmpresa = item.CodFilialEmpresa;
+
+                            if (cssGrupo == "weak")
+                            {
+                                cssGrupo = "strong";
+                            }
+                            else
+                            {
+                                cssGrupo = "weak";
+                            }
+
+                            <tr class="row-similar-group row-style-@cssGrupo" data-similar-group="@codGrupoSimilar" data-similar-codfil="@codFilialEmpresa">
+                                <td class="width60"><input type="checkbox" class="marcar" onclick="jsCheckSimilar(this)" data-similar-group="@codGrupoSimilar" data-similar-codfil="@codFilialEmpresa" @(item.VlrPrevistoCarimbo != null ? "checked=\"checked\"" : "" ) /></td>
+                                <td class="width30"><i class="fa fa-plus" style="cursor:pointer;" onclick="jsExpandeSimilares(this)" data-similar-group="@codGrupoSimilar" data-similar-codfil="@item.CodFilialEmpresa"></i></td>
+                                <td class="width120">
+                                    @Html.HiddenFor(model => item.CodFilialEmpresa, new { name = "[0]CodFilial", htmlAttributes = new { @class = "form-control" } })
+                                    @Html.DisplayFor(modelItem => item.CodFilialEmpresa) -
+                                    @Html.DisplayFor(modelItem => item.NomFilialEmpresa)
+                                </td>
+                                <td class="width80">@Html.DisplayFor(modelItem => item.CodGrupoSimilar)</td>
+                                <td class="width250" title="@Html.DisplayFor(model => item.DesGrupoMercadoriaSimilar)">@Html.DisplayFor(model => item.DesGrupoMercadoriaSimilar)</td>
+                                <td class="width150">@*@Html.DisplayFor(model => item.CodGrupoSimilar)*@</td>
+                                <td class="width90">@Model.Where(p => p.CodGrupoSimilar == codGrupoSimilar && p.CodFilialEmpresa == codFilialEmpresa).Sum(p => p.QtdEstoqueMercadoria).GetValueOrDefault().ToString("n0") </td>
+                                <td class="width90">@Model.Where(p => p.CodGrupoSimilar == codGrupoSimilar && p.CodFilialEmpresa == codFilialEmpresa).Sum(p => p.VlrEstoqueMercadoria).GetValueOrDefault().ToString("n2")</td>
+                                <td class="width90">@Model.Where(p => p.CodGrupoSimilar == codGrupoSimilar && p.CodFilialEmpresa == codFilialEmpresa).Sum(p => p.QtdSaldoPeriodoMercadoria).GetValueOrDefault().ToString("n0")</td>
+                                <td class="width90">@Model.Where(p => p.CodGrupoSimilar == codGrupoSimilar && p.CodFilialEmpresa == codFilialEmpresa).Sum(p => p.VlrSaldoPeriodoMercadoria).GetValueOrDefault().ToString("n0")</td>
+                                <td class="width90">@Model.Where(p => p.CodGrupoSimilar == codGrupoSimilar && p.CodFilialEmpresa == codFilialEmpresa).Average(p => p.VlrCobertura).GetValueOrDefault().ToString("n0")</td>
+                                <td class="width90"><input type="text" class="edit" alt="decimal_positivo_2" data-col="PerParticipacao" onchange="jsPerParticipacaoSimilarChange(this);" value="@(item.VlrPrevistoCarimbo != null ? Model.Where(p => p.CodGrupoSimilar == codGrupoSimilar && p.CodFilialEmpresa == codFilialEmpresa).Sum(p => p.VlrPerParticipacaoVerba).GetValueOrDefault().ToString("n2"): "")" @(item.VlrPrevistoCarimbo == null ? "disabled=\"disabled\"" : "" )></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90" data-col="VlrPrevistoCarimbo">
+                                    @(item.VlrPrevistoCarimbo != null ? (Model.Where(p => p.CodGrupoSimilar == codGrupoSimilar && p.CodFilialEmpresa == codFilialEmpresa).Sum(p => p.VlrPrevistoCarimbo).Value.ToString("c")) : "")
+                                </td>
+                                <td class="width90"><input type="text" class="edit" alt="decimal_2" data-col="VlrPerQuedaPonderada" value="@Html.DisplayFor(model => item.VlrPerQuedaPonderada)" disabled="disabled" onchange="jsQuedaPonderadaSimilarChange(this);" /></td>
+                                <td class="width90">@Model.Where(p => p.CodGrupoSimilar == codGrupoSimilar && p.CodFilialEmpresa == codFilialEmpresa).Average(p => p.VlrPerMcVnd).GetValueOrDefault().ToString("n2")</td>
+                                <td class="width90">@Model.Where(p => p.CodGrupoSimilar == codGrupoSimilar && p.CodFilialEmpresa == codFilialEmpresa).Average(p => p.VlrPerMbVnd).GetValueOrDefault().ToString("n2")</td>
+                                <td class="width90">@Model.Where(p => p.CodGrupoSimilar == codGrupoSimilar && p.CodFilialEmpresa == codFilialEmpresa).Average(p => p.VlrPercentualFundingVendaTotal).GetValueOrDefault().ToString("n2")</td>
+                                <td class="width90">@Model.Where(p => p.CodGrupoSimilar == codGrupoSimilar && p.CodFilialEmpresa == codFilialEmpresa).Average(p => p.VlrPercentualFundingVendaPreco).GetValueOrDefault().ToString("n2")</td>
+                                <td class="width90" data-col="VlrImpostos">
+                                    @(item.VlrPrevistoCarimbo != null ? (Model.Where(p => p.CodGrupoSimilar == codGrupoSimilar && p.CodFilialEmpresa == codFilialEmpresa).Sum(p => p.VlrImpostos).Value.ToString("c")) : "")
+                                </td>
+                            </tr>
+
+                        }
+
+                        if (cssItemGrupo == "weak")
+                        {
+                            cssItemGrupo = "strong";
+                        }
+                        else
+                        {
+                            cssItemGrupo = "weak";
+                        }
+
+                        <tr class="row-similar-item row-style-@cssItemGrupo   @((item.QtdEstoqueMercadoria == 0 || item.VlrEstoqueMercadoria == 0) ? "text-muted" : "leitura")" data-codgrpsim="@item.CodGrupoSimilar" data-codmer="@item.CodMercadoria" data-codfil="@item.CodFilialEmpresa" style="display:none;">
+                            <td class="width60"><input type="checkbox" class="@((item.QtdEstoqueMercadoria == 0 || item.VlrEstoqueMercadoria == 0) ? "" : "marcar")" data-codgrpsim="@item.CodGrupoSimilar" data-codmer="@item.CodMercadoria" data-codfil="@item.CodFilialEmpresa" @(item.VlrPrevistoCarimbo != null ? "checked=\"checked\"" : "" ) disabled="disabled" /></td>
+                            <td class="width30"></td>
+                            <td class="width120">
+                                @Html.HiddenFor(model => item.CodFilialEmpresa, new { name = "[0]CodFilial", htmlAttributes = new { @class = "form-control" } })
+                                @*@Html.DisplayFor(modelItem => item.NomFilialEmpresa)*@
+                            </td>
+                            <td class="width80">@Html.DisplayFor(modelItem => item.CodMercadoria)</td>
+                            <td class="width250" title="@Html.DisplayFor(model => item.NomMercadoria)">@Html.DisplayFor(model => item.NomMercadoria)</td>
+                            <td class="width150" title="@Html.DisplayFor(model => item.DesClasseMercadoria)">@Html.DisplayFor(model => item.DesClasseMercadoria)</td>
+                            <td class="width90" data-col="QtdEstoqueMercadoria">@Html.DisplayFor(model => item.QtdEstoqueMercadoria)</td>
+                            <td class="width90" data-col="VlrEstoqueMercadoria">@Html.DisplayFor(model => item.VlrEstoqueMercadoria)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.QtdSaldoPeriodoMercadoria)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrSaldoPeriodoMercadoria)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrCobertura)</td>
+                            <td class="width90" data-col="PerParticipacao">@Html.DisplayFor(model => item.VlrPerParticipacaoVerba) </td>
+                            <td class="width90" data-col="VlrDiarioCustoMedioEfetivo">@Html.DisplayFor(model => item.VlrDiarioCustoMedioEfetivo)</td>
+                            <td class="width90" data-col="VlrMedioVerbaParaPrecoMercadoria">@Html.DisplayFor(model => item.VlrMedioVerbaParaPrecoMercadoria)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrMedioVerbaParaMargemMercadoria)</td>
+                            <td class="width90" data-col="VlrVerbaUnitario">@Html.DisplayFor(model => item.VlrVerbaUnitario)</td>
+                            <td class="width90" data-col="VlrPrevistoCarimbo">@Html.DisplayFor(model => item.VlrPrevistoCarimbo)</td>
+                            @*<td class="width90"><input type="text" class="edit" alt="decimal_positivo_2" data-col="VlrPerQuedaPonderada" value="@Html.DisplayFor(model => item.VlrPerQuedaPonderada)" disabled="disabled" /></td>*@
+                            <td class="width90" data-col="VlrPerQuedaPonderada">@Html.DisplayFor(model => item.VlrPerQuedaPonderada)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrPerMcVnd)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrPerMbVnd)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrPercentualFundingVendaTotal)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrPercentualFundingVendaPreco)</td>
+                            <td class="width90" data-col="VlrImpostos">@Html.DisplayFor(modelItem => item.VlrImpostos)</td>
+                        </tr>
+
+                    }
+                    else //itens nao similares
+                    {
+                        if (cssItem == "weak")
+                        {
+                            cssItem = "strong";
+                        }
+                        else
+                        {
+                            cssItem = "weak";
+                        }
+
+                        if (!grupoNaoSimilares)
+                        {
+                            <tr class="row-no-similar-group">
+                                <td class="width60"><input type="checkbox" class="marcar" onclick="jsCheckAllSemSimilar(this)" data-similar-group="no" /></td>
+                                <td class="width30"><i class="fa fa-minus" style="cursor:pointer;" data-similar-group="no" data-similar-codfil="no" onclick="jsExpandeSimilares(this)"></i></td>
+                                <td class="width120"></td>
+                                <td class="width80"></td>
+                                <td class="width250">SEM SIMILARES</td>
+                                <td class="width150"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                                <td class="width90"></td>
+                            </tr>
+                            grupoNaoSimilares = true;
+                        }
+                        <tr class="row-no-similar-item row-style-@cssItem  @((item.QtdEstoqueMercadoria == 0 || item.VlrEstoqueMercadoria == 0 ) ? "text-muted" : "leitura") " data-codmer="@item.CodMercadoria" data-codfil="@item.CodFilialEmpresa">
+                            <td class="width60"><input type="checkbox" class="@((item.QtdEstoqueMercadoria == 0 || item.VlrEstoqueMercadoria == 0) ? "" : "marcar")" data-codmer="@item.CodMercadoria" data-codfil="@item.CodFilialEmpresa" onclick="jsCheckItemSemSimilar(this);" @(item.VlrPrevistoCarimbo != null ? "checked=\"checked\"" : "" ) @((item.QtdEstoqueMercadoria == 0 || item.VlrEstoqueMercadoria == 0) ? "disabled=\"disabled\"" : "") /></td>
+                            <td class="width30"></td>
+                            <td class="width120">
+                                @Html.HiddenFor(model => item.CodFilialEmpresa, new { name = "[0]CodFilial", htmlAttributes = new { @class = "form-control" } })
+                                @Html.DisplayFor(modelItem => item.CodFilialEmpresa) - @Html.DisplayFor(modelItem => item.NomFilialEmpresa)
+                            </td>
+                            <td class="width80">@Html.DisplayFor(modelItem => item.CodMercadoria)</td>
+                            <td class="width250" title="@Html.DisplayFor(model => item.NomMercadoria)">@Html.DisplayFor(model => item.NomMercadoria)</td>
+                            <td class="width150" title="@Html.DisplayFor(model => item.DesClasseMercadoria)">@Html.DisplayFor(model => item.DesClasseMercadoria)</td>
+                            <td class="width90" data-col="QtdEstoqueMercadoria">@Html.DisplayFor(model => item.QtdEstoqueMercadoria)</td>
+                            <td class="width90" data-col="VlrEstoqueMercadoria">@Html.DisplayFor(model => item.VlrEstoqueMercadoria)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.QtdSaldoPeriodoMercadoria)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrSaldoPeriodoMercadoria)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrCobertura)</td>
+                            <td class="width90"><input type="text" class="edit" alt="decimal_positivo_2" data-col="PerParticipacao" onchange="jsPerParticipacaoSemSimilarChange(this);" value="@Html.DisplayFor(model => item.VlrPerParticipacaoVerba)" @(item.VlrPrevistoCarimbo == null ? "disabled=\"disabled\"" : "" ) /></td>
+                            <td class="width90" data-col="VlrDiarioCustoMedioEfetivo">@Html.DisplayFor(model => item.VlrDiarioCustoMedioEfetivo)</td>
+                            <td class="width90" data-col="VlrMedioVerbaParaPrecoMercadoria">@Html.DisplayFor(model => item.VlrMedioVerbaParaPrecoMercadoria)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrMedioVerbaParaMargemMercadoria)</td>
+                            <td class="width90" data-col="VlrVerbaUnitario">@Html.DisplayFor(model => item.VlrVerbaUnitario)</td>
+                            <td class="width90" data-col="VlrPrevistoCarimbo">@Html.DisplayFor(model => item.VlrPrevistoCarimbo)</td>
+                            <td class="width90"><input type="text" class="edit" alt="decimal_2" data-col="VlrPerQuedaPonderada" onchange="jsQuedaPonderadaSemSimilarChange(this);" value="@Html.DisplayFor(model => item.VlrPerQuedaPonderada)" @(item.VlrPrevistoCarimbo == null ? "disabled=\"disabled\"" : "" ) /></td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrPerMcVnd)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrPerMbVnd)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrPercentualFundingVendaTotal)</td>
+                            <td class="width90">@Html.DisplayFor(model => item.VlrPercentualFundingVendaPreco)</td>
+                            <td class="width90" data-col="VlrImpostos">@Html.DisplayFor(modelItem => item.VlrImpostos)</td>
+                        </tr>
+                    }
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="bg-secondary text-white font-weight-bold">
+    <div class="row">
+        <div class="col-3">
+            <label>Vlr. Tot. Estoque:&nbsp;</label>
+            <span id="lblEditCarimboTotalVlrEstoqueMercadoria">@Model.Where(p => p.VlrPrevistoCarimbo != null).Sum(p => p.VlrEstoqueMercadoria.GetValueOrDefault()).ToString("c")</span>
+        </div>
+        <div class="col-3">
+            <label>%Participação Verba:&nbsp;</label>
+            <span id="lblEditCarimboTotalPerParticipacao">@Model.Sum(p => p.VlrPerParticipacaoVerba.GetValueOrDefault()).ToString("n2")</span>
+        </div>
+        <div class="col-3">
+            <label>Vlr. Tot. Verba:&nbsp;</label>
+            <span id="lblEditCarimboTotalVerbaDistribuido">@Model.Sum(p => p.VlrPrevistoCarimbo.GetValueOrDefault()).ToString("c") </span>
+        </div>
+        <div class="col-3">
+            <label>Vlr. Tot. Imposto:&nbsp;</label>
+            <span id="lblEditCarimboTotalImpostosDistribuido">@Model.Sum(p => p.VlrImpostos.GetValueOrDefault()).ToString("c")</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+<style>
+
+    .row-similar-group.row-style-strong {
+        background-color: #B0E0E6;
+    }
+
+    .row-similar-group.row-style-weak {
+        background-color: paleturquoise;
+    }
+
+
+    .row-similar-item.row-style-strong {
+        background-color: lightcyan;
+    }
+
+    .row-similar-item.row-style-weak {
+        background-color: #F0FFFF;
+    }
+
+    .row-no-similar-item.row-style-strong {
+        background-color: #FFFACD;
+    }
+
+    .row-no-similar-item.row-style-weak {
+        background-color: #EEE8AA;
+    }
+
+    .row-no-similar-group {
+        background-color: #F0E68C;
+    }
+
+    #gridCarimboMercadoria table {
+        border-collapse: collapse;
+        overflow-x: scroll;
+        display: block;
+    }
+
+    #gridCarimboMercadoria thead {
+        background-color: #EFEFEF;
+    }
+
+    #gridCarimboMercadoria thead,
+    #gridCarimboMercadoria tbody {
+        display: block;
+    }
+
+    #gridCarimboMercadoria tbody {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    #gridCarimboMercadoria td,
+    #gridCarimboMercadoria th {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 1px;
+    }
+
+    #gridCarimboMercadoria .width30 {
+        min-width: 30px;
+        max-width: 30px;
+        text-align: center;
+    }
+
+    #gridCarimboMercadoria .width60 {
+        min-width: 60px;
+        max-width: 60px;
+        text-align: center;
+    }
+
+    #gridCarimboMercadoria .width80 {
+        min-width: 80px;
+        max-width: 80px;
+    }
+
+    #gridCarimboMercadoria .width90 {
+        min-width: 90px;
+        max-width: 90px;
+        text-align: right;
+    }
+
+    #gridCarimboMercadoria .width120 {
+        min-width: 120px;
+        max-width: 120px;
+    }
+
+    #gridCarimboMercadoria .width150 {
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+    #gridCarimboMercadoria .width200 {
+        min-width: 200px;
+        max-width: 200px;
+    }
+
+    #gridCarimboMercadoria .width250 {
+        min-width: 250px;
+        max-width: 250px;
+    }
+
+    #gridCarimboMercadoria .edit {
+        width: 100%;
+    }
+
+    .dataTable > thead > tr > th[class*=sort]:before {
+        font-size: 12px;
+    }
+
+
+    #gridCarimboMercadoria .table {
+        margin-bottom: 0px;
+    }
+</style>

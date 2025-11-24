@@ -1,0 +1,246 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Web"
+        ProductVersion = "7.10.6030"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{1D5AC850-1823-43C1-AF57-9A22125A4B5F}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "Martins.Web.Services.AcoesComerciais"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "On"
+                RootNamespace = "Martins.Web.Services.AcoesComerciais"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Web"
+                    AssemblyName = "System.Web"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "Martins.Security.Helper"
+                    AssemblyName = "Martins.Security.Helper"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.Security.Helper.dll"
+                />
+                <Reference
+                    Name = "Martins.Common"
+                    AssemblyName = "Martins.Common"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.Common.dll"
+                />
+                <Reference
+                    Name = "Martins.ConfigurationManagement"
+                    AssemblyName = "Martins.ConfigurationManagement"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.ConfigurationManagement.dll"
+                />
+                <Reference
+                    Name = "Martins.Data.TransactionManagement"
+                    AssemblyName = "Martins.Data.TransactionManagement"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.Data.TransactionManagement.dll"
+                />
+                <Reference
+                    Name = "Martins"
+                    AssemblyName = "Martins"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.dll"
+                />
+                <Reference
+                    Name = "Martins.Security"
+                    AssemblyName = "Martins.Security"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.Security.dll"
+                />
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "Martins.Compras.Negociacao.UsuarioCompra"
+                    AssemblyName = "Martins.Compras.Negociacao.UsuarioCompra"
+                    HintPath = "..\..\Classes\Martins.Compras.Negociacao.UsuarioCompra\bin\Martins.Compras.Negociacao.UsuarioCompra.dll"
+                />
+                <Reference
+                    Name = "Martins.Compras.Negociacao.PedidoCompra"
+                    AssemblyName = "Martins.Compras.Negociacao.PedidoCompra"
+                    HintPath = "..\..\Classes\Martins.Compras.Negociacao.PedidoCompra\bin\Martins.Compras.Negociacao.PedidoCompra.dll"
+                />
+                <Reference
+                    Name = "Martins.Administracao.Contabilidade.Filial"
+                    AssemblyName = "Martins.Administracao.Contabilidade.Filial"
+                    HintPath = "..\..\Classes\Martins.Administracao.Contabilidade.Filial\bin\Martins.Administracao.Contabilidade.Filial.dll"
+                />
+                <Reference
+                    Name = "Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor"
+                    AssemblyName = "Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor"
+                    HintPath = "..\..\Classes\Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor\bin\Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.dll"
+                />
+                <Reference
+                    Name = "Martins.Compras.AcoesComerciais.AcordoFornecimento"
+                    AssemblyName = "Martins.Compras.AcoesComerciais.AcordoFornecimento"
+                    HintPath = "..\..\Classes\Martins.Compras.AcoesComerciais.AcordoFornecimento\bin\Martins.Compras.AcoesComerciais.AcordoFornecimento.dll"
+                />
+                <Reference
+                    Name = "Martins.Administracao.CadastramentoFornecedores.DivisaoFornecedor"
+                    AssemblyName = "Martins.Administracao.CadastramentoFornecedores.DivisaoFornecedor"
+                    HintPath = "..\..\Classes\Martins.Administracao.CadastramentoFornecedores.DivisaoFornecedor\bin\Martins.Administracao.CadastramentoFornecedores.DivisaoFornecedor.dll"
+                />
+                <Reference
+                    Name = "Martins.Data"
+                    AssemblyName = "Martins.Data"
+                    HintPath = "..\..\..\ARF\TRB\Comum\Martins.Data.dll"
+                />
+                <Reference
+                    Name = "Martins.Compras.AcoesComerciais.AcoesMercadologicas"
+                    AssemblyName = "Martins.Compras.AcoesComerciais.AcoesMercadologicas"
+                    HintPath = "..\..\Classes\MARTINS.COMPRAS.ACOESCOMERCIAIS.ACOESMERCADOLOGICAS\bin\Martins.Compras.AcoesComerciais.AcoesMercadologicas.dll"
+                />
+                <Reference
+                    Name = "Martins.Compras.AcoesComerciais.Gestao"
+                    Project = "{A5F54098-83FE-4CFC-B709-1E3231519B81}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Diagnostics" />
+                <Import Namespace = "System.Web" />
+                <Import Namespace = "System.Web.Services" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AcoesComerciais.asmx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "AcoesComerciais.asmx.vb"
+                    DependentUpon = "AcoesComerciais.asmx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AcoesComerciais.asmx.resx"
+                    DependentUpon = "AcoesComerciais.asmx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FluxoDeCancelamentoDeAcordos.asmx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FluxoDeCancelamentoDeAcordos.asmx.vb"
+                    DependentUpon = "FluxoDeCancelamentoDeAcordos.asmx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FluxoDeCancelamentoDeAcordos.asmx.resx"
+                    DependentUpon = "FluxoDeCancelamentoDeAcordos.asmx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Global.asax"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Global.asax.vb"
+                    DependentUpon = "Global.asax"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Global.asax.resx"
+                    DependentUpon = "Global.asax.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RecuperacaoEPrevencaoPerdas.asmx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RecuperacaoEPrevencaoPerdas.asmx.vb"
+                    DependentUpon = "RecuperacaoEPrevencaoPerdas.asmx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RecuperacaoEPrevencaoPerdas.asmx.resx"
+                    DependentUpon = "RecuperacaoEPrevencaoPerdas.asmx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Web.config"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\ApplicationConfig.xml"
+                    BuildAction = "Content"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+

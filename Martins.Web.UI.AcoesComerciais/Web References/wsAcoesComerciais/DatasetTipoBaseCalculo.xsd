@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTipoBaseCalculo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTipoBaseCalculo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTipoBaseCalculo.xsd" id="DatasetTipoBaseCalculo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTipoBaseCalculo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0125003">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPBSECAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESBSECAL" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoBaseCalculoKey1">
+      <xs:selector xpath=".//mstns:T0125003" />
+      <xs:field xpath="mstns:TIPBSECAL" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

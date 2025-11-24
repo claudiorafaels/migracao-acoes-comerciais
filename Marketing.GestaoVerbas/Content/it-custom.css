@@ -1,0 +1,187 @@
+﻿.grid-paginavel .pagination-size {
+    width: 50px;
+    border: 1px #1c6ca2 solid;
+}
+
+.grid-paginavel .pagination {
+    float: right;
+    margin-bottom: 0;
+}
+
+.grid-paginavel .change-page-ok button {
+    margin: 0px;
+    background-color: #196dab;
+    color: #FFF;
+    border: 1px #1c6ca2 solid;
+    width: 28px;
+    height: 23px;
+}
+
+.grid-paginavel .pagination .active button {
+    background-color: #196dab;
+    color: #FFF;
+    border: 1px #1c6ca2 solid;
+    min-width: 25px;
+}
+
+.grid-paginavel .pagination .enable button {
+    color: #196dab;
+    background-color: #EAEFF2;
+    border: 1px #1c6ca2 solid;
+    min-width: 25px;
+}
+
+.grid-paginavel .pagination .next-prev button {
+    color: #196dab;
+    background-color: #EAEFF2;
+    border: 1px #1c6ca2 solid;
+    min-width: 25px;
+}
+
+.grid-paginavel .table-responsive {
+    margin-bottom: 15px;
+}
+
+
+
+.navbar-buttons ul li {
+    margin-right: 10px;
+}
+
+    .navbar-buttons ul li span {
+        display: table;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+        .navbar-buttons ul li span a {
+            color: #fff;
+        }
+
+.fixed-nav-content {
+    padding-bottom: 48px;
+}
+
+.dataTable > thead > tr > th[class*=sort]:before {
+    display: inline;
+    content: "\f0dc";
+    font-family: FontAwesome;
+    font-size: 17px;
+    font-weight: normal;
+    color: #555;
+}
+
+.dataTable > thead > tr > th button[type=submit], .dataTable > thead > tr > th button[type=button] {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dataTable > thead > tr > th[class*=sorting_] {
+    background-color: #555
+}
+
+    .dataTable > thead > tr > th[class*=sorting_] button[type=submit] {
+        color: #fff;
+        font-weight: bold;
+    }
+
+.dataTable > thead > tr > th.sorting_asc:before {
+    content: "\f0de";
+    top: 4px;
+    color: #ffffff;
+}
+
+.dataTable > thead > tr > th.sorting_desc:before {
+    content: "\f0dd";
+    top: -6px;
+    color: #ffffff;
+}
+
+
+.dataTable thead th {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+body.small .form-control {
+    font-size: 0.8rem;
+    padding: .3rem .75rem;
+    line-height: 1.0;
+}
+
+body.small select.form-control:not([size]):not([multiple]) {
+    height: calc(1.663rem + 2px);
+}
+
+body.small .input-group .input-group-addon {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+
+body.small .btn {
+    padding: .3rem .75rem;
+}
+
+body.small table td > .btn {
+    margin: 0px;
+    padding: .1rem .5rem;
+}
+
+body.small .card > .card-header {
+    padding: .25rem .75rem;
+}
+
+    body.small .card > .card-header h5 {
+        margin-bottom: .2rem;
+    }
+
+
+
+.fixed-nav-content {
+    position: initial;
+    padding-top: 8em;
+    padding-bottom: 0px;
+    overflow: hidden;
+}
+
+.top {
+    z-index: 9;
+}
+
+.footer {
+    padding-top: 50px;
+}
+
+.arvore {
+}
+
+    .arvore .arvore-node {
+        padding-left: 5px
+    }
+
+        .arvore .arvore-node .content {
+            padding-left: 25px;
+            width: 100%;
+            display: table;
+            padding-top: 10px;
+            margin-top: -10px;
+        }
+
+
+.menu-item > a {
+    color: grey;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 30px;
+}
+.menu-item > .collapse {
+    margin-left: 16PX;
+}
+.menu-item {
+    padding: 5px
+}

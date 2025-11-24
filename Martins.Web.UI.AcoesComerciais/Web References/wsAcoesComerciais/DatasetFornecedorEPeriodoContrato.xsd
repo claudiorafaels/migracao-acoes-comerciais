@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetFornecedorEPeriodoContrato.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetFornecedorEPeriodoContrato.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetFornecedorEPeriodoContrato.xsd" id="DatasetFornecedorEPeriodoContrato" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetFornecedorEPeriodoContrato">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Tabela1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="TipIdtEmpAscAcoCmc" type="xs:int" />
+              <xs:element minOccurs="0" name="DesTipIdtEmpAscAcoCmc" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tabela2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCPR" type="xs:decimal" />
+              <xs:element name="NUMTLFFRN" type="xs:string" />
+              <xs:element name="ENDFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCIDFRN" type="xs:decimal" />
+              <xs:element name="DATCADFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CODREPFRN" type="xs:decimal" />
+              <xs:element name="TIPFRTPADFRN" type="xs:string" />
+              <xs:element name="DESNOMFRNCMNDDO" type="xs:string" />
+              <xs:element name="FLGCMNDDOFRN" type="xs:string" />
+              <xs:element name="QDEDIAATZPADFRN" type="xs:decimal" />
+              <xs:element name="TIPCALATZPAD" type="xs:string" />
+              <xs:element name="NUMIDTTIPCALATZPAD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATFCHANOFSC" type="xs:dateTime" />
+              <xs:element name="CODGRPFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATDSTDIVFRN" type="xs:dateTime" />
+              <xs:element name="NUMSEQPCSENVINFFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMCGCFRNCMNDDOITX" type="xs:string" />
+              <xs:element name="FLGCMNDDOITX" type="xs:string" />
+              <xs:element name="CLFCRVABCFRN" type="xs:string" />
+              <xs:element name="POSCRVABCFRN" type="xs:decimal" />
+              <xs:element name="FLGFRNFBR" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCSS" type="xs:decimal" />
+              <xs:element name="NOMFNTFRN" type="xs:string" />
+              <xs:element name="INDATDDTOFRN" type="xs:decimal" />
+              <xs:element name="CODFRNPCPAPUARDFRN" type="xs:decimal" />
+              <xs:element name="NOMUSRCONCTOFRN" type="xs:string" />
+              <xs:element name="IDTENDCREETNFINFRN" type="xs:string" />
+              <xs:element name="CODBAI" type="xs:decimal" />
+              <xs:element name="CODCEP" type="xs:decimal" />
+              <xs:element name="CODIDTFRNBCOBRD" type="xs:decimal" />
+              <xs:element name="CODDIGVRFFRNBCOBRD" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPIDTEMPASCACOCMC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFRNEMPASCACOCMC" type="xs:decimal" />
+              <xs:element name="CODCRVABCFRNDRT" type="xs:string" />
+              <xs:element name="NUMPOSCRVABCFRNDRT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMTLFATDCSM" type="xs:string" />
+              <xs:element minOccurs="0" name="DesTipIdtEmpAscAcoCmc" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0124970">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPPODCTTFRN" type="xs:decimal" />
+              <xs:element name="DESPODCTTFRN" type="xs:string" />
+              <xs:element name="QDEMESREFPOD" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetFornecedorEPeriodoContratoKey1">
+      <xs:selector xpath=".//mstns:T0124970" />
+      <xs:field xpath="mstns:TIPPODCTTFRN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

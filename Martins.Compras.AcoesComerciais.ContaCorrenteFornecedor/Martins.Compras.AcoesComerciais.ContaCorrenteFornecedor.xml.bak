@@ -1,0 +1,3984 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor</name>
+    <version>1.0.0.0</version>
+    <fullname>Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b8be254342e63416</fullname>
+  </assembly>
+  <members>
+    <member name="T:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL">
+      <summary>
+ Regras de negócio da classe ContaCorrenteFornecedor 
+ </summary>
+ <remarks>
+ 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterContaCorrenteFornecedor(System.Decimal,System.String,System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123086 com base na sua chave primária. 
+ Descrição da entidade:MOVIMENTO DIARIO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODGDC">CODIGO CONTROLE TRANSACAO CABECALHO DE UM LANCAMENTO.</param>
+ <param name="DATREFLMT">DATA REFERENCIA (AAAA-MM-DD).</param>
+ <param name="NUMSEQLMT">NUMERO SEQUENCIA.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123086" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterContasCorrenteFornecedor(System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.String,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.DateTime,System.String,System.String,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123086 com base na sua chave primária. 
+ Descrição da entidade:MOVIMENTO DIARIO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODCENCSTCRD">CODIGO CENTRO DE CUSTRO DE CREDITO.</param>
+ <param name="CODCENCSTDEB">CODIGO CENTRO DE CUSTRO DE DEBITO.</param>
+ <param name="CODCNTCRD">CODIGO CONTA CONTABIL.</param>
+ <param name="CODCNTDEB">CODIGO CONTA CONTABIL.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODGDC">CODIGO CONTROLE TRANSACAO CABECALHO DE UM LANCAMENTO.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <param name="DATREFLMT">DATA REFERENCIA (AAAA-MM-DD).</param>
+ <param name="DATREFLMTInicial">DATA REFERENCIA (AAAA-MM-DD) INICIAL.</param>
+ <param name="DATREFLMTFinal">DATA REFERENCIA (AAAA-MM-DD) FINAL.</param>
+ <param name="DESHSTLMT">DESCRICAO DO HISTORICO CONTA CORRENTE.</param>
+ <param name="DESVARHSTPAD">DESCRICAO DA VARIAVEL DO HISTORICO PADRAO.</param>
+ <param name="NUMSEQLMT">NUMERO SEQUENCIA.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123086" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.AtualizarContaCorrenteFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetContaCorrenteFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetContaCorrenteFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterParametroContabilContaCorrenteFornecedor(System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123094 com base na sua chave primária. 
+ Descrição da entidade:PARAMETRO CONTABIL CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123094" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterParametrosContabilContaCorrenteFornecedor(System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123094 com base na sua chave primária. 
+ Descrição da entidade:PARAMETRO CONTABIL CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODCENCSTCRD">.</param>
+ <param name="CODCENCSTDEB">.</param>
+ <param name="CODCNTCRD">CODIGO CONTA CONTABIL.</param>
+ <param name="CODCNTDEB">CODIGO CONTA CONTABIL.</param>
+ <param name="CODEVTCTB">CODIGO EVENTO CONTABIL - COFINS.</param>
+ <param name="CODEVTCTBFRTDVL">CODIGO EVENTO CONTABIL DO FRETE DE DEVOLUCAO.</param>
+ <param name="CODEVTCTBNGCDVL">CODIGO EVENTO CONTABIL DE NEGOCIACAO DE DEVOLUCAO.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODFTOCTB">CODIGO FATO CONTABIL.</param>
+ <param name="CODFTOCTBFRTDVL">CODIGO FATO CONTABIL DO FRETE DE DEVOLUCAO.</param>
+ <param name="CODFTOCTBNGCDVL">CODIGO FATO CONTABIL DE NEGOCIACAO DE DEVOLUCAO.</param>
+ <param name="CODHSTPAD">CODIGO HISTORICO PADRAO.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123094" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.AtualizarParametroContabilContaCorrenteFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetParametroContabilContaCorrenteFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetParametroContabilContaCorrenteFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterTipoLancamentoContaCorrenteFornecedor(System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123108 com base na sua chave primária. 
+ Descrição da entidade:CADASTRO TIPO LANCAMENTO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123108" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterTiposLancamentoContaCorrenteFornecedor(System.String,System.String)">
+      <summary>
+ Este método retorna dados da entidade T0123108 com base na sua chave primária. 
+ Descrição da entidade:CADASTRO TIPO LANCAMENTO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="DESTIPLMT">DESCRICAO DO TIPO DE LANCAMENTO.</param>
+ <param name="DESTIPLMTFRN">DESCRICAO DO TIPO DE LANCAMENTO FORNECEDOR.</param>
+ <returns>Retorna um DataSet com a tabela "T0123108" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterTipoLancamentoPrincipalXTipoLancamentoAssociado(System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna os registros para tabela T062251 com base na sua chave primária. 
+ Descrição da entidade:RELACAO TIPO DE LANÇAMENTO PRINCIPAL X TIPO LANÇAMENTO ASSOCIADO 
+ </summary>
+ <param name="CODTIPLMTASC">CODIGO TIPO LANCAMENTO ASSOCIADO.</param>
+ <param name="CODTIPLMTPCP">CODIGO TIPO LANCAMENTO PRINCIPAL.</param>
+ <returns>Retorna um DataSet com a tabela "T062251" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    23/08/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.AtualizarTipoLancamentoContaCorrenteFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTipoLancamentoContaCorrenteFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetTipoLancamentoContaCorrenteFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.FornecedorPertenceCelulaAtendidaUsuario(System.Decimal,System.String)">
+      <summary>
+ Retorna verdadeiro se o fornecedor pertence a celula atendida pelo usuário 
+ </summary>
+ <param name="CODFRN" />
+ <param name="NOMACSUSRSIS" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/12/2006	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterFornecedorCompradorEDivisaoCompra(System.String)">
+      <summary>
+ 
+ </summary>
+ <param name="IN_CODFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	21/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterFornecedorPorComprador(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODCPR" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterFornecedorPorCategoria(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODDIVCMP" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterCodigoFornecedorPorCompradorSeparadoPorVirgula(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODCPR" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterCodigoFornecedorPorCategoriaSeparadoPorVirgula(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODDIVCMP" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterTransferenciaVerbaFornecedor(System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade CADTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:CADASTRO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <returns>Retorna um DataSet com a tabela "CADTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterTransferenciasVerbaFornecedor(System.Decimal,System.String,System.Decimal,System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna dados da entidade CADTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:CADASTRO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="CODFNC">CODIGO FUNCIONARIO.</param>
+ <param name="DESJSTTRNVBA">DESCRICAO JUSTIFICATIVA DA TRANSFERENCIA DE VERBA.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFDSNTRN">TIPO EMPENHO DESTINO TRANSFERENCIA VERBA.</param>
+ <param name="TIPSTAFLUAPV">TIPO STATUS FLUXO APROVACAO.</param>
+ <returns>Retorna um DataSet com a tabela "CADTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.AtualizarTransferenciaVerbaFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetTransferenciaVerbaFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterRelacaoTransferenciaVerbaFornecedor(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade RLCTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:RELACAO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFORITRN">TIPO EMPENHO ORIGEM TRANSFERENCIA VERBA.</param>
+ <returns>Retorna um DataSet com a tabela "RLCTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterTransferenciaSVerbaFornecedorJoin(System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna dados da entidade RLCTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:RELACAO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFORITRN">TIPO EMPENHO ORIGEM TRANSFERENCIA VERBA.</param>
+ <returns>Retorna um DataSet com a tabela "RLCTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterMinhasAprovavoesEmTransferenciaVerbasFornecedor(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterRelacaoTransferenciaVerbaFornecedorJoinT0153541JoinT0100426JoinT0113625JoinT0118570JoinT0109059(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	5/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterRelacoesTransferenciaVerbaFornecedor(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade RLCTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:RELACAO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFORITRN">TIPO EMPENHO ORIGEM TRANSFERENCIA VERBA.</param>
+ <returns>Retorna um DataSet com a tabela "RLCTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.AtualizarRelacaoTransferenciaVerbaFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetTransferenciaVerbaFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterNovaChaveTransferenciaVerba">
+      <summary>
+ 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterFuncionario(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterFluxosDeTransferenciaVerbaFornecedor(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODSISINF" />
+ <param name="NUMFLUAPV" />
+ <param name="NUMSEQFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	12/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterReservaSaldoFornecedor(System.String,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123159 com base na sua chave primária. 
+ Descrição da entidade:MOVIMENTO DIARIO RESERVA DE SALDO FORNECEDOR 
+ </summary>
+ <param name="CODACOCMC">CODIGO DA ACAO COMERCIAL.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123159" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    17/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterReservasSaldoFornecedor(System.String,System.Decimal,System.DateTime,System.DateTime,System.DateTime,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123159 com base na sua chave primária. 
+ Descrição da entidade:MOVIMENTO DIARIO RESERVA DE SALDO FORNECEDOR 
+ </summary>
+ <param name="CODACOCMC">CODIGO DA ACAO COMERCIAL.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="DATAPVACOCMC">DATA DE APROVACAO DA ACAO COMERCIAL.</param>
+ <param name="DATAPVACOCMCInicial">DATA DE APROVACAO DA ACAO COMERCIAL INICIAL.</param>
+ <param name="DATAPVACOCMCFinal">DATA DE APROVACAO DA ACAO COMERCIAL FINAL.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123159" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    17/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.AtualizarReservaSaldoFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetReservaSaldoFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetReservaSaldoFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    17/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterFuncionarioAprovadorDaControladoriaQuandoMesLancamentoForDiferenteDoMesDeAprovacao">
+      <summary>
+ 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	26/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterCalendarioAnual(System.DateTime)">
+      <summary>
+ 
+ </summary>
+ <param name="DATREF" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	9/1/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.TransferirValoresEntreEmpenhosFornecedor(System.Decimal,System.Int32,System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+      <summary>
+ Realiza transferencia entre dos fornecedores e/ou empenho 
+ </summary>
+ <param name="pValor" />
+ <param name="pTipAlcVbaFrn" />
+ <param name="pvDatRefLmt" />
+ <param name="pvTipDsnDscBnfOrigem" />
+ <param name="pvTipDsnDscBnfDestino" />
+ <param name="pvCodFrnOrigem" />
+ <param name="pvCodFrnDestino" />
+ <param name="pvVlrLmtCtb" />
+ <param name="pvDesHstLmt" />
+ <param name="pvDesVarHstPadOrigem" />
+ <param name="pvDesVarHstPadDestino" />
+ <param name="pvNomAcsUsrGrcLmt" />
+ <param name="pvTipAlcVbaFrnPmtOrigem" />
+ <param name="pvTipAlcVbaFrnPmtDestino" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/12/2006	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.GravaDadosTrasnf(System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Grava dados da transferencia na tabela T0144946 
+ </summary>
+ <param name="pvDatRefLmt" />
+ <param name="pvTipDsnDscBnfOrigem" />
+ <param name="pvTipDsnDscBnfDestino" />
+ <param name="pvCodFrnOrigem" />
+ <param name="pvCodFrnDestino" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/12/2006	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterNumeroSequenciaLancamento(System.Decimal,System.Decimal,System.DateTime,System.Int32,System.String)">
+      <summary>
+ Obtem o numero da última sequencia de lançamento 
+ </summary>
+ <param name="pvTipDsnDscBnf" />
+ <param name="pvCodFrn" />
+ <param name="pvDatRefLmt" />
+ <param name="pvCodTipLmt" />
+ <param name="pCodUni" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[PRETRE21]	12/29/2006	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.AtualizarContaCorrenteFornecedor(System.DateTime,System.Decimal,System.Decimal,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.Decimal,System.Decimal,System.String,System.Int32,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PCTDJAtlCntCrrFrn.PRCDJAtlCntCrrFrn 
+ </summary>
+ <param name="pvDatRefLmt" />
+ <param name="pvTipDsnDscBnf" />
+ <param name="pvCodFrn" />
+ <param name="pvCodGdc" />
+ <param name="pvCodTipLmtPmt" />
+ <param name="pvCodCntCrd" />
+ <param name="pvCodCenCstCrd" />
+ <param name="pvCodCntDeb" />
+ <param name="pvCodCenCstDeb" />
+ <param name="pvVlrLmtCtb" />
+ <param name="pvDesHstLmt" />
+ <param name="pvDesVarHstPad" />
+ <param name="pvNomAcsUsrGrcLmt" />
+ <param name="pvCodFilEmp" />
+ <param name="pvCodPms" />
+ <param name="pvFlgRetVlr" />
+ <param name="pvTipAlcVbaFrnPmt" />
+ <param name="pvTransfIntegral" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDJAtlCntCrrFrn.PRCDJAtlCntCrrFrn 
+ LEGADO: CCX001GA 
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    21/11/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterRelatorioSaldoDisponivelFornecedorCelula(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PCTDJRetSldDisFrnCel.PRCDJRetSldDisFrnCel 
+ </summary>
+ <param name="pvCodDivCmp" />
+ <param name="pvTipDsnDscBnf" />
+ <param name="pvAnoMesRef" />
+ <param name="pvTipo" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDJRetSldDisFrnCel.PRCDJRetSldDisFrnCel 
+ LEGADO:spccx025 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterDiretoriaEDivisaoDeCompraDeFornecedor(System.Decimal)">
+      <summary>
+ Chamada para procedure: MRT.PCTDJObtDrtCmpFrn.PRCDJObtDrtCmpFrn 
+ </summary>
+ <param name="pvCodFrn" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDJObtDrtCmpFrn.PRCDJObtDrtCmpFrn 
+ LEGADO:spCCX043 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    30/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.ContaCorrenteFornecedorBLL.ObterSelecaoValorDisponivelFornecedor(System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ CONSULTA Valores Disponiveis de um Fornecedor 
+ </summary>
+ <param name="vDatRef" />
+ <param name="vCodFrn" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[ELIFÁZIO]	21/9/2006	Created 
+ </history></member>
+    <member name="T:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL">
+      <summary>
+ Regras de negócio da classe FluxoDeCancelamentoDeAcordos 
+ </summary>
+ <remarks>
+ 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterFluxoCancelamentoAcordoPorChave(System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0154038 com base na sua chave primária. 
+ Descrição da entidade:FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <returns>Retorna um DataSet com a tabela "T0154038" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterFluxoCancelamentoAcordoPorAtributos(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0154038 com base na sua chave primária. 
+ Descrição da entidade:FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODSTAAPV">CODIGO DO STATUS DO FLUXO.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <param name="NUMREQCNCACOCMC">NUMERO REQUISICAO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <returns>Retorna um DataSet com a tabela "T0154038" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.AtualizarFluxoCancelamentoAcordo(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetFluxoCancelamentoAcordo)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetFluxoCancelamentoAcordo">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChave(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0154021 com base na sua chave primária. 
+ Descrição da entidade:ACORDO A CANCELAR EM FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="CODEMP">CODIGO EMPRESA.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="DATNGCPMS">DATA DA NEGOCIACAO DA PROMESSA.</param>
+ <param name="DATPRVRCBPMS">DATA DE PREVISAO DE RECEBIMENTO DA PROMESSA.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <param name="TIPFRMDSCBNF">TIPO FORMA DESCONTO BONIFICACAO.</param>
+ <returns>Retorna um DataSet com a tabela "T0154021" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributos(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0154021 com base na sua chave primária. 
+ Descrição da entidade:ACORDO A CANCELAR EM FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="CODEMP">CODIGO EMPRESA.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="DATNGCPMS">DATA DA NEGOCIACAO DA PROMESSA.</param>
+ <param name="DATPRVRCBPMS">DATA DE PREVISAO DE RECEBIMENTO DA PROMESSA.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <param name="TIPFRMDSCBNF">TIPO FORMA DESCONTO BONIFICACAO.</param>
+ <returns>Retorna um DataSet com a tabela "T0154021" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.AtualizarAcordoACancelarEmFluxoCancelamentoAcordo(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetFluxoCancelamentoAcordo)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetAcordoACancelarEmFluxoCancelamentoAcordo">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordos(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo]	4/24/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterNovaChaveFluxoCancelamento">
+      <summary>
+ 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	4/25/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterAcordosParaCancelamentoPorFornecedor(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	4/28/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMC(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	5/6/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterFluxoCancelamentoAcordoPesquisa(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODFRN" />
+ <param name="CODSTAAPV" />
+ <param name="NUMPEDCNCACOCMC" />
+ <param name="NUMREQCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	14/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterDiretorAprovadorDeFluxoFluxoDeCancelamentosDeAcordo(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	14/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterGerentesAprovadoresDeFluxoFluxoDeCancelamentosDeAcordo(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	14/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterFluxoAprovacao(System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0161591 com base na sua chave primária. 
+ Descrição da entidade:FLUXO DE APROVAÇÃO 
+ </summary>
+ <param name="CODSISINF">CODIGO DO SISTEMA DE INFORMACAO.</param>
+ <param name="NUMFLUAPV">.</param>
+ <param name="NUMSEQFLUAPV">.</param>
+ <returns>Retorna um DataSet com a tabela "T0161591" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    06/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterFluxosAprovacao(System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna dados da entidade T0161591 com base na sua chave primária. 
+ Descrição da entidade:FLUXO DE APROVAÇÃO 
+ </summary>
+ <param name="CODEDEAPV">CODIGO ENTIDADE APROVOU.</param>
+ <param name="CODEDEARZ">CODIGO DA ENTIDADE AUTORIZADA.</param>
+ <param name="CODSISINF">CODIGO DO SISTEMA DE INFORMACAO.</param>
+ <param name="DATHRAAPVFLU">DATA E HORA DE APROVACAO DO FLUXO.</param>
+ <param name="DATHRAFLUAPV">DATA E HORA DO FLUXO DE APROVACAO.</param>
+ <param name="NUMFLUAPV">.</param>
+ <param name="NUMSEQFLUAPV">.</param>
+ <param name="NUMSEQFLUAPVPEDOPN">.</param>
+ <param name="NUMSEQNIVAPV">.</param>
+ <param name="TIPSTAFLUAPV">.</param>
+ <returns>Retorna um DataSet com a tabela "T0161591" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    06/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.AtualizarFluxoAprovacao(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetFluxoAprovacao)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetFluxoAprovacao">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    06/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterDiretoresAprovadoresTransferenciaVerbas(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	6/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterGerentesAprovadoresTransferenciaVerbas(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="CODDRTCMP" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	6/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterFuncionariosDaControladoriaAprovadoresDeFluxoDeCancelamentoDeAcordos">
+      <summary>
+ 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	15/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterFluxosDeCancelamentoDeAcordos(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	16/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.FluxoDeCancelamentoDeAcordosBLL.ObterAcordoComDuplicidadeEmOutroFluxo(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	19/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.RecuperacaoEPrevencaoPerdasBLL.ObterRecuperacaoEPrevencaoPerdasSintetico(System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Obtem os dados para o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <param name="NUMCTTFRN">Numero do Contrato do Fornecedor</param>
+ <param name="INDDVRVLRAPUARDFRN">Define se apresenta todas as linhas ou apenas divergencias </param>
+ 1 - apresenta somente divergencias 
+ 0 - apresenta todas as linhas 
+ <param name="TIPLMTHSTCFAARDFRN">Define se apresenta informacoes da Devolucao 99</param>
+ 1 - Apresenta apuracao sem devolucao 99 
+ 2 - Apresenta apuracao com devolucao 99 
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	27/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.RecuperacaoEPrevencaoPerdasBLL.ObterRecuperacaoEPrevencaoPerdasAnalitico(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Decimal)">
+      <summary>
+ Obtem os dados para o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <param name="NUMCTTFRN">Numero do Contrato do Fornecedor</param>
+ <param name="INDDVRVLRAPUARDFRN">Define se apresenta todas as linhas ou apenas divergencias </param>
+ 1 - apresenta somente divergencias 
+ 0 - apresenta todas as linhas 
+ <param name="TIPLMTHSTCFAARDFRN">Define se apresenta informacoes da Devolucao 99</param>
+ 1 - Apresenta apuracao sem devolucao 99 
+ 2 - Apresenta apuracao com devolucao 99 
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	27/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.RecuperacaoEPrevencaoPerdasBLL.ObterRecuperacaoEPrevencaoPerdasClausulas(System.Decimal)">
+      <summary>
+ Obtem as clausulas do contrato selecionado como filtro para 
+ o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	28/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.RecuperacaoEPrevencaoPerdasBLL.ObterRecuperacaoEPrevencaoPerdasDataApuracao(System.Decimal)">
+      <summary>
+ Obtem as datas de referencia da apuracao do contrato selecionado como filtro para 
+ o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	28/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.RecuperacaoEPrevencaoPerdasBLL.ObterAcordosCanceladosPerdas(System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Obtem os dados para o relatorio Acordos Cancelados / Perdas 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	27/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.RecuperacaoEPrevencaoPerdasBLL.ObterComprador(System.Decimal,System.String)">
+      <summary>
+ Obtem Compradores 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	04/09/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BLL.RecuperacaoEPrevencaoPerdasBLL.ObterCelulaPorAtributo(System.Decimal,System.String)">
+      <summary>
+ Obtem Celulas por atributo 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	09/09/2008	Created 
+ </history></member>
+    <member name="T:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP">
+      <summary>
+ Classe BP da entidade com objetivo: chegar segurança e repassar a chamada para a classe BLL 
+ </summary>
+ <remarks>
+ 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    12/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterContaCorrenteFornecedor(System.Decimal,System.String,System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123086 com base na sua chave primária. 
+ Descrição da entidade:MOVIMENTO DIARIO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODGDC">CODIGO CONTROLE TRANSACAO CABECALHO DE UM LANCAMENTO.</param>
+ <param name="DATREFLMT">DATA REFERENCIA (AAAA-MM-DD).</param>
+ <param name="NUMSEQLMT">NUMERO SEQUENCIA.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123086" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    12/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterContasCorrenteFornecedor(System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.String,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.DateTime,System.String,System.String,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123086 com base em outros atributos. 
+ Descrição da entidade:MOVIMENTO DIARIO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODCENCSTCRD">CODIGO CENTRO DE CUSTRO DE CREDITO.</param>
+ <param name="CODCENCSTDEB">CODIGO CENTRO DE CUSTRO DE DEBITO.</param>
+ <param name="CODCNTCRD">CODIGO CONTA CONTABIL.</param>
+ <param name="CODCNTDEB">CODIGO CONTA CONTABIL.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODGDC">CODIGO CONTROLE TRANSACAO CABECALHO DE UM LANCAMENTO.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <param name="DATREFLMT">DATA REFERENCIA (AAAA-MM-DD).</param>
+ <param name="DATREFLMTInicial">DATA REFERENCIA (AAAA-MM-DD) INICIAL.</param>
+ <param name="DATREFLMTFinal">DATA REFERENCIA (AAAA-MM-DD) FINAL.</param>
+ <param name="DESHSTLMT">DESCRICAO DO HISTORICO CONTA CORRENTE.</param>
+ <param name="DESVARHSTPAD">DESCRICAO DA VARIAVEL DO HISTORICO PADRAO.</param>
+ <param name="NUMSEQLMT">NUMERO SEQUENCIA.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123086" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    12/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.AtualizarContaCorrenteFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetContaCorrenteFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetContaCorrenteFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    12/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterParametroContabilContaCorrenteFornecedor(System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123094 com base na sua chave primária. 
+ Descrição da entidade:PARAMETRO CONTABIL CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123094" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    12/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterParametrosContabilContaCorrenteFornecedor(System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123094 com base em outros atributos. 
+ Descrição da entidade:PARAMETRO CONTABIL CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODCENCSTCRD">.</param>
+ <param name="CODCENCSTDEB">.</param>
+ <param name="CODCNTCRD">CODIGO CONTA CONTABIL.</param>
+ <param name="CODCNTDEB">CODIGO CONTA CONTABIL.</param>
+ <param name="CODEVTCTB">CODIGO EVENTO CONTABIL - COFINS.</param>
+ <param name="CODEVTCTBFRTDVL">CODIGO EVENTO CONTABIL DO FRETE DE DEVOLUCAO.</param>
+ <param name="CODEVTCTBNGCDVL">CODIGO EVENTO CONTABIL DE NEGOCIACAO DE DEVOLUCAO.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODFTOCTB">CODIGO FATO CONTABIL.</param>
+ <param name="CODFTOCTBFRTDVL">CODIGO FATO CONTABIL DO FRETE DE DEVOLUCAO.</param>
+ <param name="CODFTOCTBNGCDVL">CODIGO FATO CONTABIL DE NEGOCIACAO DE DEVOLUCAO.</param>
+ <param name="CODHSTPAD">CODIGO HISTORICO PADRAO.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123094" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    12/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.AtualizarParametroContabilContaCorrenteFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetParametroContabilContaCorrenteFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetParametroContabilContaCorrenteFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    12/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterTipoLancamentoContaCorrenteFornecedor(System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123108 com base na sua chave primária. 
+ Descrição da entidade:CADASTRO TIPO LANCAMENTO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123108" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    12/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterTiposLancamentoContaCorrenteFornecedor(System.String,System.String)">
+      <summary>
+ Este método retorna dados da entidade T0123108 com base em outros atributos. 
+ Descrição da entidade:CADASTRO TIPO LANCAMENTO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="DESTIPLMT">DESCRICAO DO TIPO DE LANCAMENTO.</param>
+ <param name="DESTIPLMTFRN">DESCRICAO DO TIPO DE LANCAMENTO FORNECEDOR.</param>
+ <returns>Retorna um DataSet com a tabela "T0123108" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    12/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterTipoLancamentoPrincipalXTipoLancamentoAssociado(System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna os registros para tabela T062251 com base na sua chave primária. 
+ Descrição da entidade:RELACAO TIPO DE LANÇAMENTO PRINCIPAL X TIPO LANÇAMENTO ASSOCIADO 
+ </summary>
+ <param name="CODTIPLMTASC">CODIGO TIPO LANCAMENTO ASSOCIADO.</param>
+ <param name="CODTIPLMTPCP">CODIGO TIPO LANCAMENTO PRINCIPAL.</param>
+ <returns>Retorna um DataSet com a tabela "T062251" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    23/08/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.AtualizarTipoLancamentoContaCorrenteFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTipoLancamentoContaCorrenteFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetTipoLancamentoContaCorrenteFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    12/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterTransferenciaVerbaFornecedor(System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade CADTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:CADASTRO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <returns>Retorna um DataSet com a tabela "CADTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterTransferenciasVerbaFornecedor(System.Decimal,System.String,System.Decimal,System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna dados da entidade CADTRNVBAFRN com base em outros atributos. 
+ Descrição da entidade:CADASTRO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="CODFNC">CODIGO FUNCIONARIO.</param>
+ <param name="DESJSTTRNVBA">DESCRICAO JUSTIFICATIVA DA TRANSFERENCIA DE VERBA.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFDSNTRN">TIPO EMPENHO DESTINO TRANSFERENCIA VERBA.</param>
+ <param name="TIPSTAFLUAPV">TIPO STATUS FLUXO APROVACAO.</param>
+ <returns>Retorna um DataSet com a tabela "CADTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterTransferenciasVerbaFornecedorJOIN(System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna dados da entidade CADTRNVBAFRN com base em outros atributos. 
+ Descrição da entidade:CADASTRO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="CODFNC">CODIGO FUNCIONARIO.</param>
+ <param name="DESJSTTRNVBA">DESCRICAO JUSTIFICATIVA DA TRANSFERENCIA DE VERBA.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFDSNTRN">TIPO EMPENHO DESTINO TRANSFERENCIA VERBA.</param>
+ <param name="TIPSTAFLUAPV">TIPO STATUS FLUXO APROVACAO.</param>
+ <returns>Retorna um DataSet com a tabela "CADTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterMinhasAprovavoesEmTransferenciaVerbasFornecedor(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.AtualizarTransferenciaVerbaFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetTransferenciaVerbaFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterRelacaoTransferenciaVerbaFornecedor(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade RLCTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:RELACAO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFORITRN">TIPO EMPENHO ORIGEM TRANSFERENCIA VERBA.</param>
+ <returns>Retorna um DataSet com a tabela "RLCTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterRelacaoTransferenciaVerbaFornecedorJoin(System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna dados da entidade RLCTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:RELACAO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFORITRN">TIPO EMPENHO ORIGEM TRANSFERENCIA VERBA.</param>
+ <returns>Retorna um DataSet com a tabela "RLCTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterRelacaoTransferenciaVerbaFornecedorJoinT0153541JoinT0100426JoinT0113625JoinT0118570JoinT0109059(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	5/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterRelacoesTransferenciaVerbaFornecedor(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade RLCTRNVBAFRN com base em outros atributos. 
+ Descrição da entidade:RELACAO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFORITRN">TIPO EMPENHO ORIGEM TRANSFERENCIA VERBA.</param>
+ <returns>Retorna um DataSet com a tabela "RLCTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.AtualizarRelacaoTransferenciaVerbaFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetTransferenciaVerbaFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterNovaChaveTransferenciaVerba">
+      <summary>
+ 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterFuncionario(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.FornecedorPertenceCelulaAtendidaUsuario(System.Decimal,System.String)">
+      <summary>
+ Retorna verdadeiro se o fornecedor pertence a celula atendida pelo usuário 
+ </summary>
+ <param name="CODFRN" />
+ <param name="NOMACSUSRSIS" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/12/2006	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.IniciarFluxoTransferenciaVerbas(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	6/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.AprovarFluxoTransferenciaVerbas(System.Decimal,System.Decimal,System.String)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	12/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterDataLancamentoTransferenciaVerbas(System.Decimal,System.DateTime,System.DateTime)">
+      <summary>
+ 
+ </summary>
+ <param name="INDMESTRNFLU" />
+ <param name="DATHRAFLUAPV" />
+ <param name="DATAPVACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	9/1/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ReprovarFluxoTransferenciaVerbas(System.Decimal,System.Decimal,System.String)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	12/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.TransferirValoresDeFluxoTransferenciaVerbas(System.Decimal,System.DateTime,System.DateTime,System.Decimal,System.DateTime)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	12/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.EnviarEmailNaIniciacaoDoFluxoDeTransferenciaVerbas(System.Decimal,System.String)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="emailRemetente" />
+ <param name="emailDestinatario" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	7/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.EnviarEmailNaIniciacaoDoFluxoDeTransferenciaVerbas(System.Decimal,System.Collections.ArrayList)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="emailDestinatario" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	31/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ReservarSaldo(System.Decimal,System.DateTime)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	17/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.LiberarReservaSaldo(System.Decimal,System.DateTime)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="DATHRAAPVFLU" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	17/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ExcluirReservaSaldo(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="DATAPVACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	18/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterReservaSaldoFornecedor(System.String,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123159 com base na sua chave primária. 
+ Descrição da entidade:MOVIMENTO DIARIO RESERVA DE SALDO FORNECEDOR 
+ </summary>
+ <param name="CODACOCMC">CODIGO DA ACAO COMERCIAL.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123159" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    17/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterReservasSaldoFornecedor(System.String,System.Decimal,System.DateTime,System.DateTime,System.DateTime,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123159 com base em outros atributos. 
+ Descrição da entidade:MOVIMENTO DIARIO RESERVA DE SALDO FORNECEDOR 
+ </summary>
+ <param name="CODACOCMC">CODIGO DA ACAO COMERCIAL.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="DATAPVACOCMC">DATA DE APROVACAO DA ACAO COMERCIAL.</param>
+ <param name="DATAPVACOCMCInicial">DATA DE APROVACAO DA ACAO COMERCIAL INICIAL.</param>
+ <param name="DATAPVACOCMCFinal">DATA DE APROVACAO DA ACAO COMERCIAL FINAL.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123159" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    17/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.AtualizarReservaSaldoFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetReservaSaldoFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetReservaSaldoFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    17/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterSaldoDisponivelFornecedor(System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="vDatRef" />
+ <param name="vCodFrn" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	21/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterSaldoDisponivelFornecedor(System.DateTime,System.Decimal,System.String)">
+      <summary>
+ 
+ </summary>
+ <param name="vDatRef" />
+ <param name="vCodFrn" />
+ <param name="In_TipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/2/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterSaldoDisponivelFornecedorParaTodosEmpenhos(System.DateTime,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="vDatRef" />
+ <param name="vCodFrn" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	11/1/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterSaldoDisponivelFornecedorPorCategoria(System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="vDatRef" />
+ <param name="CodDivCmp" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterSaldoDisponivelFornecedorPorCategoria(System.DateTime,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="DatRef" />
+ <param name="CodDivCmp" />
+ <param name="In_TipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/2/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterSaldoDisponivelFornecedorPorComprador(System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="vDatRef" />
+ <param name="codCpr" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterSaldoDisponivelFornecedorPorComprador(System.DateTime,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="DatRef" />
+ <param name="CodCpr" />
+ <param name="In_TipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/2/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterSaldoDisponivelFornecedorPorCategoriaEOuComprador(System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="DatRef" />
+ <param name="CodCpr" />
+ <param name="CodDivCmp" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	18/3/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterSaldoDisponivelFornecedor(System.DateTime,System.String,System.String)">
+      <summary>
+ Consulta saldo para varios fornecedores e vários empenhos 
+ </summary>
+ <param name="vDatRef" />
+ <param name="IN_CodFrn" />
+ <param name="IN_TipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/2/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterSaldoDisponivelFornecedor(System.DateTime,System.String,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="vDatRef" />
+ <param name="vCodFrn" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	21/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterFuncionarioAprovadorDaControladoriaQuandoMesLancamentoForDiferenteDoMesDeAprovacao">
+      <summary>
+ 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	26/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterCalendarioAnual(System.DateTime)">
+      <summary>
+ 
+ </summary>
+ <param name="DATREF" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	9/1/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.AtualizarTransferencia(System.String,System.String,Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor)">
+      <summary>
+ 
+ </summary>
+ <param name="TIPUSRSIS" />
+ <param name="dsTransferenciaVerbaFornecedor" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	15/1/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.TransferirValoreEntreEmpenhosFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor.ParametrosTransferenciaRow)">
+      <summary>
+ 
+ </summary>
+ <param name="ParametrosTransferenciaRow" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	15/1/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.TransferenciaRegraAnterior(System.String,System.String,Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor.ParametrosTransferenciaRow,Martins.Compras.AcoesComerciais.Gestao.DatasetEmpenho.T0109059Row,Martins.Compras.AcoesComerciais.Gestao.DatasetEmpenho.T0109059Row)">
+      <summary>
+ 
+ </summary>
+ <param name="NOMACSUSRSIS" />
+ <param name="TIPUSRSIS" />
+ <param name="ParametrosTransferenciaRow" />
+ <param name="T0109059rowOrigem" />
+ <param name="T0109059rowDestino" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	15/1/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ValidarTransferencia(System.String,Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor.ParametrosTransferenciaRow,Martins.Compras.AcoesComerciais.Gestao.DatasetEmpenho.T0109059Row,Martins.Compras.AcoesComerciais.Gestao.DatasetEmpenho.T0109059Row)">
+      <summary>
+ 
+ </summary>
+ <param name="linha" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	15/1/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterRelatorioSaldoDisponivelFornecedorCelula(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PCTDJRetSldDisFrnCel.PRCDJRetSldDisFrnCel 
+ </summary>
+ <param name="pvCodDivCmp" />
+ <param name="pvTipDsnDscBnf" />
+ <param name="pvAnoMesRef" />
+ <param name="pvTipo" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDJRetSldDisFrnCel.PRCDJRetSldDisFrnCel 
+ LEGADO:spccx025 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.AtualizarContaCorrenteFornecedor(System.DateTime,System.Decimal,System.Decimal,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.Decimal,System.Decimal,System.String,System.Int32,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PCTDJAtlCntCrrFrn.PRCDJAtlCntCrrFrn 
+ </summary>
+ <param name="pvDatRefLmt" />
+ <param name="pvTipDsnDscBnf" />
+ <param name="pvCodFrn" />
+ <param name="pvCodGdc" />
+ <param name="pvCodTipLmtPmt" />
+ <param name="pvCodCntCrd" />
+ <param name="pvCodCenCstCrd" />
+ <param name="pvCodCntDeb" />
+ <param name="pvCodCenCstDeb" />
+ <param name="pvVlrLmtCtb" />
+ <param name="pvDesHstLmt" />
+ <param name="pvDesVarHstPad" />
+ <param name="pvNomAcsUsrGrcLmt" />
+ <param name="pvCodFilEmp" />
+ <param name="pvCodPms" />
+ <param name="pvFlgRetVlr" />
+ <param name="pvTipAlcVbaFrnPmt" />
+ <param name="pvTransfIntegral" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDJAtlCntCrrFrn.PRCDJAtlCntCrrFrn 
+ LEGADO: CCX001GA 
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    21/11/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.TransferirValoresEntreEmpenhosFornecedor(System.Decimal,System.Int32,System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+      <summary>
+ Realiza transferencia entre dos fornecedores e/ou empenho 
+ </summary>
+ <param name="pValor" />
+ <param name="pTipAlcVbaFrn" />
+ <param name="pvDatRefLmt" />
+ <param name="pvTipDsnDscBnfOrigem" />
+ <param name="pvTipDsnDscBnfDestino" />
+ <param name="pvCodFrnOrigem" />
+ <param name="pvCodFrnDestino" />
+ <param name="pvVlrLmtCtb" />
+ <param name="pvDesHstLmt" />
+ <param name="pvDesVarHstPadOrigem" />
+ <param name="pvDesVarHstPadDestino" />
+ <param name="pvNomAcsUsrGrcLmt" />
+ <param name="pvTipAlcVbaFrnPmtOrigem" />
+ <param name="pvTipAlcVbaFrnPmtDestino" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/12/2006	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterDiretoriaEDivisaoDeCompraDeFornecedor(System.Decimal)">
+      <summary>
+ Chamada para procedure: MRT.PCTDJObtDrtCmpFrn.PRCDJObtDrtCmpFrn 
+ </summary>
+ <param name="pvCodFrn" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDJObtDrtCmpFrn.PRCDJObtDrtCmpFrn 
+ LEGADO:spCCX043 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    30/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.ContaCorrenteFornecedorBP.ObterSelecaoValorDisponivelFornecedor(System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ CONSULTA Valores Disponiveis de um Fornecedor 
+ </summary>
+ <param name="vDatRef" />
+ <param name="vCodFrn" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[ELIFÁZIO]	21/9/2006	Created 
+ </history></member>
+    <member name="T:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP">
+      <summary>
+ Classe BP da entidade com objetivo: chegar segurança e repassar a chamada para a classe BLL 
+ </summary>
+ <remarks>
+ 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterFluxoCancelamentoAcordoPorChave(System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0154038 com base na sua chave primária. 
+ Descrição da entidade:FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <returns>Retorna um DataSet com a tabela "T0154038" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+         '''     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterFluxoCancelamentoAcordoPorAtributos(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0154038 com base em outros atributos. 
+ Descrição da entidade:FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODSTAAPV">CODIGO DO STATUS DO FLUXO.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <param name="NUMREQCNCACOCMC">NUMERO REQUISICAO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <returns>Retorna um DataSet com a tabela "T0154038" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.AtualizarFluxoCancelamentoAcordo(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetFluxoCancelamentoAcordo)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetFluxoCancelamentoAcordo">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChave(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0154021 com base na sua chave primária. 
+ Descrição da entidade:ACORDO A CANCELAR EM FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="CODEMP">CODIGO EMPRESA.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="DATNGCPMS">DATA DA NEGOCIACAO DA PROMESSA.</param>
+ <param name="DATPRVRCBPMS">DATA DE PREVISAO DE RECEBIMENTO DA PROMESSA.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <param name="TIPFRMDSCBNF">TIPO FORMA DESCONTO BONIFICACAO.</param>
+ <returns>Retorna um DataSet com a tabela "T0154021" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributos(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0154021 com base em outros atributos. 
+ Descrição da entidade:ACORDO A CANCELAR EM FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="CODEMP">CODIGO EMPRESA.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="DATNGCPMS">DATA DA NEGOCIACAO DA PROMESSA.</param>
+ <param name="DATPRVRCBPMS">DATA DE PREVISAO DE RECEBIMENTO DA PROMESSA.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <param name="TIPFRMDSCBNF">TIPO FORMA DESCONTO BONIFICACAO.</param>
+ <returns>Retorna um DataSet com a tabela "T0154021" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.AtualizarAcordoACancelarEmFluxoCancelamentoAcordo(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetFluxoCancelamentoAcordo)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetAcordoACancelarEmFluxoCancelamentoAcordo">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordos(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo]	4/24/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterNovaChaveFluxoCancelamento">
+      <summary>
+ 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	4/25/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterAcordosParaCancelamentoPorFornecedor(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	4/28/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMC(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	5/6/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.IniciarFluxoCancelamentoAcordo(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	13/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterFluxoCancelamentoAcordoPesquisa(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODFRN" />
+ <param name="CODSTAAPV" />
+ <param name="NUMPEDCNCACOCMC" />
+ <param name="NUMREQCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	14/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterFluxoAprovacao(System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0161591 com base na sua chave primária. 
+ Descrição da entidade:FLUXO DE APROVAÇÃO 
+ </summary>
+ <param name="CODSISINF">CODIGO DO SISTEMA DE INFORMACAO.</param>
+ <param name="NUMFLUAPV">.</param>
+ <param name="NUMSEQFLUAPV">.</param>
+ <returns>Retorna um DataSet com a tabela "T0161591" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    06/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterFluxosAprovacao(System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna dados da entidade T0161591 com base em outros atributos. 
+ Descrição da entidade:FLUXO DE APROVAÇÃO 
+ </summary>
+ <param name="CODEDEAPV">CODIGO ENTIDADE APROVOU.</param>
+ <param name="CODEDEARZ">CODIGO DA ENTIDADE AUTORIZADA.</param>
+ <param name="CODSISINF">CODIGO DO SISTEMA DE INFORMACAO.</param>
+ <param name="DATHRAAPVFLU">DATA E HORA DE APROVACAO DO FLUXO.</param>
+ <param name="DATHRAFLUAPV">DATA E HORA DO FLUXO DE APROVACAO.</param>
+ <param name="NUMFLUAPV">.</param>
+ <param name="NUMSEQFLUAPV">.</param>
+ <param name="NUMSEQFLUAPVPEDOPN">.</param>
+ <param name="NUMSEQNIVAPV">.</param>
+ <param name="TIPSTAFLUAPV">.</param>
+ <returns>Retorna um DataSet com a tabela "T0161591" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    06/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterFluxosAprovacaoPendentes(System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODEDEAPV" />
+ <param name="CODEDEARZ" />
+ <param name="CODSISINF" />
+ <param name="DATHRAAPVFLU" />
+ <param name="DATHRAFLUAPV" />
+ <param name="NUMFLUAPV" />
+ <param name="NUMSEQFLUAPV" />
+ <param name="NUMSEQFLUAPVPEDOPN" />
+ <param name="NUMSEQNIVAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	28/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.AtualizarFluxoAprovacao(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetFluxoAprovacao)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetFluxoAprovacao">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    06/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ObterFuncionariosDaControladoriaAprovadoresDeFluxoDeCancelamentoDeAcordos">
+      <summary>
+ 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	15/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.EnviarEmailNaIniciacaoDoFluxoDeCancelamentoDeAcordo(System.Decimal,System.Decimal,System.Collections.ArrayList)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <param name="emailDestinatario" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	15/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ReprovarFluxoCancelamentoAcordo(System.Decimal,System.Decimal,System.Decimal,System.String)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <param name="CODFRN" />
+ <param name="CODFNC" />
+ <param name="DESOBSAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	16/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.AprovarFluxoCancelamentoAcordo(System.Decimal,System.Decimal,System.Decimal,System.String,System.String)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <param name="CODFNC" />
+ <param name="CODFRN" />
+ <param name="DESOBSAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	19/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.CancelarAcordoTotal(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODEMP" />
+ <param name="CODFILEMP" />
+ <param name="CODPMS" />
+ <param name="DATNGCPMS" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	19/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.CancelarAcordoParcial(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Decimal,System.Decimal,System.String,System.String,System.Boolean)">
+      <summary>
+ Cancelamento Acordo (quando o cancelamento é parcial) 
+ </summary>
+ <param name="CODEMP" />
+ <param name="CODFILEMP" />
+ <param name="CODPMS" />
+ <param name="DATNGCPMS" />
+ <param name="NUMPEDCNCACOCMC" />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	20/6/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.FluxoDeCancelamentoDeAcordosBP.ClonarFluxoCancelamentoAcordoFornecedor(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <param name="CODFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	20/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.RecuperacaoEPrevencaoPerdasBP.ObterRecuperacaoEPrevencaoPerdasSintetico(System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Obtem os dados para o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <param name="NUMCTTFRN">Numero do Contrato do Fornecedor</param>
+ <param name="INDDVRVLRAPUARDFRN">Define se apresenta todas as linhas ou apenas divergencias </param>
+ 1 - apresenta somente divergencias 
+ 0 - apresenta todas as linhas 
+ <param name="TIPLMTHSTCFAARDFRN">Define se apresenta informacoes da Devolucao 99</param>
+ 1 - Apresenta apuracao sem devolucao 99 
+ 2 - Apresenta apuracao com devolucao 99 
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	27/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.RecuperacaoEPrevencaoPerdasBP.ObterRecuperacaoEPrevencaoPerdasAnalitico(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Decimal)">
+      <summary>
+ Obtem os dados para o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <param name="NUMCTTFRN">Numero do Contrato do Fornecedor</param>
+ <param name="INDDVRVLRAPUARDFRN">Define se apresenta todas as linhas ou apenas divergencias </param>
+ 1 - apresenta somente divergencias 
+ 0 - apresenta todas as linhas 
+ <param name="TIPLMTHSTCFAARDFRN">Define se apresenta informacoes da Devolucao 99</param>
+ 1 - Apresenta apuracao sem devolucao 99 
+ 2 - Apresenta apuracao com devolucao 99 
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	27/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.RecuperacaoEPrevencaoPerdasBP.ObterRecuperacaoEPrevencaoPerdasClausulas(System.Decimal)">
+      <summary>
+ Obtem as clausulas do contrato selecionado como filtro para 
+ o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	28/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.RecuperacaoEPrevencaoPerdasBP.ObterRecuperacaoEPrevencaoPerdasDataApuracao(System.Decimal)">
+      <summary>
+ Obtem as datas de referencia da apuracao do contrato selecionado como filtro para 
+ o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	28/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.RecuperacaoEPrevencaoPerdasBP.ObterAcordosCanceladosPerdas(System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Obtem os dados para o relatorio Acordos Cancelados / Perdas 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	27/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.RecuperacaoEPrevencaoPerdasBP.ObterComprador(System.Decimal,System.String)">
+      <summary>
+ Obtem Compradores 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	04/09/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.BP.RecuperacaoEPrevencaoPerdasBP.ObterCelulaPorAtributo(System.Decimal,System.String)">
+      <summary>
+ Obtem Celulas por atributo 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	09/09/2008	Created 
+ </history></member>
+    <member name="T:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL">
+      <summary>
+ Classe DAL da entidade com objetivo: persistir os dados 
+ </summary>
+ <remarks>
+ 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterContaCorrenteFornecedor(System.Decimal,System.String,System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123086 com base na sua chave primária. 
+ Descrição da entidade:MOVIMENTO DIARIO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODGDC">CODIGO CONTROLE TRANSACAO CABECALHO DE UM LANCAMENTO.</param>
+ <param name="DATREFLMT">DATA REFERENCIA (AAAA-MM-DD).</param>
+ <param name="NUMSEQLMT">NUMERO SEQUENCIA.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123086" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterContasCorrenteFornecedor(System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.String,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.DateTime,System.String,System.String,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123086 com base na em atributos que geralmente não compoem a chave primária (exceto em chaves compostas). 
+ Descrição da entidade:MOVIMENTO DIARIO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODCENCSTCRD">CODIGO CENTRO DE CUSTRO DE CREDITO.</param>
+ <param name="CODCENCSTDEB">CODIGO CENTRO DE CUSTRO DE DEBITO.</param>
+ <param name="CODCNTCRD">CODIGO CONTA CONTABIL.</param>
+ <param name="CODCNTDEB">CODIGO CONTA CONTABIL.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODGDC">CODIGO CONTROLE TRANSACAO CABECALHO DE UM LANCAMENTO.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <param name="DATREFLMT">DATA REFERENCIA (AAAA-MM-DD).</param>
+ <param name="DATREFLMTInicial">DATA REFERENCIA (AAAA-MM-DD) INICIAL.</param>
+ <param name="DATREFLMTFinal">DATA REFERENCIA (AAAA-MM-DD) FINAL.</param>
+ <param name="DESHSTLMT">DESCRICAO DO HISTORICO CONTA CORRENTE.</param>
+ <param name="DESVARHSTPAD">DESCRICAO DA VARIAVEL DO HISTORICO PADRAO.</param>
+ <param name="NUMSEQLMT">NUMERO SEQUENCIA.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123086" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterFornecedoresDeContasCorrenteFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetContaCorrenteFornecedor@,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.String,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.DateTime,System.String,System.String,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123086 com base na em atributos que geralmente não compoem a chave primária (exceto em chaves compostas). 
+ Descrição da entidade:MOVIMENTO DIARIO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODCENCSTCRD">CODIGO CENTRO DE CUSTRO DE CREDITO.</param>
+ <param name="CODCENCSTDEB">CODIGO CENTRO DE CUSTRO DE DEBITO.</param>
+ <param name="CODCNTCRD">CODIGO CONTA CONTABIL.</param>
+ <param name="CODCNTDEB">CODIGO CONTA CONTABIL.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODGDC">CODIGO CONTROLE TRANSACAO CABECALHO DE UM LANCAMENTO.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <param name="DATREFLMT">DATA REFERENCIA (AAAA-MM-DD).</param>
+ <param name="DATREFLMTInicial">DATA REFERENCIA (AAAA-MM-DD) INICIAL.</param>
+ <param name="DATREFLMTFinal">DATA REFERENCIA (AAAA-MM-DD) FINAL.</param>
+ <param name="DESHSTLMT">DESCRICAO DO HISTORICO CONTA CORRENTE.</param>
+ <param name="DESVARHSTPAD">DESCRICAO DA VARIAVEL DO HISTORICO PADRAO.</param>
+ <param name="NUMSEQLMT">NUMERO SEQUENCIA.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123086" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterParametroContabilContaCorrenteFornecedor(System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123094 com base na sua chave primária. 
+ Descrição da entidade:PARAMETRO CONTABIL CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123094" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterParametrosContabilContaCorrenteFornecedor(System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123094 com base na em atributos que geralmente não compoem a chave primária (exceto em chaves compostas). 
+ Descrição da entidade:PARAMETRO CONTABIL CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODCENCSTCRD">.</param>
+ <param name="CODCENCSTDEB">.</param>
+ <param name="CODCNTCRD">CODIGO CONTA CONTABIL.</param>
+ <param name="CODCNTDEB">CODIGO CONTA CONTABIL.</param>
+ <param name="CODEVTCTB">CODIGO EVENTO CONTABIL - COFINS.</param>
+ <param name="CODEVTCTBFRTDVL">CODIGO EVENTO CONTABIL DO FRETE DE DEVOLUCAO.</param>
+ <param name="CODEVTCTBNGCDVL">CODIGO EVENTO CONTABIL DE NEGOCIACAO DE DEVOLUCAO.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODFTOCTB">CODIGO FATO CONTABIL.</param>
+ <param name="CODFTOCTBFRTDVL">CODIGO FATO CONTABIL DO FRETE DE DEVOLUCAO.</param>
+ <param name="CODFTOCTBNGCDVL">CODIGO FATO CONTABIL DE NEGOCIACAO DE DEVOLUCAO.</param>
+ <param name="CODHSTPAD">CODIGO HISTORICO PADRAO.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123094" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.AtualizarParametroContabilContaCorrenteFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetParametroContabilContaCorrenteFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetParametroContabilContaCorrenteFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterTipoLancamentoContaCorrenteFornecedor(System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123108 com base na sua chave primária. 
+ Descrição da entidade:CADASTRO TIPO LANCAMENTO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123108" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterTiposLancamentoContaCorrenteFornecedor(System.String,System.String)">
+      <summary>
+ Este método retorna dados da entidade T0123108 com base na em atributos que geralmente não compoem a chave primária (exceto em chaves compostas). 
+ Descrição da entidade:CADASTRO TIPO LANCAMENTO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="DESTIPLMT">DESCRICAO DO TIPO DE LANCAMENTO.</param>
+ <param name="DESTIPLMTFRN">DESCRICAO DO TIPO DE LANCAMENTO FORNECEDOR.</param>
+ <returns>Retorna um DataSet com a tabela "T0123108" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterTipoLancamentoPrincipalXTipoLancamentoAssociado(System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna os registros para tabela T062251 com base na sua chave primária. 
+ Descrição da entidade:RELACAO TIPO DE LANÇAMENTO PRINCIPAL X TIPO LANÇAMENTO ASSOCIADO 
+ </summary>
+ <param name="CODTIPLMTASC">CODIGO TIPO LANCAMENTO ASSOCIADO.</param>
+ <param name="CODTIPLMTPCP">CODIGO TIPO LANCAMENTO PRINCIPAL.</param>
+ <returns>Retorna um DataSet com a tabela "T062251" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    23/08/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.AtualizarTipoLancamentoContaCorrenteFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTipoLancamentoContaCorrenteFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetTipoLancamentoContaCorrenteFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterNovaChaveTipoLancamentoContaCorrenteFornecedor">
+      <summary>
+ Retorna a próxima chave disponível no banco para a tabelaT0123108 
+ Descrição da tabela: CADASTRO TIPO LANCAMENTO CONTA CORRENTE FORNECEDOR. 
+ </summary>
+ <returns>Código da próxima chave disponível</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.FornecedorPertenceCelulaAtendidaUsuario(System.Decimal,System.String)">
+      <summary>
+ Retorna verdadeiro se o fornecedor pertence a celula atendida pelo usuário 
+ </summary>
+ <param name="CODFRN" />
+ <param name="NOMACSUSRSIS" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/12/2006	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.FornecedorPertenceCelulaAtendidaUsuarioExcecao1(System.String)">
+      <summary>
+ Retorna verdadeiro se o fornecedor pertence a celula atendida pelo usuário, 
+ exeção criada para atender um caso específico 
+ </summary>
+ <param name="CODFRN" />
+ <param name="NOMACSUSRSIS" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	20/3/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterNovaChaveTransferenciaVerba">
+      <summary>
+ 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterFuncionario(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterTransferenciaVerbaFornecedor(System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade CADTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:CADASTRO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <returns>Retorna um DataSet com a tabela "CADTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterTransferenciasVerbaFornecedor(System.Decimal,System.String,System.Decimal,System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna dados da entidade CADTRNVBAFRN com base na em atributos que geralmente não compoem a chave primária (exceto em chaves compostas). 
+ Descrição da entidade:CADASTRO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="CODFNC">CODIGO FUNCIONARIO.</param>
+ <param name="DESJSTTRNVBA">DESCRICAO JUSTIFICATIVA DA TRANSFERENCIA DE VERBA.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFDSNTRN">TIPO EMPENHO DESTINO TRANSFERENCIA VERBA.</param>
+ <param name="TIPSTAFLUAPV">TIPO STATUS FLUXO APROVACAO.</param>
+ <returns>Retorna um DataSet com a tabela "CADTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.AtualizarTransferenciaVerbaFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetTransferenciaVerbaFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterRelacaoTransferenciaVerbaFornecedor(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade RLCTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:RELACAO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFORITRN">TIPO EMPENHO ORIGEM TRANSFERENCIA VERBA.</param>
+ <returns>Retorna um DataSet com a tabela "RLCTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterTransferenciaSVerbaFornecedorjoin(System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna dados da entidade RLCTRNVBAFRN com base na em atributos que geralmente não compoem a chave primária (exceto em chaves compostas). 
+ Descrição da entidade:RELACAO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="CODFNC">CODIGO FUNCIONARIO.</param>
+ <param name="TIPSTAFLUAPV">TIPO STATUS FLUXO APROVACAO.</param>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterMinhasAprovavoesEmTransferenciaVerbasFornecedor(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterRelacaoTransferenciaVerbaFornecedorJoinT0153541JoinT0100426JoinT0113625JoinT0118570JoinT0109059(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	5/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterRelacoesTransferenciaVerbaFornecedor(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade RLCTRNVBAFRN com base na em atributos que geralmente não compoem a chave primária (exceto em chaves compostas). 
+ Descrição da entidade:RELACAO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFORITRN">TIPO EMPENHO ORIGEM TRANSFERENCIA VERBA.</param>
+ <returns>Retorna um DataSet com a tabela "RLCTRNVBAFRN" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.AtualizarRelacaoTransferenciaVerbaFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetTransferenciaVerbaFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetTransferenciaVerbaFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterFluxosDeTransferenciaVerbaFornecedor(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	12/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterReservaSaldoFornecedor(System.String,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123159 com base na sua chave primária. 
+ Descrição da entidade:MOVIMENTO DIARIO RESERVA DE SALDO FORNECEDOR 
+ </summary>
+ <param name="CODACOCMC">CODIGO DA ACAO COMERCIAL.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123159" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    17/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterReservasSaldoFornecedor(System.String,System.Decimal,System.DateTime,System.DateTime,System.DateTime,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0123159 com base na em atributos que geralmente não compoem a chave primária (exceto em chaves compostas). 
+ Descrição da entidade:MOVIMENTO DIARIO RESERVA DE SALDO FORNECEDOR 
+ </summary>
+ <param name="CODACOCMC">CODIGO DA ACAO COMERCIAL.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="DATAPVACOCMC">DATA DE APROVACAO DA ACAO COMERCIAL.</param>
+ <param name="DATAPVACOCMCInicial">DATA DE APROVACAO DA ACAO COMERCIAL INICIAL.</param>
+ <param name="DATAPVACOCMCFinal">DATA DE APROVACAO DA ACAO COMERCIAL FINAL.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>Retorna um DataSet com a tabela "T0123159" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    17/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.AtualizarReservaSaldoFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetReservaSaldoFornecedor)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetReservaSaldoFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    17/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterFuncionarioAprovadorDaControladoriaQuandoMesLancamentoForDiferenteDoMesDeAprovacao">
+      <summary>
+ 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	26/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterCalendarioAnual(System.DateTime)">
+      <summary>
+ 
+ </summary>
+ <param name="DATREF" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	9/1/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.AtualizarContaCorrenteFornecedor(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetContaCorrenteFornecedor.T0123086Row)">
+      <summary>
+ Atualiza os dados no banco 
+ LEGADO: SPCCX004 
+ Procedure: MRT.PCTDJAtlCntCrrFrn.PRCDJAtlCntCrrFrn 
+ </summary>
+ <param name="DatasetContaCorrenteFornecedor">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.AtualizarContaCorrenteFornecedor(System.DateTime,System.Decimal,System.Decimal,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.Decimal,System.Decimal,System.String,System.Int32,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PCTDJAtlCntCrrFrn.PRCDJAtlCntCrrFrn 
+ </summary>
+ <param name="pvDatRefLmt" />
+ <param name="pvTipDsnDscBnf" />
+ <param name="pvCodFrn" />
+ <param name="pvCodGdc" />
+ <param name="pvCodTipLmtPmt" />
+ <param name="pvCodCntCrd" />
+ <param name="pvCodCenCstCrd" />
+ <param name="pvCodCntDeb" />
+ <param name="pvCodCenCstDeb" />
+ <param name="pvVlrLmtCtb" />
+ <param name="pvDesHstLmt" />
+ <param name="pvDesVarHstPad" />
+ <param name="pvNomAcsUsrGrcLmt" />
+ <param name="pvCodFilEmp" />
+ <param name="pvCodPms" />
+ <param name="pvFlgRetVlr" />
+ <param name="pvTipAlcVbaFrnPmt" />
+ <param name="pvTransfIntegral" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDJAtlCntCrrFrn.PRCDJAtlCntCrrFrn 
+ LEGADO: CCX001GA 
+ </remarks>
+ <history>
+     [Elifázio Bernardes]    21/11/2006  Created 
+     [Marcos Queiroz]        29/12/2006  Updated 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterNumeroSequenciaLancamento(System.Decimal,System.Decimal,System.DateTime,System.Int32,System.String)">
+      <summary>
+ Chamada para procedure: MRT.PCTDJAtlCntCrrFrn.PRCDJObtNumSeqLmt 
+ </summary>
+ <param name="pvTipDsnDscBnf" />
+ <param name="pvCodFrn" />
+ <param name="pvDatRefLmt" />
+ <param name="pvCodTipLmt" />
+ <param name="pCodUni" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDJAtlCntCrrFrn.PRCDJObtNumSeqLmt 
+ LEGADO:Estava incluído na spCCX004 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    28/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterRelatorioSaldoDisponivelFornecedorCelula(System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int32)">
+      <summary>
+ Chamada para procedure: MRT.PCTDJRetSldDisFrnCel.PRCDJRetSldDisFrnCel 
+ </summary>
+ <param name="pvCodDivCmp" />
+ <param name="pvTipDsnDscBnf" />
+ <param name="pvAnoMesRef" />
+ <param name="pvTipo" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDJRetSldDisFrnCel.PRCDJRetSldDisFrnCel 
+ LEGADO:spccx025 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterDiretoriaEDivisaoDeCompraDeFornecedor(System.Decimal)">
+      <summary>
+ Chamada para procedure: MRT.PCTDJObtDrtCmpFrn.PRCDJObtDrtCmpFrn 
+ </summary>
+ <param name="pvCodFrn" />
+ <remarks>
+ Chamada para procedure: MRT.PCTDJObtDrtCmpFrn.PRCDJObtDrtCmpFrn 
+ LEGADO:spCCX043 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    30/12/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterSelecaoValorDisponivelFornecedor(System.DateTime,System.Decimal,System.Decimal)">
+      <summary>
+ CONSULTA Valores Disponiveis de um Fornecedor 
+ </summary>
+ <param name="vDatRef" />
+ <param name="vCodFrn" />
+ <param name="vTipDsnDscBnf" />
+ <returns />
+ <remarks>
+ Procedure legado SQL-SERVER: SPCCX017 
+ Procedure Migrada Oracle...: PCTDJSelVlrDisFrn.PRCDJSelVlrDisFrn 
+ </remarks>
+ <history>
+ 	[ELIFÁZIO]	21/9/2006	Created 
+     [Marcos Queiroz] 01/11/2006 Updated 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDAL.ObterFornecedorCompradorEDivisaoCompra(System.String)">
+      <summary>
+ 
+ </summary>
+ <param name="IN_CODFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	21/11/2007	Created 
+ </history></member>
+    <member name="T:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL">
+      <summary>
+ Classe de geração de comandos sql 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectTipoLancamentoPrincipalXTipoLancamentoAssociado(Martins.Data.IData)">
+      <summary>
+ Este método retorna o SQL para tabela T0162251 com base na sua chave primária. 
+ Descrição da entidade:RELACAO TIPO DE LANÇAMENTO PRINCIPAL X TIPO LANÇAMENTO ASSOCIADO 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectTipoLancamentoPrincipalXTipoLancamentoAssociado(Martins.Data.IData,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna o SQL para tabela T0162251 com base em atributos que não fazem parte da chave primária. 
+ Descrição da entidade:RELACAO TIPO DE LANÇAMENTO PRINCIPAL X TIPO LANÇAMENTO ASSOCIADO 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="CODTIPLMTASC">CODIGO TIPO LANCAMENTO ASSOCIADO.</param>
+ <param name="CODTIPLMTPCP">CODIGO TIPO LANCAMENTO PRINCIPAL.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectContaCorrenteFornecedor(Martins.Data.IData)">
+      <summary>
+ Este método retorna o SQL para tabela T0123086 com base na sua chave primária. 
+ Descrição da entidade:MOVIMENTO DIARIO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectContaCorrenteFornecedor(Martins.Data.IData,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.String,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.DateTime,System.String,System.String,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna o SQL para tabela T0123086 com base em atributos que não fazem parte da chave primária. 
+ Descrição da entidade:MOVIMENTO DIARIO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="CODCENCSTCRD">CODIGO CENTRO DE CUSTRO DE CREDITO.</param>
+ <param name="CODCENCSTDEB">CODIGO CENTRO DE CUSTRO DE DEBITO.</param>
+ <param name="CODCNTCRD">CODIGO CONTA CONTABIL.</param>
+ <param name="CODCNTDEB">CODIGO CONTA CONTABIL.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODGDC">CODIGO CONTROLE TRANSACAO CABECALHO DE UM LANCAMENTO.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <param name="DATREFLMT">DATA REFERENCIA (AAAA-MM-DD).</param>
+ <param name="DATREFLMTInicial">DATA REFERENCIA (AAAA-MM-DD) INICIAL.</param>
+ <param name="DATREFLMTFinal">DATA REFERENCIA (AAAA-MM-DD) FINAL.</param>
+ <param name="DESHSTLMT">DESCRICAO DO HISTORICO CONTA CORRENTE.</param>
+ <param name="DESVARHSTPAD">DESCRICAO DA VARIAVEL DO HISTORICO PADRAO.</param>
+ <param name="NUMSEQLMT">NUMERO SEQUENCIA.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectFornecedorDeContaCorrenteFornecedor(Martins.Data.IData,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.String,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.DateTime,System.String,System.String,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna o SQL para tabela com os fornecedores da tabela T0123086 
+ Descrição da entidade:DIVISÃO FORNECEDOR 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="CODCENCSTCRD">CODIGO CENTRO DE CUSTRO DE CREDITO.</param>
+ <param name="CODCENCSTDEB">CODIGO CENTRO DE CUSTRO DE DEBITO.</param>
+ <param name="CODCNTCRD">CODIGO CONTA CONTABIL.</param>
+ <param name="CODCNTDEB">CODIGO CONTA CONTABIL.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODGDC">CODIGO CONTROLE TRANSACAO CABECALHO DE UM LANCAMENTO.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <param name="DATREFLMT">DATA REFERENCIA (AAAA-MM-DD).</param>
+ <param name="DATREFLMTInicial">DATA REFERENCIA (AAAA-MM-DD) INICIAL.</param>
+ <param name="DATREFLMTFinal">DATA REFERENCIA (AAAA-MM-DD) FINAL.</param>
+ <param name="DESHSTLMT">DESCRICAO DO HISTORICO CONTA CORRENTE.</param>
+ <param name="DESVARHSTPAD">DESCRICAO DA VARIAVEL DO HISTORICO PADRAO.</param>
+ <param name="NUMSEQLMT">NUMERO SEQUENCIA.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectParametroContabilContaCorrenteFornecedor(Martins.Data.IData)">
+      <summary>
+ Este método retorna o SQL para tabela T0123094 com base na sua chave primária. 
+ Descrição da entidade:PARAMETRO CONTABIL CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectParametroContabilContaCorrenteFornecedor(Martins.Data.IData,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String,System.Decimal)">
+      <summary>
+ Este método retorna o SQL para tabela T0123094 com base em atributos que não fazem parte da chave primária. 
+ Descrição da entidade:PARAMETRO CONTABIL CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="CODCENCSTCRD">.</param>
+ <param name="CODCENCSTDEB">.</param>
+ <param name="CODCNTCRD">CODIGO CONTA CONTABIL.</param>
+ <param name="CODCNTDEB">CODIGO CONTA CONTABIL.</param>
+ <param name="CODEVTCTB">CODIGO EVENTO CONTABIL - COFINS.</param>
+ <param name="CODEVTCTBFRTDVL">CODIGO EVENTO CONTABIL DO FRETE DE DEVOLUCAO.</param>
+ <param name="CODEVTCTBNGCDVL">CODIGO EVENTO CONTABIL DE NEGOCIACAO DE DEVOLUCAO.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODFTOCTB">CODIGO FATO CONTABIL.</param>
+ <param name="CODFTOCTBFRTDVL">CODIGO FATO CONTABIL DO FRETE DE DEVOLUCAO.</param>
+ <param name="CODFTOCTBNGCDVL">CODIGO FATO CONTABIL DE NEGOCIACAO DE DEVOLUCAO.</param>
+ <param name="CODHSTPAD">CODIGO HISTORICO PADRAO.</param>
+ <param name="CODTIPLMT">CODIGO TIPO LANCAMENTO.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectResumoMensalSaldoFornecedor(Martins.Data.IData)">
+      <summary>
+ Este método retorna o SQL para tabela T0123078 com base na sua chave primária. 
+ Descrição da entidade:RESUMO MENSAL SALDO FORNECEDOR 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectResumoMensalSaldoFornecedor(Martins.Data.IData,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna o SQL para tabela T0123078 com base em atributos que não fazem parte da chave primária. 
+ Descrição da entidade:RESUMO MENSAL SALDO FORNECEDOR 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="ANOMESREF">ANO E MES DE REFERENCIA NO FORMATO AAAAMM.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectTipoLancamentoContaCorrenteFornecedor(Martins.Data.IData)">
+      <summary>
+ Este método retorna o SQL para tabela T0123108 com base na sua chave primária. 
+ Descrição da entidade:CADASTRO TIPO LANCAMENTO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectTipoLancamentoContaCorrenteFornecedor(Martins.Data.IData,System.String,System.String)">
+      <summary>
+ Este método retorna o SQL para tabela T0123108 com base em atributos que não fazem parte da chave primária. 
+ Descrição da entidade:CADASTRO TIPO LANCAMENTO CONTA CORRENTE FORNECEDOR 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="DESTIPLMT">DESCRICAO DO TIPO DE LANCAMENTO.</param>
+ <param name="DESTIPLMTFRN">DESCRICAO DO TIPO DE LANCAMENTO FORNECEDOR.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    21/07/2006  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectFornecedorPertenceCelulaAtendidaUsuario(Martins.Data.IData)">
+      <summary>
+ Obtem o sql que retorna o atributo quant, através desse atributo é possível 
+ identificar se o fornecedor pertence a celula atendida pelo usuário compra 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/12/2006	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectFornecedorPertenceCelulaAtendidaUsuarioExcecao1(Martins.Data.IData)">
+      <summary>
+ Obtem o sql que retorna o atributo quant, através desse atributo é possível 
+ identificar se o fornecedor pertence a celula atendida pelo usuário compra 
+ esse caso é uma exeção criada para atender a uma situação específica, utilizado hard code 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	20/3/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectTransferenciaVerbaFornecedor(Martins.Data.IData)">
+      <summary>
+ Este método retorna o SQL para tabela CADTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:CADASTRO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectTransferenciaVerbaFornecedor(Martins.Data.IData,System.Decimal,System.String,System.Decimal,System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna o SQL para tabela CADTRNVBAFRN com base em atributos que não fazem parte da chave primária. 
+ Descrição da entidade:CADASTRO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="CODFNC">CODIGO FUNCIONARIO.</param>
+ <param name="DESJSTTRNVBA">DESCRICAO JUSTIFICATIVA DA TRANSFERENCIA DE VERBA.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFDSNTRN">TIPO EMPENHO DESTINO TRANSFERENCIA VERBA.</param>
+ <param name="TIPSTAFLUAPV">TIPO STATUS FLUXO APROVACAO.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectRelacaoTransferenciaVerbaFornecedor(Martins.Data.IData)">
+      <summary>
+ Este método retorna o SQL para tabela RLCTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:RELACAO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectRelacaoTransferenciaVerbaFornecedorJoin(Martins.Data.IData,System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna o SQL para tabela RLCTRNVBAFRN com base na sua chave primária. 
+ Descrição da entidade:RELACAO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectMinhasAprovavoesEmTransferenciaVerbasFornecedor(Martins.Data.IData,System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <param name="NUMFLUAPV" />
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	22/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectRelacaoTransferenciaVerbaFornecedorJoinT0153541JoinT0100426JoinT0113625JoinT0118570JoinT0109059(Martins.Data.IData)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	5/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectRelacaoTransferenciaVerbaFornecedor(Martins.Data.IData,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna o SQL para tabela RLCTRNVBAFRN com base em atributos que não fazem parte da chave primária. 
+ Descrição da entidade:RELACAO DE TRANSFERENCIA VERBAS FORNECEDOR 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="NUMFLUAPV">NUMERO FLUXO DE APROVACAO.</param>
+ <param name="TIPALCVBAFRN">TIPO DE ALOCACAO DA VERBA DO FORNECEDOR.</param>
+ <param name="TIPDSNDSCBNFORITRN">TIPO EMPENHO ORIGEM TRANSFERENCIA VERBA.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    27/11/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectFluxosDeTransferenciaVerbaFornecedor(Martins.Data.IData)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	12/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectReservaSaldoFornecedor(Martins.Data.IData)">
+      <summary>
+ Este método retorna o SQL para tabela T0123159 com base na sua chave primária. 
+ Descrição da entidade:MOVIMENTO DIARIO RESERVA DE SALDO FORNECEDOR 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    17/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectReservaSaldoFornecedor(Martins.Data.IData,System.String,System.Decimal,System.DateTime,System.DateTime,System.DateTime,System.Decimal)">
+      <summary>
+ Este método retorna o SQL para tabela T0123159 com base em atributos que não fazem parte da chave primária. 
+ Descrição da entidade:MOVIMENTO DIARIO RESERVA DE SALDO FORNECEDOR 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="CODACOCMC">CODIGO DA ACAO COMERCIAL.</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="DATAPVACOCMC">DATA DE APROVACAO DA ACAO COMERCIAL.</param>
+ <param name="DATAPVACOCMCInicial">DATA DE APROVACAO DA ACAO COMERCIAL INICIAL.</param>
+ <param name="DATAPVACOCMCFinal">DATA DE APROVACAO DA ACAO COMERCIAL FINAL.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    17/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectFuncionario(Martins.Data.IData)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	29/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetClausulaIn(Martins.Data.IData,System.String[],System.String,System.String)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <param name="parametrosClausulaIn" />
+ <param name="nomeCampoBanco" />
+ <param name="nomeParametro" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	21/11/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectObterFuncionarioAprovadorDaControladoriaQuandoMesLancamentoForDiferenteDoMesDeAprovacao(Martins.Data.IData)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	26/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectCalendarioAnual(Martins.Data.IData)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	9/1/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectObterRelatorioSaldoDisponivelFornecedorCelula">
+      <summary>
+ Retorna o select para procedure:MRT.PCTDJRetSldDisFrnCel.PRCDJRetSldDisFrnCel 
+ LEGADO:spccx025 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[PRETRE21]	27/12/2006	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectObterNumeroSequenciaLancamento">
+      <summary>
+ Retorna o sql para procedure MRT.PCTDJAtlCntCrrFrn.PRCDJObtNumSeqLmt 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	28/12/2006	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectObterDiretoriaEDivisaoDeCompraDeFornecedor">
+      <summary>
+ Retorna o sql para procedure MRT.PCTDJObtDrtCmpFrn.PRCDJObtDrtCmpFrn 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	30/12/2006	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectObterSelecaoValorDisponivelFornecedor">
+      <summary>
+ Retorna Sql para procedure 
+ </summary>
+ <returns />
+ <remarks>
+ Procedure legado SQL-SERVER: SPCCX017 
+ Procedure Migrada Oracle...: PCTDJSelVlrDisFrn.PRCDJSelVlrDisFrn 
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	1/11/2006	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.ContaCorrenteFornecedorDALSQL.GetSelectFornecedorCompradorEDivisaoCompra(Martins.Data.IData,System.String)">
+      <summary>
+ Select para obter dados do fornecedor, comprador e divisão de compra 
+ </summary>
+ <param name="data" />
+ <param name="CODFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	21/11/2007	Created 
+ </history></member>
+    <member name="T:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL">
+      <summary>
+ Classe DAL da entidade com objetivo: persistir os dados 
+ </summary>
+ <remarks>
+ 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterFluxoCancelamentoAcordoPorChave(System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0154038 com base na sua chave primária. 
+ Descrição da entidade:FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <returns>Retorna um DataSet com a tabela "T0154038" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterFluxoCancelamentoAcordoPorAtributos(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0154038 com base na em atributos que geralmente não compoem a chave primária (exceto em chaves compostas). 
+ Descrição da entidade:FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODSTAAPV">CODIGO DO STATUS DO FLUXO.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <param name="NUMREQCNCACOCMC">NUMERO REQUISICAO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <returns>Retorna um DataSet com a tabela "T0154038" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.AtualizarFluxoCancelamentoAcordo(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetFluxoCancelamentoAcordo)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetFluxoCancelamentoAcordo">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChave(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0154021 com base na sua chave primária. 
+ Descrição da entidade:ACORDO A CANCELAR EM FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="CODEMP">CODIGO EMPRESA.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="DATNGCPMS">DATA DA NEGOCIACAO DA PROMESSA.</param>
+ <param name="DATPRVRCBPMS">DATA DE PREVISAO DE RECEBIMENTO DA PROMESSA.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <param name="TIPFRMDSCBNF">TIPO FORMA DESCONTO BONIFICACAO.</param>
+ <returns>Retorna um DataSet com a tabela "T0154021" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributos(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0154021 com base na em atributos que geralmente não compoem a chave primária (exceto em chaves compostas). 
+ Descrição da entidade:ACORDO A CANCELAR EM FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="CODEMP">CODIGO EMPRESA.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="DATNGCPMS">DATA DA NEGOCIACAO DA PROMESSA.</param>
+ <param name="DATPRVRCBPMS">DATA DE PREVISAO DE RECEBIMENTO DA PROMESSA.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <param name="TIPFRMDSCBNF">TIPO FORMA DESCONTO BONIFICACAO.</param>
+ <returns>Retorna um DataSet com a tabela "T0154021" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.AtualizarAcordoACancelarEmFluxoCancelamentoAcordo(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetFluxoCancelamentoAcordo)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetAcordoACancelarEmFluxoCancelamentoAcordo">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordos(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo]	4/24/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterNovaChaveFluxoCancelamento">
+      <summary>
+ 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	4/25/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterAcordosParaCancelamentoPorFornecedor(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	13/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMC(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	14/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterFluxoCancelamentoAcordoPesquisa(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="CODFRN" />
+ <param name="CODSTAAPV" />
+ <param name="NUMPEDCNCACOCMC" />
+ <param name="NUMREQCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	14/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterDiretorAprovadorDeFluxoFluxoDeCancelamentosDeAcordo(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	14/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterGerentesAprovadoresDeFluxoFluxoDeCancelamentosDeAcordo(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	14/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterFluxoAprovacao(System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna dados da entidade T0161591 com base na sua chave primária. 
+ Descrição da entidade:FLUXO DE APROVAÇÃO 
+ </summary>
+ <param name="CODSISINF">CODIGO DO SISTEMA DE INFORMACAO.</param>
+ <param name="NUMFLUAPV">.</param>
+ <param name="NUMSEQFLUAPV">.</param>
+ <returns>Retorna um DataSet com a tabela "T0161591" preenchida.</returns>
+ <remarks>
+ Sempre que um código inválido for informado, uma exception será retornada. 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    06/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterFluxosAprovacao(System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna dados da entidade T0161591 com base na em atributos que geralmente não compoem a chave primária (exceto em chaves compostas). 
+ Descrição da entidade:FLUXO DE APROVAÇÃO 
+ </summary>
+ <param name="CODEDEAPV">CODIGO ENTIDADE APROVOU.</param>
+ <param name="CODEDEARZ">CODIGO DA ENTIDADE AUTORIZADA.</param>
+ <param name="CODSISINF">CODIGO DO SISTEMA DE INFORMACAO.</param>
+ <param name="DATHRAAPVFLU">DATA E HORA DE APROVACAO DO FLUXO.</param>
+ <param name="DATHRAFLUAPV">DATA E HORA DO FLUXO DE APROVACAO.</param>
+ <param name="NUMFLUAPV">.</param>
+ <param name="NUMSEQFLUAPV">.</param>
+ <param name="NUMSEQFLUAPVPEDOPN">.</param>
+ <param name="NUMSEQNIVAPV">.</param>
+ <param name="TIPSTAFLUAPV">.</param>
+ <returns>Retorna um DataSet com a tabela "T0161591" preenchida.</returns>
+ <remarks>
+ Caso o parametro seja omitido o atributo não será incluído na clausula Where. 
+ Um parametro do tipo número é omitido quando for zero, 
+ Um parametro do tipo String é omitido quando for vazia, 
+ Um parametro do tipo data   é omitido quando for Nothing, 
+ Um parametro com valor inicial e final será incluído somente se ambos parametros forem informados, 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    06/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.AtualizarFluxoAprovacao(Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DatasetFluxoAprovacao)">
+      <summary>
+ Atualiza os dados no banco 
+ </summary>
+ <param name="DatasetFluxoAprovacao">DataSet com os dados a serem atualizados</param>
+ <remarks>
+ Caso ocorra algum problema, a transação é abortada e uma Exception é disparada 
+ </remarks>
+ <history>
+     [Marcos Queiroz]    06/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterDiretoresAprovadoresTransferenciaVerbas(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	6/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterGerentesAprovadoresTransferenciaVerbas(System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMFLUAPV" />
+ <param name="CODDRTCMP" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	6/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterFuncionariosDaControladoriaAprovadoresDeFluxoDeCancelamentoDeAcordos">
+      <summary>
+ 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	15/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterFluxosDeCancelamentoDeAcordos(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	16/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDAL.ObterAcordoComDuplicidadeEmOutroFluxo(System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="NUMPEDCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	19/5/2008	Created 
+ </history></member>
+    <member name="T:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL">
+      <summary>
+ Classe de geração de comandos sql 
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectFluxoCancelamentoAcordo(Martins.Data.IData)">
+      <summary>
+ Este método retorna o SQL para tabela T0154038 com base na sua chave primária. 
+ Descrição da entidade:FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectFluxoCancelamentoAcordo(Martins.Data.IData,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna o SQL para tabela T0154038 com base em atributos que não fazem parte da chave primária. 
+ Descrição da entidade:FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="CODFRN">CODIGO FORNECEDOR.</param>
+ <param name="CODSTAAPV">CODIGO DO STATUS DO FLUXO.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <param name="NUMREQCNCACOCMC">NUMERO REQUISICAO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectAcordoACancelarEmFluxoCancelamentoAcordo(Martins.Data.IData)">
+      <summary>
+ Este método retorna o SQL para tabela T0154021 com base na sua chave primária. 
+ Descrição da entidade:ACORDO A CANCELAR EM FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectAcordoACancelarEmFluxoCancelamentoAcordo(Martins.Data.IData,System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Este método retorna o SQL para tabela T0154021 com base em atributos que não fazem parte da chave primária. 
+ Descrição da entidade:ACORDO A CANCELAR EM FLUXO CANCELAMENTO ACORDO 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="CODEMP">CODIGO EMPRESA.</param>
+ <param name="CODFILEMP">CODIGO DA FILIAL DA EMPRESA.</param>
+ <param name="CODPMS">CODIGO PROMESSA.</param>
+ <param name="DATNGCPMS">DATA DA NEGOCIACAO DA PROMESSA.</param>
+ <param name="DATPRVRCBPMS">DATA DE PREVISAO DE RECEBIMENTO DA PROMESSA.</param>
+ <param name="NUMPEDCNCACOCMC">NUMERO PEDIDO CANCELAMENTO ACORDO COMERCIAL.</param>
+ <param name="TIPDSNDSCBNF">TIPO DESTINO / DESCONTO BONIFICADO.</param>
+ <param name="TIPFRMDSCBNF">TIPO FORMA DESCONTO BONIFICACAO.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    23/04/2008  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectMinhasAprovavoesEmFluxoDeCancelamentoDeAcordos(Martins.Data.IData,System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <param name="NUMFLUAPV" />
+ <param name="CODFNC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo]	4/24/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectAcordosParaCancelamentoPorFornecedor(Martins.Data.IData,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <param name="CODFRN" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	4/28/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectAcordosParaCancelamentoPorNUMPEDCNCACOCMC(Martins.Data.IData,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <param name="NUMPEDCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	5/6/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectObterFluxoCancelamentoAcordoPesquisa(Martins.Data.IData,System.Decimal,System.Decimal)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <param name="NUMPEDCNCACOCMC" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	14/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetDiretorAprovadorDeFluxoFluxoDeCancelamentosDeAcordo(Martins.Data.IData)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	14/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetGerentesAprovadoresDeFluxoFluxoDeCancelamentosDeAcordo(Martins.Data.IData)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	14/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectFluxoAprovacao(Martins.Data.IData)">
+      <summary>
+ Este método retorna o SQL para tabela T0161591 com base na sua chave primária. 
+ Descrição da entidade:FLUXO DE APROVAÇÃO 
+ </summary>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    06/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectFluxoAprovacao(Martins.Data.IData,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String)">
+      <summary>
+ Este método retorna o SQL para tabela T0161591 com base em atributos que não fazem parte da chave primária. 
+ Descrição da entidade:FLUXO DE APROVAÇÃO 
+ </summary>
+ <param name="data">Contexto do banco de dados</param>
+ <param name="CODEDEAPV">CODIGO ENTIDADE APROVOU.</param>
+ <param name="CODEDEARZ">CODIGO DA ENTIDADE AUTORIZADA.</param>
+ <param name="CODSISINF">CODIGO DO SISTEMA DE INFORMACAO.</param>
+ <param name="DATHRAAPVFLU">DATA E HORA DE APROVACAO DO FLUXO.</param>
+ <param name="DATHRAFLUAPV">DATA E HORA DO FLUXO DE APROVACAO.</param>
+ <param name="NUMFLUAPV">.</param>
+ <param name="NUMSEQFLUAPV">.</param>
+ <param name="NUMSEQFLUAPVPEDOPN">.</param>
+ <param name="NUMSEQNIVAPV">.</param>
+ <param name="TIPSTAFLUAPV">.</param>
+ <returns>String com o comando sql.</returns>
+ <remarks>
+ </remarks>
+ <history>
+     [Marcos Queiroz]    06/12/2007  Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetDiretoresAprovadoresTransferenciaVerbas(Martins.Data.IData)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	12/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetGerentesAprovadoresTransferenciaVerbas(Martins.Data.IData)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Marcos Queiroz]	12/12/2007	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectObterFuncionariosDaControladoriaAprovadoresDeFluxoDeCancelamentoDeAcordos(Martins.Data.IData)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	15/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectFluxosDeCancelamentoDeAcordos(Martins.Data.IData)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	16/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.FluxoDeCancelamentoDeAcordosDALSQL.GetSelectObterAcordoComDuplicidadeEmOutroFluxo(Martins.Data.IData)">
+      <summary>
+ 
+ </summary>
+ <param name="data" />
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Danilo Rafael]	19/5/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDAL.ObterRecuperacaoEPrevencaoPerdasSintetico(System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Obtem os dados para o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <param name="NUMCTTFRN">Numero do Contrato do Fornecedor</param>
+ <param name="INDDVRVLRAPUARDFRN">Define se apresenta todas as linhas ou apenas divergencias </param>
+ 1 - apresenta somente divergencias 
+ 0 - apresenta todas as linhas 
+ <param name="TIPLMTHSTCFAARDFRN">Define se apresenta informacoes da Devolucao 99</param>
+ 1 - Apresenta apuracao sem devolucao 99 
+ 2 - Apresenta apuracao com devolucao 99 
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	27/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDAL.ObterRecuperacaoEPrevencaoPerdasAnalitico(System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Decimal)">
+      <summary>
+ Obtem os dados para o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <param name="NUMCTTFRN">Numero do Contrato do Fornecedor</param>
+ <param name="INDDVRVLRAPUARDFRN">Define se apresenta todas as linhas ou apenas divergencias </param>
+ 1 - apresenta somente divergencias 
+ 0 - apresenta todas as linhas 
+ <param name="TIPLMTHSTCFAARDFRN">Define se apresenta informacoes da Devolucao 99</param>
+ 1 - Apresenta apuracao sem devolucao 99 
+ 2 - Apresenta apuracao com devolucao 99 
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	27/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDAL.ObterRecuperacaoEPrevencaoPerdasClausulas(System.Decimal)">
+      <summary>
+ Obtem as clausulas do contrato selecionado como filtro para 
+ o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	28/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDAL.ObterRecuperacaoEPrevencaoPerdasDataApuracao(System.Decimal)">
+      <summary>
+ Obtem as Datas de referencia de apuracao do contrato selecionado como filtro para 
+ o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	28/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDAL.ObterAcordosCanceladosPerdas(System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+ Obtem os dados para o relatorio Acordos Cancelados / Perdas 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	27/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDAL.ObterComprador(System.Decimal,System.String)">
+      <summary>
+ Obtem Compradores 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	04/09/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDAL.ObterCelulaPorAtributo(System.Decimal,System.String)">
+      <summary>
+ Obtem Celulas por atributo 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	09/09/2008	Created 
+ </history>
+ '''</member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDALSQL.GetSelectRecuperacaoEPrevencaoPerdasSintetico(Martins.Data.IData,System.Decimal)">
+      <summary>
+ Obtem os dados para o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <param name="NUMCTTFRN">Numero do Contrato do Fornecedor</param>
+ <param name="INDDVRVLRAPUARDFRN">Define se apresenta todas as linhas ou apenas divergencias </param>
+ 1 - apresenta somente divergencias 
+ 0 - apresenta todas as linhas 
+ <param name="TIPLMTHSTCFAARDFRN">Define se apresenta informacoes da Devolucao 99</param>
+ 1 - Apresenta apuracao sem devolucao 99 
+ 2 - Apresenta apuracao com devolucao 99 
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	27/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDALSQL.GetSelectRecuperacaoEPrevencaoPerdasAnalitico(Martins.Data.IData,System.Decimal,System.DateTime,System.Decimal)">
+      <summary>
+ Obtem os dados para o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <param name="NUMCTTFRN">Numero do Contrato do Fornecedor</param>
+ <param name="INDDVRVLRAPUARDFRN">Define se apresenta todas as linhas ou apenas divergencias </param>
+ 1 - apresenta somente divergencias 
+ 0 - apresenta todas as linhas 
+ <param name="TIPLMTHSTCFAARDFRN">Define se apresenta informacoes da Devolucao 99</param>
+ 1 - Apresenta apuracao sem devolucao 99 
+ 2 - Apresenta apuracao com devolucao 99 
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	27/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDALSQL.GetSelectRecuperacaoEPrevencaoPerdasClausulas(Martins.Data.IData)">
+      <summary>
+ Obtem as clausulas do contrato selecionado como filtro para 
+ o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	28/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDALSQL.GetSelectRecuperacaoEPrevencaoPerdasDataApuracao(Martins.Data.IData)">
+      <summary>
+ Obtem as datas de referencia da apuracao do contrato selecionado como filtro para 
+ o relatorio Recuperacao e Prevencao de Perdas. 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	28/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDALSQL.GetSelectAcordosCanceladosPerdas(Martins.Data.IData)">
+      <summary>
+ Obtem os dados para o relatorio Acordos Cancelados / Perdas 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	27/8/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDALSQL.GetSelectObterComprador(Martins.Data.IData,System.Decimal,System.String)">
+      <summary>
+ Obtem Compradores 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	04/09/2008	Created 
+ </history></member>
+    <member name="M:Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor.DAL.RecuperacaoEPrevencaoPerdasDALSQL.GetSelectObterCelulaPorAtributo(Martins.Data.IData,System.Decimal,System.String)">
+      <summary>
+ Obtem Células por atributo 
+ </summary>
+ <returns />
+ <remarks>
+ </remarks>
+ <history>
+ 	[Rodrigo Gama]	09/09/2008	Created 
+ </history></member>
+  </members>
+</doc>

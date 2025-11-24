@@ -1,0 +1,229 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel
+@model  RelatoriosVerbasEmitidasViewModel
+
+
+<div class="fixed-nav-content">
+
+    <div class="container">
+        <div class="row py-1">
+            <div class="mx-auto">
+                <ul class="nav nav-pills" style="font-size:25px;">
+                    <li class="nav-item">
+                        <button type="button" onclick="ModeIndex()" title="Voltar" class="nav-link" style="background-color:transparent;border:none;"> <i class="fa fa-arrow-left"></i>&nbsp;</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" title="Exportar" class="nav-link" style="background-color:transparent;border:none;"> <i class="fa fa-save"></i>&nbsp;</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dropdown-divider" style="margin-top:-12px;"></div>
+        <br />
+    </div>
+    <div class="container card bg-primary" style="padding-bottom:2px; overflow: auto">
+
+        <div class="py-1" style="color:white;">
+            <h5>Relatório por Mercadoria</h5>
+        </div>
+
+        <div class="row bg-secondary">
+            <table id="tb" class="table" style="margin: 0px;width:100%;table-layout:inherit;overflow: scroll;">
+                <thead class="bg-secondary">
+                    <tr role="row">
+                        <th class="sorting border">                 </th>
+                        <th class="sorting border">Grupo de Similares            </th>
+                        <th class="sorting border">Data             </th>
+                        <th class="sorting border">Cód. Carimbo     </th>
+                        <th class="sorting border">Situação         </th>
+                        <th class="sorting border">Destino          </th>
+                        <th class="sorting border">Objetivo         </th>
+                        <th class="sorting border">Entidade         </th>
+                        <th class="sorting border">Cód. Mercadoria  </th>
+                        <th class="sorting border">Mercadoria       </th>
+                        <th class="sorting border">Valor            </th>
+                        <th class="sorting border">Observação       </th>
+                    </tr>
+                </thead>
+
+                <tbody class="bg-light border" id="tbodyRelatorioItem">
+
+                    <tr class="row-similar-group row-similar-group row-style-strong">
+                        <td class="border"><i class="fa fa-plus" style="cursor:pointer;" onclick="jsExpandeSimilaresRelatorio(1)"></i></td>
+                        <td class="border">Grupo Similar 1            </td>
+                        <td class="border">             </td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border">10000,00</td>
+                        <td class="border"></td>
+
+                    </tr>
+                    <tr class="filho-1 row-similar-item row-style-strong" style="display:none;">
+                        <td class="border"></td>
+                        <td class="border">Grupo Similar 1            </td>
+                        <td class="border">23/02/2018             </td>
+                        <td class="border">000     </td>
+                        <td class="border">Aguardando Aprovação        </td>
+                        <td class="border">Destino          </td>
+                        <td class="border">Objetivo         </td>
+                        <td class="border">Entidade 04        </td>
+                        <td class="border">04  </td>
+                        <td class="border">Mercadoria 04       </td>
+                        <td class="border">1000,00            </td>
+                        <td class="border">Observação 04      </td>
+                    </tr>
+                    <tr class="row-similar-group row-similar-group row-style-weak">
+                        <td class="border"><i class="fa fa-plus" style="cursor:pointer;" onclick="jsExpandeSimilaresRelatorio(2)"></i></td>
+                        <td class="border">Grupo Similar 2            </td>
+                        <td class="border">             </td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border">10000,00</td>
+                        <td class="border"></td>
+                    </tr>
+                    <tr class="filho-2 row-similar-item row-style-weak" style="display:none;">
+                        <td class="border"></td>
+                        <td class="border">Grupo Similar 2            </td>
+                        <td class="border">23/02/2018             </td>
+                        <td class="border">000     </td>
+                        <td class="border">Aguardando Aprovação        </td>
+                        <td class="border">Destino          </td>
+                        <td class="border">Objetivo         </td>
+                        <td class="border">Entidade 04        </td>
+                        <td class="border">04  </td>
+                        <td class="border">Mercadoria 04       </td>
+                        <td class="border">1000,00            </td>
+                        <td class="border">Observação 04      </td>
+                    </tr>
+                    <tr class="row-no-similar-group row-style-strong">
+                        <td class="border"><i class="fa fa-plus" style="cursor:pointer;" onclick="jsExpandeSimilaresRelatorio(3)"></i></td>
+                        <td class="border">Sem Similares            </td>
+                        <td class="border">             </td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border">10000,00</td>
+                        <td class="border"></td>
+                    </tr>
+                    <tr class="filho-3 row-no-similar-item row-style-strong" style="display:none;">
+                        <td class="border"></td>
+                        <td class="border">Sem Similares            </td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border"></td>
+                        <td class="border">10000,00</td>
+                        <td class="border"></td>
+                    </tr>
+                    <tr class="filho-3 row-no-similar-item row-style-weak" style="display:none;">
+                        <td class="border"></td>
+                        <td class="border">Sem Similares            </td>
+                        <td class="border">23/02/2018             </td>
+                        <td class="border">000     </td>
+                        <td class="border">Aguardando Aprovação        </td>
+                        <td class="border">Destino          </td>
+                        <td class="border">Objetivo         </td>
+                        <td class="border">Entidade 04        </td>
+                        <td class="border">04  </td>
+                        <td class="border">Mercadoria 04       </td>
+                        <td class="border">1000,00            </td>
+                        <td class="border">Observação 04      </td>
+                    </tr>
+                    <tr class="filho-3 row-no-similar-item row-style-strong" style="display:none;">
+                        <td class="border"></td>
+                        <td class="border">Sem Similares            </td>
+                        <td class="border">23/02/2018             </td>
+                        <td class="border">000     </td>
+                        <td class="border">Aguardando Aprovação        </td>
+                        <td class="border">Destino          </td>
+                        <td class="border">Objetivo         </td>
+                        <td class="border">Entidade 04        </td>
+                        <td class="border">04  </td>
+                        <td class="border">Mercadoria 04       </td>
+                        <td class="border">1000,00            </td>
+                        <td class="border">Observação 04      </td>
+                    </tr>
+                    <tr class="filho-3 row-no-similar-item row-style-weak" style="display:none;">
+                        <td class="border"></td>
+                        <td class="border">Sem Similares            </td>
+                        <td class="border">23/02/2018             </td>
+                        <td class="border">000     </td>
+                        <td class="border">Aguardando Aprovação        </td>
+                        <td class="border">Destino          </td>
+                        <td class="border">Objetivo         </td>
+                        <td class="border">Entidade 04        </td>
+                        <td class="border">04  </td>
+                        <td class="border">Mercadoria 04       </td>
+                        <td class="border">1000,00            </td>
+                        <td class="border">Observação 04      </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="row bg-light">
+            Mostrando 5 de 5 resultados
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+</div>
+<style>
+
+    .row-similar-group.row-style-strong {
+        background-color: #B0E0E6;
+    }
+
+    .row-similar-group.row-style-weak {
+        background-color: paleturquoise;
+    }
+
+
+    .row-similar-item.row-style-strong {
+        background-color: lightcyan;
+    }
+
+    .row-similar-item.row-style-weak {
+        background-color: #F0FFFF;
+    }
+
+    .row-no-similar-item.row-style-strong {
+        background-color: #FFFACD;
+    }
+
+    .row-no-similar-item.row-style-weak {
+        background-color: #EEE8AA;
+    }
+
+    .row-no-similar-group {
+        background-color: #F0E68C;
+    }
+
+    #tbodyCarimboItem td {
+        white-space: nowrap;
+    }
+</style>

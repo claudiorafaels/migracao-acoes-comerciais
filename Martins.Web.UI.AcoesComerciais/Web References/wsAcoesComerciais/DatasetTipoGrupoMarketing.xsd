@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTipoGrupoMarketing.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTipoGrupoMarketing.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTipoGrupoMarketing.xsd" id="DatasetTipoGrupoMarketing" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTipoGrupoMarketing">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="CADTIPGRPMKTFRN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPGRPMKTFRN" type="xs:int" />
+              <xs:element minOccurs="0" name="DESGRPMKTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="PERGRPMKTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDORIVBAMKT" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0107579">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="CODFILEMP" type="xs:decimal" />
+              <xs:element name="CODGRPFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMGRPFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="DATCADGRPFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATDSTGRPFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CODCGMECOFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPCLFFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Planilha">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODGRPFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMGRPFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPGRPMKTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESGRPMKTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="PERGRPMKTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDORIVBAMKT" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RLCGRPECOGRPMKTFRN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODGRPFRN" type="xs:decimal" />
+              <xs:element name="TIPGRPMKTFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RLCGRPECOGRPMKTFRNPesquisaPai">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODGRPFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMGRPFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="DESGRPMKTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="PERGRPMKTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDORIVBAMKT" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPGRPMKTFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RLCGRPECOGRPMKTFRNPesquisaFilho">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODGRPFRN" type="xs:decimal" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CADTIPGRPMKTFRNPesquisa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TIPGRPMKTFRN" type="xs:int" />
+              <xs:element minOccurs="0" name="DESGRPMKTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="PERGRPMKTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDORIVBAMKT" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoGrupoMarketingKey1">
+      <xs:selector xpath=".//mstns:CADTIPGRPMKTFRN" />
+      <xs:field xpath="mstns:TIPGRPMKTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoGrupoMarketingKey2">
+      <xs:selector xpath=".//mstns:T0107579" />
+      <xs:field xpath="mstns:CODEMP" />
+      <xs:field xpath="mstns:CODFILEMP" />
+      <xs:field xpath="mstns:CODGRPFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoGrupoMarketingKey5">
+      <xs:selector xpath=".//mstns:RLCGRPECOGRPMKTFRN" />
+      <xs:field xpath="mstns:CODGRPFRN" />
+      <xs:field xpath="mstns:TIPGRPMKTFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoGrupoMarketingKey3">
+      <xs:selector xpath=".//mstns:RLCGRPECOGRPMKTFRNPesquisaPai" />
+      <xs:field xpath="mstns:CODGRPFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoGrupoMarketingKey4">
+      <xs:selector xpath=".//mstns:RLCGRPECOGRPMKTFRNPesquisaFilho" />
+      <xs:field xpath="mstns:CODGRPFRN" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:unique>
+    <xs:keyref name="Relation" refer="mstns:DatasetTipoGrupoMarketingKey3">
+      <xs:selector xpath=".//mstns:RLCGRPECOGRPMKTFRNPesquisaFilho" />
+      <xs:field xpath="mstns:CODGRPFRN" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetPrevisaoApuracao" targetNamespace="http://tempuri.org/DatasetPrevisaoApuracao.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetPrevisaoApuracao.xsd"
+	xmlns:mstns="http://tempuri.org/DatasetPrevisaoApuracao.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetPrevisaoApuracao" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="PrevisaoApuracao">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODDRTCMP" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DESDRTCMP" type="xs:string" minOccurs="0" />
+							<xs:element name="CODDIVCMP" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DESDIVCMP" type="xs:string" minOccurs="0" />
+							<xs:element name="CODCPR" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMCPR" type="xs:string" minOccurs="0" />
+							<xs:element name="CODFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMFRN" type="xs:string" minOccurs="0" />
+							<xs:element name="numcttfrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="numcslcttfrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="descslcttfrn" type="xs:string" minOccurs="0" />
+							<xs:element name="tippodcttfrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="numrefpod" type="xs:decimal" minOccurs="0" />
+							<xs:element name="tipedeabgmix" type="xs:decimal" minOccurs="0" />
+							<xs:element name="codedeabgmix" type="xs:decimal" minOccurs="0" />
+							<xs:element name="vlrrcbeftfxa" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

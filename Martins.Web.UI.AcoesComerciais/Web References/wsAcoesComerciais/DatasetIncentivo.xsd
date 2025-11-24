@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetIncentivo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetIncentivo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetIncentivo.xsd" id="DatasetIncentivo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetIncentivo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="CADPRGICT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODPRGICT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMPRGICT" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0100426">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RLCPRGICTFRN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODPRGICT" type="xs:decimal" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RLCPRGICTFRNPesquisa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PROGRAMA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCRICAO" type="xs:string" />
+              <xs:element name="CODIGO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FORNECEDOR" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetIncentivoKey1">
+      <xs:selector xpath=".//mstns:CADPRGICT" />
+      <xs:field xpath="mstns:CODPRGICT" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetIncentivoKey2">
+      <xs:selector xpath=".//mstns:T0100426" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetIncentivoKey3">
+      <xs:selector xpath=".//mstns:RLCPRGICTFRN" />
+      <xs:field xpath="mstns:CODPRGICT" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetIncentivoKey4">
+      <xs:selector xpath=".//mstns:RLCPRGICTFRNPesquisa" />
+      <xs:field xpath="mstns:PROGRAMA" />
+      <xs:field xpath="mstns:CODIGO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

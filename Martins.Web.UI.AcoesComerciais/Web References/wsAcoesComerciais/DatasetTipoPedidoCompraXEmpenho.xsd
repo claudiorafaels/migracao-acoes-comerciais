@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTipoPedidoCompraXEmpenho.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTipoPedidoCompraXEmpenho.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTipoPedidoCompraXEmpenho.xsd" id="DatasetTipoPedidoCompraXEmpenho" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTipoPedidoCompraXEmpenho">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0118104">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPPEDCMP" type="xs:decimal" />
+              <xs:element name="TIPDSNDSCBNF" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0104499">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPPEDCMP" type="xs:decimal" />
+              <xs:element name="DESTIPPEDCMP" type="xs:string" />
+              <xs:element name="FLGCALPCOMER" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0109059">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element name="DESDSNDSCBNF" type="xs:string" />
+              <xs:element name="FLGCALCST" type="xs:string" />
+              <xs:element name="FLGCNTCRRFRN" type="xs:string" />
+              <xs:element name="FLGACOMCD" type="xs:string" />
+              <xs:element name="FLGUTZLCREMP" type="xs:string" />
+              <xs:element name="FLGCTBDSNDSC" type="xs:string" />
+              <xs:element name="IDTFLUACOCMC" type="xs:string" />
+              <xs:element name="CODCCP" type="xs:string" />
+              <xs:element name="CODCNTCTBGLM" type="xs:string" />
+              <xs:element name="CODCENCST" type="xs:string" />
+              <xs:element name="INDFLUCNCPEDCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDTRNDSNDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFLUAPVACOCMC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPALCVBAFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoPedidoCompraXEmpenhoKey1">
+      <xs:selector xpath=".//mstns:T0118104" />
+      <xs:field xpath="mstns:TIPPEDCMP" />
+      <xs:field xpath="mstns:TIPDSNDSCBNF" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoPedidoCompraXEmpenhoKey2">
+      <xs:selector xpath=".//mstns:T0104499" />
+      <xs:field xpath="mstns:TIPPEDCMP" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoPedidoCompraXEmpenhoKey3">
+      <xs:selector xpath=".//mstns:T0109059" />
+      <xs:field xpath="mstns:TIPDSNDSCBNF" />
+    </xs:unique>
+    <xs:keyref name="T0109059T0118104" refer="mstns:DatasetTipoPedidoCompraXEmpenhoKey3">
+      <xs:selector xpath=".//mstns:T0118104" />
+      <xs:field xpath="mstns:TIPDSNDSCBNF" />
+    </xs:keyref>
+    <xs:keyref name="T0104499T0118104" refer="mstns:DatasetTipoPedidoCompraXEmpenhoKey2">
+      <xs:selector xpath=".//mstns:T0118104" />
+      <xs:field xpath="mstns:TIPPEDCMP" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

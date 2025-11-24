@@ -1,0 +1,182 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel.RelatoriosCarimbosContabilizados
+@model  GridSetings<FiltrosRelatoriosCarimbosContabilizados>
+
+@{
+    AjaxOptions ajaxOptions = new AjaxOptions()
+    {
+        UpdateTargetId = "visaoRelatorio",
+        InsertionMode = InsertionMode.Replace,
+        OnBegin = "PesquisarAjaxBegin",
+        OnComplete = "DefaultAjaxComplete",
+        OnSuccess = "ModePesquisar",
+        OnFailure = "DefaultAjaxFailure",
+        HttpMethod = "POST"
+
+    };
+}
+<div class="container-fluid">
+
+    @using (Ajax.BeginForm("Pesquisar", "RelatoriosCarimbosContabilizados", ajaxOptions, new { @id = "frmPesquisa", @class = "form-pagination" }))
+    {
+        <br />
+        <div id="formPesquisa" class="card bg-primary divFiltrosPesquisa">
+            <div class="card-header text-white" style="color:white;">
+                <h5>Filtros</h5>
+            </div>
+
+            <div class="card-body bg-light">
+                <div class="row">
+                    @*Visões*@
+                    <div class="col-md-12">
+                        <label>Visão</label><br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.RadioButtonFor(model => model.Filtro.IndRelVisao, "Receber", new { @class = "indVisao", @checked = "checked", id = "btnVisaoAReceber", onclick = "jsChangeVisaoRelatorioCarimbosContabilizados()" })
+                                <label for="btnVisaoAReceber">Valores a Receber</label>
+                            </div>
+                            <div class="col-md-3">
+                                @Html.RadioButtonFor(model => model.Filtro.IndRelVisao, "Recebidos", new { @class = "indVisao", @id = "btnVisaoRecebidos", onclick = "jsChangeVisaoRelatorioCarimbosContabilizados()" })
+                                <label for="btnVisaoRecebidos">Valores Recebidos</label>
+                            </div>
+                            <div class="col-md-3">
+                                @Html.RadioButtonFor(model => model.Filtro.IndRelVisao, "Novos", new { @class = "indVisao", @id = "btnVisaoNovosAcordos", onclick = "jsChangeVisaoRelatorioCarimbosContabilizados()" })
+                                <label for="btnVisaoNovosAcordos">Novos Acordos</label>
+                            </div>
+                            <div class="col-md-3">
+                                @Html.RadioButtonFor(model => model.Filtro.IndRelVisao, "Cancelados", new { @class = "indVisao", @id = "btnVisaoAcordosCancelados", onclick = "jsChangeVisaoRelatorioCarimbosContabilizados()" })
+                                <label for="btnVisaoAcordosCancelados">Acordos Cancelados</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Tipo</label><br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.RadioButtonFor(model => model.Filtro.IndAnaliticoSintetico, "Analitico", new { @class = "indAnaliticoSintetico", @checked = "checked", id = "btnAnalitico" })
+                                <label for="btnAnalitico">Analítico</label>
+                            </div>
+                            <div class="col-md-3">
+                                @Html.RadioButtonFor(model => model.Filtro.IndAnaliticoSintetico, "Sintetico", new { @class = "indAnaliticoSintetico", @id = "btnSintetico" })
+                                <label for="btnSintetico">Sintético</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    @*Todos*@
+                    <div class="col-md-6 Todos">
+                        @Html.LabelFor(model => model.Filtro.NomFornecedor)
+                        <div class="row">
+                            <div class="col-md-4">
+                                @Html.EditorFor(model => model.Filtro.CodFornecedor, new { htmlAttributes = new { id = "txtFiltroCodFornecedor", @class = "form-control filtroGeral", onchange = "findFornecedorCodFornecedorChange(txtFiltroCodFornecedor, txtFiltroNomFornecedor)", data_val = false } })
+
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    @Html.EditorFor(model => model.Filtro.NomFornecedor, new { htmlAttributes = new { id = "txtFiltroNomFornecedor", @class = "form-control", data_val = false } })
+                                    <button type="button" class="input-group-addon" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" onclick="  findFornecedor('txtFiltroCodFornecedor', 'txtFiltroNomFornecedor', 'appendFind');"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 Todos">
+                        <label>  @Html.LabelFor(model => model.Filtro.CodTipoVerbaFornecedor)</label><br />
+                        <div class="row">
+                            <div class="col-md-4">
+                                @Html.RadioButtonFor(model => model.Filtro.CodTipoVerbaFornecedor, "", new { @checked = "checked", id = "rblFiltroCodTipoVerbaFornecedorTodos" })
+                                <label for="rblFiltroCodTipoVerbaFornecedorTodos">Todos</label>
+                            </div>
+                            <div class="col-md-4">
+                                @Html.RadioButtonFor(model => model.Filtro.CodTipoVerbaFornecedor, "1", new { id = "rblFiltroCodTipoVerbaFornecedorTodosNegociados" })
+                                <label for="rblFiltroCodTipoVerbaFornecedorTodosNegociados">Verba Negociada</label>
+                            </div>
+                            <div class="col-md-4">
+                                @Html.RadioButtonFor(model => model.Filtro.CodTipoVerbaFornecedor, "0", new { id = "rblFiltroCodTipoVerbaFornecedorOutras" })
+                                <label for="rblFiltroCodTipoVerbaFornecedorOutras">Outras Verbas</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 Todos">
+                        @Html.LabelFor(model => model.Filtro.CodObjetivo)
+                        @Html.DropDownListFor(model => model.Filtro.CodObjetivo, new SelectList(ViewBag.ListObjetivos, "CodObjetivo", "CodNomObjetivo"), "Todos...", new { @class = "form-control filtroValores", id = "drpFiltroCodTipoObjetivo" })
+                    </div>
+                    @*Valores*@
+
+
+
+                    <div class="col-md-4 AReceber">
+                        @Html.LabelFor(model => model.Filtro.IdtAnoMesReferencia)
+                        @Html.DropDownListFor(model => model.Filtro.IdtAnoMesReferencia, new SelectList(ViewBag.ListAnoMesReferencia, "IdtAnoMesReferencia", "IdtAnoMesReferencia"), "Todos...", new { @class = "form-control filtroValores", id = "drpFiltroIdtAnomMesReferencia" })
+                    </div>
+                    <div class="col-md-4 AReceber">
+                        @Html.LabelFor(model => model.Filtro.DtPrevisaoRecebimento)
+                        @Html.EditorFor(model => model.Filtro.DtPrevisaoRecebimento, new { htmlAttributes = new { id = "txtFiltroDtPrevisaoRecebimento", @class = "form-control date-picker", @autocomplete = "off", data_val = false } })
+                    </div>
+
+                    <div class="col-md-2 Recebidos">
+                        @Html.LabelFor(model => model.Filtro.DtInicioRecebidos)
+                        @Html.EditorFor(model => model.Filtro.DtInicioRecebidos, new { htmlAttributes = new { id = "txtFiltroDtInicioRecebidos", @class = "form-control date-picker", @autocomplete = "off", data_val = false } })
+                    </div>
+                    <div class="col-md-2 Recebidos">
+                        @Html.LabelFor(model => model.Filtro.DtFimRecebidos)
+                        @Html.EditorFor(model => model.Filtro.DtFimRecebidos, new { htmlAttributes = new { id = "txtFiltroDtFimRecebidos", @class = "form-control date-picker", @autocomplete = "off", data_val = false } })
+                    </div>
+
+
+                    <div class="col-md-4 Recebidos">
+                        @Html.LabelFor(model => model.Filtro.CodTipoLancamento)
+                        @{
+
+            SelectListItem[] tipo = new SelectListItem[5];
+            tipo[0] = new SelectListItem { Value = "", Text = "Selecione..." };
+            tipo[1] = new SelectListItem { Value = "1", Text = "01 - DEDUCTION" };
+            tipo[2] = new SelectListItem { Value = "2", Text = "02 - DUPLICATA" };
+            tipo[3] = new SelectListItem { Value = "3", Text = "03 - ACERTO" };
+            tipo[4] = new SelectListItem { Value = "4", Text = "04 - OP" };
+                        }
+                        @Html.DropDownListFor(model => model.Filtro.CodTipoLancamento, tipo, new { @class = "form-control filtroValores", id = "drpFiltroCodTipoLancamento" })
+                    </div>
+
+                    @*Acordos*@
+                    <div class="col-md-2 Acordos">
+                        @Html.LabelFor(model => model.Filtro.DtInicioAcordo)
+                        @Html.EditorFor(model => model.Filtro.DtInicioAcordo, new { htmlAttributes = new { id = "txtFiltroDtInicioAcordo", @class = "form-control date-picker", @autocomplete = "off", data_val = false } })
+                    </div>
+                    <div class="col-md-2 Acordos">
+                        @Html.LabelFor(model => model.Filtro.DtFimAcordo)
+                        @Html.EditorFor(model => model.Filtro.DtFimAcordo, new { htmlAttributes = new { id = "txtFiltroDtFimAcordo", @class = "form-control date-picker", @autocomplete = "off", data_val = false } })
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    @*Pesquisar*@
+                    <div class="col-md-12 text-right">
+                        <br />
+                        <div class="pull-right">
+                            <button id="btnSearch" type="submit" class="btn" style="cursor: pointer;background-color: #196dab;"><i class="fa fa-search"></i> Pesquisar</button>
+                            <button type="button" class="btn" style="cursor: pointer;background-color: #196dab;" title="Limpar campos de filtro" onclick="jsLimparFiltrosPesquisa()"><i class="fa fa-eraser"></i> Limpar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="visaoRelatorio" style="display:none;">
+            @Html.Partial(Constantes.VIEW_PAGINACAO, Model.Setings, new ViewDataDictionary { TemplateInfo = new TemplateInfo { HtmlFieldPrefix = "Setings" } })
+        </div>
+    }
+    <div id="appendFind"></div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/Relatorios/relatoriosCarimbosContabilizados.js")
+    @Scripts.Render("~/Scripts/find/fornecedor.js")
+}

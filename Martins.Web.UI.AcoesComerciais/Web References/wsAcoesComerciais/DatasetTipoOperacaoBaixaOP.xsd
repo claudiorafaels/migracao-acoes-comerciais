@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTipoOperacaoBaixaOP.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTipoOperacaoBaixaOP.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTipoOperacaoBaixaOP.xsd" id="DatasetTipoOperacaoBaixaOP" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTipoOperacaoBaixaOP">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0136390">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPOPEBXAORDPGTFRN" type="xs:decimal" />
+              <xs:element name="DESTIPOPEBXAORDPGT" type="xs:string" />
+              <xs:element name="CODTIPLMT" type="xs:decimal" />
+              <xs:element name="TIPORIORDPGTFRN" type="xs:decimal" />
+              <xs:element name="INDTIPOPEBXAORDPGT" type="xs:decimal" />
+              <xs:element name="INDTIPOPETRNORDPGT" type="xs:decimal" />
+              <xs:element name="INDTIPOPEQBRORDPGT" type="xs:decimal" />
+              <xs:element name="CODTIPLMTPNDSEMDVL" type="xs:decimal" />
+              <xs:element name="CODTIPLMTPNDCOMDVL" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoOperacaoBaixaOPKey1">
+      <xs:selector xpath=".//mstns:T0136390" />
+      <xs:field xpath="mstns:TIPOPEBXAORDPGTFRN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

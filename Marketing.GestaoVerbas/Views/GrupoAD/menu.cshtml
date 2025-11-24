@@ -1,0 +1,33 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel
+@using System.Linq
+
+@model  GrupoADViewModel
+
+
+@if (Model.ControleAcessos != null)
+{
+    List<MenuViewModel> filhos = Model.ControleAcessos.Where(p => p.CodMenuPai == Model.CodMenuCorrente).ToList();
+
+    <div class="arvore-node">
+        @foreach (MenuViewModel node in filhos)
+        {
+            <div class="content">
+                @if (node.CodMenuPai == "0")
+                {
+                    @Html.CheckBox(string.Format("{0}.{1}", node.CodMenuPai, node.CodMenu), (node.IndAssociado == 1), new { id = "chbMenu", onclick = "toggleCheckBox(this);" })
+                    @Html.Label("NomeMenu", node.NomMenu.Replace("&", ""))
+                }
+                else
+                {
+                    @Html.CheckBox(string.Format("{0}.{1}", node.CodMenuPai, node.CodMenu), (node.IndAssociado == 1), new { id = "chbMenu", onclick = "toggleCheckBox(this);" })
+                    @Html.Label("NomeMenu", node.NomMenu.Replace("&", ""))
+                }
+                @{
+                    Model.CodMenuCorrente = node.CodMenu;
+                }
+                @Html.Partial("menu", Model)
+            </div>
+        }
+    </div>
+}

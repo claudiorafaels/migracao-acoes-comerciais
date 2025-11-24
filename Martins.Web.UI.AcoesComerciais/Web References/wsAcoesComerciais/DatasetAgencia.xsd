@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetAgencia.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetAgencia.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetAgencia.xsd" id="DatasetAgencia" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetAgencia">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0104413">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODBCO" type="xs:decimal" />
+              <xs:element name="CODAGEBCO" type="xs:decimal" />
+              <xs:element name="NUMDIGVRFAGEBCO" type="xs:string" />
+              <xs:element name="NOMAGEBCO" type="xs:string" />
+              <xs:element name="CODCIDAGEBCO" type="xs:decimal" />
+              <xs:element name="ENDAGEBCO" type="xs:string" />
+              <xs:element name="CODCEPAGEBCO" type="xs:decimal" />
+              <xs:element name="NUMTLFAGEBCO" type="xs:string" />
+              <xs:element name="NUMCGCAGEBCO" type="xs:string" />
+              <xs:element name="FLGAGECOBBCO" type="xs:string" />
+              <xs:element name="NUMDGTVRFCNTCRRCDT" type="xs:decimal" />
+              <xs:element name="FLGAGECDTCOBBCO" type="xs:string" />
+              <xs:element name="NUMCNTCRRCDT" type="xs:decimal" />
+              <xs:element name="NUMFAXAGEBCO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetAgenciaKey1">
+      <xs:selector xpath=".//mstns:T0104413" />
+      <xs:field xpath="mstns:CODBCO" />
+      <xs:field xpath="mstns:CODAGEBCO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

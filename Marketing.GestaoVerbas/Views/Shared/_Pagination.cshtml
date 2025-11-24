@@ -1,0 +1,64 @@
+﻿
+@model Marketing.GestaoVerbas.Core.Grid.Setings
+
+
+    <div class="col-lg-3">
+        <div class="dataTables_info">Exibindo @Html.DisplayFor(model => model.CurrentPageSize) de @Html.DisplayFor(model => model.TotalRows)</div>
+    </div>
+    <div class="col-lg-9">
+        <div class="dataTables_paginate paging_bootstrap">
+            @Html.HiddenFor(model => model.CurrentPage)
+            @Html.HiddenFor(model => model.Column)
+            @Html.HiddenFor(model => model.Way)
+            <ul class="pagination">
+                @if (Model.CurrentPage > 2)
+                {
+                    <li class="next-prev">
+                        <button type="submit" data-goto="1">
+                            <i class="fa fa-angle-double-left"></i>
+                        </button>
+                    </li>
+                }
+                @if (Model.CurrentPage > 1)
+                {
+                    <li class="next-prev">
+                        <button type="submit" data-goto="@(Model.CurrentPage -1)">
+                            <i class="fa fa-angle-left"></i>
+                        </button>
+                    </li>
+                }
+                @for (int i = 1; i <= Math.Ceiling(Convert.ToDecimal(Model.TotalRows) / Convert.ToDecimal(Model.PageSize)); i++)
+                {
+                    if (i > Model.CurrentPage - 5 && i < Model.CurrentPage + 5)
+                    {
+                        <li class="@(Model.CurrentPage == i ? "active" : "enable")">
+                            <button type="submit" data-goto="@i">@i</button>
+                        </li>
+                    }
+                }
+                @if (Model.CurrentPage < Math.Ceiling(Convert.ToDecimal(Model.TotalRows) / Convert.ToDecimal(Model.PageSize)))
+                {
+                    <li class="next-prev">
+                        <button type="submit" data-goto="@(Model.CurrentPage + 1)">
+                            <i class="fa fa-angle-right"></i>
+                        </button>
+                    </li>
+                }
+                @if (Model.CurrentPage + 1 < Math.Ceiling(Convert.ToDecimal(Model.TotalRows) / Convert.ToDecimal(Model.PageSize)))
+                {
+                    <li class="next-prev">
+                        <button type="submit" data-goto="@Math.Ceiling(Convert.ToDecimal(Model.TotalRows) / Convert.ToDecimal(Model.PageSize))">
+                            <i class="fa fa-angle-double-right"></i>
+                        </button>
+                    </li>
+                }
+                <li>
+                    @Html.EditorFor(model => model.PageSize, new { htmlAttributes = new { @class = "pagination-size" } })
+                </li>
+                <li class="change-page-ok">
+                    <button type="submit" class="fa fa-check"></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+

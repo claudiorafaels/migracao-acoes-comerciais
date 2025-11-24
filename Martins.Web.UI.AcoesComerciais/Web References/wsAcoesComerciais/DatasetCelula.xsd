@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetCelula.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetCelula.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetCelula.xsd" id="DatasetCelula" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetCelula">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0118570">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODDIVCMP" type="xs:decimal" />
+              <xs:element name="DESDIVCMP" type="xs:string" />
+              <xs:element name="CODGERPRD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODDRTCMP" type="xs:decimal" />
+              <xs:element name="CODGRPMERFRC" type="xs:decimal" />
+              <xs:element name="VLRMNMFATMER" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetCelulaKey1">
+      <xs:selector xpath=".//mstns:T0118570" />
+      <xs:field xpath="mstns:CODDIVCMP" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

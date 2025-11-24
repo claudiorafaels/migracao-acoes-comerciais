@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetBaixaOPFornecedor.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetBaixaOPFornecedor.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetBaixaOPFornecedor.xsd" id="DatasetBaixaOPFornecedor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetBaixaOPFornecedor">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0118902">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMORDPGTFRN" type="xs:decimal" />
+              <xs:element name="CODBCO" type="xs:decimal" />
+              <xs:element name="CODAGE" type="xs:decimal" />
+              <xs:element name="NUMSEQORDPGT" type="xs:decimal" />
+              <xs:element name="DATRCBORDPGT" type="xs:dateTime" />
+              <xs:element name="DATPRVRCBPMS" type="xs:dateTime" />
+              <xs:element name="CODPMS" type="xs:decimal" />
+              <xs:element name="DATNGCPMS" type="xs:dateTime" />
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="CODFILEMP" type="xs:decimal" />
+              <xs:element name="TIPFRMDSCBNF" type="xs:decimal" />
+              <xs:element name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element name="NUMPNDFRN" type="xs:decimal" />
+              <xs:element name="FLGPGTPMSORD" type="xs:string" />
+              <xs:element name="VLRAPPORDPGT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FLGCTB" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRDPRORDPGT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATLMTCNTCRR" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VLRPIS" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetBaixaOPFornecedorKey1">
+      <xs:selector xpath=".//mstns:T0118902" />
+      <xs:field xpath="mstns:NUMORDPGTFRN" />
+      <xs:field xpath="mstns:CODBCO" />
+      <xs:field xpath="mstns:CODAGE" />
+      <xs:field xpath="mstns:NUMSEQORDPGT" />
+      <xs:field xpath="mstns:DATRCBORDPGT" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

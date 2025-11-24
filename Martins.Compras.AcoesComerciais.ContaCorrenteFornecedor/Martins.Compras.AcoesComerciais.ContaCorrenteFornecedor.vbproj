@@ -1,0 +1,546 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{4AA9E164-7F9C-4D93-945A-50E036810FAE}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "On"
+                RootNamespace = "Martins.Compras.AcoesComerciais.ContaCorrenteFornecedor"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "Martins.Security.Helper"
+                    AssemblyName = "Martins.Security.Helper"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.Security.Helper.dll"
+                />
+                <Reference
+                    Name = "Martins.Common"
+                    AssemblyName = "Martins.Common"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.Common.dll"
+                />
+                <Reference
+                    Name = "Martins.ConfigurationManagement"
+                    AssemblyName = "Martins.ConfigurationManagement"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.ConfigurationManagement.dll"
+                />
+                <Reference
+                    Name = "Martins.Data"
+                    AssemblyName = "Martins.Data"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.Data.dll"
+                />
+                <Reference
+                    Name = "Martins.Data.Oracle"
+                    AssemblyName = "Martins.Data.Oracle"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.Data.Oracle.dll"
+                />
+                <Reference
+                    Name = "Martins.Data.TransactionManagement"
+                    AssemblyName = "Martins.Data.TransactionManagement"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.Data.TransactionManagement.dll"
+                />
+                <Reference
+                    Name = "Martins"
+                    AssemblyName = "Martins"
+                    HintPath = "C:\ARF\TRB\Comum\Martins.dll"
+                />
+                <Reference
+                    Name = "System.Data.OracleClient"
+                    AssemblyName = "System.Data.OracleClient"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.OracleClient.dll"
+                />
+                <Reference
+                    Name = "Martins.Compras.AcoesComerciais.MensagemEletronica"
+                    Project = "{1443C852-EE6C-4D9D-8DEF-D0345A25DD14}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "Martins.Administracao.CadastramentoFornecedores.DivisaoFornecedor"
+                    AssemblyName = "Martins.Administracao.CadastramentoFornecedores.DivisaoFornecedor"
+                    HintPath = "..\Martins.Administracao.CadastramentoFornecedores.DivisaoFornecedor\bin\Martins.Administracao.CadastramentoFornecedores.DivisaoFornecedor.dll"
+                />
+                <Reference
+                    Name = "Martins.Compras.AcoesComerciais.Gestao"
+                    AssemblyName = "Martins.Compras.AcoesComerciais.Gestao"
+                    HintPath = "..\Martins.Compras.AcoesComerciais.Gestao\bin\Martins.Compras.AcoesComerciais.Gestao.dll"
+                />
+                <Reference
+                    Name = "Martins.Compras.AcoesComerciais.AcordoFornecimento"
+                    Project = "{9DA01D2D-3EFF-4563-AFE2-7D1383830636}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Diagnostics" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Constants.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DatasetAcordoACancelarEmFluxoCancelamentoAcordo.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetAcordoACancelarEmFluxoCancelamentoAcordo1.vb"
+                />
+                <File
+                    RelPath = "DatasetAcordoACancelarEmFluxoCancelamentoAcordo.xsx"
+                    DependentUpon = "DatasetAcordoACancelarEmFluxoCancelamentoAcordo.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetAcordoACancelarEmFluxoCancelamentoAcordo1.vb"
+                    DependentUpon = "DatasetAcordoACancelarEmFluxoCancelamentoAcordo.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetCalendarioAnual.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetCalendarioAnual.vb"
+                />
+                <File
+                    RelPath = "DatasetCalendarioAnual.vb"
+                    DependentUpon = "DatasetCalendarioAnual.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetCalendarioAnual.xsx"
+                    DependentUpon = "DatasetCalendarioAnual.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetContaCorrenteFornecedor.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetContaCorrenteFornecedor.vb"
+                />
+                <File
+                    RelPath = "DatasetContaCorrenteFornecedor.vb"
+                    DependentUpon = "DatasetContaCorrenteFornecedor.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetContaCorrenteFornecedor.xsx"
+                    DependentUpon = "DatasetContaCorrenteFornecedor.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetDiretoriaCelulas.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetDiretoriaCelulas.vb"
+                />
+                <File
+                    RelPath = "DatasetDiretoriaCelulas.vb"
+                    DependentUpon = "DatasetDiretoriaCelulas.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetDiretoriaCelulas.xsx"
+                    DependentUpon = "DatasetDiretoriaCelulas.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetDiretoriaEDivisaoDeCompraDeFornecedor.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetDiretoriaEDivisaoDeCompraDeFornecedor.vb"
+                />
+                <File
+                    RelPath = "DatasetDiretoriaEDivisaoDeCompraDeFornecedor.vb"
+                    DependentUpon = "DatasetDiretoriaEDivisaoDeCompraDeFornecedor.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetDiretoriaEDivisaoDeCompraDeFornecedor.xsx"
+                    DependentUpon = "DatasetDiretoriaEDivisaoDeCompraDeFornecedor.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetFluxoAprovacao.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetFluxoAprovacao1.vb"
+                />
+                <File
+                    RelPath = "DatasetFluxoAprovacao.xsx"
+                    DependentUpon = "DatasetFluxoAprovacao.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetFluxoAprovacao1.vb"
+                    DependentUpon = "DatasetFluxoAprovacao.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetFluxoCancelamentoAcordo.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetFluxoCancelamentoAcordo.vb"
+                />
+                <File
+                    RelPath = "DatasetFluxoCancelamentoAcordo.vb"
+                    DependentUpon = "DatasetFluxoCancelamentoAcordo.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetFluxoCancelamentoAcordo.xsx"
+                    DependentUpon = "DatasetFluxoCancelamentoAcordo.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetFuncionario.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetFuncionario.vb"
+                />
+                <File
+                    RelPath = "DatasetFuncionario.vb"
+                    DependentUpon = "DatasetFuncionario.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetFuncionario.xsx"
+                    DependentUpon = "DatasetFuncionario.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetParametroContabilContaCorrenteFornecedor.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetParametroContabilContaCorrenteFornecedor.vb"
+                />
+                <File
+                    RelPath = "DatasetParametroContabilContaCorrenteFornecedor.vb"
+                    DependentUpon = "DatasetParametroContabilContaCorrenteFornecedor.xsd"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetParametroContabilContaCorrenteFornecedor.xsx"
+                    DependentUpon = "DatasetParametroContabilContaCorrenteFornecedor.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetPrevisaoApuracao.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetPrevisaoApuracao.vb"
+                />
+                <File
+                    RelPath = "DatasetPrevisaoApuracao.vb"
+                    DependentUpon = "DatasetPrevisaoApuracao.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetPrevisaoApuracao.xsx"
+                    DependentUpon = "DatasetPrevisaoApuracao.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetRecuperacaoEPrevencaoPerdas.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetRecuperacaoEPrevencaoPerdas.vb"
+                />
+                <File
+                    RelPath = "DatasetRecuperacaoEPrevencaoPerdas.vb"
+                    DependentUpon = "DatasetRecuperacaoEPrevencaoPerdas.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetRecuperacaoEPrevencaoPerdas.xsx"
+                    DependentUpon = "DatasetRecuperacaoEPrevencaoPerdas.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DataSetRelatorioSaldoDisponivelFornecedorCelula.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DataSetRelatorioSaldoDisponivelFornecedorCelula.vb"
+                />
+                <File
+                    RelPath = "DataSetRelatorioSaldoDisponivelFornecedorCelula.vb"
+                    DependentUpon = "DataSetRelatorioSaldoDisponivelFornecedorCelula.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DataSetRelatorioSaldoDisponivelFornecedorCelula.xsx"
+                    DependentUpon = "DataSetRelatorioSaldoDisponivelFornecedorCelula.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetReservaSaldoFornecedor.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetReservaSaldoFornecedor.vb"
+                />
+                <File
+                    RelPath = "DatasetReservaSaldoFornecedor.vb"
+                    DependentUpon = "DatasetReservaSaldoFornecedor.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetReservaSaldoFornecedor.xsx"
+                    DependentUpon = "DatasetReservaSaldoFornecedor.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetSelecaoValorDisponivelFornecedor.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetSelecaoValorDisponivelFornecedor.vb"
+                />
+                <File
+                    RelPath = "DatasetSelecaoValorDisponivelFornecedor.vb"
+                    DependentUpon = "DatasetSelecaoValorDisponivelFornecedor.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetSelecaoValorDisponivelFornecedor.xsx"
+                    DependentUpon = "DatasetSelecaoValorDisponivelFornecedor.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetTipoLancamentoContaCorrenteFornecedor.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetTipoLancamentoContaCorrenteFornecedor.vb"
+                />
+                <File
+                    RelPath = "DatasetTipoLancamentoContaCorrenteFornecedor.vb"
+                    DependentUpon = "DatasetTipoLancamentoContaCorrenteFornecedor.xsd"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetTipoLancamentoContaCorrenteFornecedor.xsx"
+                    DependentUpon = "DatasetTipoLancamentoContaCorrenteFornecedor.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DatasetTransferenciaVerbaFornecedor.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DatasetTransferenciaVerbaFornecedor.vb"
+                />
+                <File
+                    RelPath = "DatasetTransferenciaVerbaFornecedor.vb"
+                    DependentUpon = "DatasetTransferenciaVerbaFornecedor.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DatasetTransferenciaVerbaFornecedor.xsx"
+                    DependentUpon = "DatasetTransferenciaVerbaFornecedor.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "ErrorConstants.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BLL\ContaCorrenteFornecedorBLL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BLL\FluxoDeCancelamentoDeAcordosBLL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BLL\PrevisaoApuracaoBLL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BLL\RecuperacaoEPrevencaoPerdasBLL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BP\ContaCorrenteFornecedorBP.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BP\FluxoDeCancelamentoDeAcordosBP.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BP\PrevisaoApuracaoBP.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BP\RecuperacaoEPrevencaoPerdasBP.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DAL\ContaCorrenteFornecedorDAL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DAL\ContaCorrenteFornecedorDALSQL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DAL\FluxoDeCancelamentoDeAcordosDAL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DAL\FluxoDeCancelamentoDeAcordosDALSQL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DAL\PrevisaoApuracaoDAL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DAL\PrevisaoApuracaoDALSQL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DAL\RecuperacaoEPrevencaoPerdasDAL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DAL\RecuperacaoEPrevencaoPerdasDALSQL.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+

@@ -1,0 +1,40 @@
+﻿
+@using Marketing.GestaoVerbas.ViewModel
+@model IEnumerable<NegociacaoVerbaHistoricoViewModel>
+
+<div class="modal" id="modalHistoricoNegociacao" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary" style="color:white;">
+                <h5 class="modal-title" id="myModalLabel">Histórico</h5>
+            </div>
+            <div class="modal-body bg-light">
+                @foreach (NegociacaoVerbaHistoricoViewModel item in Model)
+                {
+                    <div class="card bg-primary">
+                        <div class="card-body bg-light" style="border-radius: 3px;">
+                            <ul style="cursor: pointer;">
+                                <li style="list-style-type: none;">
+                                    <i class="fa fa-fw fa-calendar"></i>&nbsp;Data: <b>@Html.DisplayFor(modelItem => item.DtHistorico)</b>
+                                    <br />
+                                    <i class="fa fa-fw fa-check"></i>&nbsp;Status: <b>@Html.DisplayFor(modelItem => item.NomStatusNegociacaoVenda)</b>
+                                    <br />
+                                    <i class="fa fa-fw fa-user"></i>&nbsp; Funcionário: <b>@Html.DisplayFor(modelItem => item.NomFuncionario)</b>
+                                    <br />
+                                    <i class="fa fa-fw fa-edit"></i>&nbsp; Observação: <b>@Html.DisplayFor(modelItem => item.DesJustificativaReprovacao)</b>
+                                    <br />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br />
+                }
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" title="Fechar" class="btn btn-default" style="cursor: pointer;background-color:orange" onclick="jsCloseModalHistoricoNegociacao()">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+

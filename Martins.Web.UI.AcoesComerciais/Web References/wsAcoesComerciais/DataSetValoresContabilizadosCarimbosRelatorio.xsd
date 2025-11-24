@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DataSetValoresContabilizadosCarimbosRelatorio.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DataSetValoresContabilizadosCarimbosRelatorio.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DataSetValoresContabilizadosCarimbosRelatorio.xsd" id="DataSetValoresContabilizadosCarimbosRelatorio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DataSetValoresContabilizadosCarimbosRelatorio">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TBValoresReceberSintetico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="NOME_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="DATA_PREVISAO_RECEBIMENTO" type="xs:string" />
+              <xs:element minOccurs="0" name="SALDO_EXTRA_ACORDO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SALDO_ACORDO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SALDO_TOTAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBValoresReceberAnalitico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="NOME_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="ACORDO" type="xs:string" />
+              <xs:element minOccurs="0" name="DATA_PREVISAO_RECEBIMENTO" type="xs:string" />
+              <xs:element minOccurs="0" name="SALDO_EXTRA_ACORDO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SALDO_ACORDO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SALDO_TOTAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBTipoLancamento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODTIPLMT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESTIPLMT_x0020_" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBValoresRecebidosSintetico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="NOME_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_LANCTO" type="xs:string" />
+              <xs:element minOccurs="0" name="VALOR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBValoresRecebidosAnalitico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO_FORNECEDOR" type="xs:long" />
+              <xs:element minOccurs="0" name="NOME_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO_LANCTO" type="xs:string" />
+              <xs:element minOccurs="0" name="ACORDO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALOR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="DOCPGTO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBComboAnoMesRef">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="AnoMesRef" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBVendaCarimboXPendenteFaturarSint">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NOMEFILIAL" type="xs:string" />
+              <xs:element minOccurs="0" name="REALIZADOVENDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRPNDFATMCO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFILEMP" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBVendaCarimboXPendenteFaturarAnali">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NOMEFILIAL" type="xs:string" />
+              <xs:element minOccurs="0" name="MERCADORIA" type="xs:string" />
+              <xs:element minOccurs="0" name="REALIZADOVENDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRPNDFATMCO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFILEMP" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBValoresFunding">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="CODMER" type="xs:string" />
+              <xs:element minOccurs="0" name="MERCADORIA" type="xs:string" />
+              <xs:element minOccurs="0" name="FUNDING_PRECO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FUNDING_MARGEM" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFILEMP" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

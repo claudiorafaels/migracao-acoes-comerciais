@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetspCBU180.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetspCBU180.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetspCBU180.xsd" id="DatasetspCBU180" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetspCBU180">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TbRetorno1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NumOrdPgtFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodBco" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodAge" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatRcbOrdPgt" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="VlrOrdPgt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatUltPmsOrd" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DatRcbCreOrd" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NomAcsUsrSis" type="xs:string" />
+              <xs:element minOccurs="0" name="TipOriOrdPgtFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipOpeBxaOrdPgtFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesTipOpeBxaOrdPgt" type="xs:string" />
+              <xs:element minOccurs="0" name="NumOrdPgtOriFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatTrnOrdPgtFrn" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DesHstDpsIdtFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="NomAcsUsrBxaOrdPgt" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DataSetAbatimentoPerdasAcoFrn.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DataSetAbatimentoPerdasAcoFrn.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DataSetAbatimentoPerdasAcoFrn.xsd" id="DataSetAbatimentoPerdasAcoFrn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DataSetAbatimentoPerdasAcoFrn">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tbAbatimentoPerdasAcoFrn">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPPODCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMREFPOD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODEDEABGMIX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATREFAPU" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NUMSEQRLCCTTPMS" type="xs:int" />
+              <xs:element minOccurs="0" name="CODEMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFILEMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATNGCPMS" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATPRVRCBPMS" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TIPFRMDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMCTTFRNORIPDA" type="xs:int" />
+              <xs:element minOccurs="0" name="NUMCSLCTTFRNORIPDA" type="xs:int" />
+              <xs:element minOccurs="0" name="TIPPODCTTFRNORIPDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMREFPODORIPDA" type="xs:int" />
+              <xs:element minOccurs="0" name="TIPEDEABGMIXORIPDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODEDEABGMIXORIPDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATREFAPUORIPDA" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="VLRCRDUTZCTTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATGRCRLCPDACTTFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATDSTRLCPDACTTFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TIPFRMDSCBNFORIPDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPDSNDSCBNFORIPDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESOBSPMS" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMUSRSIS" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

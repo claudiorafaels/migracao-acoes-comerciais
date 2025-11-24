@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel>
+
+@*Adicionar*@
+<div class="py-1" style="color:white;">
+    <h5>Adicionar</h5>
+</div>
+<div class="row bg-light" style="padding-top:20px;">
+    @{
+        List<Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel> listaDestino = new List<Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel>();
+        listaDestino.Add(new Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel() { CodDestino = 0, NomDestino = "Selecione..." });
+        listaDestino.Add(new Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel() { CodDestino = 1, NomDestino = "Ações em Venda" });
+        listaDestino.Add(new Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel() { CodDestino = 2, NomDestino = "Ações em Preço" });
+        Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel item = new Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel();
+    }
+    <div class="col-md-4">
+        @Html.LabelFor(model => item.NomDestino)
+        <br />
+        @Html.ValidationMessageFor(model => item.NomDestino, "", new { @class = "text-danger" })
+        @Html.DropDownListFor(model => item.CodDestino, new SelectList(listaDestino, "CodDestino", "NomDestino"), new { @class = "form-control", id = "drpNomDestino" })
+    </div>
+    @{
+        List<Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel> listaObjetivos = new List<Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel>();
+        listaObjetivos.Add(new Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel() { CodObjetivo = 0, NomObjetivo = "Selecione..." });
+        listaObjetivos.Add(new Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel() { CodObjetivo = 1, NomObjetivo = "Resultado" });
+        listaObjetivos.Add(new Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel() { CodObjetivo = 2, NomObjetivo = "Carimbo" });
+        listaObjetivos.Add(new Martins.GestaoVerba.ViewModel.DestinoObjetivoViewModel() { CodObjetivo = 3, NomObjetivo = "Plano Trade" });
+    }
+    <div class="col-md-4">
+        @Html.LabelFor(model => item.NomObjetivo)
+        <br />
+        @Html.ValidationMessageFor(model => item.NomObjetivo, "", new { @class = "text-danger" })
+        @Html.DropDownListFor(model => item.CodObjetivo, new SelectList(listaObjetivos, "CodObjetivo", "NomObjetivo"), new { @class = "form-control", id = "drpNomObjetivo" })
+    </div>
+    <div class="col-4">
+        @Html.LabelFor(model => item.VlrDestino)
+        @Html.ValidationMessageFor(model => item.VlrDestino, "", new { @class = "text-danger" })
+        @Html.EditorFor(model => item.VlrDestino, new { htmlAttributes = new { @class = "form-control", data_val = false, id = "txtVlrDestino" } })
+    </div>
+
+</div>
+<div class="row bg-light">
+    <div class="col-md-8">
+        <div class="row bg-light" style="padding-bottom: 1rem; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">
+            <div class="col-12">
+                @Html.LabelFor(model => item.ObsDestino)
+                @Html.ValidationMessageFor(model => item.ObsDestino, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => item.ObsDestino, new { htmlAttributes = new { @class = "form-control", id = "txtObsDestino", data_val = false } })
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <br />
+        <button id="btnAdd" type="button" title="Adicionar" class="btn fa fa-plus" style="cursor: pointer;margin-top: 7px; border-bottom-right-radius:3px;border-top-right-radius:3px;" onclick="jsAddObjetivoDestino()"></button>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+
+
+@*Grid*@
+<div class="row bg-secondary">
+    <table id="tbGrid" class="table table-hover table-striped" style="margin: 0px;">
+        <thead class="bg-secondary">
+            <tr role="row">
+                <th class="center border" style="width: 200px;">Ações</th>
+                <th class="sorting border">
+
+                    @Html.DisplayNameFor(model => model.NomDestino)
+                </th>
+                <th class="sorting border">
+                    @Html.DisplayNameFor(model => model.NomObjetivo)
+                </th>
+                <th class="sorting border">
+                    @Html.DisplayNameFor(model => model.VlrDestino)
+                </th>
+                <th class="sorting border">
+                    @Html.DisplayNameFor(model => model.ObsDestino)
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tbGridBody" class="bg-light border">
+            @{
+                foreach (var item2 in Model)
+                {
+                    <tr class="odd">
+                        <td class="center border">
+                            <button type="button" title="Editar" class="btn bg-primary" id="btnEditNegociacao" value="" required="" onclick="jsEditar()"><i class="fa fa-edit"></i></button>
+                            <button type="button" title="Remover" class="btn bg-danger" id="btnRemoveNegociacao" value="" required="" onclick="DeleteConfirm('Destino: @item2.NomDestino', @item.CodDestino, DeleteConfirmed)"><i class="fa fa-edit"></i></button>
+                        </td>
+                        <td class="border">
+                            @Html.HiddenFor(modelItem => item2.CodDestino, new { htmlAttributes = new { @class = "form-control", id = "idteste"} })
+                            @Html.DisplayFor(modelItem => item2.NomDestino)
+                        </td>
+                        <td class="border">
+                            @Html.HiddenFor(modelItem => item2.CodObjetivo, new { htmlAttributes = new { @class = "form-control", id = "idteste" } })
+                            @Html.DisplayFor(modelItem => item2.NomObjetivo)
+                        </td>
+                        <td class="border">
+                            @Html.DisplayFor(modelItem => item2.VlrDestino)
+                        </td>
+                        <td class="border">
+                            @Html.DisplayFor(modelItem => item2.ObsDestino)
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+

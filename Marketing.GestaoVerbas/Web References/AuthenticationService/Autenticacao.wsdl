@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="WSAutenticacaoDMZ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WSAutenticacaoDMZResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WSAutenticacaoDMZResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WSAutenticacaoDMZSemToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WSAutenticacaoDMZSemTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WSAutenticacaoDMZSemTokenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WSAutenticacaoDMZRetornaGrupo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WSAutenticacaoDMZRetornaGrupoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WSAutenticacaoDMZRetornaGrupoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="WSAutenticacaoDMZSoapIn">
+    <wsdl:part name="parameters" element="tns:WSAutenticacaoDMZ" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZSoapOut">
+    <wsdl:part name="parameters" element="tns:WSAutenticacaoDMZResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZSemTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:WSAutenticacaoDMZSemToken" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZSemTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:WSAutenticacaoDMZSemTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZRetornaGrupoSoapIn">
+    <wsdl:part name="parameters" element="tns:WSAutenticacaoDMZRetornaGrupo" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZRetornaGrupoSoapOut">
+    <wsdl:part name="parameters" element="tns:WSAutenticacaoDMZRetornaGrupoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZSemTokenHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZSemTokenHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZRetornaGrupoHttpGetIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZRetornaGrupoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZSemTokenHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZSemTokenHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZRetornaGrupoHttpPostIn">
+    <wsdl:part name="usuario" type="s:string" />
+    <wsdl:part name="senha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WSAutenticacaoDMZRetornaGrupoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="WSAutenticacaoTokenDMZSoap">
+    <wsdl:operation name="WSAutenticacaoDMZ">
+      <wsdl:input message="tns:WSAutenticacaoDMZSoapIn" />
+      <wsdl:output message="tns:WSAutenticacaoDMZSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZSemToken">
+      <wsdl:input message="tns:WSAutenticacaoDMZSemTokenSoapIn" />
+      <wsdl:output message="tns:WSAutenticacaoDMZSemTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZRetornaGrupo">
+      <wsdl:input message="tns:WSAutenticacaoDMZRetornaGrupoSoapIn" />
+      <wsdl:output message="tns:WSAutenticacaoDMZRetornaGrupoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSAutenticacaoTokenDMZHttpGet">
+    <wsdl:operation name="WSAutenticacaoDMZ">
+      <wsdl:input message="tns:WSAutenticacaoDMZHttpGetIn" />
+      <wsdl:output message="tns:WSAutenticacaoDMZHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZSemToken">
+      <wsdl:input message="tns:WSAutenticacaoDMZSemTokenHttpGetIn" />
+      <wsdl:output message="tns:WSAutenticacaoDMZSemTokenHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZRetornaGrupo">
+      <wsdl:input message="tns:WSAutenticacaoDMZRetornaGrupoHttpGetIn" />
+      <wsdl:output message="tns:WSAutenticacaoDMZRetornaGrupoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSAutenticacaoTokenDMZHttpPost">
+    <wsdl:operation name="WSAutenticacaoDMZ">
+      <wsdl:input message="tns:WSAutenticacaoDMZHttpPostIn" />
+      <wsdl:output message="tns:WSAutenticacaoDMZHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZSemToken">
+      <wsdl:input message="tns:WSAutenticacaoDMZSemTokenHttpPostIn" />
+      <wsdl:output message="tns:WSAutenticacaoDMZSemTokenHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZRetornaGrupo">
+      <wsdl:input message="tns:WSAutenticacaoDMZRetornaGrupoHttpPostIn" />
+      <wsdl:output message="tns:WSAutenticacaoDMZRetornaGrupoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSAutenticacaoTokenDMZSoap" type="tns:WSAutenticacaoTokenDMZSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WSAutenticacaoDMZ">
+      <soap:operation soapAction="http://tempuri.org/WSAutenticacaoDMZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZSemToken">
+      <soap:operation soapAction="http://tempuri.org/WSAutenticacaoDMZSemToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZRetornaGrupo">
+      <soap:operation soapAction="http://tempuri.org/WSAutenticacaoDMZRetornaGrupo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSAutenticacaoTokenDMZSoap12" type="tns:WSAutenticacaoTokenDMZSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WSAutenticacaoDMZ">
+      <soap12:operation soapAction="http://tempuri.org/WSAutenticacaoDMZ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZSemToken">
+      <soap12:operation soapAction="http://tempuri.org/WSAutenticacaoDMZSemToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZRetornaGrupo">
+      <soap12:operation soapAction="http://tempuri.org/WSAutenticacaoDMZRetornaGrupo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSAutenticacaoTokenDMZHttpGet" type="tns:WSAutenticacaoTokenDMZHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="WSAutenticacaoDMZ">
+      <http:operation location="/WSAutenticacaoDMZ" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZSemToken">
+      <http:operation location="/WSAutenticacaoDMZSemToken" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZRetornaGrupo">
+      <http:operation location="/WSAutenticacaoDMZRetornaGrupo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSAutenticacaoTokenDMZHttpPost" type="tns:WSAutenticacaoTokenDMZHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="WSAutenticacaoDMZ">
+      <http:operation location="/WSAutenticacaoDMZ" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZSemToken">
+      <http:operation location="/WSAutenticacaoDMZSemToken" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WSAutenticacaoDMZRetornaGrupo">
+      <http:operation location="/WSAutenticacaoDMZRetornaGrupo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSAutenticacaoTokenDMZ">
+    <wsdl:port name="WSAutenticacaoTokenDMZSoap" binding="tns:WSAutenticacaoTokenDMZSoap">
+      <soap:address location="http://bidmz.martins.com.br/Seguranca.AutenticacaoTokenDMZ/Autenticacao.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSAutenticacaoTokenDMZSoap12" binding="tns:WSAutenticacaoTokenDMZSoap12">
+      <soap12:address location="http://bidmz.martins.com.br/Seguranca.AutenticacaoTokenDMZ/Autenticacao.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSAutenticacaoTokenDMZHttpGet" binding="tns:WSAutenticacaoTokenDMZHttpGet">
+      <http:address location="http://bidmz.martins.com.br/Seguranca.AutenticacaoTokenDMZ/Autenticacao.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSAutenticacaoTokenDMZHttpPost" binding="tns:WSAutenticacaoTokenDMZHttpPost">
+      <http:address location="http://bidmz.martins.com.br/Seguranca.AutenticacaoTokenDMZ/Autenticacao.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

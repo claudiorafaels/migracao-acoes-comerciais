@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetSelecaoValorDisponivelFornecedor" targetNamespace="http://tempuri.org/DatasetSelecaoValorDisponivelFornecedor.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetSelecaoValorDisponivelFornecedor.xsd"
+	xmlns:mstns="http://tempuri.org/DatasetSelecaoValorDisponivelFornecedor.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetSelecaoValorDisponivelFornecedor" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="tbSelecaoValorDisponivelFornecedor">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="VlrSldDsp" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VlrSldPms" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VlrSldAcoFut" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VlrSldTot" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CodFrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TipDsnDscBnf" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TipAlcVbaFrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DesAlcVbaFrn" type="xs:string" minOccurs="0" />
+							<xs:element name="PerAlcVbaFrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VlrAlcVbaFrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VlrRcbAlcVbaFrn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VlrSldDspAlcVbaFrn" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="tbTransfenciaEmpenhosDoFornecedor">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NomeCategoria" type="xs:string" minOccurs="0" />
+							<xs:element name="NomeComprador" type="xs:string" minOccurs="0" />
+							<xs:element name="CodigoFornecedor" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NomeFornecedor" type="xs:string" minOccurs="0" />
+							<xs:element name="CodigoEmpenho" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NomeEmpenho" type="xs:string" minOccurs="0" />
+							<xs:element name="CodigoAlocacao" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NomeAlocacao" type="xs:string" minOccurs="0" />
+							<xs:element name="ValorAlocado" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ValorReceber" type="xs:decimal" minOccurs="0" />
+							<xs:element name="SaldoDisponivel" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ValorTransferir" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VlrSldDspAlcVbaFrnPmt" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CodigoComprador" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="tbFornecedorCompradorEDivisaoCompra">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMFRN" type="xs:string" minOccurs="0" />
+							<xs:element name="CODDIVCMP" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DESDIVCMP" type="xs:string" minOccurs="0" />
+							<xs:element name="CODCPR" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NOMCPR" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DatasetSelecaoValorDisponivelFornecedorKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:tbFornecedorCompradorEDivisaoCompra" />
+			<xs:field xpath="mstns:CODFRN" />
+		</xs:unique>
+		<xs:unique name="DatasetSelecaoValorDisponivelFornecedorKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:tbTransfenciaEmpenhosDoFornecedor" />
+			<xs:field xpath="mstns:CodigoFornecedor" />
+			<xs:field xpath="mstns:CodigoEmpenho" />
+			<xs:field xpath="mstns:CodigoAlocacao" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

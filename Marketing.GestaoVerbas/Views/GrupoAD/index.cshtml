@@ -1,0 +1,140 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel
+@model  GridSetings<GrupoADViewModel>
+
+
+
+@{
+    ViewBag.Title = "Grupo AD";
+}
+
+<div class="container-fluid">
+    @using (Ajax.BeginForm("Pesquisar", "GrupoAD", Marketing.GestaoVerbas.Core.Ajax.Constantes.AJAX_PESQUISA_POST_DEFAULT(), new { @id = "formPesquisa", @class = "form-pagination" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="row py-1" id="formbotoes">
+            <div class="mx-auto">
+                <ul class="nav nav-pills" style="font-size:25px;">
+
+                    <li class="nav-item">
+                        <a title="Adicionar Grupo" id="btnAdicionar" onclick="jsNovoGrupoAcesso()" class="nav-link gray"> <i class="fa fa-plus"></i>&nbsp;</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="dropdown-divider" style="margin-top:-12px;"></div>
+        <br />
+
+        @Html.HiddenFor(model => model.Filtro.CodGrupoAcesso, new { id = "hdfEditNegociacaoVerbaCodNegociacaoVerba" })
+
+        <div class="card bg-primary divFiltrosPesquisa" id="formpesquisa">
+            <div class="card-header text-white">
+                <h5>Filtros</h5>
+            </div>
+
+            <div class="card-body bg-light">
+                <div class="row">
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.CodGrupoAcesso)
+                        @Html.EditorFor(model => model.Filtro.CodGrupoAcesso, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                    </div>
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.NomGrupoAcesso)
+                        @Html.EditorFor(model => model.Filtro.NomGrupoAcesso, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                    </div>
+                    <div class="col-md-4">
+                        <div class="pull-right">
+                            <button type="submit" id="btnPesquisar" value="" class="btn" style="cursor: pointer;background-color: #196dab;"><i class="fa fa-search"></i> Pesquisar</button>
+                            <button type="button" class="btn" style="cursor: pointer;background-color: #196dab;" title="Limpar campos de filtro" onclick="jsLimparFiltrosPesquisa()"><i class="fa fa-eraser"></i> Limpar</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="card bg-primary" id="formGrid">
+            <div class="card-header text-white">
+                <h5>Resultados</h5>
+            </div>
+            <div class="card-body bg-secondary grid-paginavel">
+                <div class="row">
+                    <div class="table-responsive">
+                        <div class="dataTables_wrapper">
+                            <table id="tb" class="table table-hover table-bordered table-striped dataTable" style="margin: 0px;">
+                                <thead class="bg-secondary">
+                                    <tr role="row">
+                                        <th class="center">Ações</th>
+                                        <th class="center sorting">
+                                            <button type="submit" style="border:none;" sort-expression="CodGrupoAcesso">
+                                                @Html.DisplayNameFor(model => model.Filtro.CodGrupoAcesso)
+                                            </button>
+                                        </th>
+                                        <th class="sorting">
+                                            <button type="submit" style="border:none;" sort-expression="NomGrupoAcesso">
+                                                @Html.DisplayNameFor(model => model.Filtro.NomGrupoAcesso)
+                                            </button>
+                                        </th>
+                                        <th class="sorting">
+                                            <button type="submit" style="border:none;" sort-expression="DesGrupoAcesso">
+                                                @Html.DisplayNameFor(model => model.Filtro.DesGrupoAcesso)
+                                            </button>
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-light border">
+                                    @foreach (var item in Model.Result)
+    {
+                                <tr class="odd">
+                                    <td class="center">
+                                            <button type="button" title="Editar" class="btn btn-primary"  id="btnEditGrupoAD"  onclick="jsEditarGrupoAD(@item.CodGrupoAcesso)"><i class="fa fa-edit"></i></button>
+                                            <button type="button" title="Carrega Menus" class="btn btn-primary" id="btnCarregaMenus" onclick="jsCarregaMenus(@item.CodGrupoAcesso)"><i class="fa fa-sitemap"></i></button>
+
+                                    </td>
+                                    <td class="border">
+                                        @Html.DisplayFor(modelItem => item.CodGrupoAcesso)
+                                    </td>
+                                    <td class="border">
+                                        @Html.DisplayFor(modelItem => item.NomGrupoAcesso)
+                                    </td>
+                                    <td class="border">
+                                        @Html.DisplayFor(modelItem => item.DesGrupoAcesso)
+                                    </td>
+                                </tr>
+}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    @Html.Partial(Constantes.VIEW_PAGINACAO, Model.Setings, new ViewDataDictionary { TemplateInfo = new TemplateInfo { HtmlFieldPrefix = "Setings" } })
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+</div>
+
+
+<div id="formEdit"></div>
+
+<div id="appendFind"></div>
+
+<div id="formMenu"></div>
+
+<!-- Script -->
+@section Scripts {
+    @Scripts.Render("~/Scripts/pagina/grupoad.js")
+}
+
+

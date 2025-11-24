@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetCHRecebidoFornecedor.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetCHRecebidoFornecedor.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetCHRecebidoFornecedor.xsd" id="DatasetCHRecebidoFornecedor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetCHRecebidoFornecedor">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0118872">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCHQ" type="xs:decimal" />
+              <xs:element name="CODBCO" type="xs:decimal" />
+              <xs:element name="CODAGE" type="xs:decimal" />
+              <xs:element name="DATRCBCHQ" type="xs:dateTime" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="VLRCHQ" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATULTPMSCHQ" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATRCBCRECHQ" type="xs:dateTime" />
+              <xs:element name="NOMACSUSRSIS" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0100426">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="NOMFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetCHRecebidoFornecedorKey1">
+      <xs:selector xpath=".//mstns:T0118872" />
+      <xs:field xpath="mstns:NUMCHQ" />
+      <xs:field xpath="mstns:CODBCO" />
+      <xs:field xpath="mstns:CODAGE" />
+      <xs:field xpath="mstns:DATRCBCHQ" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetCHRecebidoFornecedorKey2">
+      <xs:selector xpath=".//mstns:T0100426" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:unique>
+    <xs:keyref name="T0100426T0118872" refer="mstns:DatasetCHRecebidoFornecedorKey2">
+      <xs:selector xpath=".//mstns:T0118872" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

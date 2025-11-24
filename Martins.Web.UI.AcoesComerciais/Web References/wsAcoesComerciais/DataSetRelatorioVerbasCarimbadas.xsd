@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DataSetRelatorioVerbasCarimbadas.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DataSetRelatorioVerbasCarimbadas.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DataSetRelatorioVerbasCarimbadas.xsd" id="DataSetRelatorioVerbasCarimbadas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DataSetRelatorioVerbasCarimbadas">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TBVerbasCarimbadasSintetico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="NOME_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="DESTINO" type="xs:string" />
+              <xs:element minOccurs="0" name="FILIAL" type="xs:string" />
+              <xs:element minOccurs="0" name="VALOR" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBVerbasCarimbadasAnalitico">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODIGO_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="NOME_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="DESTINO" type="xs:string" />
+              <xs:element minOccurs="0" name="FILIAL" type="xs:string" />
+              <xs:element minOccurs="0" name="CODIGO_MERCADORIA" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCRICAO_MERCADORIA" type="xs:string" />
+              <xs:element minOccurs="0" name="VALOR" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

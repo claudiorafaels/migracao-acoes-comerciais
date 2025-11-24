@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTransferenciaVerbaFornecedor.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTransferenciaVerbaFornecedor.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTransferenciaVerbaFornecedor.xsd" id="DatasetTransferenciaVerbaFornecedor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTransferenciaVerbaFornecedor">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="CADTRNVBAFRN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMFLUAPV" type="xs:decimal" />
+              <xs:element name="TIPSTAFLUAPV" type="xs:string" />
+              <xs:element name="TIPDSNDSCBNFDSNTRN" type="xs:decimal" />
+              <xs:element name="TIPALCVBAFRN" type="xs:decimal" />
+              <xs:element name="DESJSTTRNVBA" type="xs:string" />
+              <xs:element name="CODFNC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDMESTRNFLU" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDFLUTRNVBAMKT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERPSQSLDFRN" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RLCTRNVBAFRN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMFLUAPV" type="xs:decimal" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="TIPDSNDSCBNFORITRN" type="xs:decimal" />
+              <xs:element name="TIPALCVBAFRN" type="xs:decimal" />
+              <xs:element name="VLRLMTCTB" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="QueryRLCTRNVBAFRN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODDIVCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESDIVCMP" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCPR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMCPR" type="xs:string" />
+              <xs:element minOccurs="0" name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPDSNDSCBNFORITRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESDSNDSCBNF" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPALCVBAFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESALCVBAFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRLMTCTB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrSldDspAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDMESTRNFLU" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrSldDsp" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CADTRNVBAFRNJOIN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NUMFLUAPV" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPSTAFLUAPV" type="xs:string" />
+              <xs:element minOccurs="0" name="DESALCVBAFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="DESDSNDSCBNF" type="xs:string" />
+              <xs:element minOccurs="0" name="DESJSTTRNVBA" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMFNC" type="xs:string" />
+              <xs:element minOccurs="0" name="DESSTAFLUAPV" type="xs:string" />
+              <xs:element minOccurs="0" name="INDMESTRNFLU" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="queryFluxos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODFNC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFNC" type="xs:string" />
+              <xs:element minOccurs="0" name="DESSTAFLUAPV" type="xs:string" />
+              <xs:element minOccurs="0" name="DATHRAAPVFLU" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DESOBSAPV" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPSTAFLUAPV" type="xs:string" />
+              <xs:element minOccurs="0" name="DATHRAFLUAPV" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="INDMESTRNFLU" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFNCDELEGADO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ParametrosTransferencia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Valor" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipAlcVbaFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="DatRefLmt" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TipDsnDscBnfOrigem" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipDsnDscBnfDestino" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodFrnOrigem" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodFrnDestino" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrLmtCtb" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesHstLmt" type="xs:string" />
+              <xs:element minOccurs="0" name="DesVarHstPadOrigem" type="xs:string" />
+              <xs:element minOccurs="0" name="DesVarHstPadDestino" type="xs:string" />
+              <xs:element minOccurs="0" name="NomAcsUsrGrcLmt" type="xs:string" />
+              <xs:element minOccurs="0" name="TipAlcVbaFrnPmtOrigem" type="xs:int" />
+              <xs:element minOccurs="0" name="TipAlcVbaFrnPmtDestino" type="xs:int" />
+              <xs:element minOccurs="0" name="SaldoDisponivel" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0161581">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NUMSEQNIVAPV" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFNCAPVFIX" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTransferenciaVerbaFornecedorKey1">
+      <xs:selector xpath=".//mstns:CADTRNVBAFRN" />
+      <xs:field xpath="mstns:NUMFLUAPV" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTransferenciaVerbaFornecedorKey2">
+      <xs:selector xpath=".//mstns:RLCTRNVBAFRN" />
+      <xs:field xpath="mstns:NUMFLUAPV" />
+      <xs:field xpath="mstns:CODFRN" />
+      <xs:field xpath="mstns:TIPDSNDSCBNFORITRN" />
+      <xs:field xpath="mstns:TIPALCVBAFRN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

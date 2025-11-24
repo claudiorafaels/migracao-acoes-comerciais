@@ -1,0 +1,82 @@
+﻿@using Marketing.GestaoVerbas.ViewModel
+@model AcordoViewModel
+
+
+<div class="modal" id="modalAprovar" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary" style="color:white;">
+                <h5 class="modal-title" id="myModalLabel">Aprovar Negociação</h5>
+            </div>
+            <div class="modal-body bg-light">
+                @{
+                    NegociacaoVerbaViewModel negociacao = ViewBag.NegociacaoVerba;
+                }
+
+                @Html.HiddenFor(model => negociacao.CodNegociacaoVerba, new { id = "hdfAprovarNegociacaoVerbaCodNegociacaoVerba" })
+                <div class="row">
+                    <div class="col-md-6">
+                        @Html.DisplayNameFor(model => model.DtNegociacaoAcordo)
+                        @Html.EditorFor(model => model.DtNegociacaoAcordo, new { htmlAttributes = new { @class = "form-control", id = "txtAprovarNegociacaoVerbaDtNegociacaoAcordo", @readonly = "readonly", maxlength = "10" } })
+                    </div>
+                    <div class="col-md-6">
+                        @Html.DisplayNameFor(model => model.NomUsuario)
+                        @Html.EditorFor(model => model.NomUsuario, new { htmlAttributes = new { @class = "form-control", id = "txtAprovarNegociacaoVerbaNomUsuario", data_val = false, @readonly = "readonly" } })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.DisplayNameFor(model => model.DesComentarioUsuario)
+                        @Html.EditorFor(model => model.DesComentarioUsuario, new { htmlAttributes = new { @class = "form-control", id = "txtAprovarNegociacaoVerbaDesComentarioUsuario", data_val = false } })
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        @Html.DisplayNameFor(model => model.NomContatoFornecedor)
+                        @Html.EditorFor(model => model.NomContatoFornecedor, new { htmlAttributes = new { @class = "form-control", id = "txtAprovarNegociacaoVerbaNomContatoFornecedor", data_val = false } })
+                    </div>
+                    <div class="col-md-6">
+                        @Html.DisplayNameFor(model => model.NumTelefoneContatoFornecedor)
+                        @Html.EditorFor(model => model.NumTelefoneContatoFornecedor, new { htmlAttributes = new { @class = "form-control", id = "txtAprovarNegociacaoVerbaNumTelefoneContatoFornecedor", data_val = false } })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.DisplayNameFor(model => model.NomCargoContatoFornecedor)
+                        @Html.EditorFor(model => model.NomCargoContatoFornecedor, new { htmlAttributes = new { @class = "form-control", id = "txtAprovarNegociacaoVerbaNomCargoContatoFornecedor", data_val = false } })
+                    </div>
+                </div>
+
+                @{
+                    List<Marketing.GestaoVerbas.ViewModel.AcordoRecebimentoViewModel> listaFormaRecebimento = new List<Marketing.GestaoVerbas.ViewModel.AcordoRecebimentoViewModel>();
+                    listaFormaRecebimento.Add(new Marketing.GestaoVerbas.ViewModel.AcordoRecebimentoViewModel() { NomFormaRecebimento = "Selecione..." });
+                    listaFormaRecebimento.Add(new Marketing.GestaoVerbas.ViewModel.AcordoRecebimentoViewModel() { CodFormaRecebimento = 3, NomFormaRecebimento = "3 - DESCONTO EM CHEQUE" });
+                    listaFormaRecebimento.Add(new Marketing.GestaoVerbas.ViewModel.AcordoRecebimentoViewModel() { CodFormaRecebimento = 8, NomFormaRecebimento = "8 - ORDEM DE PAGAMENTO" });
+                    listaFormaRecebimento.Add(new Marketing.GestaoVerbas.ViewModel.AcordoRecebimentoViewModel() { CodFormaRecebimento = 13, NomFormaRecebimento = "13 - DESC DUP EXTRA ACORDO" });
+                }
+                @foreach (AcordoRecebimentoViewModel recebimento in Model.Recebimentos)
+                {
+                    <div class="row">
+                        <div class="col-md-6">
+                            @Html.LabelFor(model => recebimento.CodFormaRecebimento)
+                            @Html.ValidationMessageFor(model => recebimento.CodFormaRecebimento, "", new { @class = "text-danger" })
+                            @Html.DropDownListFor(model => recebimento.CodFormaRecebimento, new SelectList(listaFormaRecebimento, "CodFormaRecebimento", "NomFormaRecebimento"), new { @class = "form-control", id = "drpAprovarNegociacaoVerbaCodFormaRecebimento" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.LabelFor(model => recebimento.DtPrevisaoRecebimento)
+                            @Html.ValidationMessageFor(model => recebimento.DtPrevisaoRecebimento, "", new { @class = "text-danger" })
+                            @Html.EditorFor(model => recebimento.DtPrevisaoRecebimento, new { htmlAttributes = new { @class = "form-control date-picker", @autocomplete = "off", id = "txtAprovarNegociacaoVerbaDtPrevisaoRecebimento" } })
+                        </div>
+                    </div>
+                }
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" title="Aprovar" class="btn btn-default" style="cursor: pointer;" onclick="jsGACAprovar()">Aprovar</button>
+                <button type="button" title="Fechar" class="btn btn-default" style="cursor: pointer;background-color:orange" onclick="jsCloseModalAprovar()">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

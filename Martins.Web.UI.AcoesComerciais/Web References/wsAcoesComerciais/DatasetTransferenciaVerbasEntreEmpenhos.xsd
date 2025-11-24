@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTransferenciaVerbasEntreEmpenhos.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTransferenciaVerbasEntreEmpenhos.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTransferenciaVerbasEntreEmpenhos.xsd" id="DatasetTransferenciaVerbasEntreEmpenhos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTransferenciaVerbasEntreEmpenhos">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0144946">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFRNORITRNVBA" type="xs:decimal" />
+              <xs:element name="CODFRNDSNTRNVBA" type="xs:decimal" />
+              <xs:element name="TIPDSNDSCBNFORITRN" type="xs:decimal" />
+              <xs:element name="TIPDSNDSCBNFDSNTRN" type="xs:decimal" />
+              <xs:element name="NUMSEQLMTORITRNVBA" type="xs:decimal" />
+              <xs:element name="NUMSEQLMTDSNTRNVBA" type="xs:decimal" />
+              <xs:element name="CODGDCORITRNVBA" type="xs:string" />
+              <xs:element name="CODGDCDSNTRNVBA" type="xs:string" />
+              <xs:element name="DATREFLMT" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTransferenciaVerbasEntreEmpenhosKey1">
+      <xs:selector xpath=".//mstns:T0144946" />
+      <xs:field xpath="mstns:CODFRNORITRNVBA" />
+      <xs:field xpath="mstns:CODFRNDSNTRNVBA" />
+      <xs:field xpath="mstns:TIPDSNDSCBNFORITRN" />
+      <xs:field xpath="mstns:TIPDSNDSCBNFDSNTRN" />
+      <xs:field xpath="mstns:NUMSEQLMTORITRNVBA" />
+      <xs:field xpath="mstns:NUMSEQLMTDSNTRNVBA" />
+      <xs:field xpath="mstns:CODGDCORITRNVBA" />
+      <xs:field xpath="mstns:CODGDCDSNTRNVBA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

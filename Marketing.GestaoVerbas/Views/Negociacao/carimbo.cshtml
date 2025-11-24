@@ -1,0 +1,490 @@
+﻿
+@{
+    ViewBag.Title = "Negociação";
+
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="fixed-nav-content">
+    <!-- Botões -->
+    <div class="container">
+        <div class="row py-1">
+            <div class="mx-auto">
+                <ul class="nav nav-pills" style="font-size:25px;">
+                    <li class="nav-item">
+                        <a href="http://localhost/Martins.GestaoVerba/Negociacao/edit/1" title="Voltar" style="cursor: pointer;" class="nav-link gray" id="btnCancel"> <i class="fa fa-arrow-left"></i>&nbsp;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a title="Salvar" style="cursor: pointer;" class="nav-link gray" id="btnSave"> <i class="fa fa-save"></i>&nbsp;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dropdown-divider" style="margin-top:-12px;"></div>
+        <br />
+    </div>
+
+    <!-- Informações -->
+    <div class="container card bg-primary ">
+        <div class="py-1 menu-root" style="color:white;">
+            <h5><i class="fa fa-plus" style="cursor:pointer;padding-top:10px;"></i> Informações da Negociação</h5>
+        </div>
+        <div class="collapse">
+            <div class="row bg-light">
+                <div class="col-md-4">
+                    <label>Filial de Origem:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" readonly id="txtEditNomFilialOrigemVerba" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Divisão do Fornecedor:</label>
+                    <input type="text" class="form-control" readonly id="txtEditNomFilialOrigemVerba" />
+                </div>
+                <div class="col-md-4">
+                    <label>Comprador:</label>
+                    <input type="text" class="form-control" id="txtEditNomComprador" readonly placeholder="" value="" required="">
+                </div>
+            </div>
+            <div class="row bg-light">
+                <div class="col-md-4">
+                    <label>Origem:</label>
+                    <input type="text" class="form-control" id="txtEditNomNegociacao" readonly placeholder="" value="" required="">
+                </div>
+                <div class="col-md-4">
+                    <label>Destino:</label>
+                    <input type="text" class="form-control" id="txtEditNomNegociacao" readonly placeholder="" value="" required="">
+                </div>
+                <div class="col-md-4">
+                    <label>Valor Total da Verba:</label>
+                    <input type="text" class="form-control" id="txtEditVlrTotalVerba" readonly placeholder="" value="" required="">
+                </div>
+            </div>
+            <div class="row bg-light" style="padding-bottom: 1rem; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">
+                <div class="col-md-12">
+                    <label>Observações:</label>
+                    <textarea rows="4" class="form-control" id="txtEditObservacao" readonly placeholder="" value="" required=""></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <!-- Aplicar Verba -->
+    <div class="container card bg-primary ">
+        <div class="py-1" style="color:white;">
+            <h5>Calcular Carimbo</h5>
+        </div>
+        <div class="">
+            <div class="row bg-light">
+                <div class="col-md-3">
+                    <label>Total:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" readonly id="txtEditNomFilialOrigemVerba" value="50.000,00" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label>Imposto:</label>
+                    <input type="text" class="form-control" readonly id="txtEditNomFilialOrigemVerba" value="5.000,00" />
+                </div>
+                <div class="col-md-3">
+                    <label>Calcular Carimbo:</label>
+                    <input type="text" class="form-control" id="txtEditNomComprador" readonly placeholder="" value="45.000,00" required="">
+                </div>
+                <div class="col-md-3">
+                    <label><b>Período: </b></label>
+                    <br />
+                    <label>Semanal </label>
+                    @*<button type="button" title="Aplicar" class="btn" style="cursor: pointer;background-color: #196dab;" id="" value="" required="">Aplicar</button>*@
+                    <br />
+                    <br />
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <br />
+
+    <!-- Filtros -->
+    <div class="container card bg-primary ">
+        <div class="py-1" style="color:white;">
+            <h5>Filtros</h5>
+        </div>
+        <div class="">
+            <div class="row bg-light">
+                <div class="col-md-4">
+                    <label>Filial:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" style="width: 230px;" id="txtEditNomFilialOrigemVerba" />
+                        <button class="form-control" title="Pesquisar Filial" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" id="btnOpenModal" onclick="jsOpenModalFilial()"><i class="fa fa-search center"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <br />
+                    <button type="button" title="Filtrar" class="btn" style="cursor: pointer;background-color: #196dab;" id="" value="" required="">Filtrar</button>
+                    <br />
+                    <br />
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <br />
+
+
+    <!-- Grid -->
+    <div class="container card bg-primary" style="padding-bottom:2px; overflow: auto" ">
+
+        <div class="py-1" style="color:white;">
+            <h5>Itens</h5>
+        </div>
+
+        <div class="row bg-secondary">
+            <table id="tb" class="table table-hover table-striped" style="margin: 0px;width:100%;table-layout:inherit;">
+                <thead class="bg-secondary">
+                    <tr role="row">
+                        <th class="sorting border"><input type="checkbox" onclick="jsSelecionarTodos(this)" /></th>
+                        <th class="sorting border"></th>
+                        <th class="sorting border">Filial</th>
+                        <th class="sorting border">Código</th>
+                        <th class="sorting border">Categoria</th>
+                        <th class="sorting border">Descrição</th>
+                        <th class="sorting border">Qtd. Estoque</th>
+                        <th class="sorting border">Vlr. Estoque</th>
+                        <th class="sorting border">Verba Preço</th>
+                        <th class="sorting border">Verba Margem</th>
+                        <th class="sorting border">Verba Unitária</th>
+                        <th class="sorting border">Verba Total</th>
+                        <th class="sorting border">%MC</th>
+                        <th class="sorting border">%MB</th>
+                        <th class="sorting border">%Funding Total</th>
+                        <th class="sorting border">%Funding Preço</th>
+                        <th class="sorting border">Impostos</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-light border">
+                    <tr class="menu-root-2">
+                        <td class="border"><input type="checkbox" class="marcar" /></td>
+                        <td class="border"><i class="fa fa-plus" style="cursor:pointer;" onclick="jsShowLines(this)"></i></td>
+                        <td class="border"><a>Filial 1</a></td>
+                        <td class="border">001</td>
+                        <td class="border">Cat. 1</td>
+                        <td class="border">Descrição </td>
+                        <td class="border">10</td>
+                        <td class="border" onclick="jsOpenModalDetalhes()">10000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">1000,00</td>
+                    </tr>
+                    <tr style="display:none; background-color: #E0FFFF;">
+                        <td class="border"><input type="checkbox" class="marcar" /></td>
+                        <td class="border"></td>
+                        <td class="border"><a onclick="jsOpenModalDetalhes()">Filial 1</a></td>
+                        <td class="border">001</td>
+                        <td class="border">Cat. 1</td>
+                        <td class="border">Descrição 1</td>
+                        <td class="border">10</td>
+                        <td class="border" onclick="jsOpenModalDetalhes()">3000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">1000,00</td>
+                    </tr>
+                    <tr style="display:none;background-color: #B0E0E6;">
+                        <td class="border"><input type="checkbox" class="marcar" /></td>
+                        <td class="border"></td>
+                        <td class="border"><a onclick="jsOpenModalDetalhes()">Filial 1</a></td>
+                        <td class="border">001</td>
+                        <td class="border">Cat. 1</td>
+                        <td class="border">Descrição 2</td>
+                        <td class="border">10</td>
+                        <td class="border" onclick="jsOpenModalDetalhes()">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">1000,00</td>
+                    </tr>
+
+                    <tr class="menu-root-2">
+                        <td class="border"><input type="checkbox" class="marcar" /></td>
+                        <td class="border"><i class="fa fa-plus" style="cursor:pointer;" onclick="jsShowLines(this)"></i></td>
+                        <td class="border"><a>Filial 1</a></td>
+                        <td class="border">001</td>
+                        <td class="border">Cat. 1</td>
+                        <td class="border">Descrição </td>
+                        <td class="border">10</td>
+                        <td class="border" onclick="jsOpenModalDetalhes()">10000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">1000,00</td>
+                    </tr>
+                    <tr style="display:none;background-color: #B0E0E6;">
+                        <td class="border"><input type="checkbox" class="marcar" /></td>
+                        <td class="border"></td>
+                        <td class="border"><a onclick="jsOpenModalDetalhes()">Filial 1</a></td>
+                        <td class="border">001</td>
+                        <td class="border">Cat. 1</td>
+                        <td class="border">Descrição 0</td>
+                        <td class="border">10</td>
+                        <td class="border" onclick="jsOpenModalDetalhes()">5000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">1000,00</td>
+                    </tr>
+                    <tr style="display:none; background-color: #E0FFFF;">
+                        <td class="border"><input type="checkbox" class="marcar" /></td>
+                        <td class="border"></td>
+                        <td class="border"><a onclick="jsOpenModalDetalhes()">Filial 1</a></td>
+                        <td class="border">001</td>
+                        <td class="border">Cat. 1</td>
+                        <td class="border">Descrição 1</td>
+                        <td class="border">10</td>
+                        <td class="border" onclick="jsOpenModalDetalhes()">3000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">1000,00</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="border"><input type="checkbox" class="marcar" /></td>
+                        <td class="border"></td>
+                        <td class="border"><a onclick="jsOpenModalDetalhes()">Filial 2</a></td>
+                        <td class="border">002</td>
+                        <td class="border">Cat. 2</td>
+                        <td class="border">Desc.</td>
+                        <td class="border">20</td>
+                        <td class="border" onclick="jsOpenModalDetalhes()">20000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">1000,00</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="border"><input type="checkbox" class="marcar" /></td>
+                        <td class="border"></td>
+                        <td class="border"><a onclick="jsOpenModalDetalhes()">Filial 3</a></td>
+                        <td class="border">003</td>
+                        <td class="border">Cat. 3</td>
+                        <td class="border">Desc.</td>
+                        <td class="border">30</td>
+                        <td class="border" onclick="jsOpenModalDetalhes()">30000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">1000,00</td>
+                    </tr>
+                    <tr class="header odd">
+                        <td class="border"><input type="checkbox" class="marcar" /></td>
+                        <td class="border"></td>
+                        <td class="border"><a onclick="jsOpenModalDetalhes()">Filial 4</a></td>
+                        <td class="border">004</td>
+                        <td class="border">Desc.</td>
+                        <td class="border">Cat. 4</td>
+                        <td class="border">40</td>
+                        <td class="border">40000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">1000,00</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">10%</td>
+                        <td class="border">1000,00</td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+
+<!-- Modais -->
+<div class="modal col-md-8" id="modalDetalhes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:50%; margin-left:auto; margin-right: auto;">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header bg-primary" style="color:white;">
+                    <h5 class="modal-title" id="myModalLabel">Alterar Valor</h5>
+                </div>
+                <div class="modal-body bg-light">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>Valor:</label>
+                            <input type="text" class="form-control" id="txtEditNomComprador" placeholder="" value="" required="">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" title="Fechar" class="btn btn-default" style="cursor: pointer;background-color:orange" onclick="jsCloseModalDetalhes()">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal col-md-8" id="modalFilialOrigem" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:90%; margin-left:auto; margin-right: auto;">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header bg-primary" style="color:white;">
+                    <h5 class="modal-title" id="myModalLabel">Selecionar Filial</h5>
+                </div>
+                <div class="modal-body bg-light">
+                    <div class="container card bg-primary">
+                        <div class="py-1" style="color:white;">
+                            <h5>Pesquisar</h5>
+                        </div>
+                        <div class="row bg-light">
+
+                            <div class="col-md-4">
+                                <label>Filial:</label>
+                                <input type="text" class="form-control" style="width: 230px;" id="" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Código Filial:</label>
+                                <input type="text" class="form-control" id="" placeholder="" value="" required="">
+                            </div>
+                            <div class="col-md-4">
+                                <br />
+                                <button type="button" title="Pesquisar" class="btn" style="cursor: pointer;background-color: #196dab;" id="btnSaveNegociacao" value="" required=""><i class="fa fa-search"></i> Pesquisar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="container card bg-primary">
+                        <div class="py-1" style="color:white;">
+                            <h>Resultados</h>
+                        </div>
+                        <div class="row bg-secondary">
+                            <table id="tb" class="table table-hover table-bordered table-striped" style="margin: 0px;">
+                                <thead class="bg-secondary">
+                                    <tr role="row">
+                                        <th class="sorting">Ações</th>
+                                        <th class="sorting">Código</th>
+                                        <th class="sorting">Nome</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-light border">
+                                    <tr class="odd">
+                                        <td class="center border">
+                                            <button type="button" title="Selecionar" style="cursor: pointer;" class="btn bg-primary fa fa-check" id="btnEditNegociacao" value="" required="" onclick="jsCloseModalFilial()"></button>
+                                        </td>
+                                        <td class="border">0001</td>
+                                        <td class="border">Filial 1</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="center border">
+                                            <button type="button" title="Selecionar" style="cursor: pointer;" class="btn bg-primary fa fa-check" id="btnEditNegociacao" value="" required="" onclick="jsCloseModalFilial()"></button>
+                                        </td>
+                                        <td class="border">0002</td>
+                                        <td class="border">Filial 2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="py-1" style="color:white">
+                            Mostrando 3 de 3 resultados
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" title="Fechar" class="btn btn-default" style="cursor: pointer;background-color:orange" onclick="jsCloseModalFilial()">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script -->
+<script type="text/javascript">
+
+    function jsShowLines(sender) {
+
+        $(sender).parent().parent().next().toggle();
+        $(sender).parent().parent().next().next().toggle();
+        $(sender).parent().parent().next().next().next().toggle();
+    }
+
+    function jsOpenModalFilial() {
+
+        $('.loadingFundoPreto').show();
+        $('#modalFilialOrigem').show();
+    }
+
+    function jsCloseModalFilial() {
+        $('.loadingFundoPreto').hide();
+        $('#modalFilialOrigem').hide();
+    }
+
+    function jsOpenModalDetalhes() {
+
+        $('.loadingFundoPreto').show();
+        $('#modalDetalhes').show();
+    }
+
+    function jsCloseModalDetalhes() {
+        $('.loadingFundoPreto').hide();
+        $('#modalDetalhes').hide();
+    }
+
+    function jsSelecionarTodos(sender) {
+        $(".marcar").each(
+            function () {
+                $(this).prop("checked", $(sender).prop("checked"));
+            })
+    }
+
+</script>

@@ -1,0 +1,291 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel
+@model  GridSetings<RelatoriosVerbasEmitidasViewModel>
+
+<div class="fixed-nav-content">
+
+    <div class="container">
+        <div class="row py-1">
+            <div class="mx-auto">
+                <ul class="nav nav-pills" style="font-size:25px;">
+                    <li class="nav-item">
+                        <button type="button" onclick="ModeIndex()" title="Voltar" class="nav-link" style="background-color:transparent;border:none;"><i class="fa fa-arrow-left"></i>&nbsp;</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" title="Exportar" class="nav-link" style="background-color:transparent;border:none;"> <i class="fa fa-save"></i>&nbsp;</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dropdown-divider" style="margin-top:-12px;"></div>
+        <br />
+    </div>
+    <div class="container card bg-primary" style="padding-bottom:2px; overflow: auto">
+
+        <div class="py-1" style="color:white;">
+            @if (Model.Filtro.IndRelVisao == "N")
+            {
+                <h5>Relatório por Negociação</h5>
+            }
+            else if (Model.Filtro.IndRelVisao == "M")
+            {
+                <h5>Relatório por Mercadoria</h5>
+            }
+            else if (Model.Filtro.IndRelVisao == "F")
+            {
+                <h5>Relatório por Fornecedor</h5>
+            }
+        </div>
+
+        <div class="row bg-secondary">
+            <table id="tb" class="table" style="margin: 0px;width:100%;table-layout:inherit;overflow: scroll;">
+                <thead class="bg-secondary">
+                    <tr role="row">
+                        <th class="sorting border">                 </th>
+                        <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.CodGrupoSimilar)</th>
+                        <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.DtCadastroCarimbo)</th>
+                        <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.CodCarimbo)</th>
+                        <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.CodStatusCarimbo)</th>
+                        <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.CodDestino)</th>
+                        <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.CodObjetivo)</th>
+                        <th class="sorting border">Entidade         </th>
+                        @if (Model.Filtro.IndRelVisao == "N")
+                        {
+                            <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.CodNegociacaoVerba)</th>
+                            <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.NomNegociacaoVerba)</th>
+                        }
+                        else if (Model.Filtro.IndRelVisao == "M")
+                        {
+                            <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.CodMercadoria)</th>
+                            <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.NomMercadoria)</th>
+                        }
+                        else if (Model.Filtro.IndRelVisao == "F")
+                        {
+                            <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.CodFornecedor)</th>
+                            <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.NomFornecedor)</th>
+                        }
+                        <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.VlrVerba)</th>
+                        <th class="sorting border">@Html.DisplayNameFor(model => model.Filtro.DesObservacao)</th>
+                    </tr>
+                </thead>
+
+                <tbody class="bg-light border" id="tbodyRelatorioItem">
+                    @{
+                        int? CodGrupoSimilar = null;
+                        int? codFilialEmpresa = null;
+
+                        bool grupoNaoSimilares = false;
+                        string cssGrupo = "weak";
+                        string cssItemGrupo = "weak";
+                        string cssItem = "weak";
+                    }
+
+                    @foreach (var item in Model.Result)
+                    {
+                        if (item.CodGrupoSimilar != 0) //verifica se o item  possui grupo
+                        {
+                            if (item.CodGrupoSimilar != CodGrupoSimilar || item.CodFilialEmpresa != codFilialEmpresa) //verificar se o grupo esta alternando // || item.CodFilialEmpresa != codFilialEmpresa
+                            {
+                                if (cssGrupo == "weak")
+                                {
+                                    cssGrupo = "strong";
+                                }
+                                else
+                                {
+                                    cssGrupo = "weak";
+                                }
+                                <tr class="row-similar-group row-style-@cssGrupo">
+                                    <td class="border"><i class="fa fa-plus" style="cursor:pointer;" onclick="jsExpandeSimilares(this)" data-similar-group="@item.CodGrupoSimilar" data-similar-filial="@item.CodFilialEmpresa"></i></td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.CodGrupoSimilar)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.DtCadastroCarimbo)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.CodCarimbo)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.CodStatusCarimbo)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.CodDestino)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.CodObjetivo)</td>
+                                    <td class="sorting border">Entidade     </td>
+                                    @if (Model.Filtro.IndRelVisao == "N")
+                                    {
+                                        <td class="sorting border">@Html.DisplayFor(model => model.Filtro.CodNegociacaoVerba)</td>
+                                        <td class="sorting border">@Html.DisplayFor(model => model.Filtro.NomNegociacaoVerba)</td>
+                                    }
+                                    else if (Model.Filtro.IndRelVisao == "M")
+                                    {
+                                        <td class="sorting border">@Html.DisplayFor(model => model.Filtro.CodMercadoria)</td>
+                                        <td class="sorting border">@Html.DisplayFor(model => model.Filtro.NomMercadoria)</td>
+                                    }
+                                    else if (Model.Filtro.IndRelVisao == "F")
+                                    {
+                                        <td class="sorting border">@Html.DisplayFor(model => model.Filtro.CodFornecedor)</td>
+                                        <td class="sorting border">@Html.DisplayFor(model => model.Filtro.NomFornecedor)</td>
+                                    }
+                                    <td class="sorting border">@Html.DisplayFor(model => item.VlrVerba)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.DesObservacao)</td>
+
+                                </tr>
+                                CodGrupoSimilar = item.CodGrupoSimilar;
+                                codFilialEmpresa = item.CodFilialEmpresa;
+                            }
+
+                            if (cssItemGrupo == "weak")
+                            {
+                                cssItemGrupo = "strong";
+                            }
+                            else
+                            {
+                                cssItemGrupo = "weak";
+                            }
+                            <tr class="row-similar-item row-style-@cssItemGrupo" style="display:none;" data-similar-item="@string.Format("{0}{1}", item.CodGrupoSimilar.ToString(), item.CodFilialEmpresa.ToString())">
+                                <td class="border"></td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.CodGrupoSimilar)</td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.DtCadastroCarimbo)</td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.CodCarimbo)</td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.CodStatusCarimbo)</td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.CodDestino)</td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.CodObjetivo)</td>
+                                <td class="sorting border">Entidade     </td>
+                                @if (Model.Filtro.IndRelVisao == "N")
+                                {
+                                    <td class="sorting border">@Html.DisplayFor(model => model.Filtro.CodNegociacaoVerba)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => model.Filtro.NomNegociacaoVerba)</td>
+                                }
+                                else if (Model.Filtro.IndRelVisao == "M")
+                                {
+                                    <td class="sorting border">@Html.DisplayFor(model => model.Filtro.CodMercadoria)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => model.Filtro.NomMercadoria)</td>
+                                }
+                                else if (Model.Filtro.IndRelVisao == "F")
+                                {
+                                    <td class="sorting border">@Html.DisplayFor(model => model.Filtro.CodFornecedor)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => model.Filtro.NomFornecedor)</td>
+                                }
+                                <td class="sorting border">@Html.DisplayFor(model => item.VlrVerba)</td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.DesObservacao)</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            if (cssItem == "weak")
+                            {
+                                cssItem = "strong";
+                            }
+                            else
+                            {
+                                cssItem = "weak";
+                            }
+
+                            if (!grupoNaoSimilares)
+                            {
+                                <tr class="row-no-similar-group row-style-@cssGrupo">
+                                    <td class="border"><i class="fa fa-plus" style="cursor:pointer;" data-similar-group="no" data-similar-filial="no" onclick="jsExpandeSimilares(this)"></i></td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.CodGrupoSimilar)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.DtCadastroCarimbo)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.CodCarimbo)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.CodStatusCarimbo)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.CodDestino)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.CodObjetivo)</td>
+                                    <td class="sorting border">Entidade     </td>
+                                    @if (Model.Filtro.IndRelVisao == "N")
+                                    {
+                                        <td class="sorting border">@Html.DisplayFor(model => model.Filtro.CodNegociacaoVerba)</td>
+                                        <td class="sorting border">@Html.DisplayFor(model => model.Filtro.NomNegociacaoVerba)</td>
+                                    }
+                                    else if (Model.Filtro.IndRelVisao == "M")
+                                    {
+                                        <td class="sorting border">@Html.DisplayFor(model => model.Filtro.CodMercadoria)</td>
+                                        <td class="sorting border">@Html.DisplayFor(model => model.Filtro.NomMercadoria)</td>
+                                    }
+                                    else if (Model.Filtro.IndRelVisao == "F")
+                                    {
+                                        <td class="sorting border">@Html.DisplayFor(model => model.Filtro.CodFornecedor)</td>
+                                        <td class="sorting border">@Html.DisplayFor(model => model.Filtro.NomFornecedor)</td>
+                                    }
+                                    <td class="sorting border">@Html.DisplayFor(model => item.VlrVerba)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => item.DesObservacao)</td>
+
+                                </tr>
+                                grupoNaoSimilares = true;
+                            }
+
+                            <tr class="row-no-similar-item row-style-@cssItemGrupo" data-similar-item="no">
+                                <td class="border"></td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.CodGrupoSimilar)</td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.DtCadastroCarimbo)</td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.CodCarimbo)</td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.CodStatusCarimbo)</td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.CodDestino)</td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.CodObjetivo)</td>
+                                <td class="sorting border">Entidade     </td>
+                                @if (Model.Filtro.IndRelVisao == "N")
+                                {
+                                    <td class="sorting border">@Html.DisplayFor(model => model.Filtro.CodNegociacaoVerba)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => model.Filtro.NomNegociacaoVerba)</td>
+                                }
+                                else if (Model.Filtro.IndRelVisao == "M")
+                                {
+                                    <td class="sorting border">@Html.DisplayFor(model => model.Filtro.CodMercadoria)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => model.Filtro.NomMercadoria)</td>
+                                }
+                                else if (Model.Filtro.IndRelVisao == "F")
+                                {
+                                    <td class="sorting border">@Html.DisplayFor(model => model.Filtro.CodFornecedor)</td>
+                                    <td class="sorting border">@Html.DisplayFor(model => model.Filtro.NomFornecedor)</td>
+                                }
+                                <td class="sorting border">@Html.DisplayFor(model => item.VlrVerba)</td>
+                                <td class="sorting border">@Html.DisplayFor(model => item.DesObservacao)</td>
+
+                            </tr>
+                        }
+                    }
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="row bg-light">
+
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+</div>
+
+<style>
+
+    .row-similar-group.row-style-strong {
+        background-color: #B0E0E6;
+    }
+
+    .row-similar-group.row-style-weak {
+        background-color: paleturquoise;
+    }
+
+
+    .row-similar-item.row-style-strong {
+        background-color: lightcyan;
+    }
+
+    .row-similar-item.row-style-weak {
+        background-color: #F0FFFF;
+    }
+
+    .row-no-similar-item.row-style-strong {
+        background-color: #FFFACD;
+    }
+
+    .row-no-similar-item.row-style-weak {
+        background-color: #EEE8AA;
+    }
+
+    .row-no-similar-group {
+        background-color: #F0E68C;
+    }
+
+    #tbodyCarimboItem td {
+        white-space: nowrap;
+    }
+</style>

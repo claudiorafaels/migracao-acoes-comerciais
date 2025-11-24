@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:i1="http://tempuri.org/DatasetAcordoACancelarEmFluxoCancelamentoAcordo.xsd" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:i0="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd" xmlns:tns="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd" location="http://localhost/Martins.Web.Services.AcoesComerciais/FluxoDeCancelamentoDeAcordos.asmx?schema=DatasetFluxoCancelamentoAcordo" />
+  <wsdl:import namespace="http://tempuri.org/DatasetAcordoACancelarEmFluxoCancelamentoAcordo.xsd" location="http://localhost/Martins.Web.Services.AcoesComerciais/FluxoDeCancelamentoDeAcordos.asmx?schema=DatasetAcordoACancelarEmFluxoCancelamentoAcordo" />
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais">
+      <s:import namespace="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd" />
+      <s:import namespace="http://tempuri.org/DatasetAcordoACancelarEmFluxoCancelamentoAcordo.xsd" />
+      <s:element name="ObterFluxoCancelamentoAcordoPorChave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODFRN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="NUMPEDCNCACOCMC" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterFluxoCancelamentoAcordoPorChaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterFluxoCancelamentoAcordoPorChaveResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterFluxoCancelamentoAcordoPorAtributos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODFRN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODSTAAPV" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="NUMPEDCNCACOCMC" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="NUMREQCNCACOCMC" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterFluxoCancelamentoAcordoPorAtributosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterFluxoCancelamentoAcordoPorAtributosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizarFluxoCancelamentoAcordo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DatasetFluxoCancelamentoAcordo">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizarFluxoCancelamentoAcordoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AtualizarFluxoCancelamentoAcordoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODEMP" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODFILEMP" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODPMS" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATNGCPMS" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATPRVRCBPMS" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="NUMPEDCNCACOCMC" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="TIPDSNDSCBNF" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="TIPFRMDSCBNF" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChaveResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODEMP" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODFILEMP" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODPMS" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATNGCPMS" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATPRVRCBPMS" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="NUMPEDCNCACOCMC" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="TIPDSNDSCBNF" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="TIPFRMDSCBNF" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizarAcordoACancelarEmFluxoCancelamentoAcordo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DatasetFluxoCancelamentoAcordo">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizarAcordoACancelarEmFluxoCancelamentoAcordoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AtualizarAcordoACancelarEmFluxoCancelamentoAcordoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NUMPEDCNCACOCMC" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODFNC" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterNovaChaveFluxoCancelamento">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObterNovaChaveFluxoCancelamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObterNovaChaveFluxoCancelamentoResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterAcordosParaCancelamentoPorFornecedor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODFRN" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterAcordosParaCancelamentoPorFornecedorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterAcordosParaCancelamentoPorFornecedorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetAcordoACancelarEmFluxoCancelamentoAcordo.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NUMPEDCNCACOCMC" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetAcordoACancelarEmFluxoCancelamentoAcordo.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IniciarFluxoCancelamentoAcordo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NUMPEDCNCACOCMC" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODFRN" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IniciarFluxoCancelamentoAcordoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IniciarFluxoCancelamentoAcordoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterFluxoCancelamentoAcordoPesquisa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODFRN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODSTAAPV" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="NUMPEDCNCACOCMC" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="NUMREQCNCACOCMC" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterFluxoCancelamentoAcordoPesquisaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterFluxoCancelamentoAcordoPesquisaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetFluxoCancelamentoAcordo.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReprovarFluxoCancelamentoAcordo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NUMPEDCNCACOCMC" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODFRN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODFNC" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESOBSAPV" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReprovarFluxoCancelamentoAcordoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReprovarFluxoCancelamentoAcordoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AprovarFluxoCancelamentoAcordo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NUMPEDCNCACOCMC" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODFNC" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODFRN" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DESOBSAPV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NOMACSUSRSIS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AprovarFluxoCancelamentoAcordoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AprovarFluxoCancelamentoAcordoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClonarFluxoCancelamentoAcordoFornecedor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NUMPEDCNCACOCMC" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODFRN" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClonarFluxoCancelamentoAcordoFornecedorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ClonarFluxoCancelamentoAcordoFornecedorResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObterFluxoCancelamentoAcordoPorChaveSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterFluxoCancelamentoAcordoPorChave" />
+  </wsdl:message>
+  <wsdl:message name="ObterFluxoCancelamentoAcordoPorChaveSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterFluxoCancelamentoAcordoPorChaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterFluxoCancelamentoAcordoPorAtributosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterFluxoCancelamentoAcordoPorAtributos" />
+  </wsdl:message>
+  <wsdl:message name="ObterFluxoCancelamentoAcordoPorAtributosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterFluxoCancelamentoAcordoPorAtributosResponse" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarFluxoCancelamentoAcordoSoapIn">
+    <wsdl:part name="parameters" element="tns:AtualizarFluxoCancelamentoAcordo" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarFluxoCancelamentoAcordoSoapOut">
+    <wsdl:part name="parameters" element="tns:AtualizarFluxoCancelamentoAcordoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChaveSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChave" />
+  </wsdl:message>
+  <wsdl:message name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChaveSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributos" />
+  </wsdl:message>
+  <wsdl:message name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributosResponse" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarAcordoACancelarEmFluxoCancelamentoAcordoSoapIn">
+    <wsdl:part name="parameters" element="tns:AtualizarAcordoACancelarEmFluxoCancelamentoAcordo" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarAcordoACancelarEmFluxoCancelamentoAcordoSoapOut">
+    <wsdl:part name="parameters" element="tns:AtualizarAcordoACancelarEmFluxoCancelamentoAcordoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordos" />
+  </wsdl:message>
+  <wsdl:message name="ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterNovaChaveFluxoCancelamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterNovaChaveFluxoCancelamento" />
+  </wsdl:message>
+  <wsdl:message name="ObterNovaChaveFluxoCancelamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterNovaChaveFluxoCancelamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterAcordosParaCancelamentoPorFornecedorSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterAcordosParaCancelamentoPorFornecedor" />
+  </wsdl:message>
+  <wsdl:message name="ObterAcordosParaCancelamentoPorFornecedorSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterAcordosParaCancelamentoPorFornecedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMCSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMC" />
+  </wsdl:message>
+  <wsdl:message name="ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMCSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IniciarFluxoCancelamentoAcordoSoapIn">
+    <wsdl:part name="parameters" element="tns:IniciarFluxoCancelamentoAcordo" />
+  </wsdl:message>
+  <wsdl:message name="IniciarFluxoCancelamentoAcordoSoapOut">
+    <wsdl:part name="parameters" element="tns:IniciarFluxoCancelamentoAcordoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterFluxoCancelamentoAcordoPesquisaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterFluxoCancelamentoAcordoPesquisa" />
+  </wsdl:message>
+  <wsdl:message name="ObterFluxoCancelamentoAcordoPesquisaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterFluxoCancelamentoAcordoPesquisaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReprovarFluxoCancelamentoAcordoSoapIn">
+    <wsdl:part name="parameters" element="tns:ReprovarFluxoCancelamentoAcordo" />
+  </wsdl:message>
+  <wsdl:message name="ReprovarFluxoCancelamentoAcordoSoapOut">
+    <wsdl:part name="parameters" element="tns:ReprovarFluxoCancelamentoAcordoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AprovarFluxoCancelamentoAcordoSoapIn">
+    <wsdl:part name="parameters" element="tns:AprovarFluxoCancelamentoAcordo" />
+  </wsdl:message>
+  <wsdl:message name="AprovarFluxoCancelamentoAcordoSoapOut">
+    <wsdl:part name="parameters" element="tns:AprovarFluxoCancelamentoAcordoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClonarFluxoCancelamentoAcordoFornecedorSoapIn">
+    <wsdl:part name="parameters" element="tns:ClonarFluxoCancelamentoAcordoFornecedor" />
+  </wsdl:message>
+  <wsdl:message name="ClonarFluxoCancelamentoAcordoFornecedorSoapOut">
+    <wsdl:part name="parameters" element="tns:ClonarFluxoCancelamentoAcordoFornecedorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FluxoDeCancelamentoDeAcordosSoap">
+    <wsdl:operation name="ObterFluxoCancelamentoAcordoPorChave">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna um registro com base em sua chave primária. Entidade principal:T0154038</documentation>
+      <wsdl:input message="tns:ObterFluxoCancelamentoAcordoPorChaveSoapIn" />
+      <wsdl:output message="tns:ObterFluxoCancelamentoAcordoPorChaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterFluxoCancelamentoAcordoPorAtributos">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna registro(s) com base em atributos (não necessariamente chave primária). Entidade principal:T0154038</documentation>
+      <wsdl:input message="tns:ObterFluxoCancelamentoAcordoPorAtributosSoapIn" />
+      <wsdl:output message="tns:ObterFluxoCancelamentoAcordoPorAtributosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarFluxoCancelamentoAcordo">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Atualização dos dados. Entidade principalT0154038</documentation>
+      <wsdl:input message="tns:AtualizarFluxoCancelamentoAcordoSoapIn" />
+      <wsdl:output message="tns:AtualizarFluxoCancelamentoAcordoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChave">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna um registro com base em sua chave primária. Entidade principal:T0154021</documentation>
+      <wsdl:input message="tns:ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChaveSoapIn" />
+      <wsdl:output message="tns:ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributos">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna registro(s) com base em atributos (não necessariamente chave primária). Entidade principal:T0154021</documentation>
+      <wsdl:input message="tns:ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributosSoapIn" />
+      <wsdl:output message="tns:ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarAcordoACancelarEmFluxoCancelamentoAcordo">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Atualização dos dados. Entidade principalT0154021</documentation>
+      <wsdl:input message="tns:AtualizarAcordoACancelarEmFluxoCancelamentoAcordoSoapIn" />
+      <wsdl:output message="tns:AtualizarAcordoACancelarEmFluxoCancelamentoAcordoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordos">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obter as aprovações pendentes de um usuário</documentation>
+      <wsdl:input message="tns:ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordosSoapIn" />
+      <wsdl:output message="tns:ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterNovaChaveFluxoCancelamento">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obter nova chave para a transferencia verba</documentation>
+      <wsdl:input message="tns:ObterNovaChaveFluxoCancelamentoSoapIn" />
+      <wsdl:output message="tns:ObterNovaChaveFluxoCancelamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterAcordosParaCancelamentoPorFornecedor">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obter saldo disponível do fornecedor</documentation>
+      <wsdl:input message="tns:ObterAcordosParaCancelamentoPorFornecedorSoapIn" />
+      <wsdl:output message="tns:ObterAcordosParaCancelamentoPorFornecedorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMC">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obter saldo disponível do fornecedor</documentation>
+      <wsdl:input message="tns:ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMCSoapIn" />
+      <wsdl:output message="tns:ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarFluxoCancelamentoAcordo">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Iniciar Fluxo Cancelamento Acordo</documentation>
+      <wsdl:input message="tns:IniciarFluxoCancelamentoAcordoSoapIn" />
+      <wsdl:output message="tns:IniciarFluxoCancelamentoAcordoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterFluxoCancelamentoAcordoPesquisa">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna registro(s) com base em atributos (não necessariamente chave primária). Entidade principal:T0154038Pesquisa</documentation>
+      <wsdl:input message="tns:ObterFluxoCancelamentoAcordoPesquisaSoapIn" />
+      <wsdl:output message="tns:ObterFluxoCancelamentoAcordoPesquisaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReprovarFluxoCancelamentoAcordo">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Reprovar Fluxo Cancelamento de Acordo</documentation>
+      <wsdl:input message="tns:ReprovarFluxoCancelamentoAcordoSoapIn" />
+      <wsdl:output message="tns:ReprovarFluxoCancelamentoAcordoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AprovarFluxoCancelamentoAcordo">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Aprovar  Fluxo Cancelamento de Acordo</documentation>
+      <wsdl:input message="tns:AprovarFluxoCancelamentoAcordoSoapIn" />
+      <wsdl:output message="tns:AprovarFluxoCancelamentoAcordoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClonarFluxoCancelamentoAcordoFornecedor">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Clonar Fluxo Cancelamento de Acordo</documentation>
+      <wsdl:input message="tns:ClonarFluxoCancelamentoAcordoFornecedorSoapIn" />
+      <wsdl:output message="tns:ClonarFluxoCancelamentoAcordoFornecedorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FluxoDeCancelamentoDeAcordosSoap" type="tns:FluxoDeCancelamentoDeAcordosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="ObterFluxoCancelamentoAcordoPorChave">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/ObterFluxoCancelamentoAcordoPorChave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterFluxoCancelamentoAcordoPorAtributos">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/ObterFluxoCancelamentoAcordoPorAtributos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarFluxoCancelamentoAcordo">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/AtualizarFluxoCancelamentoAcordo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChave">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/ObterAcordoACancelarEmFluxoCancelamentoAcordoPorChave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributos">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/ObterAcordoACancelarEmFluxoCancelamentoAcordoPorAtributos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarAcordoACancelarEmFluxoCancelamentoAcordo">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/AtualizarAcordoACancelarEmFluxoCancelamentoAcordo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordos">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/ObterMinhasAprovavoesEmFluxoDeCancelamentoDeAcordos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterNovaChaveFluxoCancelamento">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/ObterNovaChaveFluxoCancelamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterAcordosParaCancelamentoPorFornecedor">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/ObterAcordosParaCancelamentoPorFornecedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMC">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/ObterAcordosParaCancelamentoPorNUMPEDCNCACOCMC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarFluxoCancelamentoAcordo">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/IniciarFluxoCancelamentoAcordo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterFluxoCancelamentoAcordoPesquisa">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/ObterFluxoCancelamentoAcordoPesquisa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReprovarFluxoCancelamentoAcordo">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/ReprovarFluxoCancelamentoAcordo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AprovarFluxoCancelamentoAcordo">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/AprovarFluxoCancelamentoAcordo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClonarFluxoCancelamentoAcordoFornecedor">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.AcoesComerciais/AcoesComerciais/ClonarFluxoCancelamentoAcordoFornecedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FluxoDeCancelamentoDeAcordos">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="FluxoDeCancelamentoDeAcordosSoap" binding="tns:FluxoDeCancelamentoDeAcordosSoap">
+      <soap:address location="http://localhost/Martins.Web.Services.AcoesComerciais/FluxoDeCancelamentoDeAcordos.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

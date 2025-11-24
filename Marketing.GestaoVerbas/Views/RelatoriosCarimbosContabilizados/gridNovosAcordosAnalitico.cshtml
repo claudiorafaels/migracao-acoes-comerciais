@@ -1,0 +1,91 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel.RelatoriosCarimbosContabilizados
+@model  GridSetings<NovosAcordosAnalitico>
+
+<div class="row py-1">
+    <div class="mx-auto">
+        <ul class="nav nav-pills" style="font-size:25px;">
+            <li class="nav-item">
+                <button type="button" onclick="ModeFiltro()" title="Voltar" class="nav-link" style="background-color:transparent;border:none;"><i class="fa fa-arrow-left"></i>&nbsp;</button>
+            </li>
+
+            <li class="nav-item">
+                <button type="button" title="Exportar" class="nav-link" style="background-color:transparent;border:none;" onclick="jsExportarCSV()"> <i class="fa fa-download"></i>&nbsp;</button>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="dropdown-divider" style="margin-top:-12px;"></div>
+<br />
+<div class="card bg-primary">
+
+    <div class="card-header text-white">
+        <h5>Relatório Novos Acordos - Analítico</h5>
+    </div>
+
+    <div id="tbGridPaginavel" class="card-body bg-secondary grid-paginavel">
+        <div class="row">
+            <div class="table-responsive">
+                <div class="dataTables_wrapper">
+                    <table class="table table-hover table-bordered table-striped dataTable">
+                        <thead class="bg-secondary">
+                            <tr role="row">
+                                <th class="sorting">
+                                    <button type="submit" sort-expression="CodFornecedor">
+                                        @Html.DisplayNameFor(model => model.Filtro.CodFornecedor)
+                                    </button>
+                                </th>
+                                <th class="sorting">
+                                    <button type="submit" sort-expression="NomFornecedor">
+                                        @Html.DisplayNameFor(model => model.Filtro.NomFornecedor)
+                                    </button>
+                                </th>
+                                <th class="sorting">
+                                    <button type="submit" sort-expression="CodPromessa">
+                                        @Html.DisplayNameFor(model => model.Filtro.CodPromessa)
+                                    </button>
+                                </th>
+                                <th class="sorting">
+                                    <button type="submit" sort-expression="DtNegociacaoAcordo">
+                                        @Html.DisplayNameFor(model => model.Filtro.DtNegociacaoAcordo)
+                                    </button>
+                                </th>
+                                <th class="sorting">
+                                    <button type="submit" sort-expression="VlrAcordo">
+                                        @Html.DisplayNameFor(model => model.Filtro.VlrAcordo)
+                                    </button>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="bg-light border" id="tbodyRelatorioItem">
+                            @foreach (NovosAcordosAnalitico item in Model.Result)
+                            {
+                                <tr class="row-similar-item">
+                                    <td>@Html.DisplayFor(model => item.CodFornecedor)</td>
+                                    <td>@Html.DisplayFor(model => item.NomFornecedor)</td>
+                                    <td>@Html.DisplayFor(model => item.CodPromessa)</td>
+                                    <td>@Html.DisplayFor(model => item.DtNegociacaoAcordo)</td>
+                                    <td>@Html.DisplayFor(model => item.VlrAcordo)</td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot class="bg-secondary">
+                            <tr>
+                                <th>Total: </th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>
+                                    <span>@((Model.AggregateSummary["sumVlrAcordo"] as double?).GetValueOrDefault().ToString("c"))</span>
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            @Html.HiddenFor(model => model.Setings.TotalRows, new { @id = "hdfRelatorioTotalRows" })
+            @Html.Partial(Constantes.VIEW_PAGINACAO, Model.Setings, new ViewDataDictionary { TemplateInfo = new TemplateInfo { HtmlFieldPrefix = "Setings" } })
+        </div>
+    </div>
+</div>

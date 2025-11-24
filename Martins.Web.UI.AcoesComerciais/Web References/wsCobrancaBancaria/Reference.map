@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost/Martins.Web.Services.Administracao.CobrancaBancaria/CobrancaBancaria.asmx?disco" filename="CobrancaBancaria.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost/Martins.Web.Services.Administracao.CobrancaBancaria/CobrancaBancaria.asmx?wsdl" filename="CobrancaBancaria.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost/Martins.Web.Services.Administracao.CobrancaBancaria/CobrancaBancaria.asmx?schema=DatasetAgencia" filename="DatasetAgencia.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost/Martins.Web.Services.Administracao.CobrancaBancaria/CobrancaBancaria.asmx?schema=DatasetBanco" filename="DatasetBanco.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

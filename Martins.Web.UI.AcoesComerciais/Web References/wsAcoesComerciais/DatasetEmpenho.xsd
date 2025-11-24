@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetEmpenho.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetEmpenho.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetEmpenho.xsd" id="DatasetEmpenho" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetEmpenho">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0151799">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPALCVBAFRN" type="xs:decimal" />
+              <xs:element name="DESALCVBAFRN" type="xs:string" />
+              <xs:element name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element name="INDUTZVBAMRGCRB" type="xs:decimal" />
+              <xs:element name="INDUTZVBAMKT" type="xs:decimal" />
+              <xs:element name="INDUTZVBARST" type="xs:decimal" />
+              <xs:element name="INDUTZVBACNTCRR" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0109059">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element name="DESDSNDSCBNF" type="xs:string" />
+              <xs:element name="FLGCALCST" type="xs:string" />
+              <xs:element name="FLGCNTCRRFRN" type="xs:string" />
+              <xs:element name="FLGACOMCD" type="xs:string" />
+              <xs:element name="FLGUTZLCREMP" type="xs:string" />
+              <xs:element name="FLGCTBDSNDSC" type="xs:string" />
+              <xs:element name="IDTFLUACOCMC" type="xs:string" />
+              <xs:element name="CODCCP" type="xs:string" />
+              <xs:element name="CODCNTCTBGLM" type="xs:string" />
+              <xs:element name="CODCENCST" type="xs:string" />
+              <xs:element name="INDFLUCNCPEDCMP" type="xs:decimal" />
+              <xs:element name="INDTRNDSNDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFLUAPVACOCMC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPALCVBAFRN" type="xs:decimal" />
+              <xs:element name="FLGARDEMSCON" type="xs:string" />
+              <xs:element minOccurs="0" name="INDTIPDSNDSPFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDTIPDSNRCTCSTMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDDSNVBAMCO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPOBJDSNVBA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATLIMVGR" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0109059Pesquisa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="TIPDSNDSCBNF" type="xs:string" />
+              <xs:element minOccurs="0" name="DESDSNDSCBNF" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetEmpenhoKey1">
+      <xs:selector xpath=".//mstns:T0151799" />
+      <xs:field xpath="mstns:TIPALCVBAFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetEmpenhoKey2">
+      <xs:selector xpath=".//mstns:T0109059" />
+      <xs:field xpath="mstns:TIPDSNDSCBNF" />
+    </xs:unique>
+    <xs:keyref name="T0151799T0109059" refer="mstns:DatasetEmpenhoKey1">
+      <xs:selector xpath=".//mstns:T0109059" />
+      <xs:field xpath="mstns:TIPALCVBAFRN" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

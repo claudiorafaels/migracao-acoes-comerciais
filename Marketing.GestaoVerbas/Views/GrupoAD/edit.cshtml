@@ -1,0 +1,80 @@
+﻿@using Marketing.GestaoVerbas.ViewModel
+@model GrupoADViewModel
+
+<div id="divEditGrupoAD">
+
+    <div class="row py-1">
+        <div class="mx-auto">
+            <ul class="nav nav-pills" style="font-size:25px;">
+
+
+                <li class="nav-item">
+                    <a title="Voltar" style="cursor: pointer;" class="nav-link gray bg-transparent" onclick="ModeSearch()">
+                        <i class="fa fa-arrow-left"></i>&nbsp;
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a title="Salvar" style="cursor: pointer;border:none;" class="nav-link gray bg-transparent" id="btnSalvarNegociacaoVerba" onclick="jsSalvarGrupoAD(@Model.CodGrupoAcesso)"> <i class="fa fa-save"></i>&nbsp;</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="dropdown-divider" style="margin-top:-12px;"></div>
+    <br />
+
+    @Html.HiddenFor(model => model.CodGrupoAcesso, new { id = "hdfEditGrupoADCodGrupoAcesso" })
+
+    <div class="card bg-primary" id="formEdicao">
+
+        <div class="card-header text-white">
+            @if ((Model.CodGrupoAcesso == null))
+            {
+                <h5>Cadastrar Grupo AD</h5>
+            }
+            else
+            {
+                <h5>Editar Grupo AD</h5>
+            }
+        </div>
+
+        <div class="card-body bg-light">
+            <div class="row">
+                <br />
+                <div class="col-md-6">
+                    <label><b>Cód. Grupo AD:</b></label>
+                    <label>@Html.DisplayFor(model => model.CodGrupoAcesso)</label>
+                    @*@Html.ValidationMessageFor(model => model.CodGrupoAcesso, "", new { @class = "text-danger" })
+                        @Html.EditorFor(model => model.CodGrupoAcesso, new { htmlAttributes = new { @class = "form-control", id = "txtEditGrupoAdCodGrupoAD", data_val = false, MaxLength = "20", Required = false } })*@
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label><b>Nome Grupo: </b></label>
+                    @*<label>@Html.DisplayFor(model => model.NomGrupoAcesso)</label>*@
+                    @Html.ValidationMessageFor(model => model.NomGrupoAcesso, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.NomGrupoAcesso, new { htmlAttributes = new { @class = "form-control", id = "txtEditGrupoAdNomGrupo", data_val = false, MaxLength = "40" } })
+                </div>
+                <div class="col-md-6">
+                    <label id="lblStatus"><b>@Html.DisplayNameFor(model => model.DesGrupoAcesso) </b> </label>
+                    @*<label>@Html.DisplayFor(model => model.DesGrupoAcesso)</label>*@
+                    @Html.ValidationMessageFor(model => model.DesGrupoAcesso, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.DesGrupoAcesso, new { htmlAttributes = new { @class = "form-control", id = "txtEditGrupoAdDesGrupoAcesso", data_val = false, MaxLength = "40" } })
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- Script -->
+@section Scripts {
+    @Scripts.Render("~/Scripts/pagina/grupoad.js")
+}

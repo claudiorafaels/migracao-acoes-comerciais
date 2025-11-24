@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetFormaPagamento.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetFormaPagamento.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetFormaPagamento.xsd" id="DatasetFormaPagamento" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetFormaPagamento">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0113552">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPFRMDSCBNF" type="xs:decimal" />
+              <xs:element name="DESFRMDSCBNF" type="xs:string" />
+              <xs:element name="FLGCFANOTFSC" type="xs:string" />
+              <xs:element name="FLGPTCVLRTIT" type="xs:string" />
+              <xs:element minOccurs="0" name="PERDSCIMD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERDSCMNS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QDEMNMDIABLQFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMORDAPLDSC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDDSCICMICT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDDSCGRCACOCMC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDDSCDVLMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDTIPDSNRCTCSTMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDUTZPEDCMP" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetFormaPagamentoKey1">
+      <xs:selector xpath=".//mstns:T0113552" />
+      <xs:field xpath="mstns:TIPFRMDSCBNF" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

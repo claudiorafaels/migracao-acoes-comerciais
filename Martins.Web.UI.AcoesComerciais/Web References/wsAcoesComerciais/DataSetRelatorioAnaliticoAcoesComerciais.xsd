@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DataSetRelatorioAnaliticoAcoesComerciais.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DataSetRelatorioAnaliticoAcoesComerciais.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DataSetRelatorioAnaliticoAcoesComerciais.xsd" id="DataSetRelatorioAnaliticoAcoesComerciais" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DataSetRelatorioAnaliticoAcoesComerciais">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TbAnaliticoAcoesComerciais">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:int" />
+              <xs:element name="DATINIPODVGRCTTFRN" type="xs:string" />
+              <xs:element name="DATVNCCTTFRN" type="xs:string" />
+              <xs:element name="CODFRN" type="xs:int" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

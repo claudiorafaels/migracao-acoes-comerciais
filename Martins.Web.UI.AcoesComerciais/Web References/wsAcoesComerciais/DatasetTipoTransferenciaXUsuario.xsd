@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetTipoTransferenciaXUsuario.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetTipoTransferenciaXUsuario.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetTipoTransferenciaXUsuario.xsd" id="DatasetTipoTransferenciaXUsuario" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetTipoTransferenciaXUsuario">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0135092">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODTIPTRNVLRACOCMC" type="xs:decimal" />
+              <xs:element name="NOMACSUSRSIS" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0135033">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODTIPTRNVLRACOCMC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESTIPTRNVLRACOCMC" type="xs:string" />
+              <xs:element name="TIPDSNDSCBNF" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoTransferenciaXUsuarioKey1">
+      <xs:selector xpath=".//mstns:T0135092" />
+      <xs:field xpath="mstns:CODTIPTRNVLRACOCMC" />
+      <xs:field xpath="mstns:NOMACSUSRSIS" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetTipoTransferenciaXUsuarioKey2">
+      <xs:selector xpath=".//mstns:T0135033" />
+      <xs:field xpath="mstns:CODTIPTRNVLRACOCMC" />
+    </xs:unique>
+    <xs:keyref name="T0135033T0135092" refer="mstns:DatasetTipoTransferenciaXUsuarioKey2">
+      <xs:selector xpath=".//mstns:T0135092" />
+      <xs:field xpath="mstns:CODTIPTRNVLRACOCMC" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

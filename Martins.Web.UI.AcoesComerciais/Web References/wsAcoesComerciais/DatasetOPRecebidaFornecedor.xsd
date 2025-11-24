@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetOPRecebidaFornecedor.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetOPRecebidaFornecedor.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetOPRecebidaFornecedor.xsd" id="DatasetOPRecebidaFornecedor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetOPRecebidaFornecedor">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0118880">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMORDPGTFRN" type="xs:decimal" />
+              <xs:element name="CODBCO" type="xs:decimal" />
+              <xs:element name="CODAGE" type="xs:decimal" />
+              <xs:element name="DATRCBORDPGT" type="xs:dateTime" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="VLRORDPGT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATULTPMSORD" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATRCBCREORD" type="xs:dateTime" />
+              <xs:element name="NOMACSUSRSIS" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPORIORDPGTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPOPEBXAORDPGTFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMORDPGTORIFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATTRNORDPGTFRN" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DESHSTDPSIDTFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMACSUSRBXAORDPGT" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0100426">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" default="" name="NOMFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TbMaximoDeCodigoOrdemPagamentoFornecedor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NumOrdPgtFrn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetOPRecebidaFornecedorKey1">
+      <xs:selector xpath=".//mstns:T0118880" />
+      <xs:field xpath="mstns:NUMORDPGTFRN" />
+      <xs:field xpath="mstns:CODBCO" />
+      <xs:field xpath="mstns:CODAGE" />
+      <xs:field xpath="mstns:DATRCBORDPGT" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetOPRecebidaFornecedorKey2">
+      <xs:selector xpath=".//mstns:T0100426" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:unique>
+    <xs:keyref name="T0100426T0118880" refer="mstns:DatasetOPRecebidaFornecedorKey2">
+      <xs:selector xpath=".//mstns:T0118880" />
+      <xs:field xpath="mstns:CODFRN" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetDuplicatasDisponiveis.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetDuplicatasDisponiveis.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetDuplicatasDisponiveis.xsd" id="DatasetDuplicatasDisponiveis" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetDuplicatasDisponiveis">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tbDuplicatasDisponiveis">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:int" />
+              <xs:element name="CODFILEMP" type="xs:int" />
+              <xs:element name="CODEMPFRN" type="xs:int" />
+              <xs:element name="NUMNOTFSCFRNCTB" type="xs:int" />
+              <xs:element name="CODSEQPCLNOTFSC" type="xs:string" />
+              <xs:element name="NUMSEQTITPGT" type="xs:int" />
+              <xs:element minOccurs="0" name="DATPGTPCLNOTFSC" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="VLRDSP" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

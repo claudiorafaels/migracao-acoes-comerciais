@@ -1,0 +1,308 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel
+@model  GridSetings<NegociacaoVerbaViewModel>
+
+@{
+    ViewBag.Title = "Negociação";
+}
+
+
+<div class="container-fluid">
+
+
+    @using (Ajax.BeginForm("Pesquisar", "NegociacaoVerba", Marketing.GestaoVerbas.Core.Ajax.Constantes.AJAX_PESQUISA_POST_DEFAULT(), new { @id = "formPesquisa", @class = "form-pagination" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="row py-1">
+            <div class="mx-auto">
+                <ul class="nav nav-pills" style="font-size:25px;">
+                    @if (Util.VerificaMenuUsuario("10"))
+                    {
+                        <li class="nav-item">
+                            <a title="Adicionar Negociação" onclick="jsNovaNegociacao();" class="nav-link gray"> <i class="fa fa-plus"></i>&nbsp;</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="dropdown-divider" style="margin-top:-12px;"></div>
+        <br />
+
+        <div class="card bg-primary divFiltrosPesquisa">
+            <div class="card-header text-white">
+                <h5>Filtros</h5>
+            </div>
+            <div class="card-body bg-light">
+                <div class="row">
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.CodNegociacaoVerba)
+                        @Html.EditorFor(model => model.Filtro.CodNegociacaoVerba, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                    </div>
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.DesNegociacaoVerba)
+                        @Html.EditorFor(model => model.Filtro.DesNegociacaoVerba, new { htmlAttributes = new { @class = "form-control", data_val = false } })
+                    </div>
+                    <div class="col-md-4">
+
+                        @{
+
+                            SelectListItem[] statusNegociacao = new SelectListItem[5];
+                            statusNegociacao[0] = new SelectListItem { Value = "", Text = "Selecione..." };
+                            statusNegociacao[1] = new SelectListItem { Value = "1", Text = "Nova" };
+                            statusNegociacao[2] = new SelectListItem { Value = "2", Text = "Aguardando Aprovação" };
+                            statusNegociacao[3] = new SelectListItem { Value = "3", Text = "Aprovado" };
+                            statusNegociacao[4] = new SelectListItem { Value = "4", Text = "Reprovado" };
+                        }
+
+
+                        @Html.LabelFor(model => model.Filtro.CodStatusNegociacaoVenda)
+                        @Html.DropDownListFor(model => model.Filtro.CodStatusNegociacaoVenda, statusNegociacao, new { @class = "form-control", data_val = false })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.NomFilialVerba)
+                        @Html.DropDownListFor(model => model.Filtro.CodFilialVerba, new SelectList(ViewBag.Filiais, "CodFilialEmpresa", "CodNomFilialEmpresa"), "Todas as Filiais...", new { @class = "form-control" })
+
+                        @*<div class="row">
+                                <div class="col-4">
+                                    @Html.EditorFor(model => model.Filtro.CodFilialVerba, new { htmlAttributes = new { id = "txtFiltroNegociacaoVerbaCodFilialVerba", @class = "form-control", data_val = false } })
+                                </div>
+                                <div class="col-8">
+                                    <div class="input-group">
+                                        @Html.EditorFor(model => model.Filtro.NomFilialVerba, new { htmlAttributes = new { id = "txtFiltroNegociacaoVerbaNomFilialVerba", @class = "form-control", data_val = false } })
+                                        <button type="button" class="input-group-addon" title="Pesquisar Filial" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" id="btnOpenModal" onclick="jsOpenModalFilialEmpresaFiltro()"><i class="fa fa-search center"></i></button>
+                                    </div>
+                                </div>
+                            </div>*@
+                    </div>
+
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.NomComprador)
+                        @Html.DropDownListFor(model => model.Filtro.CodComprador, new SelectList(ViewBag.Compradores, "CodComprador", "NomComprador"), "Selecione...", new { @class = "form-control" })
+                    </div>
+
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.NomAutor)
+                        <div class="row">
+                            <div class="col-4">
+                                @Html.EditorFor(model => model.Filtro.CodAutor, new { htmlAttributes = new { id = "txtFiltroNegociacaoVerbaCodAutor", @class = "form-control", data_val = false, onchange = "findFuncionarioCodFuncionarioChange('txtFiltroNegociacaoVerbaCodAutor', 'txtFiltroNegociacaoVerbaNomAutor' )" } })
+                            </div>
+                            <div class="col-8">
+                                <div class="input-group">
+                                    @Html.EditorFor(model => model.Filtro.NomAutor, new { htmlAttributes = new { id = "txtFiltroNegociacaoVerbaNomAutor", @class = "form-control", data_val = false } })
+
+                                    <button type="button" class="input-group-addon" title="Pesquisar Funcionário" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" id="btnOpenModal" onclick="jsOpenModalAutorFiltro()"><i class="fa fa-search center"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.DtCadastroNegociacaoInicio)
+                        @Html.EditorFor(model => model.Filtro.DtCadastroNegociacaoInicio, new { htmlAttributes = new { @class = "form-control date-picker", @autocomplete = "off", data_val = false } })
+                    </div>
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.DtCadastroNegociacaoFim)
+                        @Html.EditorFor(model => model.Filtro.DtCadastroNegociacaoFim, new { htmlAttributes = new { @class = "form-control date-picker", @autocomplete = "off", data_val = false } })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        @Html.LabelFor(model => model.Filtro.CodFornecedor)
+                        @Html.EditorFor(model => model.Filtro.CodFornecedor, new { htmlAttributes = new { id = "txtEditNegociacaoVerbaCodFornecedor", @class = "form-control", onchange = "findFornecedorCodFornecedorChange(txtEditNegociacaoVerbaCodFornecedor, txtEditNegociacaoVerbaNomFornecedor)", data_val = false } })
+                    </div>
+                    <div class="col-md-3">
+                        @Html.LabelFor(model => model.Filtro.NomFornecedor)
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.Filtro.NomFornecedor, new { htmlAttributes = new { id = "txtEditNegociacaoVerbaNomFornecedor", @class = "form-control", data_val = false } })
+                            <button type="button" class="input-group-addon" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" onclick="jsOpenModalFornecedorEditar()"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.LabelFor(model => model.Filtro.CodCelula)
+                        @Html.DropDownListFor(model => model.Filtro.CodCelula, new SelectList(ViewBag.Celulas, "CodCelula", "NomCelula"), "Selecione...", new { @class = "form-control", id = "drpEditCarimboCodCelula" })
+                    </div>
+                    <div class="col-md-4">
+                        <br />
+                        <div class="pull-right">
+                            <button type="submit" id="btnPesquisar" value="" class="btn" style="cursor: pointer;background-color: #196dab;"><i class="fa fa-search"></i> Pesquisar</button>
+                            <button type="button" class="btn" style="cursor: pointer;background-color: #196dab;" title="Limpar campos de filtro" onclick="jsLimparFiltrosPesquisa()"><i class="fa fa-eraser"></i> Limpar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="card bg-primary">
+            <div class="card-header text-white">
+                <h5>Resultados</h5>
+            </div>
+            <div class="card-body bg-secondary grid-paginavel">
+                <div class="row">
+                    <div class="table-responsive">
+                        <div class="dataTables_wrapper">
+                            <table id="tb" class="table table-hover table-bordered table-striped dataTable" style="margin: 0px;">
+                                <thead class="bg-secondary">
+                                    <tr role="row">
+                                        <th class="center">Ações</th>
+                                        <th class="center sorting">
+                                            <button type="submit" style="border:none;" sort-expression="CodNegociacaoVerba">
+                                                @Html.DisplayNameFor(model => model.Filtro.CodNegociacaoVerba)
+                                            </button>
+                                        </th>
+                                        <th class="sorting">
+                                            <button type="submit" style="border:none;" sort-expression="DesNegociacaoVerba">
+                                                @Html.DisplayNameFor(model => model.Filtro.DesNegociacaoVerba)
+                                            </button>
+                                        </th>
+                                        <th class="sorting">
+                                            <button type="submit" style="border:none;" sort-expression="CodStatusNegociacaoVenda">
+                                                @Html.DisplayNameFor(model => model.Filtro.CodStatusNegociacaoVenda)
+                                            </button>
+                                        </th>
+                                        <th class="sorting">
+                                            <button type="submit" style="border:none;" sort-expression="CodFornecedor">
+                                                @Html.DisplayNameFor(model => model.Filtro.CodFornecedor)
+                                            </button>
+                                        </th>
+                                        <th class="sorting">
+                                            <button type="submit" style="border:none;" sort-expression="NomFornecedor">
+                                                @Html.DisplayNameFor(model => model.Filtro.NomFornecedor)
+                                            </button>
+                                        </th>
+                                        <th class="sorting">
+                                            <button type="submit" style="border:none;" sort-expression="NomFilialVerba">
+                                                @Html.DisplayNameFor(model => model.Filtro.NomFilialVerba)
+                                            </button>
+                                        </th>
+                                        <th class="center sorting">
+                                            <button type="submit" style="border:none;" sort-expression="NomAutor">
+                                                @Html.DisplayNameFor(model => model.Filtro.NomAutor)
+                                            </button>
+                                        </th>
+                                        <th class="sorting">
+                                            <button type="submit" style="border:none;" sort-expression="NomComprador">
+                                                @Html.DisplayNameFor(model => model.Filtro.NomComprador)
+                                            </button>
+                                        </th>
+                                        <th class="sorting">
+                                            <button type="submit" style="border:none;" sort-expression="VlrVerba">
+                                                @Html.DisplayNameFor(model => model.Filtro.VlrVerba)
+                                            </button>
+                                        </th>
+                                        <th class="sorting">
+                                            <button type="submit" style="border:none;" sort-expression="DtCadastroNegociacao">
+                                                @Html.DisplayNameFor(model => model.Filtro.DtCadastroNegociacao)
+                                            </button>
+                                        </th>
+                                        <th class="sorting">
+                                            <button type="submit" style="border:none;" sort-expression="DtAprovacao">
+                                                @Html.DisplayNameFor(model => model.Filtro.DtAprovacao)
+                                            </button>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-light border">
+                                    @foreach (var item in Model.Result)
+                                    {
+                                        <tr class="odd">
+                                            <td class="center border">
+                                                <button type="button" title="Editar" class="nav-link btn bg-primary" id="btnEditNegociacao" value="" required="" onclick="jsEditarNegociacao(@item.CodNegociacaoVerba)"><i class="fa fa-edit"></i></button>
+                                            </td>
+                                            <td class="border">
+                                                @Html.DisplayFor(modelItem => item.CodNegociacaoVerba)
+                                            </td>
+                                            <td class="border">
+                                                @Html.DisplayFor(modelItem => item.DesNegociacaoVerba)
+                                            </td>
+                                            <td class="border">
+                                                @Html.DisplayFor(modelItem => item.NomStatusNegociacaoVenda)
+                                            </td>
+                                            <td class="border">
+                                                @Html.DisplayFor(modelItem => item.CodFornecedor)
+                                            </td>
+                                            <td class="border">
+                                                @Html.DisplayFor(modelItem => item.NomFornecedor)
+                                            </td>
+                                            <td class="border">
+                                                @Html.DisplayFor(modelItem => item.NomFilialVerba)
+                                            </td>
+                                            <td class="border">
+                                                @Html.DisplayFor(modelItem => item.NomAutor)
+                                            </td>
+                                            <td class="border">
+                                                @Html.DisplayFor(modelItem => item.NomComprador)
+                                            </td>
+                                            <td class="border">
+                                                @Html.DisplayFor(modelItem => item.VlrVerba)
+                                            </td>
+                                            <td class="border">
+                                                @Html.DisplayFor(modelItem => item.DtCadastroNegociacao)
+                                            </td>
+                                            <td class="border">
+                                                @Html.DisplayFor(modelItem => item.DtAprovacao)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    @Html.Partial(Constantes.VIEW_PAGINACAO, Model.Setings, new ViewDataDictionary { TemplateInfo = new TemplateInfo { HtmlFieldPrefix = "Setings" } })
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+    <div id="formEdit"></div>
+
+    <div id="appendFind"></div>
+
+</div>
+
+
+@*<div class="modal" tabindex="-1" role="dialog" id="mdlEditValorCarimboItem">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary" style="color:white;">
+                    <h5 class="modal-title">Alterar Valor</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="jsCloseModalDetalhes()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-light">
+                    <div class="col-md-12">
+                        <input type="hidden" id="hdfCelSender" value="qwert" />
+                        <label>Valor: </label>
+                        <input type="text" id="txtVlrTotalVerba" class="form-control" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-sm btn-success" onclick="jsCloseSaveModalDetalhes()">Aplicar</button>
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-sm btn-warning" onclick="jsCloseModalDetalhes()">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+
+<!-- Script -->
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/pagina/negociacao-verba.js")
+    @Scripts.Render("~/Scripts/pagina/carimbo.js")
+    @*@Scripts.Render("~/Scripts/pagina/pendencias.js")*@
+    @Scripts.Render("~/Scripts/find/funcionario.js")
+    @Scripts.Render("~/Scripts/find/filialEmpresa.js")
+    @Scripts.Render("~/Scripts/find/fornecedor.js")
+}
+

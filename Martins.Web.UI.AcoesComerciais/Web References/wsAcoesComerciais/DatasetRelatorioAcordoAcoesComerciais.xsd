@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetRelatorioAcordoAcoesComerciais.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetRelatorioAcordoAcoesComerciais.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetRelatorioAcordoAcoesComerciais.xsd" id="DatasetRelatorioAcordoAcoesComerciais" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetRelatorioAcordoAcoesComerciais">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TbAcordoAcoesComerciais_232">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodPms" type="xs:int" />
+              <xs:element name="DatNgcPms" type="xs:dateTime" />
+              <xs:element name="NumPedCmp" type="xs:decimal" />
+              <xs:element name="DesMsgUsr" type="xs:string" />
+              <xs:element name="NomCtoFrn" type="xs:string" />
+              <xs:element name="DesCgrCtoFrn" type="xs:string" />
+              <xs:element name="CodFilEmp" type="xs:int" />
+              <xs:element name="NomFilEmp" type="xs:string" />
+              <xs:element name="DatPrvRcbPms" type="xs:dateTime" />
+              <xs:element name="VlrNgcPms" type="xs:decimal" />
+              <xs:element name="VlrEftPms" type="xs:decimal" />
+              <xs:element name="CodFrn" type="xs:int" />
+              <xs:element name="NomFrn" type="xs:string" />
+              <xs:element name="TipIdtEmpAscAcoCmc" type="xs:int" />
+              <xs:element name="CodFrnEmpAscAcoCmc" type="xs:int" />
+              <xs:element name="NomUsrSis" type="xs:string" />
+              <xs:element name="TipFrmDscBnf" type="xs:int" />
+              <xs:element name="DesFrmDscBnf" type="xs:string" />
+              <xs:element name="TipDsnDscBnf" type="xs:int" />
+              <xs:element name="DesDsnDscBnf" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TbAcordoAcoesComerciais_194">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFRN" type="xs:int" />
+              <xs:element name="NOMFRN" type="xs:string" />
+              <xs:element name="PERDST" type="xs:decimal" />
+              <xs:element name="VLREMIBON" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLREMIDUP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRACOCMC" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

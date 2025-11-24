@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetExtratoMovimentoDiarioFornecedor.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetExtratoMovimentoDiarioFornecedor.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetExtratoMovimentoDiarioFornecedor.xsd" id="DatasetExtratoMovimentoDiarioFornecedor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetExtratoMovimentoDiarioFornecedor">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tbExtratoMovimentoDiarioFornecedor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="DatRefLmt" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NumSeqLmt" type="xs:int" />
+              <xs:element minOccurs="0" name="DesHstLmt" type="xs:string" />
+              <xs:element minOccurs="0" name="VlrLmtCtb" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NomAcsUsrGrcLmt" type="xs:string" />
+              <xs:element minOccurs="0" name="CodGdc" type="xs:string" />
+              <xs:element minOccurs="0" name="DesTipLmt" type="xs:string" />
+              <xs:element minOccurs="0" name="VlrSldMesAnt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrCrdMesCrr" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrDebMesCrr" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrSldPms" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesDsnDscBnf" type="xs:string" />
+              <xs:element minOccurs="0" name="FlgCtbDsnDsc" type="xs:string" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="SldDsp" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrSldRsv" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipDsnDscBnf" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrRcb" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesAlcVbaFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="PerAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrRcbAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrSldDspAlcVbaFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PmtDdo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

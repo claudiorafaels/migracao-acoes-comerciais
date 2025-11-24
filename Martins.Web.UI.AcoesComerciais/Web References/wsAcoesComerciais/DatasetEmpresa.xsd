@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetEmpresa.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetEmpresa.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetEmpresa.xsd" id="DatasetEmpresa" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetEmpresa">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0103409">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="NOMEMP" type="xs:string" />
+              <xs:element name="RAZSOCEMP" type="xs:string" />
+              <xs:element name="NUMSEQTRNPRVPGT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATABRFSC" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATBXAFSC" type="xs:dateTime" />
+              <xs:element name="DATCAD" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATDST" type="xs:dateTime" />
+              <xs:element name="IDCARRVLRIMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDUNDFML" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetEmpresaKey1">
+      <xs:selector xpath=".//mstns:T0103409" />
+      <xs:field xpath="mstns:CODEMP" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

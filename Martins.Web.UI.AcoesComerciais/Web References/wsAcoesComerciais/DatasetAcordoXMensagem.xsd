@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetAcordoXMensagem.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetAcordoXMensagem.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetAcordoXMensagem.xsd" id="DatasetAcordoXMensagem" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetAcordoXMensagem">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0153031">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="CODFILEMP" type="xs:decimal" />
+              <xs:element name="CODPMS" type="xs:decimal" />
+              <xs:element name="DATNGCPMS" type="xs:dateTime" />
+              <xs:element name="NUMSEQOBSPMS" type="xs:decimal" />
+              <xs:element name="DESOBSPMS" type="xs:string" />
+              <xs:element name="NOMUSRSIS" type="xs:string" />
+              <xs:element name="DATGRCOBSPMS" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATPRVRCBPMS" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TIPDSNDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPFRMDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPOBSPMS" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetAcordoXMensagemKey1">
+      <xs:selector xpath=".//mstns:T0153031" />
+      <xs:field xpath="mstns:CODEMP" />
+      <xs:field xpath="mstns:CODFILEMP" />
+      <xs:field xpath="mstns:CODPMS" />
+      <xs:field xpath="mstns:DATNGCPMS" />
+      <xs:field xpath="mstns:NUMSEQOBSPMS" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

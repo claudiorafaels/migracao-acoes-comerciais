@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetDadosDoCartorioPorCelula.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetDadosDoCartorioPorCelula.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetDadosDoCartorioPorCelula.xsd" id="DatasetDadosDoCartorioPorCelula" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetDadosDoCartorioPorCelula">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TbDadosDoCartorioPorCelula">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="DatRefBlqFrn" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CodMtvBlqFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="NomAcsUsrBlqFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="VlrRefBlqFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatRefRtrBlqFrn" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="NomAcsUsrRtrBlqFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="DesObsBlqFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="DesMtvBlqFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="DesDivCmp" type="xs:string" />
+              <xs:element minOccurs="0" name="CodDivCmp" type="xs:string" />
+              <xs:element minOccurs="0" name="Semana" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrSldFrn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

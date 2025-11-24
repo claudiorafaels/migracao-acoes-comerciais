@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetCalendarioAnual" targetNamespace="http://tempuri.org/DatasetCalendarioAnual.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetCalendarioAnual.xsd"
+	xmlns:mstns="http://tempuri.org/DatasetCalendarioAnual.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetCalendarioAnual" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="T0102321">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DATREF" type="xs:dateTime" />
+							<xs:element name="FLGFATDIA" type="xs:string" />
+							<xs:element name="NUMDIASMN" type="xs:decimal" />
+							<xs:element name="FLGFRDBCO" type="xs:string" />
+							<xs:element name="NUMSMNMES" type="xs:decimal" />
+							<xs:element name="FLGDIAACEVGMMOT" type="xs:string" />
+							<xs:element name="DATTRNLMTCTBACEVGM" type="xs:dateTime" />
+							<xs:element name="FLGFRDFRMPCO" type="xs:string" />
+							<xs:element name="PERPRVVNDDIA" type="xs:decimal" />
+							<xs:element name="DATREFSGNDIASMN" type="xs:dateTime" />
+							<xs:element name="FLGFRDLEGTRB" type="xs:string" />
+							<xs:element name="FLGFRDNAC" type="xs:string" />
+							<xs:element name="MESREF" type="xs:decimal" />
+							<xs:element name="FLGFRDEPD" type="xs:string" />
+							<xs:element name="FLGORDPGTREP" type="xs:string" />
+							<xs:element name="ANOMESREF" type="xs:decimal" />
+							<xs:element name="INDFRDFOLPGT" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DatasetCalendarioAnualKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:T0102321" />
+			<xs:field xpath="mstns:DATREF" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

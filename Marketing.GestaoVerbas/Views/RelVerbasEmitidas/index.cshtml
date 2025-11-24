@@ -1,0 +1,272 @@
+﻿@using Marketing.GestaoVerbas.Core.Grid
+@using Marketing.GestaoVerbas.ViewModel
+@model  GridSetings<RelatoriosVerbasEmitidasViewModel>
+
+@{
+    AjaxOptions ajaxOptions = new AjaxOptions()
+    {
+        UpdateTargetId = "pageContent",
+        InsertionMode = InsertionMode.Replace,
+        OnBegin = "PesquisarAjaxBegin",
+        OnComplete = "DefaultAjaxComplete",
+        OnSuccess = "ModePesquisar",
+        OnFailure = "DefaultAjaxFailure",
+        HttpMethod = "POST"
+
+    };
+}
+<div class="container-fluid">
+
+    @using (Ajax.BeginForm("Pesquisar", "RelatoriosVerbasEmitidas", ajaxOptions, new { @id = "frmPesquisa", @class = "form-pagination" }))
+    {
+        <div id="formPesquisa" class="card bg-primary divFiltrosPesquisa">
+            <div class="card-header text-white" style="color:white;">
+                <h5>Filtros do Relatório</h5>
+            </div>
+
+            <div class="card-body bg-light">
+                <div class="row">
+                    @*Visões*@
+                    <div class="col-md-12">
+                        <label>Visão</label><br />
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.RadioButtonFor(model => model.Filtro.IndRelVisao, "N", new { @class = "indVisao", @checked = "checked", id = "btnVisaoNegociacao", onclick = "jsChangeVisaoRelatorio()" })
+                                <label for="btnVisaoNegociacao">Negociação</label>
+                            </div>
+                            <div class="col-md-3">
+                                @Html.RadioButtonFor(model => model.Filtro.IndRelVisao, "E", new { @class = "indVisao", @id = "btnVisaoEmpenho", onclick = "jsChangeVisaoRelatorio()" })
+                                <label for="btnVisaoEmpenho">Negociação - Empenho</label>
+                            </div>
+                            <div class="col-md-3">
+                                @Html.RadioButtonFor(model => model.Filtro.IndRelVisao, "M", new { @class = "indVisao", @id = "btnVisaoMercadoria", onclick = "jsChangeVisaoRelatorio()" })
+                                <label for="btnVisaoMercadoria">Carimbo - Mercadoria</label>
+                            </div>
+                            <div class="col-md-3">
+                                @Html.RadioButtonFor(model => model.Filtro.IndRelVisao, "F", new { @class = "indVisao", @id = "btnVisaoFornecedor", onclick = "jsChangeVisaoRelatorio()" })
+                                <label for="btnVisaoFornecedor">Carimbo - Fornecedor</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @*CodNegociacaoVerba*@
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.NomNegociacaoVerba)
+                        @Html.ValidationMessageFor(model => model.Filtro.CodNegociacaoVerba, "", new { @class = "text-danger" })
+                        <div class="row">
+                            <div class="col-md-4">
+                                @Html.EditorFor(model => model.Filtro.CodNegociacaoVerba, new { htmlAttributes = new { id = "txtFiltroNegociacaoVerbaCodNegociacaoVerba", @class = "form-control filtroEmpenho filtroCarimboFornecedor filtroCarimboMercadoria", data_val = false } })
+
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    @Html.EditorFor(model => model.Filtro.NomNegociacaoVerba, new { htmlAttributes = new { id = "txtFiltroNegociacaoVerbaDesNegociacaoVerba", @class = "form-control filtroEmpenho filtroCarimboFornecedor filtroCarimboMercadoria", data_val = false } })
+                                    <button type="button" class="input-group-addon" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" onclick="jsOpenModalNegociacaoRelatorio()"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @{
+                        Marketing.GestaoVerbas.ViewModel.NegociacaoVerbaDestinoViewModel item = new Marketing.GestaoVerbas.ViewModel.NegociacaoVerbaDestinoViewModel();
+
+                        SelectListItem[] statusNegociacao = new SelectListItem[5];
+                        statusNegociacao[0] = new SelectListItem { Value = "", Text = "Selecione..." };
+                        statusNegociacao[1] = new SelectListItem { Value = "1", Text = "Nova" };
+                        statusNegociacao[2] = new SelectListItem { Value = "2", Text = "Aguardando Aprovação" };
+                        statusNegociacao[3] = new SelectListItem { Value = "3", Text = "Aprovado" };
+                        statusNegociacao[4] = new SelectListItem { Value = "4", Text = "Reprovado" };
+                    }
+
+                    @*StatusNegociacaoVerba*@
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.CodStatusNegociacao)
+                        <br />
+                        @Html.ValidationMessageFor(model => model.Filtro.CodStatusNegociacao, "", new { @class = "text-danger" })
+                        @Html.DropDownListFor(model => model.Filtro.CodStatusNegociacao, statusNegociacao, new { @class = "form-control", id = "drpFiltroNegociacaoVerbaCodStatusNegociacao" })
+                    </div>
+
+
+                    @*Filial*@
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.CodFilialEmpresa)
+                        @Html.DropDownListFor(model => model.Filtro.CodFilialEmpresa, new SelectList(ViewBag.Filiais, "CodFilialEmpresa", "CodNomFilialEmpresa"), "Selecione...", new { @class = "form-control", id = "drpEditCarimboCodFilialFiltro" })
+                    </div>
+
+
+
+
+
+
+                </div>
+                <div class="row">
+                    @*Diretoria*@
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.CodDiretoria)
+                        @Html.DropDownListFor(model => model.Filtro.CodDiretoria, new SelectList(ViewBag.Diretoria, "CodDiretoria", "NomDiretoria"), "Selecione...", new { @class = "form-control filtroNegociacao", id = "drpEditCarimboCodDiretoria" })
+                    </div>
+                    @*Célula*@
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.CodCelula)
+                        @Html.DropDownListFor(model => model.Filtro.CodCelula, new SelectList(ViewBag.Celulas, "CodCelula", "NomCelula"), "Selecione...", new { @class = "form-control filtroNegociacao filtroEmpenho filtroCarimboMercadoria filtroCarimboFornecedor ", id = "drpEditCarimboCodCelula" })
+                    </div>
+                    @*Comprador*@
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.CodComprador)
+                        @Html.DropDownListFor(model => model.Filtro.CodComprador, new SelectList(ViewBag.compradores, "CodComprador", "NomComprador"), "Selecione...", new { @class = "form-control", id = "drpEditNegociacaoVerbaCodComprador" })
+                    </div>
+                </div>
+                <div class="row">
+                    @*Fornecedor*@
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.NomFornecedor)
+                        @Html.ValidationMessageFor(model => model.Filtro.CodFornecedor, "", new { @class = "text-danger" })
+                        <div class="row">
+                            <div class="col-md-4">
+                                @Html.EditorFor(model => model.Filtro.CodFornecedor, new { htmlAttributes = new { id = "txtEditNegociacaoVerbaCodFornecedor", @class = "form-control", onchange = "findFornecedorCodFornecedorChange(txtEditNegociacaoVerbaCodFornecedor, txtEditNegociacaoVerbaNomFornecedor)", data_val = false } })
+
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    @Html.EditorFor(model => model.Filtro.NomFornecedor, new { htmlAttributes = new { id = "txtEditNegociacaoVerbaNomFornecedor", @class = "form-control", data_val = false } })
+                                    <button type="button" class="input-group-addon" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" onclick="jsOpenModalFornecedorEdit()"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @{
+                        SelectListItem[] destinos = new SelectListItem[3];
+                        destinos[0] = new SelectListItem { Value = "", Text = "Selecione..." };
+                        destinos[1] = new SelectListItem { Value = "1", Text = "Ações Comerciais" };
+                        destinos[2] = new SelectListItem { Value = "2", Text = "Ações em Preço" };
+
+                        SelectListItem[] objetivos = new SelectListItem[5];
+                        objetivos[0] = new SelectListItem { Value = "", Text = "Selecione..." };
+                        objetivos[1] = new SelectListItem { Value = "1", Text = "CARIMBO" };
+                        objetivos[2] = new SelectListItem { Value = "4", Text = "RESULTADOS" };
+                        objetivos[3] = new SelectListItem { Value = "3", Text = "TRADE" };
+                        objetivos[4] = new SelectListItem { Value = "9", Text = "VERBA PRE PAGA" };
+                    }
+                    @*Destino*@
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.NomDestino)
+                        <br />
+                        @Html.ValidationMessageFor(model => model.Filtro.NomDestino, "", new { @class = "text-danger" })
+                        @Html.DropDownListFor(model => model.Filtro.CodDestino, destinos, new { @class = "form-control  filtroEmpenho filtroCarimboFornecedor filtroCarimboMercadoria", id = "drpFiltroNegociacaoVerbaCodDestino" })
+                    </div>
+                    @*Objetivo*@
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => item.NomObjetivo)
+                        <br />
+                        @Html.ValidationMessageFor(model => item.NomObjetivo, "", new { @class = "text-danger" })
+                        @Html.DropDownListFor(model => model.Filtro.CodObjetivo, objetivos, new { @class = "form-control filtroEmpenho filtroCarimboFornecedor filtroCarimboMercadoria", id = "drpAddDestinoObjetivoCodObjetivo", data_val = false })
+                    </div>
+                </div>
+                <div class="row">
+                    @*Mercadoria*@
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.CodMercadoria)
+                        @Html.ValidationMessageFor(model => model.Filtro.CodMercadoria, "", new { @class = "text-danger" })
+                        <div class="row">
+                            <div class="col-md-4">
+                                @Html.EditorFor(model => model.Filtro.CodMercadoria, new { htmlAttributes = new { id = "txtFiltroNegociacaoVerbaCodMercadoria", @class = "form-control filtroCarimboFornecedor filtroCarimboMercadoria", onchange = "findMercadoriaCodMercadoriaChange(this, txtFiltroNegociacaoVerbaNomMercadoria)", data_val = false } })
+                            </div>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    @Html.EditorFor(model => model.Filtro.NomMercadoria, new { htmlAttributes = new { id = "txtFiltroNegociacaoVerbaNomMercadoria", @class = "form-control filtroCarimboFornecedor filtroCarimboMercadoria", data_val = false } })
+                                    <button type="button" class="input-group-addon" style="cursor: pointer;background-color: #196dab;color:white;padding-top:10px;padding-bottom: 10px;" onclick="jsOpenModalMercadoriaRelatorio()"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*Período*@
+                    <div class="col-md-8">
+                        <div class="row" id="periodoCarimbo">
+                            <div class="col-md-6">
+                                @Html.LabelFor(model => model.Filtro.DtCadastroCarimboInicio)
+                                @Html.ValidationMessageFor(model => model.Filtro.DtCadastroCarimboInicio, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.Filtro.DtCadastroCarimboInicio, new { htmlAttributes = new { @class = "form-control date-picker", @autocomplete = "off", id = "txtRelatorioVerbasEmitidasSearchDtCadastroCarimboInicio" } })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.LabelFor(model => model.Filtro.DtCadastroCarimboFim)
+                                @Html.ValidationMessageFor(model => model.Filtro.DtCadastroCarimboFim, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.Filtro.DtCadastroCarimboFim, new { htmlAttributes = new { @class = "form-control date-picker", @autocomplete = "off", id = "txtRelatorioVerbasEmitidasSearchDtCadastroCarimboFim" } })
+                            </div>
+                        </div>
+                        <div class="row" style="display:none;" id="periodoNegociacao">
+                            <div class="col-md-6">
+                                @Html.LabelFor(model => model.Filtro.DtAprovacaoNegociacaoInicio)
+                                @Html.ValidationMessageFor(model => model.Filtro.DtAprovacaoNegociacaoInicio, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.Filtro.DtAprovacaoNegociacaoInicio, new { htmlAttributes = new { @class = "form-control date-picker", @autocomplete = "off", id = "txtRelatorioVerbasEmitidasSearchDtAprovacaoNegociacaoInicio" } })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.LabelFor(model => model.Filtro.DtAprovacaoNegociacaoFim)
+                                @Html.ValidationMessageFor(model => model.Filtro.DtAprovacaoNegociacaoFim, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.Filtro.DtAprovacaoNegociacaoFim, new { htmlAttributes = new { @class = "form-control date-picker", @autocomplete = "off", id = "txtRelatorioVerbasEmitidasSearchDtAprovacaoNegociacaoFim" } })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @*Carimbo*@
+
+
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.CodCarimbo)
+                        @Html.ValidationMessageFor(model => model.Filtro.CodCarimbo, "", new { @class = "text-danger" })
+                        @Html.EditorFor(model => model.Filtro.CodCarimbo, new { htmlAttributes = new { id = "txtFiltroNegociacaoVerbaCodCarimbo", @class = "form-control filtroCarimboFornecedor filtroCarimboMercadoria", data_val = false } })
+                    </div>
+                    @{
+
+                        SelectListItem[] statusCarimbo = new SelectListItem[8];
+                        statusCarimbo[0] = new SelectListItem { Value = "", Text = "Selecione..." };
+                        statusCarimbo[1] = new SelectListItem { Value = "1", Text = "Simulado" };
+                        statusCarimbo[2] = new SelectListItem { Value = "2", Text = "Assinado" };
+                        statusCarimbo[3] = new SelectListItem { Value = "3", Text = "Realizado" };
+                        statusCarimbo[4] = new SelectListItem { Value = "4", Text = "Em Andamento" };
+                        statusCarimbo[5] = new SelectListItem { Value = "5", Text = "Cancelado" };
+                        statusCarimbo[6] = new SelectListItem { Value = "6", Text = "Recebimento Parcia" };
+                        statusCarimbo[7] = new SelectListItem { Value = "7", Text = "Cancelamento Parcial" };
+
+                    }
+                    @*Status*@
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.Filtro.CodStatusCarimbo)
+                        <br />
+                        @Html.ValidationMessageFor(model => model.Filtro.CodStatusCarimbo, "", new { @class = "text-danger" })
+                        @Html.DropDownListFor(model => model.Filtro.CodStatusCarimbo, statusCarimbo, new { @class = "form-control filtroCarimboFornecedor filtroCarimboMercadoria", id = "drpFiltroNegociacaoVerbaCodStatusCarimbo" })
+                    </div>
+
+
+                    @*Pesquisar*@
+                    <div class="col-md-4 text-right">
+                        <br />
+                        <div class="pull-right">
+                            <button id="btnSearch" type="submit" class="btn" style="cursor: pointer;background-color: #196dab;"><i class="fa fa-search"></i> Pesquisar</button>
+                            <button type="button" class="btn" style="cursor: pointer;background-color: #196dab;" title="Limpar campos de filtro" onclick="jsLimparFiltrosPesquisa()"><i class="fa fa-eraser"></i> Limpar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="visaoRelatorio" class="gridNegociacao" style="display:none;">
+            @Html.Partial("~/Views/RelVerbasEmitidas/relVerbasEmitidas.cshtml", Model, new ViewDataDictionary { TemplateInfo = new TemplateInfo { HtmlFieldPrefix = "listaSimilares" } })
+
+        </div>
+    }
+    <div id="appendFind"></div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/pagina/negociacao-verba.js")
+    @Scripts.Render("~/Scripts/pagina/carimbo.js")
+    @Scripts.Render("~/Scripts/Relatorios/relatoriosVerbasEmitidas.js")
+    @Scripts.Render("~/Scripts/find/negociacao.js")
+    @Scripts.Render("~/Scripts/find/funcionario.js")
+    @Scripts.Render("~/Scripts/find/filialEmpresa.js")
+    @Scripts.Render("~/Scripts/find/mercadoria.js")
+    @Scripts.Render("~/Scripts/find/fornecedor.js")
+}

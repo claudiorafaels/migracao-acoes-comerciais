@@ -1,0 +1,227 @@
+﻿@using Marketing.GestaoVerbas.ViewModel
+@model NegociacaoVerbaViewModel
+
+<div id="divEditNegociacaoVerba">
+
+    @*Botões*@
+    @*<div class="container">*@
+    <div class="row py-1">
+        <div class="mx-auto">
+            <ul class="nav nav-pills" style="font-size:25px;">
+
+
+                <li class="nav-item">
+                    <a title="Voltar" style="cursor: pointer;" class="nav-link gray bg-transparent" onclick="ModeSearch()">
+                        <i class="fa fa-arrow-left"></i>&nbsp;
+                    </a>
+                </li>
+
+                @if (Util.VerificaMenuUsuario("5"))
+                {
+                    if (Model.CodStatusNegociacaoVenda != 3 && Model.CodStatusNegociacaoVenda != 2)
+                    {
+                        <li class="nav-item">
+                            <a title="Salvar" style="cursor: pointer;border:none;" class="nav-link gray bg-transparent" id="btnSalvarNegociacaoVerba" onclick="jsSalvarNegociacao()"> <i class="fa fa-save"></i>&nbsp;</a>
+                        </li>
+                    }
+                    if (Model.CodNegociacaoVerba != null && Model.CodStatusNegociacaoVenda != 3 && Model.CodStatusNegociacaoVenda != 2)
+                    {
+                        if (Util.VerificaMenuUsuario("14"))
+                        {
+                            <li class="nav-item">
+                                <a title="Enviar para Aprovação" style="cursor: pointer;" id="btnSend" class="nav-link gray bg-transparent" onclick="jsEnviarParaAprovacao()"> <i class="fa fa-send"></i>&nbsp;</a>
+                            </li>
+                        }
+                    }
+                }
+
+                @if (Util.VerificaMenuUsuario("4") && Model.CodStatusNegociacaoVenda == 2)
+                {
+                    if (Util.VerificaMenuUsuario("11"))
+                    {
+                        <li class="nav-item">
+                            <a title="Aprovar" id="btnAprove" style="cursor: pointer;" onclick="jsOpenModalAprovar()" class="nav-link gray bg-transparent"> <i class="fa fa-check"></i>&nbsp;</a>
+                        </li>
+                    }
+                    if (Util.VerificaMenuUsuario("12"))
+                    {
+                        <li class="nav-item">
+                            <a id="btnReprove" style="cursor: pointer;" title="Reprovar" class="nav-link gray bg-transparent" onclick="jsOpenModalJustificativaReprovacao(@Model.CodNegociacaoVerba)"> <i class="fa fa-remove"></i>&nbsp;</a>
+                        </li>
+                    }
+                }
+                @if (Util.VerificaMenuUsuario("13") && Model.CodStatusNegociacaoVenda == 3)
+                {
+                    <li class="nav-item">
+                        <a id="btnImprimir" style="cursor: pointer;" title="Imprimir Acordos" class="nav-link gray bg-transparent" onclick="jsOpenModalImprimirAcordos(@Model.CodNegociacaoVerba)"> <i class="fa fa-print"></i>&nbsp;</a>
+                    </li>
+                }
+
+                @if (Model.CodNegociacaoVerba != null)
+                {
+                    <li class="nav-item">
+                        <a id="btnHistorico" style="cursor: pointer;" title="Histórico da Negociação" class="nav-link gray bg-transparent" onclick="jsOpenHistoricoNegociacao(@Model.CodNegociacaoVerba)"> <i class="fa fa-history"></i>&nbsp;</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="dropdown-divider" style="margin-top:-12px;"></div>
+    <br />
+    @*</div>*@
+
+
+
+    @Html.HiddenFor(model => model.CodNegociacaoVerba, new { id = "hdfEditNegociacaoVerbaCodNegociacaoVerba" })
+    @Html.HiddenFor(model => model.CodStatusNegociacaoVenda, new { id = "hdfEditNegociacaoVerbaCodStatusNegociacaoVenda" })
+    @Html.HiddenFor(model => model.DtAprovacao, new { id = "hdfEditNegociacaoVerbaDtAprovacao" })
+
+    <div class="card bg-primary">
+        @if (Model.CodStatusNegociacaoVenda != 2 && Model.CodStatusNegociacaoVenda != 3)
+        {
+            <div class="card-header text-white">
+                <h5>Cadastrar Negociação</h5>
+            </div>
+            <div class="card-body bg-light">
+                <div class="row">
+                    <br />
+                    <div class="col-md-6">
+                        <label><b>Cód. Negociação:</b></label>
+                        <label>@Html.DisplayFor(model => model.CodNegociacaoVerba)</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label><b>Status: </b></label>
+                        <label>@Html.DisplayFor(model => model.NomStatusNegociacaoVenda)</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label id="lblStatus"><b>@Html.DisplayNameFor(model => model.NomAutor) </b> </label>
+                        <label>@Html.DisplayFor(model => model.NomAutor)</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label id="lblStatus"><b>Dt. Cadastro: </b> </label>
+                        <label>@Html.DisplayFor(model => model.DtCadastroNegociacao, new { htmlAttributes = new { @class = "date-picker", @autocomplete = "off", id = "txtEditNegociacaoVerbaDtCadastroNegociacao" } })</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        @Html.LabelFor(model => model.DesNegociacaoVerba)
+                        @Html.ValidationMessageFor(model => model.DesNegociacaoVerba, "", new { @class = "text-danger" })
+                        @Html.EditorFor(model => model.DesNegociacaoVerba, new { htmlAttributes = new { @class = "form-control", id = "txtEditNegociacaoVerbaDesNegociacaoVerba", data_val = false, MaxLength = "40" } })
+                    </div>
+                    <div class="col-4">
+                        @Html.LabelFor(model => model.VlrVerba)
+                        @Html.ValidationMessageFor(model => model.VlrVerba, "", new { @class = "text-danger" })
+                        @Html.EditorFor(model => model.VlrVerba, new { htmlAttributes = new { @class = "form-control", id = "txtEditNegociacaoVerbaVlrVerba", alt = "decimal_positivo_2", data_val = false, disabled = "disabled" } })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.NomFilialVerba)
+                        @Html.DropDownListFor(model => model.CodFilialVerba, new SelectList(ViewBag.Filiais, "CodFilialEmpresa", "CodNomFilialEmpresa"), "Selecione...", new { @class = "form-control", id = "drpEditNegociacaoVerbaCodFilialVerba", onchange = "jsdrpEditNegociacaoVerbaCodFilialVerbaChange()" })
+                    </div>
+                    <div class="col-4">
+                        @Html.LabelFor(model => model.NomComprador)
+                        @Html.ValidationMessageFor(model => model.NomComprador, "", new { @class = "text-danger" })
+                        @Html.DropDownListFor(model => model.CodComprador, new SelectList(ViewBag.Compradores, "CodComprador", "CodNomComprador"), "Selecione...", new { @class = "form-control", id = "drpEditNegociacaoVerbaCodComprador", onchange = "jsdrpEditNegociacaoVerbaCodCompradorChange()" })
+                    </div>
+                    <div class="col-md-4">
+                        @Html.LabelFor(model => model.NomFornecedor)
+                        @Html.ValidationMessageFor(model => model.CodFornecedor, "", new { @class = "text-danger" })
+                        @Html.DropDownListFor(model => model.CodFornecedor, new SelectList(ViewBag.Fornecedores, "CodFornecedor", "CodNomFornecedor"), "Selecione...", new { @class = "form-control", id = "drpEditNegociacaoVerbaCodFornecedor" })
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        @Html.LabelFor(model => model.DesObservacaoSolicitacao)
+                        @Html.ValidationMessageFor(model => model.DesObservacaoSolicitacao, "", new { @class = "text-danger" })
+                        @Html.TextAreaFor(model => model.DesObservacaoSolicitacao, new { @class = "form-control", id = "txtEditNegociacaoVerbaDesObservacaoSolicitacao", data_val = false, rows = "4", MaxLength = "2400" })
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="card-header text-white">
+                <h5>@Html.DisplayFor(model => model.CodNegociacaoVerba) -  @Html.DisplayFor(model => model.DesNegociacaoVerba)</h5>
+            </div>
+            <div class="card-body bg-light">
+
+
+                <div class="row">
+                    <br />
+                    <div class="col-md-6">
+                        <label><b>Status: </b></label>
+                        <label>@Html.DisplayFor(model => model.NomStatusNegociacaoVenda)</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label id="lblStatus"><b>Dt. Cadastro: </b> </label>
+                        <label>@Html.DisplayFor(model => model.DtCadastroNegociacao, new { htmlAttributes = new { @class = "", id = "txtEditNegociacaoVerbaDtCadastro" } })</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <br />
+                    <div class="col-md-6">
+                        <label><b>Valor total: </b></label>
+                        <label>@Html.DisplayFor(model => model.VlrVerba)</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label id="lblStatus"><b>Filial de Origem: </b> </label>
+                        <label>@Html.DisplayFor(model => model.NomFilialVerba, new { htmlAttributes = new { @class = "", id = "txtEditNegociacaoVerbaDtCadastro" } })</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <br />
+                    <div class="col-md-6">
+                        <label><b>Divisão Fornecedor: </b></label>
+                        <label>@Html.DisplayFor(model => model.NomFornecedor)</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label id="lblStatus"><b>Comprador: </b> </label>
+                        <label>@Html.DisplayFor(model => model.NomComprador, new { htmlAttributes = new { @class = "", id = "txtEditNegociacaoVerbaDtCadastro" } })</label>
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 1rem; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">
+                    <br />
+                    <div class="col-12">
+                        <label><b> @Html.LabelFor(model => model.DesObservacaoSolicitacao) </b></label>
+                        <label> @Html.DisplayFor(model => model.DesObservacaoSolicitacao, new { htmlAttributes = new { @class = "", id = "txtAprovacaoNegociacaoVerbaDesObservacao" } })</label>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+    <br />
+
+
+    <div id="gridDestinoObjetivo" class="gridDestinoObjetivo">
+        @Html.Partial("~/Views/Negociacao/destinoObjetivo.cshtml", Model.Destinos, new ViewDataDictionary { TemplateInfo = new TemplateInfo { HtmlFieldPrefix = "listaDestinoObjetivo" } })
+    </div>
+
+</div>
+
+
+<div id="formAprovar"></div>
+
+<div id="formCarimbo"></div>
+
+<div id="formImprimir"></div>
+
+<div id="formReprovar"></div>
+
+<div id="formHistorico"></div>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetAcordoACancelarEmFluxoCancelamentoAcordo" targetNamespace="http://tempuri.org/DatasetAcordoACancelarEmFluxoCancelamentoAcordo.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetAcordoACancelarEmFluxoCancelamentoAcordo.xsd"
+	xmlns:mstns="http://tempuri.org/DatasetAcordoACancelarEmFluxoCancelamentoAcordo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetAcordoACancelarEmFluxoCancelamentoAcordo" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="T0118066Pesquisa">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CODPMS" type="xs:decimal" />
+							<xs:element name="DATNGCPMS" type="xs:date" />
+							<xs:element name="DATPRVRCBPMS" type="xs:date" />
+							<xs:element name="DESDSNDSCBNF" type="xs:string" />
+							<xs:element name="VLRNGCPMS" type="xs:decimal" />
+							<xs:element name="VLRPGOPMS" type="xs:decimal" />
+							<xs:element name="CODEMP" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODFILEMP" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TIPDSNDSCBNF" type="xs:decimal" minOccurs="0" />
+							<xs:element name="TIPFRMDSCBNF" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CODFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NUMPEDCNCACOCMC" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VLRSLDPMSFRN" type="xs:decimal" minOccurs="0" />
+							<xs:element name="VLRDSPPMS" type="xs:decimal" minOccurs="0" />
+							<xs:element name="FLGSITNGCDUP" type="xs:string" />
+							<xs:element name="DESFRMDSCBNF" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DatasetAcordoACancelarEmFluxoCancelamentoAcordoKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:T0154021" />
+			<xs:field xpath="mstns:NUMPEDCNCACOCMC" />
+			<xs:field xpath="mstns:CODPMS" />
+			<xs:field xpath="mstns:CODEMP" />
+			<xs:field xpath="mstns:CODFILEMP" />
+			<xs:field xpath="mstns:DATNGCPMS" />
+			<xs:field xpath="mstns:DATPRVRCBPMS" />
+			<xs:field xpath="mstns:TIPFRMDSCBNF" />
+			<xs:field xpath="mstns:TIPDSNDSCBNF" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

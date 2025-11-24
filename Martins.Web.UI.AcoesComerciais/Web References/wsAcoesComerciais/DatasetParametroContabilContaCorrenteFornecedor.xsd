@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetParametroContabilContaCorrenteFornecedor.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetParametroContabilContaCorrenteFornecedor.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetParametroContabilContaCorrenteFornecedor.xsd" id="DatasetParametroContabilContaCorrenteFornecedor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetParametroContabilContaCorrenteFornecedor">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0123094">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODTIPLMT" type="xs:decimal" />
+              <xs:element name="CODFILEMP" type="xs:decimal" />
+              <xs:element name="CODCNTDEB" type="xs:string" />
+              <xs:element name="CODCENCSTDEB" type="xs:string" />
+              <xs:element name="CODCNTCRD" type="xs:string" />
+              <xs:element name="CODCENCSTCRD" type="xs:string" />
+              <xs:element name="CODHSTPAD" type="xs:string" />
+              <xs:element minOccurs="0" name="CODEVTCTB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFTOCTB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODEVTCTBNGCDVL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFTOCTBNGCDVL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODEVTCTBFRTDVL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFTOCTBFRTDVL" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetParametroContabilContaCorrenteFornecedorKey1">
+      <xs:selector xpath=".//mstns:T0123094" />
+      <xs:field xpath="mstns:CODTIPLMT" />
+      <xs:field xpath="mstns:CODFILEMP" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

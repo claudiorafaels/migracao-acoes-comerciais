@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetContratoXAbrangenciaMix.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetContratoXAbrangenciaMix.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetContratoXAbrangenciaMix.xsd" id="DatasetContratoXAbrangenciaMix" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetContratoXAbrangenciaMix">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0124996">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="NUMCSLCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element name="CODEDEABGMIX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FLGMERECS" type="xs:string" />
+              <xs:element minOccurs="0" name="FLGTRTMERNVO" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPBSECALAPUVLRRCB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPBSECALAPUIDCCRS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERFIXAPUVLRRCB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FLGCALVLRRCBFXACRS" type="xs:string" />
+              <xs:element minOccurs="0" name="FLGFXAAVLPER" type="xs:string" />
+              <xs:element minOccurs="0" name="VLRFIXAPUVLRRCB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VLRFATMNMCOBFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPBSECALVLRFATMNM" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDINCIPIAPUCTT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDINCICMAPUCTT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDINCPISAPUCTT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDINCSBTTBTAPUCTT" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0100086">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODMER" type="xs:decimal" />
+              <xs:element name="CODEMP" type="xs:decimal" />
+              <xs:element name="DESMER" type="xs:string" />
+              <xs:element name="DESUNDVNDMER" type="xs:string" />
+              <xs:element name="CODSITMER" type="xs:decimal" />
+              <xs:element name="FLGDSTMER" type="xs:string" />
+              <xs:element name="CODSBCMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PESUNTMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODTBTICMMER" type="xs:decimal" />
+              <xs:element name="PERTBTIPIMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCPLMER" type="xs:string" />
+              <xs:element minOccurs="0" name="FLGMERCONGOV" type="xs:string" />
+              <xs:element name="CODVARNVGMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATCADMER" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATDSTMER" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CODACRCSTMER" type="xs:decimal" />
+              <xs:element name="FLGOPCCTS" type="xs:string" />
+              <xs:element name="FLGOPCCMP" type="xs:string" />
+              <xs:element name="FLGGARAUTETQ" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMFOLLIVPCO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PSOUNTMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QDECXABSEPLT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QDECXAARAPLT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QDEUNDVNDCXAFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPMAP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FLGOPCDIVMAP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODNRMPLTMER" type="xs:decimal" />
+              <xs:element name="VOLUNDVNDMER" type="xs:decimal" />
+              <xs:element name="TIPPDCMER" type="xs:decimal" />
+              <xs:element name="CODCLSMOVMER" type="xs:decimal" />
+              <xs:element name="FLGMERRNG" type="xs:string" />
+              <xs:element name="QDEDIAATZMEDRCBMER" type="xs:decimal" />
+              <xs:element name="FLGMERTBTSFR" type="xs:string" />
+              <xs:element name="CODCPRPCPMER" type="xs:decimal" />
+              <xs:element name="TIPMER" type="xs:decimal" />
+              <xs:element name="CODCLFIPIMER" type="xs:decimal" />
+              <xs:element name="CODFLXPCO" type="xs:string" />
+              <xs:element name="TIPRTCFRTMER" type="xs:string" />
+              <xs:element name="TIPATLRTCFRTMER" type="xs:string" />
+              <xs:element name="NUMPODVLD" type="xs:decimal" />
+              <xs:element name="TIPPODVLD" type="xs:string" />
+              <xs:element name="FLGUNDVNDMRTVOLEPD" type="xs:string" />
+              <xs:element name="FLGUNDVNDFRNVOLEPD" type="xs:string" />
+              <xs:element name="CODBRRUNDVNDMRT" type="xs:decimal" />
+              <xs:element name="TIPCODBRRUNDVNDMRT" type="xs:string" />
+              <xs:element name="CODBRRUNDVNDFRN" type="xs:decimal" />
+              <xs:element name="TIPCODBRRUNDVNDFRN" type="xs:string" />
+              <xs:element name="VLRCNVUNDVNDMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERMRGMNMFLXPCO" type="xs:decimal" />
+              <xs:element name="CODSMBSITMERFLXPCO" type="xs:string" />
+              <xs:element name="FLGGRPCRGMER" type="xs:string" />
+              <xs:element name="FTRAJTCSTDTB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PERMRGRSTFATMERMTD" type="xs:decimal" />
+              <xs:element name="TIPMERMTD" type="xs:string" />
+              <xs:element minOccurs="0" name="CODTPIMERIPD" type="xs:decimal" />
+              <xs:element name="CODGRPMER" type="xs:decimal" />
+              <xs:element name="CODFMLMER" type="xs:decimal" />
+              <xs:element name="CODCLSMER" type="xs:decimal" />
+              <xs:element name="QDEPNDPED" type="xs:decimal" />
+              <xs:element name="CODCTGMER" type="xs:decimal" />
+              <xs:element name="CODPDAMER" type="xs:string" />
+              <xs:element name="CODORIMER" type="xs:decimal" />
+              <xs:element name="CODPORMERPSC" type="xs:decimal" />
+              <xs:element name="CLFCRVABCMER" type="xs:string" />
+              <xs:element name="POSCRVABCMER" type="xs:decimal" />
+              <xs:element name="CODGRPMERNCM" type="xs:string" />
+              <xs:element name="VLRMNMSBTTBTNAC" type="xs:decimal" />
+              <xs:element name="FLGCONIDTUNDFBR" type="xs:string" />
+              <xs:element name="CODGRPMERNCMCTB" type="xs:string" />
+              <xs:element name="QDEDIAVLDMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODTABFRTDIFMOVMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCMCMER" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCMCMERCCO" type="xs:string" />
+              <xs:element name="INDRTNFTETBTSOC" type="xs:decimal" />
+              <xs:element name="CODFRNPCPMER" type="xs:decimal" />
+              <xs:element name="CODMERTCR" type="xs:string" />
+              <xs:element name="QDEMNMVNDMER" type="xs:decimal" />
+              <xs:element name="INDQDEMPLVNDMER" type="xs:decimal" />
+              <xs:element name="INDMERPRL" type="xs:decimal" />
+              <xs:element name="VLRCMIMER" type="xs:decimal" />
+              <xs:element name="VLRARAMER" type="xs:decimal" />
+              <xs:element name="VLRPFNMER" type="xs:decimal" />
+              <xs:element name="INDCONMERTRPDPV" type="xs:decimal" />
+              <xs:element name="INDMEROFECRZ" type="xs:decimal" />
+              <xs:element name="DATALTCADMER" type="xs:dateTime" />
+              <xs:element name="INDEBGMRTDPVMOV" type="xs:decimal" />
+              <xs:element name="INDEBGFRNDPVMOV" type="xs:decimal" />
+              <xs:element name="CODGRPMERFRC" type="xs:decimal" />
+              <xs:element name="CODBRRUNDVNDCSM" type="xs:decimal" />
+              <xs:element name="TIPCODBRRUNDVNDCSM" type="xs:string" />
+              <xs:element name="INDREQNUMSERMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATRCDMER" type="xs:dateTime" />
+              <xs:element name="QDEISNMNRUNDINT" type="xs:decimal" />
+              <xs:element name="QDEISNMERVEI" type="xs:decimal" />
+              <xs:element name="PSOLIQMNRUNDINT" type="xs:decimal" />
+              <xs:element name="TIPUNDMNRUNDINT" type="xs:string" />
+              <xs:element name="CODLNHMER" type="xs:decimal" />
+              <xs:element name="QDEDIARMCPCO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESMERMRT" type="xs:string" />
+              <xs:element minOccurs="0" name="CODEBGMER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODCTGUNIMER" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="QueryDeT0100132">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODCTGUNIMER" type="xs:string" />
+              <xs:element name="DESCLSMER" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0125011">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPEDEABGMIX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESEDEABGMIX" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoXAbrangenciaMixKey1">
+      <xs:selector xpath=".//mstns:T0124996" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+      <xs:field xpath="mstns:NUMCSLCTTFRN" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoXAbrangenciaMixKey2">
+      <xs:selector xpath=".//mstns:T0100086" />
+      <xs:field xpath="mstns:CODMER" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContratoXAbrangenciaMixKey3">
+      <xs:selector xpath=".//mstns:T0125011" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+    </xs:unique>
+    <xs:keyref name="T0125011T0124996" refer="mstns:DatasetContratoXAbrangenciaMixKey3">
+      <xs:selector xpath=".//mstns:T0124996" />
+      <xs:field xpath="mstns:TIPEDEABGMIX" />
+    </xs:keyref>
+    <xs:keyref name="T0100086T0124996" refer="mstns:DatasetContratoXAbrangenciaMixKey2">
+      <xs:selector xpath=".//mstns:T0124996" />
+      <xs:field xpath="mstns:CODEDEABGMIX" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

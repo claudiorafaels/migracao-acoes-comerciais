@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetBanco.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetBanco.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetBanco.xsd" id="DatasetBanco" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetBanco">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0100345">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODBCO" type="xs:decimal" />
+              <xs:element name="NOMBCO" type="xs:string" />
+              <xs:element name="VLRCTTVDR" type="xs:decimal" />
+              <xs:element name="ENDBCO" type="xs:string" />
+              <xs:element name="CODCID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMCGCBCO" type="xs:string" />
+              <xs:element name="VLRLIMCRDRTTVDR" type="xs:decimal" />
+              <xs:element name="VLRLIMBDREMS" type="xs:decimal" />
+              <xs:element name="VLRCTTVDRDIV" type="xs:decimal" />
+              <xs:element name="VLRLIMCRDRTTVDRDIV" type="xs:decimal" />
+              <xs:element name="TIPCVNBCO" type="xs:decimal" />
+              <xs:element name="TIPSITBCO" type="xs:decimal" />
+              <xs:element name="VLRMNMTITCOBBCO" type="xs:decimal" />
+              <xs:element name="CODCRTBCO" type="xs:string" />
+              <xs:element name="CODEMPBCO" type="xs:decimal" />
+              <xs:element name="NUMDIABXATITBCO" type="xs:decimal" />
+              <xs:element name="FLGBCODFTIPRBLT" type="xs:string" />
+              <xs:element name="HRALIMEMSCTTVDR" type="xs:dateTime" />
+              <xs:element name="VLRTRFCOBBCO" type="xs:decimal" />
+              <xs:element name="NUMPRXRMSBCO" type="xs:decimal" />
+              <xs:element name="CODCNTCTBBCO" type="xs:decimal" />
+              <xs:element name="INDBCOCVNFNDIVT" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetBancoKey1">
+      <xs:selector xpath=".//mstns:T0100345" />
+      <xs:field xpath="mstns:CODBCO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

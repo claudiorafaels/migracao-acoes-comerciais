@@ -1,0 +1,146 @@
+﻿
+@using Marketing.GestaoVerbas.ViewModel
+@model AcordoViewModel
+
+<div class="bodyPage">
+    <div id="divHeader">
+        <div class="divContainerBox">
+            <img src="~/Images/logo_martins.png" style="width:100px;height:75px; float:left;" />
+
+            <div style="width:700px;text-align:center">
+                <span style="line-height: 75px;font-size: 20px;">
+                    ACORDO DE AÇÕES COMERCIAIS
+                </span>
+            </div>
+        </div>
+        <div class="container divContainerBox">
+            <p>
+                Pelo presente instrumento particular de acordo, fica estabelecida a prestação de  ações comerciais pelo Martins Comércio Ser. e Dist. S/A,
+                estabelecida com o ramo de atacado distribuidor, à Av.José Andraus Gassani, nº 5400, na cidade de Uberlândia-MG,
+                inscrito no  CNPJ  sob  nº  43.214.055/0001-07  e Inscrição Estadual: Isenta, na forma de seu contrato social, e do outro lado a empresa
+                <br />
+                <a style="padding-left:220px;"><b> @Html.DisplayFor(model => model.CodFornecedor) - @Html.DisplayFor(model => model.NomFornecedor)</b> </a>
+                <br />
+                aqui representada pelo Sr(a)
+                <a style="padding-left:40px;"> <b> @Html.DisplayFor(model => model.NomContatoFornecedor) </b></a>
+                <br />
+                que compromete-se em reembolsá-lo por esta ação comercial nas formas e valores discriminados abaixo:
+            </p>
+        </div>
+        <div class="container divContainerBox">
+            <div class="row">
+                <div class="col-md-6">
+                    <b>
+                        Acordo: 	@Html.DisplayFor(model => model.CodPromessa)
+                    </b>
+                </div>
+                <div class="col-md-6">
+                    <b>
+                        Data da negociação: @Html.DisplayFor(model => model.DtCadastroAcordo)
+                    </b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <b>
+                        Filial:		@Html.DisplayFor(model => model.CodFilialEmpresa)
+                    </b>
+                </div>
+                <div class="col-md-6">
+                    <b>
+                        Pedido: @Html.DisplayFor(model => model.NumPedidoCompra)
+                    </b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <b>
+                        Mensagem: 	@Html.DisplayFor(model => model.DesComentarioUsuario)
+                    </b>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin:15px;">
+            <table>
+                <thead>
+                    <tr>
+                        <td><b>Vencimento</b></td>
+                        <td><b>Forma de Pagamento</b></td>
+                        <td><b>Serviços</b></td>
+                        <td><b>Vlr. Nominal</b></td>
+                        <td><b>Vlr. Efetivo</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Html.DisplayFor(model => model.Recebimentos.FirstOrDefault().DtPrevisaoRecebimento)</td>
+                        <td>@Html.DisplayFor(model => model.Recebimentos.FirstOrDefault().NomFormaRecebimento)</td>
+                        <td>@Html.DisplayFor(model => model.Recebimentos.FirstOrDefault().NomDestinoObjetivo)</td>
+                        <td>@Html.DisplayFor(model => model.Recebimentos.FirstOrDefault().VlrPago)</td>
+                        <td>@Html.DisplayFor(model => model.Recebimentos.FirstOrDefault().VlrEfetivo)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Total Negociado:</b></td>
+                        <td>@Html.DisplayFor(model => model.Recebimentos.FirstOrDefault().VlrPago)</td>
+                        <td>@Html.DisplayFor(model => model.Recebimentos.FirstOrDefault().VlrEfetivo)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <div id="divMiddle"></div>
+    <div id="divFooter">
+        <div style="margin:15px;margin-bottom:3px;">
+            <h5>O PAGAMENTO DEVE SER FEITO PELO VALOR DESCRITO NO CAMPO "VALOR NOMINAL".</h5>
+            <font size="2">
+                <p>
+                    <b>
+                        Caso não ocorra o pagamento, no prazo acordado, fica permitido ao MARTINS, sem ressalvas ou restrições, o direito
+                        <br />
+                        de proceder o desconto da referida verba na próxima duplicata a vencer do FORNECEDOR!
+                    </b>
+                </p>
+            </font>
+        </div>
+        <div class="divContainerBox">
+            <p>
+                E por estarem assim  justas e contratadas, as partes assinam o presente acordo.<br />
+            </p>
+            <p style="padding-left:5em;">
+                Uberlândia, ____ de _________________________ de ________
+            </p>
+        </div>
+        <div class="divContainerBox">
+            <p>
+                <b>Responsável Martins: </b><br />
+            </p>
+            <p>
+                <b>Responsável Empresa: </b>
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .divContainerBox {
+        border: solid;
+        margin: 7px;
+        padding: 5px;
+    }
+
+    .bodyPage {
+        width: 800px;
+        height: 1024px;
+    }
+</style>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#divMiddle').height(1024 - ($('#divHeader').height() + $('#divFooter').height()));
+    });
+</script>

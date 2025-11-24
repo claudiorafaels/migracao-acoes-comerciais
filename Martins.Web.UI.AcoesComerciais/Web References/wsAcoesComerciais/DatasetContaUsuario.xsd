@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetContaUsuario.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetContaUsuario.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetContaUsuario.xsd" id="DatasetContaUsuario" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetContaUsuario">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0104596">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFNC" type="xs:decimal" />
+              <xs:element name="NOMUSRRCF" type="xs:string" />
+              <xs:element name="CODACC" type="xs:string" />
+              <xs:element name="ENDUSROFF" type="xs:string" />
+              <xs:element name="NOMUSRENDOFF" type="xs:string" />
+              <xs:element name="FLGUSROFF" type="xs:string" />
+              <xs:element name="FLGRCBMSGEQIVND" type="xs:decimal" />
+              <xs:element name="TIPACSUSR" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetContaUsuarioKey1">
+      <xs:selector xpath=".//mstns:T0104596" />
+      <xs:field xpath="mstns:NOMUSRRCF" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

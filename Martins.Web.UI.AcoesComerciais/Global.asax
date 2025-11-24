@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.vb" Inherits="Martins.Web.UI.AcoesComerciais.Global" %>

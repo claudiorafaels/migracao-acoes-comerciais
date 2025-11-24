@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetSimulacaoSinteticaDeCrescimento.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetSimulacaoSinteticaDeCrescimento.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetSimulacaoSinteticaDeCrescimento.xsd" id="DatasetSimulacaoSinteticaDeCrescimento" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetSimulacaoSinteticaDeCrescimento">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="TableCLJ121">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodFxaAvl" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrFxaAvl" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PerApuVlrRcbRefFxa" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatFimDiaPod" type="xs:string" />
+              <xs:element minOccurs="0" name="QdeFxa" type="xs:int" />
+              <xs:element minOccurs="0" name="CodFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="NomFrn" type="xs:string" />
+              <xs:element minOccurs="0" name="DatIniPriPod" type="xs:string" />
+              <xs:element minOccurs="0" name="DatFimPriPod" type="xs:string" />
+              <xs:element minOccurs="0" name="DatIniSecPod" type="xs:string" />
+              <xs:element minOccurs="0" name="DatFimSecPod" type="xs:string" />
+              <xs:element minOccurs="0" name="DesEdeAbgMix" type="xs:string" />
+              <xs:element minOccurs="0" name="DesCtgMer" type="xs:string" />
+              <xs:element minOccurs="0" name="TipBseCal" type="xs:int" />
+              <xs:element minOccurs="0" name="TipBseCalCom" type="xs:int" />
+              <xs:element minOccurs="0" name="DesBseCal" type="xs:string" />
+              <xs:element minOccurs="0" name="DesBseCalCom" type="xs:string" />
+              <xs:element minOccurs="0" name="NumCttFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="QdeIteAnt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrFatBtoAnt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrFatLiqAnt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrToneladaAnt" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QdeIteAtl" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrFatBtoAtl" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrFatLiqAtl" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrToneladaAtl" type="xs:decimal" />
+              <xs:element minOccurs="0" name="QdeDiaFimPod" type="xs:int" />
+              <xs:element minOccurs="0" name="DesMoe" type="xs:string" />
+              <xs:element minOccurs="0" name="TipMoe" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrFatMnmCobFrn" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DesFrmDscBnf" type="xs:string" />
+              <xs:element minOccurs="0" name="FlgDIF" type="xs:string" />
+              <xs:element minOccurs="0" name="VlrFxaCrsQde" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrFxaCrsFatBto" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrFxaCrsFatLiq" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VlrFxaCrsTon" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CodFxaPod" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrFaixa" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FlgFxaAvlPer" type="xs:string" />
+              <xs:element minOccurs="0" name="NumCttAnt" type="xs:int" />
+              <xs:element minOccurs="0" name="QdeIteVarMix" type="xs:int" />
+              <xs:element minOccurs="0" name="PerIteVarMix" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DatRefApuPodCslCtt" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="QdeMesApuMedPod" type="xs:int" />
+              <xs:element minOccurs="0" name="VlrLimFatCalPod" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TipLimCalPod" type="xs:int" />
+              <xs:element minOccurs="0" name="QdePedPodApuCsl" type="xs:int" />
+              <xs:element minOccurs="0" name="NumCslCttFrn" type="xs:int" />
+              <xs:element minOccurs="0" name="DesDatRefApuPodCslCtt" type="xs:string" />
+              <xs:element minOccurs="0" name="QtdPedPod" type="xs:int" />
+              <xs:element minOccurs="0" name="QtdIteAtvPod" type="xs:int" />
+              <xs:element minOccurs="0" name="CodCpr" type="xs:int" />
+              <xs:element minOccurs="0" name="NomCpr" type="xs:string" />
+              <xs:element minOccurs="0" name="CodDivCmp" type="xs:int" />
+              <xs:element minOccurs="0" name="DesDivCmp" type="xs:string" />
+              <xs:element minOccurs="0" name="NumPorEnt" type="xs:int" />
+              <xs:element minOccurs="0" name="NumPor1Ent" type="xs:int" />
+              <xs:element minOccurs="0" name="FxaAtl" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

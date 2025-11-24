@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:i1="http://tempuri.org/DatasetAgencia.xsd" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:i0="http://tempuri.org/DatasetBanco.xsd" xmlns:tns="http://tempuri.org/Martins.Web.Services.Administracao.CobrancaBancaria/Administracao.CobrancaBancaria" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/Martins.Web.Services.Administracao.CobrancaBancaria/Administracao.CobrancaBancaria" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/DatasetBanco.xsd" location="http://localhost/Martins.Web.Services.Administracao.CobrancaBancaria/CobrancaBancaria.asmx?schema=DatasetBanco" />
+  <wsdl:import namespace="http://tempuri.org/DatasetAgencia.xsd" location="http://localhost/Martins.Web.Services.Administracao.CobrancaBancaria/CobrancaBancaria.asmx?schema=DatasetAgencia" />
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/Martins.Web.Services.Administracao.CobrancaBancaria/Administracao.CobrancaBancaria">
+      <s:import namespace="http://tempuri.org/DatasetBanco.xsd" />
+      <s:import namespace="http://tempuri.org/DatasetAgencia.xsd" />
+      <s:element name="ObterBanco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODBCO" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterBancoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterBancoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetBanco.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterBancos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODCID" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ENDBCO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="INDBCOCVNFNDIVT" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="NOMBCO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TIPSITBCO" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterBancosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterBancosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetBanco.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterAgencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODAGEBCO" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODBCO" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterAgenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterAgenciaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetAgencia.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterAgencias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CODAGEBCO" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODBCO" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODCEPAGEBCO" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODCIDAGEBCO" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="FLGAGECDTCOBBCO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NOMAGEBCO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterAgenciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterAgenciasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/DatasetAgencia.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObterBancoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterBanco" />
+  </wsdl:message>
+  <wsdl:message name="ObterBancoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterBancosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterBancos" />
+  </wsdl:message>
+  <wsdl:message name="ObterBancosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterBancosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterAgenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterAgencia" />
+  </wsdl:message>
+  <wsdl:message name="ObterAgenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterAgenciasSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterAgencias" />
+  </wsdl:message>
+  <wsdl:message name="ObterAgenciasSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterAgenciasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CobrancaBancariaSoap">
+    <wsdl:operation name="ObterBanco">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna um registro com base em sua chave primária. Entidade principal:T0100345</documentation>
+      <wsdl:input message="tns:ObterBancoSoapIn" />
+      <wsdl:output message="tns:ObterBancoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterBancos">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna registro(s) com base em atributos (não necessariamente chave primária). Entidade principal:T0100345</documentation>
+      <wsdl:input message="tns:ObterBancosSoapIn" />
+      <wsdl:output message="tns:ObterBancosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterAgencia">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna um registro com base em sua chave primária. Entidade principal:T0104413</documentation>
+      <wsdl:input message="tns:ObterAgenciaSoapIn" />
+      <wsdl:output message="tns:ObterAgenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterAgencias">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Retorna registro(s) com base em atributos (não necessariamente chave primária). Entidade principal:T0104413</documentation>
+      <wsdl:input message="tns:ObterAgenciasSoapIn" />
+      <wsdl:output message="tns:ObterAgenciasSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CobrancaBancariaSoap" type="tns:CobrancaBancariaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="ObterBanco">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.Administracao.CobrancaBancaria/Administracao.CobrancaBancaria/ObterBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterBancos">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.Administracao.CobrancaBancaria/Administracao.CobrancaBancaria/ObterBancos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterAgencia">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.Administracao.CobrancaBancaria/Administracao.CobrancaBancaria/ObterAgencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterAgencias">
+      <soap:operation soapAction="http://tempuri.org/Martins.Web.Services.Administracao.CobrancaBancaria/Administracao.CobrancaBancaria/ObterAgencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CobrancaBancaria">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="CobrancaBancariaSoap" binding="tns:CobrancaBancariaSoap">
+      <soap:address location="http://localhost/Martins.Web.Services.Administracao.CobrancaBancaria/CobrancaBancaria.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

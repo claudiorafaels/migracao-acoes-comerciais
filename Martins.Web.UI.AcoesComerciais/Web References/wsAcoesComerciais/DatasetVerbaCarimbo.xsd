@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetVerbaCarimbo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetVerbaCarimbo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetVerbaCarimbo.xsd" id="DatasetVerbaCarimbo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetVerbaCarimbo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="CADMCOVBAFRNPesquisa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CARIMBO" type="xs:string" />
+              <xs:element minOccurs="0" name="DATA" type="xs:string" />
+              <xs:element minOccurs="0" name="COD_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="NOME_FORNECEDOR" type="xs:string" />
+              <xs:element minOccurs="0" name="FUNCIONARIO" type="xs:string" />
+              <xs:element minOccurs="0" name="VALOR_PREVISTO" type="xs:string" />
+              <xs:element minOccurs="0" name="OBSERVACAO" type="xs:string" />
+              <xs:element minOccurs="0" name="INDSTAMCOVBAFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EMPENHO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CADMCOVBAFRN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODMCOVBAFRN" type="xs:decimal" />
+              <xs:element name="NUMPEDCMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATGRCMCOVBAFRN" type="xs:dateTime" />
+              <xs:element name="CODFNCMCOVBAFRN" type="xs:decimal" />
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="CODPMS" type="xs:decimal" />
+              <xs:element name="DATNGCPMS" type="xs:dateTime" />
+              <xs:element name="INDSTAMCOVBAFRN" type="xs:decimal" />
+              <xs:element name="DESOBSMCOVBAFRN" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CADMCOVBAFRNVerificarCarimbo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODMCOVBAFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDSTAMCOVBAFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODPMS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDFILDTB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODFILEMP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INDECSVLRGACDTBATC" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CADOBJDSNVBA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPOBJDSNVBA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESOBJDSNVBA" type="xs:string" />
+              <xs:element minOccurs="0" name="DATDSTTIPOBJDSNVBA" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetVerbaCarimboKey1">
+      <xs:selector xpath=".//mstns:CADMCOVBAFRN" />
+      <xs:field xpath="mstns:CODMCOVBAFRN" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetVerbaCarimboKey2">
+      <xs:selector xpath=".//mstns:CADOBJDSNVBA" />
+      <xs:field xpath="mstns:TIPOBJDSNVBA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

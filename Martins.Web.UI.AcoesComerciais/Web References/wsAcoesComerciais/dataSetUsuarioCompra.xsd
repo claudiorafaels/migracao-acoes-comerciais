@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/dataSetUsuarioCompra.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/dataSetUsuarioCompra.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dataSetUsuarioCompra.xsd" id="dataSetUsuarioCompra" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="dataSetUsuarioCompra">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0113471">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMACSUSRSIS" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMUSRSIS" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPUSRSIS" type="xs:string" />
+              <xs:element minOccurs="0" name="DESPSWUSRSIS" type="xs:string" />
+              <xs:element minOccurs="0" name="NIVPVGUSRSIS" type="xs:string" />
+              <xs:element minOccurs="0" name="CODCPR" type="xs:int" />
+              <xs:element minOccurs="0" name="CODREPFRN" type="xs:int" />
+              <xs:element minOccurs="0" name="INDUSRADRAGDRCB" type="xs:int" />
+              <xs:element minOccurs="0" name="CODFNC" type="xs:long" />
+              <xs:element minOccurs="0" name="INDUSRADRMIXMER" type="xs:int" />
+              <xs:element minOccurs="0" name="INDUSRADRITBETNDOC" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TbCompradorUsuarioCompra">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODCPR" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="T0113625">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODCPR" type="xs:int" />
+              <xs:element name="NOMCPR" type="xs:string" />
+              <xs:element name="CODGERPRD" type="xs:int" />
+              <xs:element minOccurs="0" name="DESSGLGERPRD" type="xs:string" />
+              <xs:element minOccurs="0" name="DATDSTCPR" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="dataSetUsuarioCompraKey1">
+      <xs:selector xpath=".//mstns:T0113471" />
+      <xs:field xpath="mstns:NOMACSUSRSIS" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dataSetUsuarioCompraKey3">
+      <xs:selector xpath=".//mstns:TbCompradorUsuarioCompra" />
+      <xs:field xpath="mstns:CODCPR" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="dataSetUsuarioCompraKey4">
+      <xs:selector xpath=".//mstns:T0113625" />
+      <xs:field xpath="mstns:CODCPR" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

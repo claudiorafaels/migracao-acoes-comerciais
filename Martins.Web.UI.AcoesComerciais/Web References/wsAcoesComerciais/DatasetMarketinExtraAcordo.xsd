@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetMarketinExtraAcordo.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetMarketinExtraAcordo.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetMarketinExtraAcordo.xsd" id="DatasetMarketinExtraAcordo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetMarketinExtraAcordo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="RLCFRNPERMKTEXAARDPesquisa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CODFRN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMFRN" type="xs:string" />
+              <xs:element minOccurs="0" name="PERMKTEXAARD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATCADMKTEXAARD" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATINIAPUMKTEXAARD" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RLCFRNPERMKTEXAARD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODFRN" type="xs:decimal" />
+              <xs:element name="DATCADMKTEXAARD" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PERMKTEXAARD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPFRMDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DATINIAPUMKTEXAARD" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DATDSTMKTEXAARD" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FormaPagamento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TIPFRMDSCBNF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESFRMDSCBNF" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetMarketinExtraAcordoKey1">
+      <xs:selector xpath=".//mstns:RLCFRNPERMKTEXAARD" />
+      <xs:field xpath="mstns:CODFRN" />
+      <xs:field xpath="mstns:DATCADMKTEXAARD" />
+    </xs:unique>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetMarketinExtraAcordoKey2">
+      <xs:selector xpath=".//mstns:FormaPagamento" />
+      <xs:field xpath="mstns:TIPFRMDSCBNF" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

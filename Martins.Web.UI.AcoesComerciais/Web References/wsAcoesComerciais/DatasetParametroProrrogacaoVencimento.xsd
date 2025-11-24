@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DatasetParametroProrrogacaoVencimento.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DatasetParametroProrrogacaoVencimento.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DatasetParametroProrrogacaoVencimento.xsd" id="DatasetParametroProrrogacaoVencimento" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" name="DatasetParametroProrrogacaoVencimento">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="T0129440">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMCTTFRN" type="xs:decimal" />
+              <xs:element name="TIPFRT" type="xs:string" />
+              <xs:element name="DESDATREFPGC" type="xs:string" />
+              <xs:element name="NUMDIAADIPGC" type="xs:decimal" />
+              <xs:element name="FLGADIQDEDIAATZPAD" type="xs:string" />
+              <xs:element name="NUMDIAULTINIPGC" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="DatasetParametroProrrogacaoVencimentoKey1">
+      <xs:selector xpath=".//mstns:T0129440" />
+      <xs:field xpath="mstns:NUMCTTFRN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
